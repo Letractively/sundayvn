@@ -128,6 +128,9 @@ a.readmore{color:#FF0000;float:right;margin-right:5px;}
 border:1px solid #3799d1;
 height:150px;
 margin-bottom:5px;}
+.postItem:hover{background:#CCCCCC;
+				obacity:0.6;
+				}
 .postItem h2{color:#1f3141;
 			font-size:1.7em;}
 .postItem span{font-size:1.2em;}			
