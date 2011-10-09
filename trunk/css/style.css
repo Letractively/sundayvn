@@ -87,7 +87,7 @@ width:760px;
 ul#slider li{float:left;
 			width:225px;
 			overflow:hidden;
-			height:500px;
+			height:410px;
 			margin:10px;
 			background:#e1e0e0 repeat;
 			color:#5b5d5e;}
@@ -129,7 +129,8 @@ border:1px solid #3799d1;
 height:150px;
 margin-bottom:5px;}
 .postItem:hover{background:#CCCCCC;
-				obacity:0.6;
+				obacity:0.4;
+				filter:alpha(opacity=40);
 				}
 .postItem h2{color:#1f3141;
 			font-size:1.7em;}
