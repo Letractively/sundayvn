@@ -1,0 +1,66 @@
+<style>
+#image-map{background:url(map.jpg) no-repeat;
+			widht:200px;
+			height:230px;
+			position:relative;}
+img.cam {
+    left: 63px;
+    position: absolute;
+    top: 134px;
+	
+}
+a{font-size:12px;}
+img.lao {
+    left: -4px;
+    position: absolute;
+    top: 1px;
+		
+}
+img.viet {
+    left: 0px;
+    position: absolute;
+    top: 4px;
+	
+}	
+a#cam {
+    left: -28px;
+    position: absolute;
+    top: 160px;
+}
+
+a#lao {
+    left: 5px;
+    position: absolute;
+    top: 16px;
+}
+a#viet {
+    left: 133px;
+    position: absolute;
+    top: 4px;
+}
+					
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    	$('a').hover(function(){
+    	   $(this).next().css({'visibility' : 'visible'});
+ 
+	},function(){
+    
+         $(this).next().css({'visibility' : 'hidden'});
+    }
+});
+
+</script>
+<div id="image-map">
+	<a id="cam" href="#">CAMBODIA</a>
+	<a  href="#"><img  class="cam" src="cam.png" border="0"/></a>
+    <a id="lao" href="#">LAO</a>
+	<a  href="#"><img class="lao" src="lao.png"/></a>
+    <a  id="viet" href="#">VIETNAM</a>
+	<a href="#"><img class="viet" src="viet.png"/></a>
+    
+    
+    
+</div>	
