@@ -766,3 +766,17 @@ padding-right: 15px;
 {
     display: block;
 }
+.widget-livesupport .widget-content
+{
+    font-size: 1.3em;
+    line-height: 24px;
+    padding-left: 15px;
+}
+
+.column-right .widget.widget-livesupport h2 {
+ background :#0BAAD8 ;
+}
+.column-right .widget.widget-livesupport .title 
+{
+    background: url(images/widget-title-livesupport.gif) no-repeat;
+}
