@@ -27,10 +27,10 @@ Author URI: http://dev7studios.com
 }
 
 .theme-default .nivo-controlNav {
-	position:absolute;
-	left:50%;
-	bottom:-42px;
-    margin-left:-40px; /* Tweak this to center bullets */
+	 bottom: 255px;
+    left: 80%;
+    margin-left: -40px;
+    position: absolute;
 }
 .theme-default .nivo-controlNav a {
 	display:block;
@@ -63,6 +63,7 @@ Author URI: http://dev7studios.com
 }
 
 .theme-default .nivo-caption {
+    font-size: 1.3em;
     font-family: Helvetica, Arial, sans-serif;
 }
 .theme-default .nivo-caption a {
