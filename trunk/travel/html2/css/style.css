@@ -57,7 +57,7 @@ input.text, select, textarea { padding:2px 0px 3px 6px; border:1px solid #f3efde
 
 .main-bgr { overflow:hidden; height:100%; padding:0px 0px 0px 0px;  }
 
-.header { height:204px;}
+
 
 
 /*** Menu ***/
@@ -84,7 +84,11 @@ input.text, select, textarea { padding:2px 0px 3px 6px; border:1px solid #f3efde
 
 
 /*** Logo ***/
-.logo { float:left; height:136px;}
+.logo { 
+    
+    float:left; height:136px;
+width: 325px;
+}
 .logo .indent { overflow:hidden;/* height:100%;*/ padding:18px 0px 0px 12px;}
 .logo h1 {
     display:block; overflow:hidden;
@@ -103,7 +107,7 @@ input.text, select, textarea { padding:2px 0px 3px 6px; border:1px solid #f3efde
 
 
 /*** Search ***/
-.search { float:right;}
+.search { float:left;}
 .search .emailandcontact
 { 
     text-align: right;
