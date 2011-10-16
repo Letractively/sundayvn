@@ -25,25 +25,25 @@
                     </li>
 
                     <?php 
-                        $page_id = 124;
-                        get_page($intPage_id);
+                        $page_id = 122;
+                        $page = get_page($page_id);
                     ?>
 
-                    <li class="page_item page-item-22"><a href="<?php the_permalink(); ?>" title="Hotels"><span><span>About Us</span></span></a></li>
+                    <li class="page_item page-item-22"><a href="<?php echo get_permalink( $page->ID ); ?>" title="Hotels"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
 
                     <?php 
-                        $page_id = 124;
-                        get_page($intPage_id);
+                        $page_id = 132;
+                        $page = get_page($page_id);
                     ?>
 
 
-                    <li class="page_item page-item-28"><a href="<?php the_permalink(); ?>" title="Ideas"><span><span>Hot Deals</span></span></a></li>
+                    <li class="page_item page-item-28"><a href="<?php echo get_permalink( $page->ID ); ?>" title="Ideas"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
 
                     <li class="page_item page-item-33"><a href="#" title="Contacts"><span><span>Gallery</span></span></a></li>
 
                     <?php 
                         $page_id = 127;
-                        get_page($intPage_id);
+                        $page = get_page($page_id);
 
                         //$mylinks_categories = get_terms('tourcategory', 'orderby=count&hide_empty=0');
                         //$a =the_terms(7,'tourcategory');
@@ -53,7 +53,7 @@
 
                     ?>
 
-                    <li class="page_item page-item-24"><a href="<?php the_permalink(); ?>" title="Flights"><span><span>Contact Us</span></span></a></li>
+                    <li class="page_item page-item-24"><a href="<?php echo get_permalink( $page->ID ); ?>" title="Flights"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
 
                 </ul>
 
