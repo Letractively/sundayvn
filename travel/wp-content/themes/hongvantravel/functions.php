@@ -59,94 +59,145 @@
             </tbody>
         </table>
         <?php    
-        }
-        function save_tour_data($post_id) {
-            if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+    }
+    function save_tour_data($post_id) {
+        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+            return $post_id;
+
+        if ('page' == $_POST['post_type']) {
+            if (!current_user_can('edit_page', $post_id))
                 return $post_id;
+        } else {
+            if (!current_user_can('edit_post', $post_id))
+                return $post_id;
+        }
 
-            if ('page' == $_POST['post_type']) {
-                if (!current_user_can('edit_page', $post_id))
-                    return $post_id;
-            } else {
-                if (!current_user_can('edit_post', $post_id))
-                    return $post_id;
-            }
+        $post = get_post($post_id);
+        if ($post->post_type == 'tour') {
+            if ($_POST['theme_custom_fields']) {
 
-            $post = get_post($post_id);
-            if ($post->post_type == 'tour') {
-                if ($_POST['theme_custom_fields']) {
-
-                    $metas = array('time_tour');
-                    foreach ($metas as $k => $v) {
-                        if (add_post_meta($post_id, $v, $_POST[$v], true) == false)
-                            update_post_meta($post_id, $v, $_POST[$v]);
-                    }
+                $metas = array('time_tour');
+                foreach ($metas as $k => $v) {
+                    if (add_post_meta($post_id, $v, $_POST[$v], true) == false)
+                        update_post_meta($post_id, $v, $_POST[$v]);
                 }
             }
-            return $theme;
         }
-        add_theme_menus();    
+        return $theme;
+    }
+    add_theme_menus();    
 
-        //Add taxonomy for Tour
-        $labels = array(
-        'name' => _x( 'Tour Categories', 'taxonomy general name' ),
-        'singular_name' => _x( 'Tour Category', 'taxonomy singular name' ),
-        'search_items' =>  __( 'Search Tour Categories' ),
-        'all_items' => __( 'All Tour Categories' ),
-        'parent_item' => __( 'Parent Tour Category' ),
-        'parent_item_colon' => __( 'Parent Tour Category:' ),
-        'edit_item' => __( 'Edit Tour Category' ), 
-        'update_item' => __( 'Update Tour Category' ),
-        'add_new_item' => __( 'Add New Tour Category' ),
-        'new_item_name' => __( 'New Tour Category Name' ),
-        'menu_name' => __( 'Tour Categories' ),
-        );     
+    //Add taxonomy for Tour
+    $labels = array(
+    'name' => _x( 'Tour Categories', 'taxonomy general name' ),
+    'singular_name' => _x( 'Tour Category', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Tour Categories' ),
+    'all_items' => __( 'All Tour Categories' ),
+    'parent_item' => __( 'Parent Tour Category' ),
+    'parent_item_colon' => __( 'Parent Tour Category:' ),
+    'edit_item' => __( 'Edit Tour Category' ), 
+    'update_item' => __( 'Update Tour Category' ),
+    'add_new_item' => __( 'Add New Tour Category' ),
+    'new_item_name' => __( 'New Tour Category Name' ),
+    'menu_name' => __( 'Tour Categories' ),
+    );     
 
-        register_taxonomy('tourcategory',array('tour'), array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => array( 'slug' => 'tourcategory' ),
-        ));
+    register_taxonomy('tourcategory',array('tour'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'tourcategory' ),
+    ));
 
-        //Edit columns
-        add_filter('manage_edit-tour_columns', 'add_new_tour_columns');
-        function add_new_tour_columns($tour_columns) {
-            $new_columns['cb'] = '<input type="checkbox" />';
+    //Edit columns
+    add_filter('manage_edit-tour_columns', 'add_new_tour_columns');
+    function add_new_tour_columns($tour_columns) {
+        $new_columns['cb'] = '<input type="checkbox" />';
 
-            $new_columns['id'] = __('ID');
-            $new_columns['title'] = _x('Tour Name', 'column name');         
-            $new_columns['tourcategory'] = __('Tour Categories');
-            $new_columns['author'] = __('Author'); 
-            $new_columns['date'] = _x('Date', 'column name');
+        $new_columns['id'] = __('ID');
+        $new_columns['title'] = _x('Tour Name', 'column name');         
+        $new_columns['tourcategory'] = __('Tour Categories');
+        $new_columns['author'] = __('Author'); 
+        $new_columns['date'] = _x('Date', 'column name');
 
-            return $new_columns;
-        }
-        add_action('manage_tour_posts_custom_column', 'manage_tour_columns', 10, 2);
+        return $new_columns;
+    }
+    add_action('manage_tour_posts_custom_column', 'manage_tour_columns', 10, 2);
 
-        function manage_tour_columns($column_name, $id) {
-            global $wpdb;
-            switch ($column_name) {
-                case 'id':
-                    echo $id;
-                    break;
+    function manage_tour_columns($column_name, $id) {
+        global $wpdb;
+        switch ($column_name) {
+            case 'id':
+                echo $id;
+                break;
 
-                case 'tourcategory':
-                    $temp = wp_get_post_terms($id, 'tourcategory', array("fields" => "names"));
-                    $text = "";
-                    foreach($temp as $t){
-                        if($text==""){
-                            $text .= $t;
-                        }else{
-                            $text .= ", " . $t;
-                        }
+            case 'tourcategory':
+                $temp = wp_get_post_terms($id, 'tourcategory', array("fields" => "names"));
+                $text = "";
+                foreach($temp as $t){
+                    if($text==""){
+                        $text .= $t;
+                    }else{
+                        $text .= ", " . $t;
                     }
-                    echo $text; 
-                    break;
-                default:
-                    break;
-            }
-        }    
+                }
+                echo $text; 
+                break;
+            default:
+                break;
+        }
+    }    
+}
+
+//$str la chuoi can xu ly
+//$limit la do dai toi da cua chuoi
+function gioihankitu($str,$limit,$link = '#')
+{
+
+    if(strlen($str)> $limit)
+    {
+        $re =  substr($str,0,$limit);
+        $re =  substr($re, 0, strrpos($re, " "));
+        $re .="...";
+
+        return $re;
     }
 
+    else
+
+    {
+        return $str;
+    }
+}
+
+
+//function intToMonthName($int)
+//{
+//    switch ( $int )
+//    {
+//        case 1:
+//        return ''
+//    }
+//}
+function intToDayName($in)
+{
+    $in = intval($in);    
+    switch ( $in )
+    {
+        case '1':
+            return 'Monday';
+        case '2':
+            return 'Tuesday';
+        case '3':
+            return 'Wednesday';
+        case '4':
+            return 'Thirsday';
+        case '5':
+            return 'Friday';
+        case '6':
+            return 'Saturnday';
+        case '0':
+            return 'Sunday';
+    }
+}

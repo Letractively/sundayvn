@@ -43,7 +43,7 @@
 
 
         <script type="text/javascript" src="<?php bloginfo('template_url') ?>/scripts/jquery-1.6.1.min.js"></script>
-     
+
         <script type="text/javascript" src="<?php bloginfo('template_url') ?>/scripts/jquery.nivo.slider.pack.js"></script>
         <script type="text/javascript">
             $(window).load(function() {
@@ -98,9 +98,9 @@
 
 
                         <?php
-                        get_template_part('logo');
+                            get_template_part('logo');
                         ?>
-                                                <div class="search">
+                        <div class="search">
 
                             <div class="indent">
                                 <div class="emailandcontact" align="right">
@@ -205,9 +205,9 @@
 
 
 
-<?php
-    get_template_part('menu');
-?>
+                        <?php
+                            get_template_part('menu');
+                        ?>
 
 
 
@@ -257,10 +257,16 @@
 
                                     <div class="widget-bgr"><div class="bgr">
                                             <div id="dear_customer">
-                                                <h3>Dear: Valued Customers!</h3>
-                                                Let us inspire you!
-
-                                                Established in 1994, our western managed sales team live, and breathe  Indochina. It is our home, after all. For tailor made, private Indochina and Thailand tours, small group day tours and a one stop travel shop, look no further than Buffalo Tours!<br /><a href="#">Read more...</a>
+                                                <?php
+                                                    $page_id = 124;
+                                                    $page = get_page($page_id);
+                                                ?>
+                                                <h3><?php echo $page->post_title;
+                                                        //268
+                                                        $dear = gioihankitu($page->post_content,268);
+                                                ?></h3>
+                                                <?php echo $dear; ?>
+                                                <br /><a href="<?php echo get_permalink($page->ID); ?>">Read more...</a>
                                             </div>
 
                                         </div>
@@ -348,7 +354,7 @@
 
                                             </li>
 
-                                            <li><b> In Vietnam</b>
+                                            <li><b>In Vietnam</b>
                                                 <a href="#" title="This page The World Wide Web Consortium (W3C)">Vietnam Currency</a>
                                                 <a href="#" title="This page The World Wide Web Consortium (W3C)">Government Agencies</a>
 
@@ -606,383 +612,9 @@
 
 
                                 <div class="column-center">
-
-
-
-
-
-
-
-
-
-
-
-                                    <div class="title-page01">
-
-                                        <h2>Vietnam</h2>
-                                        <a href="#"><img style="display: block; width: 100%;height: 200px;" src="images/anh.jpg"  /></a>
-
-                                    </div>
-
-
-
-
-
-                                    <div class="post-9 post hentry category-albufeira category-corfu category-costa-del-sol category-fuerteventura tag-elit tag-fusce tag-nonummy tag-porta tag-sit tag-tetuer" id="post-9">
-
-
-
-                                        <div class="indent">
-
-
-
-                                            <div class="title">
-
-
-
-                                                <h2><a href="#" rel="bookmark" title="Permanent Link to Royal Sea Aquarium Resort">Halong Paloma Cruise 2Days/1Night</a></h2>
-
-
-
-
-                                                <div class="date">
-
-                                                    Thursday, January 14, 2010 @ <span>06:01 AM</span>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                            <div class="text-box">
-
-                                                <p>&quot;Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi&quot; <a href="http://osc.template-help.com/wordpress_27338/?p=9#more-9" class="more-link">more</a></p>
-                                            </div>
-
-
-
-
-
-                                            <div class="link-edit"></div>    
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-                                    <div class="post-9 post hentry category-albufeira category-corfu category-costa-del-sol category-fuerteventura tag-elit tag-fusce tag-nonummy tag-porta tag-sit tag-tetuer" id="post-9">
-
-
-
-                                        <div class="indent">
-
-
-
-                                            <div class="title">
-
-
-
-                                                <h2><a href="#" rel="bookmark" title="Permanent Link to Royal Sea Aquarium Resort">Hanoi-Sapa- Halong 5Days/4Nights</a></h2>
-
-
-
-
-                                                <div class="date">
-
-                                                    Thursday, January 14, 2010 @ <span>06:01 AM</span>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                            <div class="text-box">
-
-                                                <p>&quot;Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi&quot; <a href="http://osc.template-help.com/wordpress_27338/?p=9#more-9" class="more-link">more</a></p>
-                                            </div>
-
-
-
-
-
-                                            <div class="link-edit"></div>    
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-
-
-                                    <div class="navigation nav-top">
-
-                                        <div class="alignleft"><a href="#" >View all</a></div>
-
-                                        <div class="alignright"></div>
-
-                                    </div>
-
-                                    <div style=" clear: both;"></div>
-
-                                    <!-- END VIET NAM TOUR-->
-
-
-                                    <div class="title-page01">
-
-                                        <h2>Cambodia</h2>
-                                        <a href="#"><img style="display: block; width: 100%;height: 200px;" src="images/Phnom-Penh-Angkor-7-days,Phnom-Penh-Angkor-Travel-Phnom-Penh-Angkor-Travel-Phnom-Penh-Angkor-Tour_29716275_ANGKOR WAT1.jpg"  /></a>
-
-                                    </div>
-
-
-
-
-
-                                    <div class="post-9 post hentry category-albufeira category-corfu category-costa-del-sol category-fuerteventura tag-elit tag-fusce tag-nonummy tag-porta tag-sit tag-tetuer" id="post-9">
-
-
-
-                                        <div class="indent">
-
-
-
-                                            <div class="title">
-
-
-
-                                                <h2><a href="#" rel="bookmark" title="Permanent Link to Royal Sea Aquarium Resort">Halong Paloma Cruise 2Days/1Night</a></h2>
-
-
-
-
-                                                <div class="date">
-
-                                                    Thursday, January 14, 2010 @ <span>06:01 AM</span>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                            <div class="text-box">
-
-                                                <p>&quot;Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi&quot; <a href="http://osc.template-help.com/wordpress_27338/?p=9#more-9" class="more-link">more</a></p>
-                                            </div>
-
-
-
-
-
-                                            <div class="link-edit"></div>    
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-                                    <div class="post-9 post hentry category-albufeira category-corfu category-costa-del-sol category-fuerteventura tag-elit tag-fusce tag-nonummy tag-porta tag-sit tag-tetuer" id="post-9">
-
-
-
-                                        <div class="indent">
-
-
-
-                                            <div class="title">
-
-
-
-                                                <h2><a href="#" rel="bookmark" title="Permanent Link to Royal Sea Aquarium Resort">Hanoi-Sapa- Halong 5Days/4Nights</a></h2>
-
-
-
-
-                                                <div class="date">
-
-                                                    Thursday, January 14, 2010 @ <span>06:01 AM</span>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                            <div class="text-box">
-
-                                                <p>&quot;Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi&quot; <a href="http://osc.template-help.com/wordpress_27338/?p=9#more-9" class="more-link">more</a></p>
-                                            </div>
-
-
-
-
-
-                                            <div class="link-edit"></div>    
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-
-
-                                    <div class="navigation nav-top">
-
-                                        <div class="alignleft"><a href="#" >View all</a></div>
-
-                                        <div class="alignright"></div>
-
-                                    </div>
-
-                                    <div style=" clear: both;"></div>
-
-                                    <!-- END CAMBODIA TOUR-->
-                                    <div class="title-page01">
-
-                                        <h2>Laos</h2>
-                                        <a href="#"><img style="display: block; width: 100%;height: 200px;" src="images/250210012701-photo_lg_laos.jpg"  /></a>
-
-                                    </div>
-
-
-
-
-
-                                    <div class="post-9 post hentry category-albufeira category-corfu category-costa-del-sol category-fuerteventura tag-elit tag-fusce tag-nonummy tag-porta tag-sit tag-tetuer" id="post-9">
-
-
-
-                                        <div class="indent">
-
-
-
-                                            <div class="title">
-
-
-
-                                                <h2><a href="#" rel="bookmark" title="Permanent Link to Royal Sea Aquarium Resort">Halong Paloma Cruise 2Days/1Night</a></h2>
-
-
-
-
-                                                <div class="date">
-
-                                                    Thursday, January 14, 2010 @ <span>06:01 AM</span>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                            <div class="text-box">
-
-                                                <p>&quot;Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi&quot; <a href="http://osc.template-help.com/wordpress_27338/?p=9#more-9" class="more-link">more</a></p>
-                                            </div>
-
-
-
-
-
-                                            <div class="link-edit"></div>    
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-                                    <div class="post-9 post hentry category-albufeira category-corfu category-costa-del-sol category-fuerteventura tag-elit tag-fusce tag-nonummy tag-porta tag-sit tag-tetuer" id="post-9">
-
-
-
-                                        <div class="indent">
-
-
-
-                                            <div class="title">
-
-
-
-                                                <h2><a href="#" rel="bookmark" title="Permanent Link to Royal Sea Aquarium Resort">Hanoi-Sapa- Halong 5Days/4Nights</a></h2>
-
-
-
-
-                                                <div class="date">
-
-                                                    Thursday, January 14, 2010 @ <span>06:01 AM</span>
-
-                                                </div>
-
-
-
-
-
-                                            </div>
-
-
-
-                                            <div class="text-box">
-
-                                                <p>&quot;Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi&quot; <a href="http://osc.template-help.com/wordpress_27338/?p=9#more-9" class="more-link">more</a></p>
-                                            </div>
-
-
-
-
-
-                                            <div class="link-edit"></div>    
-
-
-
-                                        </div>
-
-
-
-                                    </div>
-
-
-                                    <div class="navigation nav-top">
-
-                                        <div class="alignleft"><a href="#" >View all</a></div>
-
-                                        <div class="alignright"></div>
-
-                                    </div>
-
-                                    <div style=" clear: both;"></div>
+                                    <?php
+                                        get_template_part('content');
+                                    ?>
 
                                 </div>
 
