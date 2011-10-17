@@ -176,14 +176,6 @@ function gioihankitu($str,$limit,$link = '#')
 }
 
 
-//function intToMonthName($int)
-//{
-//    switch ( $int )
-//    {
-//        case 1:
-//        return ''
-//    }
-//}
 function intToDayName($in)
 {
     $in = intval($in);    

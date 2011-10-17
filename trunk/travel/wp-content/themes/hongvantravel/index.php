@@ -17,22 +17,13 @@
 
     <body>
 
-
-
-
         <div class="tail-right"></div>
 
         <div class="main">
 
-
-
             <div class="main-width">
 
-
-
                 <div class="main-bgr">
-
-
 
                     <?php
                         get_template_part('head');
@@ -53,9 +44,6 @@
                                     get_template_part('right');    
                                 ?>
 
-
-
-
                                 <div class="column-center">
                                     <?php
                                         get_template_part('content');
@@ -67,10 +55,8 @@
 
                             </div>	
 
-
-
-                        </div></div>
-
+                        </div>
+                    </div>
 
 
                 </div>
