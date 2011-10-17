@@ -1,4 +1,8 @@
 <?php
+    
+    // This theme uses post thumbnails
+    add_theme_support( 'post-thumbnails' );
+    
     /**Custom post type Tour*/
     add_action('init', 'codex_custom_init');
     function codex_custom_init() 
@@ -207,3 +211,6 @@ function get_taxonomy_image($id){
     $data = $wpdb->get_row("SELECT meta_value FROM ".$wpdb->prefix."taxonomymeta WHERE taxonomy_id=".$id." AND meta_key='image'");
     return $data->meta_value;
 }
+
+
+
