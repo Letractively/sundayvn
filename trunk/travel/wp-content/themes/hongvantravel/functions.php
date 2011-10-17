@@ -201,3 +201,9 @@ function intToDayName($in)
             return 'Sunday';
     }
 }
+
+function get_taxonomy_image($id){
+    global $wpdb; 
+    $data = $wpdb->get_row("SELECT meta_value FROM ".$wpdb->prefix."taxonomymeta WHERE taxonomy_id=".$id." AND meta_key='image'");
+    return $data->meta_value;
+}
