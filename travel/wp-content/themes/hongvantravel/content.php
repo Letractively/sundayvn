@@ -78,7 +78,7 @@
                 <div class="title">
 
                     <h2><a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a></h2>
-
+                    <?php echo get_post_meta($post->ID, 'time_tour',true); ?>
                     <div class="date">
            
                         <?php echo $date->format('F'); ?>, <?php echo intToDayName($date->format('w')); ?> <?php echo $date->format('d') ?>, <?php echo $date->format('Y') ?> @ <span><?php echo $date->format('H:i A'); ?></span>
