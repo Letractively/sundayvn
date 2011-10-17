@@ -12,7 +12,7 @@
     <div class="title-page01">
 
         <h2><?php echo $tourCategory->name; ?></h2>
-        <a href="<?php echo get_term_link($tourCategory->slug, 'tourcategory'); ?>"><img style="display: block; width: 100%;height: 200px;" src="images/anh.jpg"  /></a>
+        <a href="<?php echo get_term_link($tourCategory->slug, 'tourcategory'); ?>"><img style="display: block; width: 100%;height: 200px;" src="<?php echo get_taxonomy_image($tourCategory->term_taxonomy_id); ?>"  /></a>
 
     </div>
 
