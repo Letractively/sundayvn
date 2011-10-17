@@ -1,5 +1,9 @@
 <?php
-    $tour_categories = get_terms( 'tourcategory' );
+
+    $tour_categories = get_terms( 'tourcategory', array(
+    'order'    => 'DESC',
+    'hide_empty' => 0
+    ) );
 
     foreach ( $tour_categories as $tourCategory)
     {
@@ -30,7 +34,7 @@
         `term_taxonomy_id`          =       '{$tourCategory->term_id}'
         AND
         `object_id`                 =       {$wpdb->posts}.`ID`
-        
+
         ORDER BY
         ID DESC
         limit 0,2
@@ -67,10 +71,10 @@
         [term_order] => 0
         )
         */
-        
+
         foreach ( $termPosts as $post )
         {
-               $date = new DateTime($post->post_date);
+            $date = new DateTime($post->post_date);
         ?>
         <div class="post hentry" id="post-<?php echo $post->ID; ?>">
             <div class="indent">
@@ -80,7 +84,7 @@
                     <h2><a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a></h2>
                     <?php echo get_post_meta($post->ID, 'time_tour',true); ?>
                     <div class="date">
-           
+
                         <?php echo $date->format('F'); ?>, <?php echo intToDayName($date->format('w')); ?> <?php echo $date->format('d') ?>, <?php echo $date->format('Y') ?> @ <span><?php echo $date->format('H:i A'); ?></span>
                     </div>
 
