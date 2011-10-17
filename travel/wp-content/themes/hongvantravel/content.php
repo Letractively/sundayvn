@@ -16,7 +16,7 @@
     <div class="title-page01">
 
         <h2><?php echo $tourCategory->name; ?></h2>
-        <a href="<?php echo get_term_link($tourCategory->slug, 'tourcategory'); ?>"><img style="display: block; max-width: 100%;max-height: 200px;" src="<?php echo get_taxonomy_image($tourCategory->term_taxonomy_id); ?>"  /></a>
+        <a href="<?php echo get_term_link($tourCategory->slug, 'tourcategory'); ?>"><img style="display: block; width: 100%;max-height: 200px;" src="<?php echo get_taxonomy_image($tourCategory->term_taxonomy_id); ?>"  /></a>
 
     </div>
 
@@ -74,30 +74,8 @@
 
         foreach ( $termPosts as $post )
         {
-            $date = new DateTime($post->post_date);
-        ?>
-        <div class="post hentry" id="post-<?php echo $post->ID; ?>">
-            <div class="indent">
-
-                <div class="title">
-
-                    <h2><a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a></h2>
-                    <?php echo get_post_meta($post->ID, 'time_tour',true); ?>
-                    <div class="date">
-
-                        <?php echo $date->format('F'); ?>, <?php echo intToDayName($date->format('w')); ?> <?php echo $date->format('d') ?>, <?php echo $date->format('Y') ?> @ <span><?php echo $date->format('H:i A'); ?></span>
-                    </div>
-
-                </div>
-
-                <div class="text-box">
-
-                    <p><?php echo gioihankitu($post->post_content,362); ?>&nbsp;<a href="<?php echo get_permalink($post->ID); ?>" class="more-link">more</a></p>
-                </div>
-                <div class="link-edit"></div>    
-            </div>
-        </div>  
-        <?php
+            //$date = new DateTime($post->post_date);
+        get_template_part('tour_list_template');
         }
     ?>
 

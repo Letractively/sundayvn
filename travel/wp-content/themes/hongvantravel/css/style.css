@@ -339,7 +339,11 @@ text-align: center;
 
 .column-center .title h2 a,
 .column-center .title h3 a { color:#34aeb7; text-decoration:none;}
-
+.column-center .title h2 i
+{
+    color: #333;
+    font-size: 0.8em;
+}
 .column-center .title h2 a:hover,
 .column-center .title h3 a:hover { text-decoration: underline;}
 
