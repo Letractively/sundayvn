@@ -149,7 +149,7 @@
                     <?php
                     }
                 ?>
-                
+
                 <!--<li><a href="#">Vietnam Hotels</a></li>
                 <li><a href="#">Cambodia Tours</a></li>
                 <li><a href="#">Cambodia Hotels</a></li>
@@ -173,7 +173,7 @@
 
                 <div><div>
 
-                        <h2><a href="#">Useful information</a></h2>
+                        <h2>Useful information</h2>
 
                     </div></div>
 
@@ -182,18 +182,52 @@
 
 
             <ul>
+                <?php
+                    $tcate =13;
+                    $tcate = get_category($tcate);
+                    $args = array(
+                    'type'                     => 'post',
+                    'child_of'                 => 13,
 
-                <li><b>Vietnam Guides</b>
-                    <a href="#">Climate</a>                                            <a href="#">Climate</a>
-                    <a href="#">Climate</a>
+                    'orderby'                  => 'name',
+                    'order'                    => 'ASC',
+                    'hide_empty'               => 1,
+                    'hierarchical'             => 1,
+                    'taxonomy'                 => 'category',
+                    'pad_counts'               => false );
+                    $tcates  = get_categories($args);
+                    foreach ( $tcates as $tsubcate)
+                    {
+                    ?>
+                    <li><b><?php echo $tsubcate->name ?></b>
+                        <?php
+                            $args = array(
+                            'category'        => $tsubcate->term_id,
+                            'orderby'         => 'post_date',
+                            'order'           => 'DESC',
 
-                </li>
+                            'post_type'       => 'post',
 
-                <li><b>In Vietnam</b>
-                    <a href="#" title="This page The World Wide Web Consortium (W3C)">Vietnam Currency</a>
-                    <a href="#" title="This page The World Wide Web Consortium (W3C)">Government Agencies</a>
+                            'post_status'     => 'publish' ); 
+                            $tposts = get_posts($args);
+                            foreach ($tposts as $tpost)
+                            {
+                            ?>
+                            <a href="<?php echo get_permalink($tpost->ID); ?>"><?php echo $tpost->post_title; ?></a>
+                            <?php
+                            }
+                        ?>                                       
 
-                </li>   
+                    </li>
+                    <?php
+                    }
+                ?>
+
+                <!--<li><b>In Vietnam</b>
+                <a href="#" title="This page The World Wide Web Consortium (W3C)">Vietnam Currency</a>
+                <a href="#" title="This page The World Wide Web Consortium (W3C)">Government Agencies</a>
+
+                </li>-->   
 
             </ul>
 
