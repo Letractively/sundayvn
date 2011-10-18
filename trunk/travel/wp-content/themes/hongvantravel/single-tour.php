@@ -69,7 +69,7 @@
                                                 </div>
                                             </div>
                                             <div class="text-box">
-                                                <div class="fleft"><img src="<?php echo $feature_image[0]; ?>" /></div>
+                                                <?php if($feature_image[0]): ?><div class="fleft"><img src="<?php echo $feature_image[0]; ?>" /></div><?php endif; ?>
                                                 <?php the_content(); ?>
                                             </div>
                                             <div class="link-edit"></div>    
