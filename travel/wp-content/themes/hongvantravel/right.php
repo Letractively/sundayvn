@@ -39,29 +39,29 @@
     ?>
     <div class="textwidget">
     <?php
-        $page_id = 179;
-            $page = get_page($page_id);
+        $intpage_id = 179;
+            $page = get_page($intpage_id);
      
     ?>
         <h3 class="alonelabel"><a href="<?php echo get_permalink($page->ID); ?>"><?php echo $page->post_title; ?></a></h3>
         <?php
-            $page_id = 171;
-            $page = get_page($page_id);
+            $intpage_id = 171;
+            $page = get_page($intpage_id);
         ?>
         <?php
             echo $page->post_content;
         ?>
          <?php
-        $page_id = 183;
-            $page = get_page($page_id);
+        $intpage_id = 183;
+            $page = get_page($intpage_id);
      
     ?>
  
         <h3 class="alonelabel"><a href="<?php echo get_permalink($page->ID); ?>"><?php echo $page->post_title; ?></a></h3>
       
        <?php
-            $page_id = 175;
-            $page = get_page($page_id);
+            $intpage_id = 175;
+            $page = get_page($intpage_id);
         ?>
         <?php
             echo $page->post_content;

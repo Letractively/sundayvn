@@ -60,9 +60,10 @@
                                 <div class="column-center">
                                     <div class="post hentry" id="post-<?php echo $post->ID; ?>">
                                         <div class="indent">
-
+                                         
                                             <div class="title">
 <?php
+    $post = get_post(get_the_ID());
      $date = new DateTime($post->post_date);
 ?>
 

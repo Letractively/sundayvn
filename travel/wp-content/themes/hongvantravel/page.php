@@ -58,9 +58,10 @@
 
 
                                 <div class="column-center">
+                                    
                                 <?php
-                                
-    $page = get_page($page_id);
+                  
+    $page = get_page($_GET['page_id']);
 ?>
                                     <div class="post hentry" id="post-<?php echo $page->ID; ?>">
                                         <div class="indent">

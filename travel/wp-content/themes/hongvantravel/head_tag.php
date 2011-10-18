@@ -1,7 +1,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 
-
+  <base href="<?php bloginfo('url'); ?>/" />
         <title><?php
                 global $page, $paged;
 
