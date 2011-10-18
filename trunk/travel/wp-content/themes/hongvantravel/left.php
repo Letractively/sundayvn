@@ -19,7 +19,7 @@
 
                                                     'height', '220',
 
-                                                    'src', 'Untitled-1',
+                                                    'src', 'http://localhost/travel/Untitled-1',
 
                                                     'quality', 'high',
 
@@ -67,7 +67,7 @@
 
                                                     <param name="allowFullScreen" value="false" />
 
-                                                    <param name="movie" value="Untitled-1.swf" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" />    <embed src="Untitled-1.swf" quality="high" wmode="transparent" bgcolor="#ffffff" width="174" height="220" name="Untitled-1" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                                    <param name="movie" value="Untitled-1.swf" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" />    <embed src="http://localhost/travel/Untitled-1.swf" quality="high" wmode="transparent" bgcolor="#ffffff" width="174" height="220" name="Untitled-1" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
 
                                                 </object>
 
