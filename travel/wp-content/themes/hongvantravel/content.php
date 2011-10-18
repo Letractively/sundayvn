@@ -1,12 +1,15 @@
 <?php
 
-    $tour_categories = get_terms( 'tourcategory', array(
-    'order'    => 'DESC',
+   $tour_categories = get_terms( 'tourcategory', array(
+    'order'    => 'ASC',
+    'orderby'   =>'id',
     'hide_empty' => 0
     ) );
-
+    $i = 1;
     foreach ( $tour_categories as $tourCategory)
     {
+        if ($i > 4)
+            break;
     ?>
     <div class="title-page01">
 
@@ -61,6 +64,7 @@
     <div style=" clear: both;"></div>
 
     <?php
+    $i++;
     }
 ?>
 <?php
