@@ -58,6 +58,17 @@
 
 
                                 <div class="column-center">
+                                    <div class="title-page01">
+                                        <?php
+                                            $term_data = get_term_by('slug',$term,'tourcategory');
+                                        ?>
+                                        <h2><?php echo $term_data->name ?></h2>
+                                        <p></p>
+                                        <img style="display: block; width: 100%;max-height: 200px;" src="<?php echo get_taxonomy_image($term_data->term_taxonomy_id); ?>"  />
+                                        <p></p>
+                                        <div class="text-box"><?php echo $term_data->description ?></div>
+                                        <p></p>
+                                    </div>
                                     <?php
                                         get_template_part('loop_tour');
                                     ?>
