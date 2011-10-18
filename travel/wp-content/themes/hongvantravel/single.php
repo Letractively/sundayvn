@@ -58,33 +58,29 @@
 
 
                                 <div class="column-center">
-                                    <div class="post hentry" id="post-<?php echo $post->ID; ?>">
+                                    <?php
+                                        if(have_posts()):
+                                            the_post();
+                                            $feature_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'thumbnail');
+                                    ?>
+                                    <div class="post hentry" id="post-<?php the_ID(); ?>">
                                         <div class="indent">
-                                         
                                             <div class="title">
-<?php
-    $post = get_post(get_the_ID());
-     $date = new DateTime($post->post_date);
-?>
-
-                                                <h2 class="single">
-                                                    <a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a>&nbsp;<i><?php echo get_post_meta($post->ID, 'time_tour',true); ?></i>
-                                                </h2>
-
+                                                <h2><?php the_title(); ?>&nbsp;<i><?php echo get_post_meta($post->ID, 'time_tour',true); ?></i></h2>
                                                 <div class="date">
-
-                                                    <?php echo $date->format('F'); ?>, <?php echo intToDayName($date->format('w')); ?> <?php echo $date->format('d') ?>, <?php echo $date->format('Y') ?> @ <span><?php echo $date->format('H:i A'); ?></span>
+                                                    <?php echo get_the_date('l, F j, Y @ h:i A'); ?><br>
                                                 </div>
-
                                             </div>
-
                                             <div class="text-box">
-
-                                                <p><?php echo $post->post_content; ?>&nbsp;</p>
+                                                <?php if($feature_image[0]): ?><div class="fleft"><img src="<?php echo $feature_image[0]; ?>" /></div><?php endif; ?>
+                                                <?php the_content(); ?>
                                             </div>
                                             <div class="link-edit"></div>    
                                         </div>
                                     </div>
+                                    <?php
+                                        endif;
+                                    ?>
                                 </div>
 
                             </div>    
