@@ -1,19 +1,57 @@
-<div class="search">
+<?php
+/**
+ * The template for displaying Search Results pages.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Eleven
+ * @since Twenty Eleven 1.0
+ */
 
-    <div class="indent">
-        <div class="emailandcontact" align="right">
+get_header(); ?>              1111111111111111111111111111
 
-            <b>email:</b> <a href="mailto:vphat28@gmail.com">vphat28@gmail.com</a><br />
-            <b>contact no:</b> 0908501056<br />
+		<section id="primary">
+			<div id="content" role="main">
 
+			<?php if ( have_posts() ) : ?>
 
-        </div>
-        <form method="get" id="searchform" action="http://osc.template-help.com/wordpress_27338">
+				<header class="page-header">
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				</header>
 
-            <input type="text" class="text" value="" name="s" id="s" /><input class="but" type="image" src="http://osc.template-help.com/wordpress_27338/wp-content/themes/theme998/images/search.gif" value="submit" />
+				<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
-        </form>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-    </div>
+					<?php
+						/* Include the Post-Format-specific template for the content.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 */
+						get_template_part( 'content', get_post_format() );
+					?>
 
-                        </div>
+				<?php endwhile; ?>
+
+				<?php twentyeleven_content_nav( 'nav-below' ); ?>
+
+			<?php else : ?>
+
+				<article id="post-0" class="post no-results not-found">
+					<header class="entry-header">
+						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
+					</header><!-- .entry-header -->
+
+					<div class="entry-content">
+						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyeleven' ); ?></p>
+						<?php get_search_form(); ?>
+					</div><!-- .entry-content -->
+				</article><!-- #post-0 -->
+
+			<?php endif; ?>
+
+			</div><!-- #content -->
+		</section><!-- #primary -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

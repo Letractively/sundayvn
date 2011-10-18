@@ -7,84 +7,54 @@
 
     foreach ( $tour_categories as $tourCategory)
     {
-
-        //        $img = wp_get_attachment_image_src( $tourCategory->image_id, 'thumbnail' );
-        //        if ( isset( $img[0] ) ) {
-        //            $src = $img[0];
-        //        }
     ?>
     <div class="title-page01">
 
-        <h2><?php echo $tourCategory->name; ?></h2>
+        <h2><a href="<?php echo get_term_link($tourCategory->slug, 'tourcategory'); ?>"><?php echo $tourCategory->name; ?></a></h2>
         <a href="<?php echo get_term_link($tourCategory->slug, 'tourcategory'); ?>"><img style="display: block; width: 100%;max-height: 200px;" src="<?php echo get_taxonomy_image($tourCategory->term_taxonomy_id); ?>"  /></a>
 
     </div>
 
     <?php
-        global $wpdb;
-
         //list 2 item
-        $termPosts = $wpdb->get_results
-        ( "SELECT *  
-        FROM 
-        {$wpdb->posts},{$wpdb->term_relationships}
-        WHERE
-        `post_type`                 =       'tour'
-        AND
-        `term_taxonomy_id`          =       '{$tourCategory->term_id}'
-        AND
-        `object_id`                 =       {$wpdb->posts}.`ID`
-
-        ORDER BY
-        ID DESC
-        limit 0,2
-        " );
-        $wpdb->flush(); 
-        /*
-        [0] => stdClass Object
-        (
-        [ID] => 115
-        [post_author] => 1
-        [post_date] => 2011-10-14 15:16:23
-        [post_date_gmt] => 2011-10-14 15:16:23
-        [post_content] => Get well and truly ‘off the beaten track’ in these two fascinating countries. Instead of flying between the major destinations, why not travel overland and cross the border near the 4000 islands area of the Mekong? After discovering ancient Khmer temples in southern Laos venture to remote Ratanakiri province in northeastern Cambodia. Enter a world of mountains, elephants and ethnic minorities before ending your adventure in Phnom Penh, the capital of the Kingdom.
-        [post_title] => Undiscovered Laos and Cambodia
-        [post_excerpt] => 
-        [post_status] => publish
-        [comment_status] => open
-        [ping_status] => open
-        [post_password] => 
-        [post_name] => undiscovered-laos-and-cambodia
-        [to_ping] => 
-        [pinged] => 
-        [post_modified] => 2011-10-14 15:16:23
-        [post_modified_gmt] => 2011-10-14 15:16:23
-        [post_content_filtered] => 
-        [post_parent] => 0
-        [guid] => http://localhost/travel/?post_type=tour&p=115
-        [menu_order] => 0
-        [post_type] => tour
-        [post_mime_type] => 
-        [comment_count] => 0
-        [object_id] => 115
-        [term_taxonomy_id] => 7
-        [term_order] => 0
-        )
-        */
-
-        foreach ( $termPosts as $post )
-        {
-            //$date = new DateTime($post->post_date);
-        get_template_part('tour_list_template');
-        }
+        $args = array(
+            'numberposts'     => 2,
+            'post_type'       => 'tour',
+            'tourcategory'  => $tourCategory->name,
+            'post_status'     => 'publish' );
+        query_posts($args);
+        if(have_posts()):
+            while(have_posts()):
+                the_post();
+                ?>
+                <div class="post hentry" id="post-<?php the_ID(); ?>">
+                    <div class="indent">
+                        <div class="title">
+                            <h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>&nbsp;<i><?php echo get_post_meta($post->ID, 'time_tour',true); ?></i></h2>
+                            <div class="date">
+                                <?php echo get_the_date('l, F j, Y @ h:i A'); ?><br>
+                            </div>
+                        </div>
+                        <div class="text-box">
+                            <?php 
+                                the_excerpt(); 
+                            ?>
+                        </div>
+                        <div class="link-edit"></div>    
+                    </div>
+                </div>
+                <?php
+            endwhile;
+        endif;
+        
     ?>
 
 
-    <div class="navigation nav-top">
+    <div class="navigation nav-top nopadding">
 
-        <div class="alignleft"><a href="<?php echo get_term_link($tourCategory->slug, 'tourcategory'); ?>" >View all</a></div>
+        <div class="alignleft"></div>
 
-        <div class="alignright"></div>
+        <div class="alignright"><a href="<?php echo get_term_link($tourCategory->slug, 'tourcategory'); ?>" >View all</a></div>
 
     </div>
 

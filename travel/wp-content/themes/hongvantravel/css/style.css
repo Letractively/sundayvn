@@ -384,7 +384,7 @@ text-align: left;
     clear:both;
     overflow:hidden; height:100%;
     font-size:1.2em; line-height:1.2em;
-    padding:6px 0px 0px 5px;
+    padding:0px 0px 0px 5px;
 }
 
 .text-box p { padding:0px 0px 18px 0px;}
@@ -864,6 +864,14 @@ ol.commentlist  li { list-style: none; font-size:12px;
     margin-bottom: 15px;
     font-size: 16px;
     text-decoration: none;
+}
+.nopadding{
+    padding: 0px 0px 10px 0px !important;
+}
+.title-page01 h2 a,
+.title-page01 h2 a:hover{
+    font-size: 16px;
+    text-decoration: none;    
     text-align: center;
     
 }
