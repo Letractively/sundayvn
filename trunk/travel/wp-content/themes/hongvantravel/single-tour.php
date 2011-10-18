@@ -66,7 +66,7 @@
 
                                             <div class="title">
 
-                                                <h2>
+                                                <h2 class="single">
                                                     <a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a>&nbsp;<i><?php echo get_post_meta($post->ID, 'time_tour',true); ?></i>
                                                 </h2>
 
@@ -79,7 +79,7 @@
 
                                             <div class="text-box">
 
-                                                <p><?php echo gioihankitu($post->post_content,362); ?>&nbsp;</p>
+                                                <p><?php echo $post->post_content; ?>&nbsp;</p>
                                             </div>
                                             <div class="link-edit"></div>    
                                         </div>

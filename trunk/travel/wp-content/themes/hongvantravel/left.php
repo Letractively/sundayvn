@@ -118,9 +118,7 @@
 
                                                 <li><a href='#' title='January 2010'>To you, your country and the team a big thank you from the Preston Family!</a><b>John Terry</b></li>
                                                 <li><a href='#' title='October 2009'>Just to let you know that we had a great trip. We liked most of the hotels and the guides. The guide in Hanoi was ...</a><b>John Terry</b></li>
-                                                <li><a href='#' title='January 2010'>To you, your country and the team a big thank you from the Preston Family!</a><b>Paul Garner</b></li>
-                                                <li><a href='#' title='October 2009'>Just to let you know that we had a great trip. We liked most of the hotels and the guides. The guide in Hanoi was ...</a><b>Obi Mikel</b></li>                                                <li><a href='#' title='January 2010'>To you, your country and the team a big thank you from the Preston Family!</a><b>John Terry</b></li>
-                                                <li><a href='#' title='October 2009'>Just to let you know that we had a great trip. We liked most of the hotels and the guides. The guide in Hanoi was ...</a><b>John Terry</b></li>
+
                                             </ul>
 
                                         </div></div>
