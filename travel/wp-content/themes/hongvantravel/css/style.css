@@ -109,7 +109,7 @@ input.text, select, textarea { padding:2px 0px 3px 6px; border:1px solid #f3efde
 
 
 /*** Search ***/
-.search { float:left;}
+.search { float:right;}
 .search .emailandcontact
 { 
     text-align: right;
@@ -128,7 +128,7 @@ input.text, select, textarea { padding:2px 0px 3px 6px; border:1px solid #f3efde
 .search h2 { font-size:13px; color:#4a4a4a; text-transform:uppercase; padding:0px 0px 6px 0px; margin:0px 0px 0px -1px;}
 
 .search form { background:url(images/search-bgr.gif) no-repeat 0 4px;}
-.search .text { width:312px; padding:4px 0px 6px 10px; border:0; background: transparent; margin:2px 15px 0px 0px;}
+.search .text { width:240px; padding:4px 0px 6px 10px; border:0; background: transparent; margin:2px 15px 0px 0px;}
 .search .but { cursor: pointer; margin:0px 0px 0px 0px;}
 
 /*** Flash ***/
@@ -253,8 +253,8 @@ input.text, select, textarea { padding:2px 0px 3px 6px; border:1px solid #f3efde
 
 /*** widget_text ***/
 .textwidget {
-text-align: center;
- color:#515151; font-size:1.2em; line-height:1.3em; padding:0px 10px 15px 17px;}
+text-align: left;
+ color:#515151; font-size:1.2em; line-height:1.3em; }
 .textwidget a {}
 
 /*** widget_other ***/
@@ -862,6 +862,22 @@ ol.commentlist  li { list-style: none; font-size:12px;
 .alonelabel
 {
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
+    text-align: center;
+    
+}
+.single
+{
+    font-size: 1.9em !important;
+}
+.textwidget ul 
+{
+    margin-bottom: 15px;
+}
+.textwidget ul li
+{
+    padding-left: 10px;
+  background: url(images/marker.gif) no-repeat left 4px;
+  margin-bottom: 5px;
 }

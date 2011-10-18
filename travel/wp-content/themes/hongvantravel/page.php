@@ -58,16 +58,21 @@
 
 
                                 <div class="column-center">
-                                    <div class="post hentry" id="post-<?php echo $post->ID; ?>">
+                                <?php
+                                
+    $page = get_page($page_id);
+?>
+                                    <div class="post hentry" id="post-<?php echo $page->ID; ?>">
                                         <div class="indent">
 
                                             <div class="title">
 <?php
-     $date = new DateTime($post->post_date);
+
+     $date = new DateTime($page->post_date);
 ?>
 
-                                                <h2>
-                                                    <a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a>&nbsp;<i><?php echo get_post_meta($post->ID, 'time_tour',true); ?></i>
+                                                <h2 class="single">
+                                                    <a href="<?php echo get_permalink($page->ID); ?>" rel="bookmark" title="<?php echo $page->post_title; ?>"><?php echo $page->post_title; ?></a>&nbsp;<i><?php echo get_post_meta($page->ID, 'time_tour',true); ?></i>
                                                 </h2>
 
                                                 <div class="date">
@@ -79,7 +84,7 @@
 
                                             <div class="text-box">
 
-                                                <p><?php echo gioihankitu($post->post_content,362); ?></p>
+                                                <p><?php echo $page->post_content; ?></p>
                                             </div>
                                             <div class="link-edit"></div>    
                                         </div>

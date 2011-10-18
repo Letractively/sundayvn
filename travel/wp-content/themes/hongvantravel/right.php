@@ -2,138 +2,119 @@
 
 
 
-                                    <div class="widget widget-livesupport">
+    <div class="widget widget-livesupport">
 
-                                        <div class="widget-bgr">
-
-
-
-                                            <div class="title">
+        <div class="widget-bgr">
 
 
 
-                                                <div><div>
-
-                                                        <h2>
-
-                                                            Live Support
-
-                                                        </h2>
-
-                                                    </div></div>
-
-                                            </div>
-
-                                            <div class="widget-content">
-                                                <b>Skype:</b> <a href="ymsgr:sendIM?ballackvn2000">game24h</a><br />
-                                                <b>Yahoo:</b> <a href="skype:vphat28?chat">game24h</a><br />
-                                                <b>Hotline:</b> 09085405624
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                    <div class="widget widget_photos">
-
-                                        <div class="widget-bgr">
+            <div class="title">
 
 
 
-                                            <div class="title">
+                <div><div>
 
+                        <h2>
 
+                            Live Support
 
-                                                <div><div>
+                        </h2>
 
-                                                        <h2>
+                    </div></div>
 
-                                                            News
+            </div>
 
-                                                        </h2>
+            <div class="widget-content">
+                <b>Skype:</b> <a href="ymsgr:sendIM?ballackvn2000">game24h</a><br />
+                <b>Yahoo:</b> <a href="skype:vphat28?chat">game24h</a><br />
+                <b>Hotline:</b> 09085405624
+            </div>
 
-                                                    </div></div>
+        </div>
 
-                                            </div>
+    </div>
 
-                                            <div class="photos">
+    <?php
+        get_template_part('news-mod');
+    ?>
+    <div class="textwidget">
+    <?php
+        $page_id = 179;
+            $page = get_page($page_id);
+     
+    ?>
+        <h3 class="alonelabel"><a href="<?php echo get_permalink($page->ID); ?>"><?php echo $page->post_title; ?></a></h3>
+        <?php
+            $page_id = 171;
+            $page = get_page($page_id);
+        ?>
+        <?php
+            echo $page->post_content;
+        ?>
+         <?php
+        $page_id = 183;
+            $page = get_page($page_id);
+     
+    ?>
+ 
+        <h3 class="alonelabel"><a href="<?php echo get_permalink($page->ID); ?>"><?php echo $page->post_title; ?></a></h3>
+      
+       <?php
+            $page_id = 175;
+            $page = get_page($page_id);
+        ?>
+        <?php
+            echo $page->post_content;
+        ?>   
 
-                                                <a href="#"><img class="news_photo" style="float: left; width: 70px;height: 70px;" alt="" src="http://osc.template-help.com/wordpress_27338/wp-content/themes/theme998/images/1page-img8.jpg" /></a>Sed massa enim, sodales id commodo eget, ornare ac magna. Cras velit velit, rhoncus non viverra sit amet, laoreet et risus. Aenean ac metus metus.
-                                                <div class="about">
-                                                    <a class="author_photos" href="#">Read more</a>
+    </div>
+    <p align="center">  
+        <object
 
-                                                </div>
+            classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
 
-                                            </div>
+            codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
 
+            id="Movie2"
 
+            width="155" height="250"
 
-                                        </div>
+            >
 
-                                    </div>
+            <param name="movie" value="Movie2.swf">
 
-                                    <div class="textwidget">
-                                        <h3 class="alonelabel"><a href="#">Why book with us</a></h3>
-                                        <p>
-                                            Cras velit velit, rhoncus non viverra sit<br />
-                                            amet, laoreet et risus. Aenean ac metus metus. <br />
-                                            Duis sem neque, lacinia id porttitor nec.
-                                        </p>
+            <param name="bgcolor" value="#FFFFFF">
 
-                                        <h3 class="alonelabel"><a href="#">Steps book tours with us</a></h3>
-                                        <p>
-                                            Cras velit velit, rhoncus non viverra sit<br />
-                                            amet, laoreet et risus. Aenean ac metus metus. <br />
-                                            Duis sem neque, lacinia id porttitor nec.
-                                        </p>
+            <param name="quality" value="high">
 
-                                    </div>
-                                    <p align="center">  <object
+            <param name="allowscriptaccess" value="samedomain">
 
-        classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+            <embed
 
-        codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                type="application/x-shockwave-flash"
 
-        id="Movie2"
+                pluginspage="http://www.adobe.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
 
-        width="155" height="250"
+                name="Movie2"
 
-      >
+                width="155" height="250"
 
-        <param name="movie" value="Movie2.swf">
+                src="Movie2.swf"
 
-        <param name="bgcolor" value="#FFFFFF">
+                bgcolor="#FFFFFF"
 
-        <param name="quality" value="high">
+                quality="high"
 
-        <param name="allowscriptaccess" value="samedomain">
+                allowscriptaccess="samedomain"
 
-        <embed
+                >
 
-          type="application/x-shockwave-flash"
+                <noembed>
 
-          pluginspage="http://www.adobe.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
+                </noembed>
 
-          name="Movie2"
+            </embed>
 
-          width="155" height="250"
-
-          src="Movie2.swf"
-
-          bgcolor="#FFFFFF"
-
-          quality="high"
-
-          allowscriptaccess="samedomain"
-
-        >
-
-          <noembed>
-
-          </noembed>
-
-        </embed>
-
-      </object>
-</p>
-                                </div>
+        </object>
+    </p>
+</div>

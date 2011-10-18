@@ -19,7 +19,7 @@
 
             <div class="text-box">
 
-                <p><?php echo gioihankitu($post->post_content,362); ?>&nbsp;<a href="<?php echo get_permalink($post->ID); ?>" class="more-link">more</a></p>
+                <p><?php echo gioihankitu($post->post_content,150); ?>&nbsp;<a href="<?php echo get_permalink($post->ID); ?>" class="more-link">more</a></p>
             </div>
             <div class="link-edit"></div>    
         </div>

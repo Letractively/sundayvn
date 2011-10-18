@@ -58,32 +58,16 @@
 
 
                                 <div class="column-center">
-                                    <div class="post hentry" id="post-<?php echo $post->ID; ?>">
-                                        <div class="indent">
+                                    <?php            
+                                        while (have_posts()) : the_post();
 
-                                            <div class="title">
-<?php
-     $date = new DateTime($post->post_date);
-?>
-
-                                                <h2 class="single">
-                                                    <a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a>&nbsp;<i><?php echo get_post_meta($post->ID, 'time_tour',true); ?></i>
-                                                </h2>
-
-                                                <div class="date">
-
-                                                    <?php echo $date->format('F'); ?>, <?php echo intToDayName($date->format('w')); ?> <?php echo $date->format('d') ?>, <?php echo $date->format('Y') ?> @ <span><?php echo $date->format('H:i A'); ?></span>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="text-box">
-
-                                                <p><?php echo $post->post_content; ?>&nbsp;</p>
-                                            </div>
-                                            <div class="link-edit"></div>    
-                                        </div>
-                                    </div>
+                                            $feature_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'fullsize');
+                                        ?>
+                                        <?php
+                                          echo "AA";
+                                            endwhile;
+                                        wp_reset_query();
+                                    ?>
                                 </div>
 
                             </div>    
