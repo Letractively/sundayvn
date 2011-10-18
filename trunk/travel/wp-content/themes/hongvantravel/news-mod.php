@@ -2,7 +2,16 @@
 
     $intcategory_id = 5;
     $tcat = get_category($intcategory_id );
-    $tposts = query_posts('cat=5&order=desc&orderby=ID&posts_per_page=1');
+    $args =    array(
+      'numberposts'     => 5,
+    'offset'          => 0,
+    'category'        => $intcategory_id,
+    'orderby'         => 'post_date',
+    'order'           => 'DESC',
+    );
+    $tposts = get_posts($args);
+
+    //'cat=5&order=desc&orderby=ID&posts_per_page=1');
     $tpost = $tposts[0];  
     $feature_image = wp_get_attachment_image_src(get_post_thumbnail_id($tpost->ID),'fullsize');
 
