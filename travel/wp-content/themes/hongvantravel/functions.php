@@ -46,8 +46,92 @@
         'supports' => array('title','editor','author','thumbnail','comments')
         ); 
         register_post_type('tour',$args);
+        
+        $labels = array(
+        'name' => _x('Travelers Reviews', 'post type general name'),
+        'singular_name' => _x('Travelers Review', 'post type singular name'),
+        'add_new' => _x('Add New', 'travelers review'),
+        'add_new_item' => __('Add New Travelers Review'),
+        'edit_item' => __('Edit Travelers Review'),
+        'new_item' => __('New Travelers Review'),
+        'all_items' => __('All Travelers Reviews'),
+        'view_item' => __('View Travelers Review'),
+        'search_items' => __('Search Travelers Reviews'),
+        'not_found' =>  __('No travelers reviews found'),
+        'not_found_in_trash' => __('No travelers reviews found in Trash'), 
+        'parent_item_colon' => '',
+        'menu_name' => 'Travelers Reviews'
+
+        );
+        $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true, 
+        'show_in_menu' => true, 
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true, 
+        'hierarchical' => false,
+        'menu_position' => 5,
+        'supports' => array('title','editor','author','thumbnail','comments')
+        ); 
+        register_post_type('travelersreview',$args);
 
         //Add custom field
+        function add_travelers_review_box() {
+            add_meta_box('travelers_review_box', 'Traveler', 'travelers_review_box', 'travelersreview', 'side', 'core');
+        }
+        function add_theme_menus2() {
+            if (!is_admin())
+                return;
+            add_action('admin_menu', 'add_travelers_review_box');
+            add_action('save_post', 'save_travelers_review_data');
+        }
+        function travelers_review_box($post) {
+            $traveler_name = get_post_meta($post->ID, 'traveler_name', true);
+        ?>
+        <input type="hidden" name="theme_custom_fields" value="1" />
+        <input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="<?php echo wp_create_nonce(plugin_basename(__FILE__)); ?>" />
+        <table border="0">
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>: <input type="text" name="traveler_name" value="<?php echo $traveler_name; ?>" size="30"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <?php    
+    }
+    function save_travelers_review_data($post_id) {
+        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
+            return $post_id;
+
+        if ('page' == $_POST['post_type']) {
+            if (!current_user_can('edit_page', $post_id))
+                return $post_id;
+        } else {
+            if (!current_user_can('edit_post', $post_id))
+                return $post_id;
+        }
+
+        $post = get_post($post_id);
+        if ($post->post_type == 'travelersreview') {
+            if ($_POST['theme_custom_fields']) {
+
+                $metas = array('traveler_name');
+                foreach ($metas as $k => $v) {
+                    if (add_post_meta($post_id, $v, $_POST[$v], true) == false)
+                        update_post_meta($post_id, $v, $_POST[$v]);
+                }
+            }
+        }
+        return $theme;
+    }
+    add_theme_menus2();
+    
+     //Add custom field
         function add_tour_box() {
             add_meta_box('tour_box', 'Tour Information', 'tour_box', 'tour', 'side', 'core');
         }
