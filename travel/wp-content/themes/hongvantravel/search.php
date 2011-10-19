@@ -1,57 +1,91 @@
-<?php
-/**
- * The template for displaying Search Results pages.
- *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
- */
 
-get_header(); ?>              1111111111111111111111111111
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-		<section id="primary">
-			<div id="content" role="main">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
-			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				</header>
 
-				<?php twentyeleven_content_nav( 'nav-above' ); ?>
+    <head profile="http://gmpg.org/xfn/11">
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+        <?php
+            get_template_part('head_tag');
+        ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
 
-				<?php endwhile; ?>
 
-				<?php twentyeleven_content_nav( 'nav-below' ); ?>
+    </head>
 
-			<?php else : ?>
+    <body>
 
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentyeleven' ); ?></h1>
-					</header><!-- .entry-header -->
 
-					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentyeleven' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
 
-			<?php endif; ?>
 
-			</div><!-- #content -->
-		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+        <div class="tail-right"></div>
+
+        <div class="main">
+
+
+
+            <div class="main-width">
+
+
+
+                <div class="main-bgr">
+
+
+
+                    <?php
+                        get_template_part('head');
+                    ?>
+
+                    <div class="content">
+                        <?php
+                            get_template_part('slideshow');
+                        ?>
+                        <div class="content-bgr">
+
+                            <?php
+                                get_template_part('left');    
+                            ?>
+                            <div class="center">
+
+                                <?php
+                                    get_template_part('right');    
+                                ?>
+
+
+
+
+                                <div class="column-center">
+                                    <?php
+                                        get_template_part('loop_tour');
+                                    ?>
+                                </div>
+
+                            </div>    
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <?php 
+                get_template_part('bottom');
+            ?>
+        </div>
+
+
+
+
+
+    </body>
+
+</html>
