@@ -115,9 +115,19 @@
                 </div>
 
                 <ul>
-
-                    <li><a href='#' title='January 2010'>To you, your country and the team a big thank you from the Preston Family!</a><b>John Terry</b></li>
-                    <li><a href='#' title='October 2009'>Just to let you know that we had a great trip. We liked most of the hotels and the guides. The guide in Hanoi was ...</a><b>John Terry</b></li>
+                    <?php $args = array(
+                        'numberposts'     => 2,
+                        'orderby'         => 'post_date',
+                        'order'           => 'DESC' ); 
+                        $tposts = get_posts($args);
+                        foreach ( $tposts as $tpost )
+                        {
+                        ?>
+                        <li><a href='#' title='January 2010'><?php echo gioihankitu( $tpost->post_content,150); ?></a><b><?php echo get_post_meta($tpost->ID, 'traveler_name',true); ?></b></li>
+                        <?php
+                        }
+                    ?>
+                    <!--<li><a href='#' title='October 2009'>Just to let you know that we had a great trip. We liked most of the hotels and the guides. The guide in Hanoi was ...</a><b>John Terry</b></li>-->
 
                 </ul>
 
