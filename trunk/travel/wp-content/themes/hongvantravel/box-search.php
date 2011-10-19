@@ -8,9 +8,9 @@
 
 
         </div>
-        <form method="get" id="searchform" action="http://osc.template-help.com/wordpress_27338">
+        <form method="post" id="searchform" action="">
 
-            <input type="text" class="text" value="" name="s" id="s" /><input class="but" type="image" src="http://osc.template-help.com/wordpress_27338/wp-content/themes/theme998/images/search.gif" value="submit" />
+            <input type="text" class="text" value="<?php the_search_query(); ?>" name="s" id="s" /><input class="but" type="image" src="<?php echo bloginfo('template_url'); ?>/images/search.gif" value="submit" />
 
         </form>
 

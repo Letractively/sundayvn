@@ -5,7 +5,7 @@
             <div class="menu">
                 <ul>
                     <li class="page_item page-item-2 current_page_parent"><a href="<?php bloginfo('url'); ?>" title="Home"><span><span>Home</span></span></a></li>
-                    <li class="page_item page-item-22"><a href="#" title="Hotels"><span><span class="has_sub">Destinations</span></span></a>                                    <div class="menu_sub" >
+                    <li class="page_item page-item-22"><a href="#" title="Destinations"><span><span class="has_sub">Destinations</span></span></a>                                    <div class="menu_sub" >
                             <?php
                                 $terms = get_terms('tourcategory');
 
@@ -29,7 +29,7 @@
                         $page = get_page($page_id);
                     ?>
 
-                    <li class="page_item page-item-22"><a href="<?php echo get_permalink( $page->ID ); ?>" title="Hotels"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
+                    <li class="page_item page-item-22"><a href="<?php echo get_permalink( $page->ID ); ?>" title="<?php echo $page->post_title;  ?>"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
 
                     <?php 
                         $page_id = 132;
@@ -37,9 +37,9 @@
                     ?>
 
 
-                    <li class="page_item page-item-28"><a href="<?php echo get_permalink( $page->ID ); ?>" title="Ideas"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
+                    <li class="page_item page-item-28"><a href="<?php echo get_permalink( $page->ID ); ?>" title="<?php echo $page->post_title;  ?>"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
 
-                    <li class="page_item page-item-33"><a href="#" title="Contacts"><span><span>Gallery</span></span></a></li>
+                    <li class="page_item page-item-33"><a href="#" title="Gallery"><span><span>Gallery</span></span></a></li>
 
                     <?php 
                         $page_id = 127;
@@ -53,7 +53,7 @@
 
                     ?>
 
-                    <li class="page_item page-item-24"><a href="<?php echo get_permalink( $page->ID ); ?>" title="Flights"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
+                    <li class="page_item page-item-24"><a href="<?php echo get_permalink( $page->ID ); ?>" title="<?php echo $page->post_title;  ?>"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
 
                 </ul>
 
