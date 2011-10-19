@@ -254,8 +254,8 @@ input.text, select, textarea { padding:2px 0px 3px 6px; border:1px solid #f3efde
 /*** widget_text ***/
 .textwidget {
 text-align: left;
- color:#515151; font-size:1.2em; line-height:1.3em; }
-.textwidget a {}
+ color:#515151; font-size:1.2em; line-height:1.3em; padding-left: 10px;}
+.textwidget a {line-height: 20px;}
 
 /*** widget_other ***/
 .column-right .widget { background:url(images/widget-left.gif) repeat-y 0 0; padding:0px 0px 25px 0px;}
@@ -888,4 +888,10 @@ ol.commentlist  li { list-style: none; font-size:12px;
     padding-left: 10px;
   background: url(images/marker.gif) no-repeat left 4px;
   margin-bottom: 5px;
+}
+.useful a{
+    margin-top: 5px;
+}
+.review a{
+    line-height: 15px;
 }
