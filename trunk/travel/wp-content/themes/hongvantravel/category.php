@@ -51,14 +51,17 @@
                             <div class="center">
 
                                 <?php
-                                    get_template_part('right');    
+                                    get_template_part('right');
+                                    $cate = get_category($cat);    
                                 ?>
 
 
 
 
                                 <div class="column-center">
-                                    <?php            
+                                    <h1><?php print_r($cate->name); ?></h1>
+                                    <?php
+                                        if(have_posts()):            
                                         while (have_posts()) : the_post();
 
                                             $feature_image = wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()),'fullsize');
@@ -66,6 +69,8 @@
                                         <?php
                                             get_template_part('tour_list_template');
                                             endwhile;
+                                            wp_pagenavi();
+                                        endif;
                                         wp_reset_query();
                                     ?>
                                 </div>
