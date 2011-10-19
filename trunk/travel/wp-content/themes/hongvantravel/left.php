@@ -108,25 +108,32 @@
 
                     <div><div>
 
-                            <h2>Travelers Reviews</h2>
+                            <h2><a href="#">Travelers Reviews</a></h2>
 
                         </div></div>
 
                 </div>
 
                 <ul>
-                    <?php $args = array(
+                    <?php
+                        //$tterm = get_term();
+                        $args = array(
                         'numberposts'     => 2,
-                        'orderby'         => 'post_date',
-                        'order'           => 'DESC' ); 
-                        $tposts = get_posts($args);
-                        foreach ( $tposts as $tpost )
-                        {
-                        ?>
-                        <li class="review"><a href='#' title='January 2010'><?php echo gioihankitu( $tpost->post_content,150); ?></a><b><?php echo get_post_meta($tpost->ID, 'traveler_name',true); ?></b></li>
-                        <?php
-                        }
+                        'post_type'       => 'travelersreview',
+                        'post_status'     => 'publish' );
+                        query_posts($args);
+                        if(have_posts()):
+                            while(have_posts()):
+                                the_post();
+                            
+                            ?>
+                            <li><a href='<?php the_permalink(); ?>' title='January 2010'><?php echo gioihankitu( $post->post_content,150); ?></a><b><?php echo get_post_meta($post->ID, 'traveler_name',true); ?></b></li>
+                            <?php
+                                endwhile;
+                            endif;
+                        wp_reset_query();
                     ?>
+
                     <!--<li><a href='#' title='October 2009'>Just to let you know that we had a great trip. We liked most of the hotels and the guides. The guide in Hanoi was ...</a><b>John Terry</b></li>-->
 
                 </ul>
@@ -209,7 +216,7 @@
                     foreach ( $tcates as $tsubcate)
                     {
                     ?>
-                    <li class="useful"><b><?php echo $tsubcate->name ?></b>
+                    <li><b><?php echo $tsubcate->name ?></b>
                         <?php
                             $args = array(
                             'category'        => $tsubcate->term_id,

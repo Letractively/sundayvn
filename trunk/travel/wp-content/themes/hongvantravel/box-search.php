@@ -1,6 +1,7 @@
 <div class="search">
 
     <div class="indent">
+   <!-- <span style="font-size: 2.0em;">Slogan will be here</span>-->
         <div class="emailandcontact" align="right">
 
             <b>email:</b> <a href="mailto:<?php echo get_custom('email'); ?>"><?php echo get_custom('email'); ?></a><br />

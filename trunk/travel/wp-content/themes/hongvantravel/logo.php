@@ -2,8 +2,8 @@
 
                             <div class="indent">
 
-                                <h1 onclick="location.href='<?php bloginfo('url') ?>'">Travel</h1>
-                                <span style="font-size: 2.0em;"><?php echo get_option('blogdescription'); ?></span>
+                                <h1 onclick="location.href='<?php bloginfo('url') ?>'"><img src="<?php bloginfo('template_url') ?>/images/logo.png" /></h1>
+                                
                             </div>
 
                         </div>
