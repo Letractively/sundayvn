@@ -108,7 +108,7 @@
 
                     <div><div>
 
-                            <h2><a href="#">Travelers Reviews</a></h2>
+                            <h2>Travelers Reviews</h2>
 
                         </div></div>
 
@@ -123,7 +123,7 @@
                         foreach ( $tposts as $tpost )
                         {
                         ?>
-                        <li><a href='#' title='January 2010'><?php echo gioihankitu( $tpost->post_content,150); ?></a><b><?php echo get_post_meta($tpost->ID, 'traveler_name',true); ?></b></li>
+                        <li class="review"><a href='#' title='January 2010'><?php echo gioihankitu( $tpost->post_content,150); ?></a><b><?php echo get_post_meta($tpost->ID, 'traveler_name',true); ?></b></li>
                         <?php
                         }
                     ?>
@@ -209,7 +209,7 @@
                     foreach ( $tcates as $tsubcate)
                     {
                     ?>
-                    <li><b><?php echo $tsubcate->name ?></b>
+                    <li class="useful"><b><?php echo $tsubcate->name ?></b>
                         <?php
                             $args = array(
                             'category'        => $tsubcate->term_id,
