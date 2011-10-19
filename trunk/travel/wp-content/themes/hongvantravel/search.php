@@ -58,6 +58,8 @@
 
 
                                 <div class="column-center">
+                                    <h1>Search Results</h1>
+                                    <br/>
                                     <?php
                                         get_template_part('loop_tour');
                                     ?>
