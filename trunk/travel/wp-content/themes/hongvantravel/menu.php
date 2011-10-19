@@ -38,8 +38,14 @@
 
 
                     <li class="page_item page-item-28"><a href="<?php echo get_permalink( $page->ID ); ?>" title="<?php echo $page->post_title;  ?>"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
+                    
+                     <?php 
+                        $page_id = 214 ;
+                        $page = get_page($page_id);
+                    ?>
 
-                    <li class="page_item page-item-33"><a href="#" title="Gallery"><span><span>Gallery</span></span></a></li>
+
+                    <li class="page_item page-item-28"><a href="<?php echo get_permalink( $page->ID ); ?>" title="<?php echo $page->post_title;  ?>"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
 
                     <?php 
                         $page_id = 127;
