@@ -293,7 +293,7 @@ function generate_taxonomy_options($tax_slug, $parent = '', $level = 0) {
 //$limit la do dai toi da cua chuoi
 function gioihankitu($str,$limit,$link = '#')
 {
-
+$str = strip_tags($str);
     if(strlen($str)> $limit)
     {
         $re =  substr($str,0,$limit);
