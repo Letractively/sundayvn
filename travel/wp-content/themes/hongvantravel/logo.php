@@ -1,9 +1,10 @@
-<div class="logo">
+<a style="text-decoration: none" href="<?php echo bloginfo('url'); ?>">
+    <div class="logo">
 
-    <div class="indent">
+        <div class="indent">
 
-        <h1 onclick="location.href='<?php bloginfo('url') ?>'">aaa as</h1>
+            <h1 style="font-size: 2.0em;"><?php echo get_option('blogdescription'); ?></h1>
+        </div>
 
     </div>
-
-</div>
+                        </a>
