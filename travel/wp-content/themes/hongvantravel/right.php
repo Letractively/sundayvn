@@ -25,9 +25,30 @@
             </div>
 
             <div class="widget-content">
-                <b>Skype:</b> <a href="ymsgr:sendIM?ballackvn2000">game24h</a><br />
-                <b>Yahoo:</b> <a href="skype:vphat28?chat">game24h</a><br />
-                <b>Hotline:</b> 09085405624
+                <?php
+                    $skype = preg_split('/\,/',get_custom('skype'));
+                    if(is_array($skype)){
+                        foreach($skype as $k){
+                            echo "<b>Skype:</b> <a href='skype:$k?chat'>$k</a><br />";    
+                        }
+                    }
+                ?>
+                <?php
+                    $yahoo = preg_split('/\,/',get_custom('yahoo'));
+                    if(is_array($yahoo)){
+                        foreach($yahoo as $y){
+                            echo "<b>Yahoo:</b> <a href='ymsgr:sendIM?$y'>$y</a><br />";    
+                        }
+                    }
+                ?>
+                <?php
+                    $hotline = preg_split('/\,/',get_custom('hotline'));
+                    if(is_array($hotline)){
+                        foreach($hotline as $h){
+                            echo "<b>Hotline:</b> $h<br />";    
+                        }
+                    }
+                ?>
             </div>
 
         </div>
