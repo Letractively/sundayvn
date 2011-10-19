@@ -93,10 +93,8 @@ input.text, select, textarea { padding:2px 0px 3px 6px; border:1px solid #f3efde
 }
 .logo .indent { overflow:hidden;/* height:100%;*/ padding:18px 0px 0px 12px;}
 .logo h1 {
-    display:block; overflow:hidden;
-    width:200px; height:60px;
- text-align: right;
-    font-size:2.1em; color:#fff; text-indent:-1000em; cursor:pointer;
+    font-size: 2.0em;
+margin: 48px 0px 0px 15px;
 }
 .logo h1:hover { text-decoration:none;}
 
