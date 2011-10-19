@@ -3,8 +3,8 @@
     <div class="indent">
         <div class="emailandcontact" align="right">
 
-            <b>email:</b> <a href="mailto:vphat28@gmail.com">vphat28@gmail.com</a><br />
-            <b>contact no:</b> 0908501056<br />
+            <b>email:</b> <a href="mailto:<?php echo get_custom('email'); ?>"><?php echo get_custom('email'); ?></a><br />
+            <b>contact no:</b> <?php echo get_custom('phone'); ?><br />
 
 
         </div>
