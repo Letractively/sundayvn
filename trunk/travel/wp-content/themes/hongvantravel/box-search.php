@@ -10,7 +10,7 @@
         </div>
         <form method="get" id="searchform" action="">
 
-            <input type="text" class="text" value="<?php the_search_query(); ?>" name="s" id="s" /><input class="but" type="image" src="<?php echo bloginfo('template_url'); ?>/images/search.gif" value="submit" />
+            <input type="text" class="text" value="<?php the_search_query(); ?>" name="s" id="s" /> <input class="but" type="image" src="<?php echo bloginfo('template_url'); ?>/images/search.gif" value="submit" />
 
         </form>
 
