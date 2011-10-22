@@ -175,7 +175,7 @@ $out.='
 
 
 <!--start of enquiry form--><div class="simple-wp-booking-enquiry-form">
- <h2>Send an enquiry</h2>
+ <h2>Booking</h2>
  <small style="color: red;">(ALL fields required)</small>
  <form action="'. get_permalink().'?bform=1#simple-wp-booking-enquiry-form" method="post" id="enqform" name="enqform"><input name="pid" id="pid" value="'. $post->id.'" type="hidden" />
 <table width="100%" border="0" >
@@ -305,7 +305,7 @@ if ($_POST['submit-enquiry']&& !$FormErrors)
  
 
 <h2 class="success-enquiry">Dear '. $contactname.',
-Thank you for you enquiry.
+Thank you for your booking.
 
  
 
