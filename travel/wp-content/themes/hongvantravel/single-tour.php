@@ -74,6 +74,9 @@
                                             </div>
                                             <div class="link-edit"></div>    
                                         </div>
+                                        <div class="booking">
+                                            <?php echo do_shortcode("[BOOKINGFORM]"); ?>
+                                        </div>
                                     </div>
                                     <?php
                                         endif;
