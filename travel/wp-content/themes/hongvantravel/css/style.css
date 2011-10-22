@@ -888,9 +888,36 @@ ol.commentlist  li { list-style: none; font-size:12px;
   background: url(images/marker.gif) no-repeat left 4px;
   margin-bottom: 5px;
 }
-.useful a{
+
+.useful a
+{
     margin-top: 5px;
 }
-.review a{
+
+.review a
+{
     line-height: 15px;
+}
+
+.booking
+{
+    font-size: 12px;
+    padding: 15px 0px;
+    clear: both;
+    margin-top: 20px;
+    border-top: 1px dotted #ccc;    
+}
+
+.booking input
+{
+    margin-top: 5px;
+}
+.simple-booking-form-errors
+{
+    margin-top: 15px;
+}
+.simple-booking-form-errors h2
+{
+font-size: 13px;
+color:red;  
 }
