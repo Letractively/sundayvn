@@ -915,9 +915,13 @@ ol.commentlist  li { list-style: none; font-size:12px;
 .simple-booking-form-errors
 {
     margin-top: 15px;
+    background-color: #F9F2CD;
+    padding: 10px;
+border: 1px solid red;
 }
 .simple-booking-form-errors h2
 {
 font-size: 13px;
 color:red;  
+font-weight: normal;
 }
