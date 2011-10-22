@@ -272,7 +272,7 @@ $out.='
 $out.= '<div class="simple-booking-form-errors">'.$FormErrors."</div>";
 
 $out.='<input type="hidden" name="random_value" value='.$random_value.'>
-<input name="submit-enquiry" value="Send your enquiry!" type="submit" />
+<input name="submit-enquiry" value="Send your booking!" type="submit" />
 </td>
 </tr>
 </tbody></table>
@@ -280,7 +280,7 @@ $out.='<input type="hidden" name="random_value" value='.$random_value.'>
 </form>
 </div>
 
-<div style="font-size:11px; color:#ccc;text-align:right;width:99%;height:10px"> Booking Form By <a style="color:#ccc;" href="http://www.romeluv.com/simple-booking-form/">RomeLuv</a> </div>
+
 
 <div style="clear: both;"></div>  
 <!--end of enquiry form--> 
