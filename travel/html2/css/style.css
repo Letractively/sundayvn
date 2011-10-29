@@ -753,17 +753,42 @@ ol.commentlist  li { list-style: none; font-size:12px;
 {
     display: none;
     position: absolute;
-    padding: 10px;
-    background: #C5E7E6;
+
     z-index: 1000;
     font-size: 13px;
     font-weight: bold;
-    border: 1px solid white;
+
+}
+.subtwo
+{
+        display: none;
+    position: absolute;
+
+    z-index: 1000;
+    font-size: 13px;
+    font-weight: bold;
+
+margin-left : 80px; 
+}
+.subtwo p
+{
+     background: #C5E7E6;
+    padding: 0px;
+    line-height: 18px;
+padding: 5px 10px;
+border-bottom: 1px solid #333;
+}
+.subtwo a
+{
+    font-size: 13px !important;    
 }
 .menu_sub p
 {
+     background: #C5E7E6;
     padding: 0px;
     line-height: 18px;
+padding: 5px 10px;
+border-bottom: 1px solid #333;
 }
 .menu_sub a
 {
