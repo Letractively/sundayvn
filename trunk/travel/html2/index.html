@@ -38,6 +38,21 @@
                 $('.main-menu .page_item .menu_sub').mouseover(function(){
                     $(this).show();
                 });
+                $('.main-menu .page_item .menu_sub .menu_root').mouseover(function(){
+                    var menuid = $(this).attr('menuid');
+                    $('.main-menu .subtwo').hide();
+                    var b = parseInt(menuid) - 1;
+                    var a = 29*b;
+                    $('.main-menu #menu_sub_'+menuid).css('margin-top',a+'px');
+                    $('.main-menu #menu_sub_'+menuid).show();
+
+                });
+                $('.main-menu .page_item .subtwo').mouseout(function(){
+                    $('.main-menu .subtwo').hide();
+                });
+                $('.main-menu .page_item .subtwo').mouseover(function(){
+                    $(this).show();
+                });
             });
         </script>
 
@@ -128,11 +143,44 @@
                                     <div class="menu">
                                         <ul>
                                             <li class="page_item page-item-2 current_page_parent"><a href="#" title="Home"><span><span>Home</span></span></a></li>
-                                            <li class="page_item page-item-22"><a href="#" title="Hotels"><span><span class="has_sub">Destinations</span></span></a>                                    <div class="menu_sub" >
-                                                    <p><a href="#">Vietnam</a></p>
-                                                    <p><a href="#">Cambodia</a></p>
-                                                    <p><a href="#">Laos</a></p>
+                                            <li class="page_item page-item-22"><a href="#" title="Hotels"><span><span class="has_sub">Destinations</span></span></a>   
+                                                <div class="menu_sub" >
+                                                    <p><a class="menu_root" menuid='1' href="#">Vietnam</a></p>
+                                                    <p><a class="menu_root" menuid='2' href="#">Cambodia</a></p>
+                                                    <p><a class="menu_root" menuid='3' href="#">Laos</a></p>
+
                                                 </div>
+                                                <div class="subtwo" id="menu_sub_1" >
+                                                    <p><a href="#">Thai</a></p>
+                                                    <p><a href="#">Thai</a></p>
+                                                    <p><a href="#">Thai</a></p>
+
+                                                </div>
+                                                <div class="subtwo" id="menu_sub_2" >
+                                                    <p><a href="#">Cam</a></p>
+                                                    <p><a href="#">Cam</a></p>
+                                                    <p><a href="#">Cam</a></p>
+
+                                                </div>
+                                                <div class="subtwo" id="menu_sub_3" >
+                                                    <p><a href="#">Lao</a></p>
+                                                    <p><a href="#">Lao</a></p>
+                                                    <p><a href="#">Lao</a></p>
+
+                                                </div>
+                                                <!--    <div class="menu_sub subtwo" id="menu_sub_2" >
+                                                <p><a href="#">Cambodia</a></p>
+                                                <p><a href="#">Cambodia</a></p>
+                                                <p><a href="#">Cambodia</a></p>
+
+                                                </div>
+                                                <div class="menu_sub subtwo" id="menu_sub_3" >
+                                                <p><a href="#">Lao</a></p>
+                                                <p><a href="#">Lao</a></p>
+                                                <p><a href="#">Laos</a></p>
+
+                                                </div>-->
+
 
                                             </li>
                                             <li class="page_item page-item-22"><a href="#" title="Hotels"><span><span>About Us</span></span></a></li>
@@ -308,7 +356,7 @@
 
                                                 <li><a href='#' title='January 2010'>To you, your country and the team a big thank you from the Preston Family!</a><b>John Terry</b></li>
                                                 <li><a href='#' title='October 2009'>Just to let you know that we had a great trip. We liked most of the hotels and the guides. The guide in Hanoi was ...</a><b>John Terry</b></li>
-                                                
+
                                             </ul>
 
                                         </div></div>
@@ -480,51 +528,6 @@
 
 
 
-                                            <!--                                            <div class="photos">
-
-                                            <a href="#"><img alt="" src="http://osc.template-help.com/wordpress_27338/wp-content/themes/theme998/images/1page-img5.jpg" /></a>
-
-                                            <div class="about">
-
-                                            <a class="where" href="#">Caribbean, Curacao</a>
-
-                                            by <a class="author_photos" href="#">Jones</a>
-
-                                            </div>
-
-                                            </div>
-
-
-
-                                            <div class="photos">
-
-                                            <a href="#"><img alt="" src="http://osc.template-help.com/wordpress_27338/wp-content/themes/theme998/images/1page-img6.jpg" /></a>
-
-                                            <div class="about">
-
-                                            <a class="where" href="#">Puerta Plata</a>
-
-                                            by <a class="author_photos" href="#">Kerry Lescott</a>
-
-                                            </div>
-
-                                            </div>
-
-
-
-                                            <div class="photos">
-
-                                            <a href="#"><img alt="" src="http://osc.template-help.com/wordpress_27338/wp-content/themes/theme998/images/1page-img7.jpg" /></a>
-
-                                            <div class="about">
-
-                                            <a class="where" href="#">I Love Sorrento!</a>
-
-                                            by <a class="author_photos" href="#">Kim</a>
-
-                                            </div>
-
-                                            </div>-->
 
 
 
@@ -935,7 +938,7 @@
                                     </div>
 
                                     <div style=" clear: both;"></div>
-  <!-- END LAOS TOUR-->
+                                    <!-- END LAOS TOUR-->
 
                                     <div class="title-page01">
 
