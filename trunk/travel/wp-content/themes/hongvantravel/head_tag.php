@@ -48,6 +48,23 @@
                 $('.main-menu .page_item .menu_sub').mouseover(function(){
                     $(this).show();
                 });
+                $('.main-menu .page_item .menu_sub .menu_root').mouseover(function(){
+                    var menuid = $(this).attr('menuid');
+                    $('.main-menu .subtwo').hide();
+                    var b = parseInt($('.main-menu .page_item .menu_sub .menu_root').index(this));
+                    var a = 29*b;
+              
+                   
+                    $('.main-menu #menu_sub_'+menuid).css('margin-top',a+'px');
+                    $('.main-menu #menu_sub_'+menuid).show();
+
+                });
+                $('.main-menu .page_item .subtwo').mouseout(function(){
+                    $('.main-menu .subtwo').hide();
+                });
+                $('.main-menu .page_item .subtwo').mouseover(function(){
+                    $(this).show();
+                });
             });
         </script>
 
