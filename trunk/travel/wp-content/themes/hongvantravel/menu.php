@@ -11,17 +11,50 @@
 
                                 foreach ($terms as $term) 
                                 {
+
                                 ?>
-                                <p><a href="<?php echo get_term_link($term->slug, 'tourcategory'); ?>"><?php echo $term->name; ?></a></p>
+                                <p><a class="menu_root" menuid='<?php echo $term->term_id; ?>'  href="<?php echo get_term_link($term->slug, 'tourcategory'); ?>"><?php echo $term->name; ?></a></p>
                                 <?php
                                 }
                             ?>
+                            <!--                            <div class="subtwo" id="menu_sub_1" >
+                            <p><a href="#">Thai</a></p>
+                            <p><a href="#">Thai</a></p>
+                            <p><a href="#">Thai</a></p>
 
-<!--                            <p><a href="#">Vietnam</a></p>
+                            </div>
+                            <div class="subtwo" id="menu_sub_2" >
+                            <p><a href="#">Cam</a></p>
+                            <p><a href="#">Cam</a></p>
+                            <p><a href="#">Cam</a></p>
+
+                            </div>
+                            <div class="subtwo" id="menu_sub_3" >
+                            <p><a href="#">Lao</a></p>
+                            <p><a href="#">Lao</a></p>
+                            <p><a href="#">Lao</a></p>
+
+                            </div>-->
+                            <!--                            <p><a href="#">Vietnam</a></p>
                             <p><a href="#">Cambodia</a></p>
                             <p><a href="#">Laos</a></p>-->
                         </div>
+                        <?php
 
+                            foreach ($terms as $term) 
+                            {
+                                $subterms = get_terms('tourcategory',  array(
+                                'parent'    => (int)$term->term_id,
+                                ));
+                                echo "<pre>";
+                                print_r($subterms);
+                                echo "</pre>";
+
+                            ?>
+
+                            <?php
+                            }
+                        ?>
                     </li>
 
                     <?php 
@@ -38,8 +71,8 @@
 
 
                     <li class="page_item page-item-28"><a href="<?php echo get_permalink( $page->ID ); ?>" title="<?php echo $page->post_title;  ?>"><span><span><?php echo $page->post_title;  ?></span></span></a></li>
-                    
-                     <?php 
+
+                    <?php 
                         $page_id = 214 ;
                         $page = get_page($page_id);
                     ?>
