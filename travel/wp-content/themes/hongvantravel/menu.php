@@ -45,14 +45,26 @@
                             {
                                 $subterms = get_terms('tourcategory',  array(
                                 'parent'    => (int)$term->term_id,
+                                'hide_empty'=> false,
                                 ));
-                                echo "<pre>";
-                                print_r($subterms);
-                                echo "</pre>";
 
-                            ?>
+                                if (count($subterms) > 0)
+                                {
+                                ?>
+                                <div class="subtwo" id="menu_sub_<?php echo $term->term_id; ?>" >
+                                    <?php 
+                                        foreach ($subterms as $st)
+                                        {
+                                        ?>
+                                        <p><a href="<?php echo get_term_link($st->slug, 'tourcategory'); ?>"><?php echo $term->name; ?></a></p>
 
-                            <?php
+                                        <?php
+                                        }
+                                    ?>
+                                </div>
+                                <?php
+
+                                }
                             }
                         ?>
                     </li>
