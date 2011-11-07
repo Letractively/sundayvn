@@ -1,56 +1,63 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="en" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    </head>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+    <body>
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-</head>
+        <div id="container">
+            <div id="wrapper">
+                <div id="t">
+                    <div id="hd">
+                        <div class="logo_banner">
+                        <span class="logo">
+                            <a title="DiaOcOnline.vn" href="#">
+                                <img width="1" height="1" alt="" src="http://static.diaoconline.vn/images/blank.gif">
+                            </a>
+                        </span>
+                        <div id="divBanner70" class="banner_top">
+                            <div class="bannerHide">
+                                <a target="_Blank" href="#">
+                                    <img class="" width="728px" alt="" src="../images/">
+                                </a>
+                            </div>
+                            <div class="bannerShow">
+                                <a target="_Blank" href="http://www.diaoconline.vn/quangCao/3254/70/">
+                                    <img class="" width="728px" alt="" src="images/30_banner728x90_843.gif">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    
 
-<body>
-
-<div class="container" id="page">
-
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
+                     <div id="mn">
+                     <?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Trang chủ', 'url'=>array('/site/index')),
+				array('label'=>'Tin tức trải nghiệm', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'Siêu thị địa ốc', 'url'=>array('/site/contact')),
+				array('label'=>'Doanh nghiệp địa ốc', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+                            )); ?>
+                      </div>
+                   
 
-	<?php echo $content; ?>
+                    <?php //if (isset($this->breadcrumbs)): ?>
+                    <?php ?>
+                    <?php //endif ?>
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
+                    <?php //echo $content; ?>
 
-</div><!-- page -->
+                    
+                </div>
+            </div><!-- page -->
 
-</body>
+    </body>
 </html>

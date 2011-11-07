@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-
+         
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -17,7 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 	),
-
+        'defaultController' => 'trangchu',
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 	
