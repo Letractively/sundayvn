@@ -18,6 +18,9 @@
                         <h1>DiaOcOnline.vn</h1>
                         <h2>Thông tin địa ốc tức thì</h2>
                     </div>
+                    <div id="top_banner">
+                        <img src="images/30_banner728x90_843.gif" />
+                    </div>
                     <div id="main_menu">
                         <div class="main clearfix">
                             <?php 
