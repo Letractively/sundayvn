@@ -3,7 +3,7 @@ body
     font-family: arial, helvetica, clean, sans-serif;
     background: #E0E0E0;
     font-size: 12px;
-    line-height: 18px;
+
 }
 .main
 {
@@ -23,13 +23,20 @@ body
 }
 #header #logo
 {
-    font-size: 1.3em;
+    font-size: 1em;
+    float: left;
     padding: 10px 0px 10px 10px;
 }
 #header .main
 {
     color: #752D27;
     background: #FA6054;
+}
+#header #top_banner
+{
+    float: left;
+    display: inline;
+    margin-left: 15px;
 }
 #header #main_menu ul
 {
@@ -39,9 +46,25 @@ body
     text-transform: uppercase;
 
 }
+
+#header  #main_menu ul li.right
+{
+    float: right;
+}
+#header  #main_menu ul li.right a
+{
+    font-weight: bold;
+    font-size: 12px;
+}
 #header  #main_menu ul li
 {
-  background: url(../images/menu_bg.jpg) repeat-x bottom;
+    background: url(../images/menu_bg.jpg) repeat-x bottom;
+}
+#header  #main_menu ul li li a
+{
+    text-transform: none;
+    font-size: 11px;
+    min-width: 100px;
 }
 #header  #main_menu ul li a
 {
@@ -51,7 +74,7 @@ body
 }
 #header  #main_menu ul li a:hover
 {
-background: url(../images/menu_bg_hover.jpg) repeat-x bottom;
+    background: url(../images/menu_bg_hover.jpg) repeat-x bottom;
 }
 
 /* cotainer */
@@ -67,4 +90,5 @@ background: url(../images/menu_bg_hover.jpg) repeat-x bottom;
 #container .main #content
 {
     padding: 10px;
+    line-height: 18px;
 }
