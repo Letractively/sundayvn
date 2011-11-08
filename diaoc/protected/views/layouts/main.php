@@ -20,50 +20,9 @@
                     </div>
                     <div id="main_menu">
                         <div class="main clearfix">
-                            <ul id="nav-one" class="nav clearfix">
-                                <li>
-
-                                    <a href="#item1"><span>Trang chủ<span></a>
-
-                                </li>
-                                <li>
-                                    <a href="#item2"><span>Tin tức &amp; Trải nghiệm<span></a>
-                                    <ul>
-                                        <li><a href="#item2.1">item 2.1</a></li>
-                                        <li><a href="#item2.2">item 2.2</a></li>
-
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#item3"><span>Mua bán địa ốc<span></a>
-                                    <ul>
-                                        <li><a href="#item3.1">item 3.1</a></li>
-                                        <li><a href="#item3.2">item 3.2</a></li>
-
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#item4"><span>Dự án địa ốc<span></a>
-                                    <ul>
-                                        <li><a href="#item4.1">item 4.1</a></li>
-                                        <li><a href="#item4.2">item 4.2</a></li>
-
-                                        <li><a href="#item4.3">item 4.3</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#item4"><span>Doanh nghiệp địa ốc<span></a>
-                                    <ul>
-                                        <li><a href="#item4.1">item 4.1 item 4.1 item 4.1 item 4.1</a></li>
-                                        <li><a href="#item4.2">item 4.2</a></li>
-
-                                        <li><a href="#item4.3">item 4.3</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#item4"><span>Liên hệ<span></a>
-                                </li>
-                            </ul>
+                            <?php 
+                                $this->renderPartial('////layouts/common/menu'
+                                );?>
                         </div>
                     </div>
                 </div>
