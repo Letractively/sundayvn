@@ -1,7 +1,7 @@
 <ul id="nav-one" class="nav clearfix">
     <li>
 
-        <a href="<?php  echo $this->createUrl('site/index');?>"><span>Trang chủ<span></a>
+        <a href="<?php echo Yii::app()->request->baseUrl; ?> "><span>Trang chủ<span></a>
 
     </li>
     <li>
