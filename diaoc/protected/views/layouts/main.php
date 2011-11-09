@@ -7,7 +7,10 @@
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/addons.css" rel="stylesheet"  />
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" rel="stylesheet"  />
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/star-light.css" rel="stylesheet"  />
-
+        <link type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" />    
+        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/common-script.js"></script>
     </head>
 
     <body>
@@ -25,7 +28,7 @@
                         <div class="main clearfix">
                             <?php 
                                 $this->renderPartial('////layouts/common/menu'
-								
+
                                 );?>
                         </div>
                     </div>
@@ -35,6 +38,28 @@
                 <div class="main clearfix">
                     <div id="content">
                         <?php echo $content; ?>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="main">
+                    <div id="bottom_menu">
+                        <div class="main clearfix">
+                            <ul>
+                                <li><a href="#">Trang chủ</a></li>
+                                <li><a href="#">Tin tức &amp; Trải nghiệm</a></li>
+                                <li><a href="#">Mua bán địa ốc</a></li>
+                                <li><a href="#">Doanh nghiệp địa ốc</a></li>
+                                <li><a href="#">Dự án</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="copyright">
+                        <div class="main clearfix">
+                            <div id="debug">
+                                <p>Copyright © 2007 - 2011 DiaOcOnline Corp. ® Ghi rõ nguồn "DiaOcOnline.vn" khi phát hành lại thông tin từ website này.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
