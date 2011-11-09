@@ -17,7 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 	),
-        'defaultController' => 'trangchu',
+    'defaultController' => 'trangchu',
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
 	
@@ -38,16 +38,20 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
-			'urlFormat'=>'path',
+			
+			/*'urlFormat'=>'path',
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
+			*/
+			'caseSensitive' => false,
+			'useStrictParsing' => false,
 		),
-		*/
+		
 		/*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
