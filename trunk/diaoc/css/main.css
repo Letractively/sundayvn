@@ -109,9 +109,71 @@ input
 #home_content #home_left
 {
     float:left;
-    background: #ccc;
     width: 68%;
     margin-right: 1%;
+}
+#home_slideshow
+{
+    width: 65%;
+    float: left;
+}
+#home_left .bx-wrapper
+{
+    float: left !important;
+    height: 142px;
+}
+#home_left #slideandgold
+{
+    margin-bottom: 10px;
+}
+#home_left .bx-wrapper .slide_content img
+{
+    width: 38%;
+    border: 1px solid #ccc;
+    margin-right: 1.2%;
+    height: 120px;
+}
+
+#home_left .bx-wrapper .bx-next
+{
+
+    margin: 0px 10px 0px 10px;
+}
+#home_left .bx-window
+{
+    margin-bottom: 6px;
+}
+#home_left .bx-wrapper .slide_content div
+{
+    width: 60%;
+}
+#home_left .bx-wrapper .bx-auto
+{
+    display: inline;
+}
+#home_left .bx-wrapper .slide_content div h2
+{
+
+    color:#0F9191;
+}
+#home_left .bx-wrapper .slide_content div p
+{
+    color:#D26767;
+    margin: 7px 0px 5px 0px;
+}
+#giavang_ngoaite
+{
+    float: left;
+    width: 35%; 
+}
+#giavang_ngoaite .content
+{    
+    border: 1px solid #93B54C;
+    padding: 2px 10px 10px 10px;
+}
+#giavang_ngoaite .content h3
+{
+    margin: 5px 0px 5px 0px;
 }
 #home_content #home_right
 {
