@@ -1,6 +1,6 @@
 <div id="home_search" class="clearfix">
     <form action="" method="get">
-        <input type="text" name="loaitin" value="Từ khóa tìm kiếm" />
+        <input type="text" name="loaitin" value="Từ khóa tìm kiếm" size="50" />
         <select>
             <option>Chọn tỉnh thành</option>
             <option>TP Hồ Chí Minh</option>
@@ -28,7 +28,50 @@
     </form>
 </div>
 <div id="home_content" class="clearfix">
-    <div id="home_left">
+    <div id="home_left" class="clearfix">
+        <div class="clearfix" id="slideandgold">
+            <div id="home_slideshow">
+                <div class="clearfix">
+                    <div class="slide_content clearfix">
+                        <img  src="images/2011/10_111110DOOLThangTT010.jpg" style="float: left;" />
+                        <div style="float: left;">
+                            <h2>Thị trường suy giảm</h2>
+                            <p>20/11/2011 10:30</p>
+                            Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="slide_content clearfix">
+                        <img  src="images/2011/10_111110DOOLThangTT05.jpg" style="float: left;" />
+                        <div style="float: left;">
+                            <h2>Thị trường suy giảm</h2>
+                            <p>20/11/2011 10:30</p>
+                            Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
+                    </div>
+                </div>
+                <div class="clearfix">
+                    <div class="slide_content clearfix">
+                        <img  src="images/2011/10_111110DOOLThangTT010.jpg" style="float: left;" />
+                        <div style="float: left;">
+                            <h2>Thị trường suy giảm</h2>
+                            <p>20/11/2011 10:30</p>
+                            Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
+                    </div>
+                </div>
+            </div>
+            <div id="giavang_ngoaite">
+                <div class="content">
+                    <h3>Giá vàng</h3>
+                    <p>Mua: 45,600 - Bán: 47,600</p>
+                    <h3>Ngoại tệ</h3>
+                    <p>
+                        USD&nbsp;&nbsp;&nbsp;&nbsp;21.011<br />
+                        GBP&nbsp;&nbsp;&nbsp;&nbsp;34.238<br />
+                        EUR&nbsp;&nbsp;&nbsp;&nbsp;29.120
+                    </p>
+                </div>
+            </div>
+        </div>
         <div class="tabs">
             <ul>
                 <li><a href="#tabs-1">Tài sản mới</a></li>
