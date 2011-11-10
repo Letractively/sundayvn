@@ -1,7 +1,7 @@
 body
 {
     font-family: arial, helvetica, clean, sans-serif;
-    background: #E0E0E0;
+
     font-size: 12px;
 
 }
@@ -28,7 +28,7 @@ input
 }
 #header
 {
-    background: #EDA09A;
+
     padding-top: 10px;
 }
 #header #logo
@@ -40,7 +40,7 @@ input
 #header .main
 {
     color: #752D27;
-    background: #FA6054;
+
 }
 #header #top_banner
 {
