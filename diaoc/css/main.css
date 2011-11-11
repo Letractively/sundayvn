@@ -10,6 +10,15 @@ a
     color:#F11919;
     text-decoration: underline;
 }
+h3
+{
+    color:#0F9191;
+    font-size: 1.3em;
+}
+h5
+{
+    font-size: 1em;
+}
 input
 {
     border:1px solid #ccc;
@@ -28,7 +37,6 @@ input
 }
 #header
 {
-
     padding-top: 10px;
 }
 #header #logo
@@ -124,7 +132,9 @@ input
 }
 #home_left #slideandgold
 {
-    margin-bottom: 10px;
+margin-bottom: 10px;
+padding: 0px 0px 10px 0px;
+border-bottom: 1px solid #0F9191;
 }
 #home_left .bx-wrapper .slide_content img
 {
@@ -225,4 +235,76 @@ input
     margin-bottom: 7px;
     padding: 15px;
     text-align: right;
+}
+
+#home_left .plain_module .plain_module_title h3
+{
+    line-height: 25px;
+    margin-bottom: 7px;
+    color: #F11919;
+    border-bottom: 1px solid #F11919;
+}
+#home_left .plain_module .plain_module_title h3 a
+{
+    float: right;
+    font-weight: normal;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+#home_left .plain_module .plain_module_title h3 a:hover
+{
+    text-decoration:underline;
+}
+.plain_module .two_div_property .left
+{
+    float: left;
+    width: 49%;
+}
+.plain_module .two_div_property .right
+{
+    float: left;
+    width: 51%;
+}
+.plain_module .two_div_property .left .customize
+{
+    border-right: 1px solid #476A03;
+}
+.plain_module .two_div_property .right .customize
+{
+    padding-left: 2%;
+}
+.two_div_property .customize .a_property
+{
+    border-bottom: 1px dotted #476A03;
+    margin-right: 2%;
+    padding-bottom: 3%;
+    margin-bottom: 3%;
+}
+.two_div_property .customize .a_property .image_pro
+{
+    float: left;
+    width:30%;
+    height: 80px;
+}
+.two_div_property .customize .a_property .image_pro img
+{
+    width: 100%;
+    height: 100%;
+}
+.two_div_property .customize .a_property div.p 
+{
+
+    float: left;
+    width:67%;
+    padding-left: 3%;
+}
+.two_div_property .customize .a_property div.p  a
+{
+    color:#476A03;
+    font-weight: normal;
+    text-decoration: none;
+}
+.two_div_property .customize .a_property div.p  a:hover
+{
+    text-decoration :underline
 }
