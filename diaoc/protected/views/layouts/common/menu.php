@@ -50,6 +50,6 @@
         <a href="<?php  echo $this->createUrl('site/contact');?>"><span>Đăng ký<span></a>
     </li>
     <li class="right">
-        <a href="<?php  echo $this->createUrl('site/contact');?>"><span>Đăng nhập<span></a>
+        <a href="<?php  echo $this->createUrl('khachhangcanhan/dangnhap');?>"><span>Đăng nhập<span></a>
     </li>
 </ul>
