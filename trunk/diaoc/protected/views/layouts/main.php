@@ -3,13 +3,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.6.2.min.js"></script> 
         <base href="<?php echo Yii::app()->request->baseUrl; ?>/" />
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/addons.css" rel="stylesheet"  />
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" rel="stylesheet"  />
+        <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" rel="stylesheet"  />
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/star-light.css" rel="stylesheet"  />
         <link type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" />    
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.6.2.min.js"></script>
+        
         <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.16.custom.min.js"></script>
         <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/common-script.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.bxSlider.min.js" type="text/javascript"></script>
