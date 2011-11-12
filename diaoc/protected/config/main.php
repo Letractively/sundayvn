@@ -63,7 +63,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=diaoc',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
 		),
 		

@@ -16,10 +16,6 @@
  * @property string $Dien_thoai_ban
  * @property string $Dien_thoai_di_dong
  * @property string $Url_anh_dai_dien
- *
- * The followings are the available model relations:
- * @property BanTinKhachhangCanhan[] $banTinKhachhangCanhans
- * @property KhachHangMailMessage[] $khachHangMailMessages
  */
 class KhachhangCanhan extends CActiveRecord
 {
@@ -27,6 +23,10 @@ class KhachhangCanhan extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * @return KhachhangCanhan the static model class
 	 */
+    public $Nhap_lai_pass;
+    public $Thang_sinh;
+    public $Nam_sinh;
+    public $codeCaptcha;
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
@@ -45,20 +45,17 @@ class KhachhangCanhan extends CActiveRecord
 	 */
 	public function rules()
 	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-			array('Ten_dang_nhap, Mat_khau', 'length', 'max'=>50),
-			array('Ho_va_ten', 'length', 'max'=>80),
-			array('Email, Ten_cong_ty, Url_anh_dai_dien', 'length', 'max'=>100),
-			array('Gioi_tinh', 'length', 'max'=>20),
-			array('Dia_chi', 'length', 'max'=>200),
-			array('Dien_thoai_ban, Dien_thoai_di_dong', 'length', 'max'=>30),
-			array('Ngay_sinh', 'safe'),
-			// The following rule is used by search().
-			// Please remove those attributes that should not be searched.
-			array('idKhachhang_canhan, Ten_dang_nhap, Mat_khau, Ho_va_ten, Email, Ngay_sinh, Gioi_tinh, Ten_cong_ty, Dia_chi, Dien_thoai_ban, Dien_thoai_di_dong, Url_anh_dai_dien', 'safe', 'on'=>'search'),
-		);
+		return array    (
+                    array    ('codeCaptcha','captcha',
+                                    'allowEmpty'=>!CCaptcha::checkRequirements(),
+                                    'message'    =>    'Mã Xác Nhận Nhập Không Đúng'
+                                    ),
+                    array('Email','email','message' =>'{attribute} không hợp lệ'),
+                    array('Ten_dang_nhap,Email,Mat_khau,Nhap_lai_pass,Ho_va_ten','required','message'=>"{attribute} không được bỏ trống"),
+                    array('Nhap_lai_pass','compare','compareAttribute'=>'Mat_khau','message'=>"{attribute} phải chính xác"),
+                    array('Mat_khau','length','min'=>'6','message'=>"{attribute} quá ngắn (tối thiểu là {min} kí tự)."),
+
+                    );
 	}
 
 	/**
@@ -69,8 +66,6 @@ class KhachhangCanhan extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'banTinKhachhangCanhans' => array(self::HAS_MANY, 'BanTinKhachhangCanhan', 'Khachhang_canhan_idKhachhang_canhan'),
-			'khachHangMailMessages' => array(self::HAS_MANY, 'KhachHangMailMessage', 'Khachhang_canhan_idKhachhang_canhan'),
 		);
 	}
 
@@ -83,9 +78,12 @@ class KhachhangCanhan extends CActiveRecord
 			'idKhachhang_canhan' => 'Id Khachhang Canhan',
 			'Ten_dang_nhap' => 'Ten Dang Nhap',
 			'Mat_khau' => 'Mat Khau',
+                        'Nhap_lai_pass'=>'Nhap lai pass',
 			'Ho_va_ten' => 'Ho Va Ten',
 			'Email' => 'Email',
 			'Ngay_sinh' => 'Ngay Sinh',
+                        'Thang_sinh'=>'Thang sinh',
+                        'Nam_sinh'=>'Nam',
 			'Gioi_tinh' => 'Gioi Tinh',
 			'Ten_cong_ty' => 'Ten Cong Ty',
 			'Dia_chi' => 'Dia Chi',
@@ -123,4 +121,43 @@ class KhachhangCanhan extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        public function hasExistUserName(){
+            $connection=Yii::app()->db;
+
+            $connection->active=true;
+
+            $sql="SELECT * from khachhang_canhan where Ten_dang_nhap='".$this->Ten_dang_nhap."'";
+            $command=$connection->createCommand($sql);
+            $rows=$command->query();
+            if($rows->count()>0)
+            {
+             $connection->active=false;
+             return true;
+            }
+            else
+            {
+                $connection->active=false;
+                 return false;
+            }
+        }
+         public function hasExistEmail(){
+            $connection=Yii::app()->db;
+
+            $connection->active=true;
+
+            $sql="SELECT * from khachhang_canhan where Email='".$this->Email."'";
+            $command=$connection->createCommand($sql);
+            $rows=$command->query();
+            if($rows->count()>0)
+            {
+             $connection->active=false;
+             return true;
+            }
+            else
+            {
+                $connection->active=false;
+                 return false;
+            }
+        }
+
 }
