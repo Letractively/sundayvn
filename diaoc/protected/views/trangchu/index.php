@@ -31,47 +31,94 @@
     <div id="home_left" class="clearfix">
         <div class="clearfix" id="slideandgold">
             <div id="home_slideshow">
-                <div class="clearfix">
-                    <div class="slide_content clearfix">
-                        <img  src="images/2011/10_111110DOOLThangTT010.jpg" style="float: left;" />
-                        <div style="float: left;">
-                            <h2>Thị trường suy giảm</h2>
-                            <p>20/11/2011 10:30</p>
-                            Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
-                    </div>
+
+                <div class="slide_content " style="float: left">
+                    <img  src="images/2011/10_111110DOOLThangTT010.jpg" style="float: left;" />
+                    <div style="float: left;">
+                        <h2>Thị trường suy giảm</h2>
+                        <p>20/11/2011 10:30</p>
+                        Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
                 </div>
-                <div class="clearfix">
-                    <div class="slide_content clearfix">
-                        <img  src="images/2011/10_111110DOOLThangTT05.jpg" style="float: left;" />
-                        <div style="float: left;">
-                            <h2>Thị trường suy giảm</h2>
-                            <p>20/11/2011 10:30</p>
-                            Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
-                    </div>
+
+
+                <div class="slide_content " style="float: left">
+                    <img  src="images/2011/10_111110DOOLThangTT05.jpg" style="float: left;" />
+                    <div style="float: left;">
+                        <h2>Thị trường suy giảm</h2>
+                        <p>20/11/2011 10:30</p>
+                        Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
+
                 </div>
-                <div class="clearfix">
-                    <div class="slide_content clearfix">
-                        <img  src="images/2011/10_111110DOOLThangTT010.jpg" style="float: left;" />
-                        <div style="float: left;">
-                            <h2>Thị trường suy giảm</h2>
-                            <p>20/11/2011 10:30</p>
-                            Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
-                    </div>
+
+                <div class="slide_content " style="float: left">
+                    <img  src="images/2011/10_111110DOOLThangTT010.jpg" style="float: left;" />
+                    <div style="float: left;">
+                        <h2>Thị trường suy giảm</h2>
+                        <p>20/11/2011 10:30</p>
+                        Trước xu hướng giảm giá mạnh của phần lớn các phân khúc như căn hộ, chung cư, biệt thự và đất nền phân lô, nhiều người băn khoăn về khả năng trụ đỡ...</div>
+
                 </div>
             </div>
             <div id="giavang_ngoaite">
                 <div class="content">
                     <h3>Giá vàng</h3>
-                    <p>Mua: 45,600 - Bán: 47,600</p>
+                    <p><b>Mua</b>: 45,600 - <b>Bán</b>: 47,600</p>
                     <h3>Ngoại tệ</h3>
                     <p>
-                        USD&nbsp;&nbsp;&nbsp;&nbsp;21.011<br />
-                        GBP&nbsp;&nbsp;&nbsp;&nbsp;34.238<br />
-                        EUR&nbsp;&nbsp;&nbsp;&nbsp;29.120
+                        <b>USD</b>&nbsp;&nbsp;&nbsp;&nbsp;21.011<br />
+                        <b>GBP</b>&nbsp;&nbsp;&nbsp;&nbsp;34.238<br />
+                        <b>EUR</b>&nbsp;&nbsp;&nbsp;&nbsp;29.120
                     </p>
                 </div>
             </div>
         </div>
+
+        <div id="brand_logos" class="clearfix">
+            <!--            <div class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-carat-1-n">&nbsp;</span></div>-->
+            <div class="brand tooltip_listen">
+                <a href="#"><img src="images/brand_logo/greensun.png" alt="brandlogo" /></a>
+                <div class="tooltip ui-widget ui-widget-content ">
+                    <h5>Công ty cổ phần đầu tư và phát triển Mặt Trời Xanh</h5>
+                    Cao Ốc Lam Giang, Lầu 5 số 167-169-171-173 Trần Hưng Đạo, Phường Cô Giang, Quận 1, TP.HCM<br>ĐT: 08.39.203.421
+                </div>
+            </div>
+            <div class="brand tooltip_listen">
+                <a href="#"><img src="images/brand_logo/greensun.png" alt="brandlogo" /></a>
+                <div class="tooltip ui-widget ui-widget-content ">
+                    <h5>Công ty cổ phần đầu tư và phát triển Mặt Trời Xanh</h5>
+                    Cao Ốc Lam Giang, Lầu 5 số 167-169-171-173 Trần Hưng Đạo, Phường Cô Giang, Quận 1, TP.HCM<br>ĐT: 08.39.203.421
+                </div>
+            </div>
+            <div class="brand tooltip_listen">
+                <a href="#"><img src="images/brand_logo/greensun.png" alt="brandlogo" /></a>
+                <div class="tooltip ui-widget ui-widget-content ">
+                    <h5>Công ty cổ phần đầu tư và phát triển Mặt Trời Xanh</h5>
+                    Cao Ốc Lam Giang, Lầu 5 số 167-169-171-173 Trần Hưng Đạo, Phường Cô Giang, Quận 1, TP.HCM<br>ĐT: 08.39.203.421
+                </div>
+            </div>
+            <div class="brand tooltip_listen">
+                <a href="#"><img src="images/brand_logo/greensun.png" alt="brandlogo" /></a>
+                <div class="tooltip ui-widget ui-widget-content ">
+                    <h5>Công ty cổ phần đầu tư và phát triển Mặt Trời Xanh</h5>
+                    Cao Ốc Lam Giang, Lầu 5 số 167-169-171-173 Trần Hưng Đạo, Phường Cô Giang, Quận 1, TP.HCM<br>ĐT: 08.39.203.421
+                </div>
+            </div>
+            <div class="brand tooltip_listen">
+                <a href="#"><img src="images/brand_logo/greensun.png" alt="brandlogo" /></a>
+                <div class="tooltip ui-widget ui-widget-content ">
+                    <h5>Công ty cổ phần đầu tư và phát triển Mặt Trời Xanh</h5>
+                    Cao Ốc Lam Giang, Lầu 5 số 167-169-171-173 Trần Hưng Đạo, Phường Cô Giang, Quận 1, TP.HCM<br>ĐT: 08.39.203.421
+                </div>
+            </div>
+            <div class="brand tooltip_listen">
+                <a href="#"><img src="images/brand_logo/greensun.png" alt="brandlogo" /></a>
+                <div class="tooltip ui-widget ui-widget-content ">
+                    <h5>Công ty cổ phần đầu tư và phát triển Mặt Trời Xanh</h5>
+                    Cao Ốc Lam Giang, Lầu 5 số 167-169-171-173 Trần Hưng Đạo, Phường Cô Giang, Quận 1, TP.HCM<br>ĐT: 08.39.203.421
+                </div>
+            </div>
+        </div>
+
 
         <div id="newest_property" class="plain_module">
             <div class="plain_module_title">
@@ -381,13 +428,7 @@
         </div>
 
     </div>
-    <div id="home_right">
-        <div class="bannerShow">
-            <embed height="250" width="300" scale="exactfit" menu="false" allowscriptaccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" src="http://image.diaoconline.vn/Banner/2011/10/27_ACLN_300x250.swf?clicktag=#">
-        </div>
-        <div class="bannerShow">
-            <embed height="120" width="300" scale="exactfit" menu="false" allowscriptaccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" quality="high" src="http://image.diaoconline.vn/Banner/2011/11/02_DaiThanh_300x120.swf?clicktag=#"></div>
-        <div class="bannerShow"><a href="#" target="_Blank"><img src="http://image.diaoconline.vn/Banner/2011/10/27_SAI_300x120.gif" class="" alt="" width="300px"></a></div>
-        <div class="bannerShow"><a href="#" target="_Blank"><img src="http://image.diaoconline.vn/Banner/2011/09/30_banner300x250.gif" class="" alt="" width="300px"></a></div>
+    <?php
+        $this->renderPartial('right');
+    ?>
     </div>
-</div>
