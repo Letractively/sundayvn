@@ -15,16 +15,6 @@
         <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.16.custom.min.js"></script>
         <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/common-script.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.bxSlider.min.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('#home_slideshow').bxSlider({
-                    auto: true,
-                    autoControls: true,
-//                    nextSelector: '#next',
-//                    prevSelector: '#prev',
-                });
-            });
-        </script>
     </head>
 
     <body>
@@ -32,7 +22,7 @@
             <div id="header">
                 <div class="main clearfix">
                     <div id="logo">
-                        <h1>DiaOcOnline.vn</h1>
+                        <h1>DiaOcXanhOnline.vn</h1>
                         <h2>Thông tin địa ốc tức thì</h2>
                     </div>
                     <div id="top_banner">
@@ -71,7 +61,7 @@
                     <div id="copyright">
                         <div class="main clearfix">
                             <div id="debug">
-                                <p>Copyright © 2007 - 2011 DiaOcOnline Corp. ® Ghi rõ nguồn "DiaOcOnline.vn" khi phát hành lại thông tin từ website này.</p>
+                                <p>Copyright © 2011 - 2012 DiaOcXanhOnline Corp. ® Các thông tin trên website hiện tại chỉ mang tính chất minh họa và thử nghiệm.
                             </div>
                         </div>
                     </div>
