@@ -47,7 +47,7 @@
         <a href="<?php  echo $this->createUrl('site/contact');?>"><span>Liên hệ<span></a>
     </li>
     <li class="right">
-        <a href="<?php  echo $this->createUrl('Register/Regist');?>"><span>Đăng ký<span></a>
+        <a href="<?php  echo $this->createUrl('khachhangCanhan/Dangky');?>"><span>Đăng ký<span></a>
     </li>
     <li class="right">
         <a href="<?php  echo $this->createUrl('khachhangcanhan/dangnhap');?>"><span>Đăng nhập<span></a>
