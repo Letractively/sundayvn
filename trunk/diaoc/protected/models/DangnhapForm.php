@@ -6,7 +6,6 @@ class DangnhapForm extends CFormModel
     public $rememberMe;
 
     private $_identity;
-    private $_type;
 
     /**
      * Declares the validation rules.
@@ -22,7 +21,7 @@ class DangnhapForm extends CFormModel
             // rememberMe needs to be a boolean
             array('rememberMe', 'boolean'),
             // password needs to be authenticated
-            //array('password', 'authenticate'),
+            array('password', 'authenticate'),
         );
     }
 
@@ -47,7 +46,7 @@ class DangnhapForm extends CFormModel
         if(!$this->hasErrors())
         {
             $this->_identity=new UserIdentity($this->username,$this->password);
-            if(!$this->_identity->authenticate())
+            if($this->_identity->authenticate()===UserIdentity::ERROR_PASSWORD_INVALID)
                 $this->addError('password','Incorrect username or password.');
         }
     }
