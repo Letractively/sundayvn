@@ -46,10 +46,25 @@
     <li>
         <a href="<?php  echo $this->createUrl('site/contact');?>"><span>Liên hệ<span></a>
     </li>
+    <?php
+        if(Yii::app()->user->isGuest):
+    ?>
     <li class="right">
         <a href="<?php  echo $this->createUrl('khachhangCanhan/Dangky');?>"><span>Đăng ký<span></a>
     </li>
     <li class="right">
         <a href="<?php  echo $this->createUrl('khachhangcanhan/dangnhap');?>"><span>Đăng nhập<span></a>
     </li>
+    <?php
+        else:
+    ?>
+    <li class="right">
+        <a href="<?php  echo $this->createUrl('trangchu/dangxuat');?>"><span>Đăng xuất<span></a>
+    </li>
+    <li class="right">
+        <a href="#">Chào bạn <?php echo Yii::app()->user->name; ?></a>
+    </li>
+    <?php
+        endif;
+    ?>
 </ul>
