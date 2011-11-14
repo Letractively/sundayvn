@@ -1,11 +1,12 @@
 <?php
 
-class KhachhangcanhanController extends Controller {
+class KhachhangCanhanController extends Controller {
 
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
      * using two-column layout. See 'protected/views/layouts/column2.php'.
      */
+     public $layout = '//layouts/main';
 
     /**
      * @return array action filters
@@ -29,7 +30,7 @@ class KhachhangcanhanController extends Controller {
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
                 'actions' => array('create', 'update'),
-                'users' => array('@'),
+                'roles' => array('canhan'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('admin', 'delete'),
@@ -39,15 +40,11 @@ class KhachhangcanhanController extends Controller {
                 'users' => array('*'),
             ),
             array(
-            'captcha'    =>    array    (
-                                        'class'    =>    'CCaptchaAction',
-                                        'backColor'    =>'#fff
-
-'
-                                    ),
-            )
-
-
+            'captcha' => array(
+                'class'    =>    'CCaptchaAction',
+                'backColor'    =>'#fff'
+            ),
+            )                  
         );
     }
 

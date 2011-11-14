@@ -61,7 +61,7 @@
     <li class="right">
         <a href="<?php  echo $this->createUrl('trangchu/dangxuat');?>"><span>Đăng xuất<span></a>
     </li>
-    <li class="right">
+    <li class="right"> 
         <a href="#">Chào bạn <?php echo Yii::app()->user->name; ?></a>
     </li>
     <?php

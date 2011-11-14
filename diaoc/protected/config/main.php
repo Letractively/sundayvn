@@ -36,6 +36,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+            'loginUrl'=>array('khachhangcanhan/dangnhap'),
 		),
 		// uncomment the following to enable URLs in path-format
 		
@@ -63,10 +64,13 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=diaoc',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 		),
-		
+		'authManager'=>array(
+//            'class'=>'CPhpAuthManager',
+            'class'=>'CDbAuthManager',
+        ),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',
