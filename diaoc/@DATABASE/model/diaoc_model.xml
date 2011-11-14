@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes" ?>
 <DBMODEL Version="4.0">
 <SETTINGS>
-<GLOBALSETTINGS ModelName="diaoc_model" IDModel="0" IDVersion="0" VersionStr="1.0.0.0" Comments="" UseVersionHistroy="1" AutoIncVersion="1" DatabaseType="MySQL" ZoomFac="100.00" XPos="0" YPos="576" DefaultDataType="5" DefaultTablePrefix="0" DefSaveDBConn="" DefSyncDBConn="New Connection" DefQueryDBConn="" Printer="" HPageCount="4.0" PageAspectRatio="1.440892512336408" PageOrientation="1" PageFormat="A4 (210x297 mm, 8.26x11.7 inches)" SelectedPages="" UsePositionGrid="0" PositionGridX="20" PositionGridY="20" TableNameInRefs="1" DefaultTableType="0" ActivateRefDefForNewRelations="1" FKPrefix="" FKPostfix="" CreateFKRefDefIndex="1" DBQuoteCharacter="`" CreateSQLforLinkedObjects="0" DefModelFont="Tahoma" CanvasWidth="4096" CanvasHeight="2842" />
+<GLOBALSETTINGS ModelName="diaoc_model" IDModel="0" IDVersion="0" VersionStr="1.0.0.0" Comments="" UseVersionHistroy="1" AutoIncVersion="1" DatabaseType="MySQL" ZoomFac="100.00" XPos="0" YPos="0" DefaultDataType="5" DefaultTablePrefix="0" DefSaveDBConn="" DefSyncDBConn="New Connection" DefQueryDBConn="" Printer="" HPageCount="4.0" PageAspectRatio="1.440892512336408" PageOrientation="1" PageFormat="A4 (210x297 mm, 8.26x11.7 inches)" SelectedPages="" UsePositionGrid="0" PositionGridX="20" PositionGridY="20" TableNameInRefs="1" DefaultTableType="0" ActivateRefDefForNewRelations="1" FKPrefix="" FKPostfix="" CreateFKRefDefIndex="1" DBQuoteCharacter="`" CreateSQLforLinkedObjects="0" DefModelFont="Tahoma" CanvasWidth="4096" CanvasHeight="2842" />
 <DATATYPEGROUPS>
 <DATATYPEGROUP Name="Numeric Types" Icon="1" />
 <DATATYPEGROUP Name="Date and Time Types" Icon="2" />
@@ -326,7 +326,7 @@
 </COLUMNS>
 <RELATIONS_START>
 <RELATION_START ID="1327" />
-<RELATION_START ID="1333" />
+<RELATION_START ID="1386" />
 </RELATIONS_START>
 <INDICES>
 <INDEX ID="1003" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
@@ -336,45 +336,57 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="1015" Tablename="Ban_tin_khachhang_canhan" PrevTableName="Table_02" XPos="463" YPos="32" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="3" >
+<TABLE ID="1015" Tablename="Ban_tin_khachhang_canhan_doanhgnhiep" PrevTableName="Table_02" XPos="463" YPos="32" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="3" >
 <COLUMNS>
-<COLUMN ID="1017" ColName="c" PrevColName="idBan_tin" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<COLUMN ID="1017" ColName="id_bantin" PrevColName="idBan_tin" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1363" ColName="Bat_dong_san_idBat_dong_san" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="1409" ColName="Khachhang_doanhnghiep_idKhachhang_doanhnghiep" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1359" ColName="Chuyen_muc_idChuyen_muc" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="1406" ColName="Chuyen_muc_idChuyen_muc" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1343" ColName="Phuong_xa_idPhuong_xa" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="1402" ColName="Bat_dong_san_idBat_dong_san" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1340" ColName="Quan_huyen_idQuan_huyen" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="1399" ColName="Hinh_anh_nha_dat_idanh_nha_dat" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1337" ColName="Tinh_thanh_pho_idTinh_thanh_pho" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="1396" ColName="Quan_huyen_idQuan_huyen" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1334" ColName="Khachhang_canhan_idKhachhang_canhan" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="1393" ColName="Tinh_thanh_pho_idTinh_thanh_pho" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1390" ColName="Quoc_gia_idQuoc_gia" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1387" ColName="Khachhang_canhan_idKhachhang_canhan" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
@@ -508,56 +520,6 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1093" ColName="hinh_URL" PrevColName="" Pos="33" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1094" ColName="hinh_URL_2" PrevColName="" Pos="34" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1095" ColName="hinh_URL_3" PrevColName="" Pos="35" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1096" ColName="hinh_URL_4" PrevColName="" Pos="36" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1097" ColName="hinh_URL_5" PrevColName="" Pos="37" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1098" ColName="hinh_URL_6" PrevColName="" Pos="38" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1099" ColName="hinh_URL_7" PrevColName="" Pos="39" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1100" ColName="hinh_URL_8" PrevColName="" Pos="40" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1101" ColName="hinh_URL_9" PrevColName="" Pos="41" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="1102" ColName="hinh_URL_10" PrevColName="" Pos="42" idDatatype="20" DatatypeParams="(200)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
 <COLUMN ID="1104" ColName="Nguoi_lien_he" PrevColName="" Pos="43" idDatatype="20" DatatypeParams="(50)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
@@ -590,12 +552,14 @@
 </COLUMN>
 </COLUMNS>
 <RELATIONS_END>
-<RELATION_END ID="1333" />
-<RELATION_END ID="1336" />
-<RELATION_END ID="1339" />
-<RELATION_END ID="1342" />
-<RELATION_END ID="1358" />
-<RELATION_END ID="1362" />
+<RELATION_END ID="1386" />
+<RELATION_END ID="1389" />
+<RELATION_END ID="1392" />
+<RELATION_END ID="1395" />
+<RELATION_END ID="1398" />
+<RELATION_END ID="1401" />
+<RELATION_END ID="1405" />
+<RELATION_END ID="1408" />
 </RELATIONS_END>
 <INDICES>
 <INDEX ID="1018" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
@@ -603,34 +567,44 @@
 <INDEXCOLUMN idColumn="1017" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1335" IndexName="Ban_tin_khachhang_canhan_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1333">
+<INDEX ID="1388" IndexName="Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1386">
 <INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="1334" LengthParam="0" />
+<INDEXCOLUMN idColumn="1387" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1338" IndexName="Ban_tin_khachhang_canhan_FKIndex3" IndexKind="1" FKRefDef_Obj_id="1336">
+<INDEX ID="1391" IndexName="Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1389">
 <INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="1337" LengthParam="0" />
+<INDEXCOLUMN idColumn="1390" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1341" IndexName="Ban_tin_khachhang_canhan_FKIndex4" IndexKind="1" FKRefDef_Obj_id="1339">
+<INDEX ID="1394" IndexName="Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex3" IndexKind="1" FKRefDef_Obj_id="1392">
 <INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="1340" LengthParam="0" />
+<INDEXCOLUMN idColumn="1393" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1344" IndexName="Ban_tin_khachhang_canhan_FKIndex5" IndexKind="1" FKRefDef_Obj_id="1342">
+<INDEX ID="1397" IndexName="Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex4" IndexKind="1" FKRefDef_Obj_id="1395">
 <INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="1343" LengthParam="0" />
+<INDEXCOLUMN idColumn="1396" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1360" IndexName="Ban_tin_khachhang_canhan_FKIndex6" IndexKind="1" FKRefDef_Obj_id="1358">
+<INDEX ID="1400" IndexName="Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex5" IndexKind="1" FKRefDef_Obj_id="1398">
 <INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="1359" LengthParam="0" />
+<INDEXCOLUMN idColumn="1399" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="1364" IndexName="Ban_tin_khachhang_canhan_FKIndex7" IndexKind="1" FKRefDef_Obj_id="1362">
+<INDEX ID="1403" IndexName="Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex6" IndexKind="1" FKRefDef_Obj_id="1401">
 <INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="1363" LengthParam="0" />
+<INDEXCOLUMN idColumn="1402" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1407" IndexName="Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex7" IndexKind="1" FKRefDef_Obj_id="1405">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1406" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1410" IndexName="Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex8" IndexKind="1" FKRefDef_Obj_id="1408">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1409" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -650,7 +624,7 @@
 </COLUMN>
 </COLUMNS>
 <RELATIONS_START>
-<RELATION_START ID="1362" />
+<RELATION_START ID="1401" />
 </RELATIONS_START>
 <INDICES>
 <INDEX ID="1057" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
@@ -660,7 +634,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="1062" Tablename="Chuyen_muc" PrevTableName="Table_04" XPos="854" YPos="587" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="chuyen muc gom nhung chuyen muc ldai loai nhu (can ban, cho thue, can mua , can ban gap)" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="7" >
+<TABLE ID="1062" Tablename="Chuyen_muc" PrevTableName="Table_04" XPos="857" YPos="729" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="chuyen muc gom nhung chuyen muc ldai loai nhu (can ban, cho thue, can mua , can ban gap)" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="7" >
 <COLUMNS>
 <COLUMN ID="1064" ColName="idChuyen_muc" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -675,7 +649,7 @@
 </COLUMN>
 </COLUMNS>
 <RELATIONS_START>
-<RELATION_START ID="1358" />
+<RELATION_START ID="1405" />
 </RELATIONS_START>
 <INDICES>
 <INDEX ID="1065" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
@@ -701,6 +675,7 @@
 </COLUMNS>
 <RELATIONS_START>
 <RELATION_START ID="1290" />
+<RELATION_START ID="1389" />
 </RELATIONS_START>
 <INDICES>
 <INDEX ID="1113" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
@@ -733,7 +708,7 @@
 </COLUMNS>
 <RELATIONS_START>
 <RELATION_START ID="1286" />
-<RELATION_START ID="1336" />
+<RELATION_START ID="1392" />
 </RELATIONS_START>
 <RELATIONS_END>
 <RELATION_END ID="1290" />
@@ -773,7 +748,7 @@
 </COLUMNS>
 <RELATIONS_START>
 <RELATION_START ID="1293" />
-<RELATION_START ID="1339" />
+<RELATION_START ID="1395" />
 </RELATIONS_START>
 <RELATIONS_END>
 <RELATION_END ID="1286" />
@@ -791,7 +766,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="1125" Tablename="Phuong_xa" PrevTableName="Table_08" XPos="31" YPos="914" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="12" >
+<TABLE ID="1125" Tablename="Phuong_xa" PrevTableName="Table_08" XPos="45" YPos="953" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="12" >
 <COLUMNS>
 <COLUMN ID="1127" ColName="idPhuong_xa" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -811,9 +786,6 @@
 </OPTIONSELECTED>
 </COLUMN>
 </COLUMNS>
-<RELATIONS_START>
-<RELATION_START ID="1342" />
-</RELATIONS_START>
 <RELATIONS_END>
 <RELATION_END ID="1293" />
 </RELATIONS_END>
@@ -887,6 +859,7 @@
 <RELATIONS_START>
 <RELATION_START ID="1274" />
 <RELATION_START ID="1351" />
+<RELATION_START ID="1408" />
 </RELATIONS_START>
 <INDICES>
 <INDEX ID="1151" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
@@ -896,7 +869,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="1161" Tablename="Bantin_khachhang_doanhgnhiep" PrevTableName="Table_11" XPos="396" YPos="1121" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="18" >
+<TABLE ID="1161" Tablename="Bantin_khachhang_doanhgnhiep" PrevTableName="Table_11" XPos="451" YPos="1123" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="18" >
 <COLUMNS>
 <COLUMN ID="1163" ColName="idBantin_khachhang_doanhgnhiep" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -986,7 +959,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="1179" Tablename="Tin_tuc" PrevTableName="Table_13" XPos="444" YPos="1521" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="22" >
+<TABLE ID="1179" Tablename="Tin_tuc" PrevTableName="Table_13" XPos="528" YPos="1546" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="22" >
 <COLUMNS>
 <COLUMN ID="1181" ColName="idTin_tuc" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -1089,7 +1062,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="1249" Tablename="Loai_du_an" PrevTableName="Table_16" XPos="825" YPos="1138" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" >
+<TABLE ID="1249" Tablename="Loai_du_an" PrevTableName="Table_16" XPos="879" YPos="1194" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" >
 <COLUMNS>
 <COLUMN ID="1251" ColName="idLoai_du_an" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -1149,6 +1122,31 @@
 </INDEX>
 </INDICES>
 </TABLE>
+<TABLE ID="1366" Tablename="Hinh_anh_nha_dat" PrevTableName="Table_17" XPos="863" YPos="387" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" >
+<COLUMNS>
+<COLUMN ID="1368" ColName="idanh_nha_dat" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1370" ColName="Url_duong_dan" PrevColName="" Pos="1" idDatatype="20" DatatypeParams="(100)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1398" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="1369" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1368" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
 </TABLES>
 <RELATIONS>
 <RELATION ID="1236" RelationName="1:n" Kind="2" SrcTable="1223" DestTable="1228" FKFields="idDanhmuc=Danh_muc_idDanhmuc\n" FKFieldsComments="\n" relDirection="3" MidOffset="-1" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1238" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="26" />
@@ -1158,14 +1156,16 @@
 <RELATION ID="1290" RelationName="Rel_25" Kind="2" SrcTable="1109" DestTable="1115" FKFields="idQuoc_gia=Quoc_gia_idQuoc_gia\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1292" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="29" />
 <RELATION ID="1293" RelationName="Rel_26" Kind="2" SrcTable="1120" DestTable="1125" FKFields="idQuan_huyen=Quan_huyen_idQuan_huyen\n" FKFieldsComments="\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1295" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="29" />
 <RELATION ID="1327" RelationName="Rel_32" Kind="2" SrcTable="1000" DestTable="1260" FKFields="idKhachhang_canhan=Khachhang_canhan_idKhachhang_canhan\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1329" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
-<RELATION ID="1333" RelationName="Rel_33" Kind="2" SrcTable="1000" DestTable="1015" FKFields="idKhachhang_canhan=Khachhang_canhan_idKhachhang_canhan\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1335" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" />
-<RELATION ID="1336" RelationName="Rel_34" Kind="2" SrcTable="1115" DestTable="1015" FKFields="idTinh_thanh_pho=Tinh_thanh_pho_idTinh_thanh_pho\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1338" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="29" />
-<RELATION ID="1339" RelationName="Rel_35" Kind="2" SrcTable="1120" DestTable="1015" FKFields="idQuan_huyen=Quan_huyen_idQuan_huyen\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1341" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
-<RELATION ID="1342" RelationName="Rel_36" Kind="2" SrcTable="1125" DestTable="1015" FKFields="idPhuong_xa=Phuong_xa_idPhuong_xa\n" FKFieldsComments="\n" relDirection="2" MidOffset="38" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1344" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
 <RELATION ID="1348" RelationName="Rel_38" Kind="2" SrcTable="1249" DestTable="1161" FKFields="idLoai_du_an=Loai_du_an_idLoai_du_an\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1350" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
 <RELATION ID="1351" RelationName="Rel_39" Kind="2" SrcTable="1147" DestTable="1161" FKFields="idKhachhang_doanhnghiep=Khachhang_doanhnghiep_idKhachhang_doanhnghiep\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1353" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
-<RELATION ID="1358" RelationName="Rel_40" Kind="2" SrcTable="1062" DestTable="1015" FKFields="idChuyen_muc=Chuyen_muc_idChuyen_muc\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1360" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
-<RELATION ID="1362" RelationName="Rel_41" Kind="2" SrcTable="1054" DestTable="1015" FKFields="idBat_dong_san=Bat_dong_san_idBat_dong_san\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1364" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
+<RELATION ID="1386" RelationName="Rel_17" Kind="2" SrcTable="1000" DestTable="1015" FKFields="idKhachhang_canhan=Khachhang_canhan_idKhachhang_canhan\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1388" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" />
+<RELATION ID="1389" RelationName="Rel_18" Kind="2" SrcTable="1109" DestTable="1015" FKFields="idQuoc_gia=Quoc_gia_idQuoc_gia\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1391" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="29" />
+<RELATION ID="1392" RelationName="Rel_19" Kind="2" SrcTable="1115" DestTable="1015" FKFields="idTinh_thanh_pho=Tinh_thanh_pho_idTinh_thanh_pho\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1394" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
+<RELATION ID="1395" RelationName="Rel_20" Kind="2" SrcTable="1120" DestTable="1015" FKFields="idQuan_huyen=Quan_huyen_idQuan_huyen\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1397" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
+<RELATION ID="1398" RelationName="Rel_21" Kind="2" SrcTable="1366" DestTable="1015" FKFields="idanh_nha_dat=Hinh_anh_nha_dat_idanh_nha_dat\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1400" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
+<RELATION ID="1401" RelationName="Rel_22" Kind="2" SrcTable="1054" DestTable="1015" FKFields="idBat_dong_san=Bat_dong_san_idBat_dong_san\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1403" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" />
+<RELATION ID="1405" RelationName="Rel_23" Kind="2" SrcTable="1062" DestTable="1015" FKFields="idChuyen_muc=Chuyen_muc_idChuyen_muc\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1407" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" />
+<RELATION ID="1408" RelationName="Rel_24" Kind="2" SrcTable="1147" DestTable="1015" FKFields="idKhachhang_doanhnghiep=Khachhang_doanhnghiep_idKhachhang_doanhnghiep\n" FKFieldsComments="\n" relDirection="1" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1410" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="35" />
 </RELATIONS>
 <NOTES>
 </NOTES>
