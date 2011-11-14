@@ -7,6 +7,12 @@ class TrangchuController extends Controller
 		$this->render('index');
 	}
 
+    public function actionDangxuat()
+    {
+        Yii::app()->user->logout();
+        $this->redirect(Yii::app()->homeUrl);
+    }
+    
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
