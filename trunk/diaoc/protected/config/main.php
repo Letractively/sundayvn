@@ -68,8 +68,8 @@ return array(
 			'charset' => 'utf8',
 		),
 		'authManager'=>array(
-//            'class'=>'CPhpAuthManager',
-            'class'=>'CDbAuthManager',
+            'class'=>'CPhpAuthManager',
+//            'class'=>'CDbAuthManager',
         ),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

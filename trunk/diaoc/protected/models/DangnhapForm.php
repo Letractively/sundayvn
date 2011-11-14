@@ -67,12 +67,17 @@ class DangnhapForm extends CFormModel
             $duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
             Yii::app()->user->login($this->_identity,$duration);
             
-            //$auth =  Yii::app()->authManager;
-//            $auth->createOperation('create');
+            $auth =  Yii::app()->authManager;
+            //$auth->createOperation('create');
 //            $role = $auth->createRole('canhan');
 //            $role->addChild('create');
-//            $auth->assign('canhan',Yii::app()->user->getId());
-//            $auth->save();
+            if(!$auth->isAssigned('canhan',Yii::app()->user->getId()))
+            {
+                if($auth->assign('canhan',Yii::app()->user->getId()))
+                {
+                    $auth->save();
+                }           
+            }
             
             return true;
         }
