@@ -1,6 +1,4 @@
 <?php
-$this->beginContent('//layouts/main'); 
-
 $this->pageTitle=Yii::app()->name . ' - Đăng nhập';
 $this->breadcrumbs=array(
     'Đăng nhập',
@@ -43,5 +41,5 @@ echo Yii::app()->user->getState('type');
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
-<?php $this->endContent(); ?>
+
 
