@@ -1,12 +1,8 @@
-<?php
-
-
+<?php   
 $this->pageTitle=Yii::app()->name . ' - Đăng nhập';
 $this->breadcrumbs=array(
     'Đăng nhập',
 );
-echo Yii::app()->user->getState('name'); 
-echo Yii::app()->user->getState('type'); 
 ?>
 <h1>Đăng nhập</h1>
 

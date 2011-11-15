@@ -5,15 +5,7 @@ class UserController extends Controller
 	public function actionIndex()
 	{
 		$this->render('index');
-	}
-    
-    public function actionlogin()
-    {
-        $result = KhachhangCanhan::model()->findByAttributes(array('Ten_dang_nhap'=>'hqduy31912'));
-        echo "<pre>";
-        print_r($result);
-        echo "</pre>";
-    }
+	} 
 
 	// Uncomment the following methods and override them if needed
 	/*

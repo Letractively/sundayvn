@@ -36,7 +36,7 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
-            'loginUrl'=>array('khachhangcanhan/dangnhap'),
+            'loginUrl'=>array('khachhang/dangnhap'),
 		),
 		// uncomment the following to enable URLs in path-format
 		
