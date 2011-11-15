@@ -15,4 +15,19 @@ return array (
       ),
     ),
   ),
+  'doanhnghiep' => 
+  array (
+    'type' => 2,
+    'description' => 'khach hang doanh nghiep',
+    'bizRule' => '',
+    'data' => '',
+    'assignments' => 
+    array (
+      2 => 
+      array (
+        'bizRule' => NULL,
+        'data' => NULL,
+      ),
+    ),
+  ),
 );

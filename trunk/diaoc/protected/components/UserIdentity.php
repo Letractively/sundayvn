@@ -6,7 +6,7 @@ class UserIdentity extends CUserIdentity
 	
 	public function authenticate()
 	{
-		$result = KhachhangCanhan::model()->findByAttributes(array('Ten_dang_nhap'=>$this->username));
+		$result = KhachHang::model()->findByAttributes(array('Ten_dang_nhap'=>$this->username));
         
         if($result === null)
         {
@@ -15,13 +15,14 @@ class UserIdentity extends CUserIdentity
         else
         {
             if($this->password != $result->Mat_khau)
-            {
+            {                                             
                 $this->errorCode = self::ERROR_PASSWORD_INVALID;
             }
             else
             {
                 $this->setState('name',$result->Ten_dang_nhap);
-                $this->id = $result->idKhachhang_canhan;
+                $this->setState('ladoanhnghiep',$result->Ladoanhgnhiep);
+                $this->id = $result->ID_khach_hang;
                 $this->errorCode = self::ERROR_NONE;
             }        
         }

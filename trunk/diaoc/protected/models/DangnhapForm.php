@@ -42,12 +42,14 @@ class DangnhapForm extends CFormModel
      * This is the 'authenticate' validator as declared in rules().
      */
     public function authenticate($attribute,$params)
-    {
+    {           
         if(!$this->hasErrors())
-        {
-            $this->_identity=new UserIdentity($this->username,$this->password);
+        {            
+            $this->_identity = new UserIdentity($this->username,$this->password);
+            if($this->_identity->authenticate()===UserIdentity::ERROR_USERNAME_INVALID)
+                $this->addError('username','Tên đăng nhập không đúng.');
             if($this->_identity->authenticate()===UserIdentity::ERROR_PASSWORD_INVALID)
-                $this->addError('password','Incorrect username or password.');
+                $this->addError('password','Mật khẩu không đúng.');
         }
     }
 
@@ -71,13 +73,24 @@ class DangnhapForm extends CFormModel
             //$auth->createOperation('create');
 //            $role = $auth->createRole('canhan');
 //            $role->addChild('create');
-            if(!$auth->isAssigned('canhan',Yii::app()->user->getId()))
-            {
-                if($auth->assign('canhan',Yii::app()->user->getId()))
+            if(Yii::app()->user->getState('ladoanhnghiep')){
+                if(!$auth->isAssigned('doanhnghiep',Yii::app()->user->getId()))
                 {
-                    $auth->save();
-                }           
+                    if($auth->assign('doanhnghiep',Yii::app()->user->getId()))
+                    {
+                        $auth->save();
+                    }           
+                }    
+            }else{
+                if(!$auth->isAssigned('canhan',Yii::app()->user->getId()))
+                {
+                    if($auth->assign('canhan',Yii::app()->user->getId()))
+                    {
+                        $auth->save();
+                    }           
+                }    
             }
+            
             
             return true;
         }
