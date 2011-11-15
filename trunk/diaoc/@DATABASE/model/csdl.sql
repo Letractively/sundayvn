@@ -1,17 +1,7 @@
-CREATE TABLE Khachhang_canhan (
-  idKhachhang_canhan INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Ten_dang_nhap VARCHAR(50) NULL,
-  Mat_khau VARCHAR(50) NULL,
-  Ho_va_ten VARCHAR(80) NULL,
-  Email VARCHAR(100) NULL,
-  Ngay_sinh DATETIME NULL,
-  Gioi_tinh BIGINT NULL,
-  Ten_cong_ty VARCHAR(100) NULL,
-  Dia_chi VARCHAR(200) NULL,
-  Dien_thoai_ban VARCHAR(30) NULL,
-  Dien_thoai_di_dong VARCHAR(30) NULL,
-  Url_anh_dai_dien VARCHAR(100) NULL,
-  PRIMARY KEY(idKhachhang_canhan)
+CREATE TABLE Danh_muc (
+  idDanhmuc INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Ten_Danhmuc VARCHAR(200) NULL,
+  PRIMARY KEY(idDanhmuc)
 );
 
 CREATE TABLE Hinh_anh_nha_dat (
@@ -20,30 +10,20 @@ CREATE TABLE Hinh_anh_nha_dat (
   PRIMARY KEY(idanh_nha_dat)
 );
 
-CREATE TABLE Khachhang_doanhnghiep (
-  idKhachhang_doanhnghiep INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Ten_cong_ty VARCHAR(200) NULL,
-  Dia_chi VARCHAR(500) NULL,
-  Dien_thoai VARCHAR(20) NULL,
-  Email VARCHAR(20) NULL,
-  Web_site VARCHAR(200) NULL,
-  Von INT UNSIGNED NULL,
-  Ngay_thanh_lap DATETIME NULL,
-  Gioi_thieu VARCHAR(2000) NULL,
-  Hinh_url VARCHAR(200) NULL,
-  PRIMARY KEY(idKhachhang_doanhnghiep)
-);
-
-CREATE TABLE Quoc_gia (
-  idQuoc_gia INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Ten_quoc_gia VARCHAR(200) NULL,
-  PRIMARY KEY(idQuoc_gia)
-);
-
-CREATE TABLE Loai_du_an (
-  idLoai_du_an INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  ten_du_an VARCHAR(200) NULL,
-  PRIMARY KEY(idLoai_du_an)
+CREATE TABLE Khachhang (
+  ID_khach_hang INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Ten_dang_nhap VARCHAR(50) NULL,
+  Mat_khau VARCHAR(50) NULL,
+  Ho_va_ten VARCHAR(80) NULL,
+  Email VARCHAR(100) NULL,
+  Ngay_sinh DATETIME NULL,
+  Gioi_tinh BIGINT NULL,
+  Dia_chi VARCHAR(200) NULL,
+  Dien_thoai_ban VARCHAR(30) NULL,
+  Dien_thoai_di_dong VARCHAR(30) NULL,
+  Url_anh_dai_dien VARCHAR(100) NULL,
+  Ladoanhgnhiep INTEGER UNSIGNED NULL,
+  PRIMARY KEY(ID_khach_hang)
 );
 
 -- ------------------------------------------------------------
@@ -56,16 +36,52 @@ CREATE TABLE Chuyen_muc (
   PRIMARY KEY(idChuyen_muc)
 );
 
+CREATE TABLE Loai_du_an (
+  idLoai_du_an INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  ten_du_an VARCHAR(200) NULL,
+  PRIMARY KEY(idLoai_du_an)
+);
+
+CREATE TABLE Quoc_gia (
+  idQuoc_gia INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Ten_quoc_gia VARCHAR(200) NULL,
+  PRIMARY KEY(idQuoc_gia)
+);
+
 CREATE TABLE Bat_dong_san (
   idBat_dong_san INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   Ten_bat_dong_san VARCHAR(100) NULL,
   PRIMARY KEY(idBat_dong_san)
 );
 
-CREATE TABLE Danh_muc (
-  idDanhmuc INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Ten_Danhmuc VARCHAR(200) NULL,
-  PRIMARY KEY(idDanhmuc)
+CREATE TABLE Thongtin_doanhnghiep (
+  Khachhang_ID_khach_hang INTEGER UNSIGNED NOT NULL,
+  Ten_cong_ty VARCHAR(200) NULL,
+  Dia_chi VARCHAR(500) NULL,
+  Dien_thoai VARCHAR(20) NULL,
+  Email VARCHAR(20) NULL,
+  Web_site VARCHAR(200) NULL,
+  Von INT UNSIGNED NULL,
+  Ngay_thanh_lap DATETIME NULL,
+  Gioi_thieu VARCHAR(2000) NULL,
+  Hinh_url VARCHAR(200) NULL,
+  INDEX Thongtin_doanhnghiep_FKIndex1(Khachhang_ID_khach_hang),
+  FOREIGN KEY(Khachhang_ID_khach_hang)
+    REFERENCES Khachhang(ID_khach_hang)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE Tin_tuc_doanh_nghiep (
+  idTin_tuc_doanh_ghiep INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Khachhang_ID_khach_hang INTEGER UNSIGNED NOT NULL,
+  Noi_dung TEXT NULL,
+  PRIMARY KEY(idTin_tuc_doanh_ghiep),
+  INDEX Tin_tuc_doanh_nghiep_FKIndex1(Khachhang_ID_khach_hang),
+  FOREIGN KEY(Khachhang_ID_khach_hang)
+    REFERENCES Khachhang(ID_khach_hang)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
 );
 
 CREATE TABLE Tinh_thanh_pho (
@@ -76,62 +92,6 @@ CREATE TABLE Tinh_thanh_pho (
   INDEX Tinh_thanh_pho_FKIndex1(Quoc_gia_idQuoc_gia),
   FOREIGN KEY(Quoc_gia_idQuoc_gia)
     REFERENCES Quoc_gia(idQuoc_gia)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION
-);
-
-CREATE TABLE Khach_hang_mail_message (
-  idKhach_hang_thu INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Khachhang_canhan_idKhachhang_canhan INTEGER UNSIGNED NOT NULL,
-  Noi_dung TEXT NULL,
-  PRIMARY KEY(idKhach_hang_thu),
-  INDEX Khach_hang_mail_message_FKIndex1(Khachhang_canhan_idKhachhang_canhan),
-  FOREIGN KEY(Khachhang_canhan_idKhachhang_canhan)
-    REFERENCES Khachhang_canhan(idKhachhang_canhan)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION
-);
-
-CREATE TABLE Danh_muc_con (
-  idDanh_muc_con INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Danh_muc_idDanhmuc INTEGER UNSIGNED NOT NULL,
-  Ten_danh_muc_con VARCHAR(200) NULL,
-  PRIMARY KEY(idDanh_muc_con),
-  INDEX Danh_muc_con_FKIndex1(Danh_muc_idDanhmuc),
-  FOREIGN KEY(Danh_muc_idDanhmuc)
-    REFERENCES Danh_muc(idDanhmuc)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION
-);
-
-CREATE TABLE Tin_tuc_doanh_nghiep (
-  idTin_tuc_doanh_ghiep INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Khachhang_doanhnghiep_idKhachhang_doanhnghiep INTEGER UNSIGNED NOT NULL,
-  Noi_dung TEXT NULL,
-  PRIMARY KEY(idTin_tuc_doanh_ghiep),
-  INDEX Tin_tuc_doanh_nghiep_FKIndex1(Khachhang_doanhnghiep_idKhachhang_doanhnghiep),
-  FOREIGN KEY(Khachhang_doanhnghiep_idKhachhang_doanhnghiep)
-    REFERENCES Khachhang_doanhnghiep(idKhachhang_doanhnghiep)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION
-);
-
-CREATE TABLE Bantin_khachhang_doanhgnhiep (
-  idBantin_khachhang_doanhgnhiep INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Khachhang_doanhnghiep_idKhachhang_doanhnghiep INTEGER UNSIGNED NOT NULL,
-  Loai_du_an_idLoai_du_an INTEGER UNSIGNED NOT NULL,
-  Chi_tiet_du_an TEXT NULL,
-  Tieu_de TEXT NULL,
-  Vitri TEXT NULL,
-  PRIMARY KEY(idBantin_khachhang_doanhgnhiep),
-  INDEX Bantin_khachhang_doanhgnhiep_FKIndex1(Loai_du_an_idLoai_du_an),
-  INDEX Bantin_khachhang_doanhgnhiep_FKIndex2(Khachhang_doanhnghiep_idKhachhang_doanhnghiep),
-  FOREIGN KEY(Loai_du_an_idLoai_du_an)
-    REFERENCES Loai_du_an(idLoai_du_an)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
-  FOREIGN KEY(Khachhang_doanhnghiep_idKhachhang_doanhnghiep)
-    REFERENCES Khachhang_doanhnghiep(idKhachhang_doanhnghiep)
       ON DELETE NO ACTION
       ON UPDATE NO ACTION
 );
@@ -148,15 +108,26 @@ CREATE TABLE Quan_huyen (
       ON UPDATE NO ACTION
 );
 
-CREATE TABLE Tin_tuc (
-  idTin_tuc INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Danh_muc_con_idDanh_muc_con INTEGER UNSIGNED NOT NULL,
+CREATE TABLE Danh_muc_con (
+  idDanh_muc_con INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Danh_muc_idDanhmuc INTEGER UNSIGNED NOT NULL,
+  Ten_danh_muc_con VARCHAR(200) NULL,
+  PRIMARY KEY(idDanh_muc_con),
+  INDEX Danh_muc_con_FKIndex1(Danh_muc_idDanhmuc),
+  FOREIGN KEY(Danh_muc_idDanhmuc)
+    REFERENCES Danh_muc(idDanhmuc)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE Khach_hang_mail_message (
+  idKhach_hang_thu INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Khachhang_ID_khach_hang INTEGER UNSIGNED NOT NULL,
   Noi_dung TEXT NULL,
-  Ngay_gio DATETIME NULL,
-  PRIMARY KEY(idTin_tuc),
-  INDEX Tin_tuc_FKIndex1(Danh_muc_con_idDanh_muc_con),
-  FOREIGN KEY(Danh_muc_con_idDanh_muc_con)
-    REFERENCES Danh_muc_con(idDanh_muc_con)
+  PRIMARY KEY(idKhach_hang_thu),
+  INDEX Khach_hang_mail_message_FKIndex1(Khachhang_ID_khach_hang),
+  FOREIGN KEY(Khachhang_ID_khach_hang)
+    REFERENCES Khachhang(ID_khach_hang)
       ON DELETE NO ACTION
       ON UPDATE NO ACTION
 );
@@ -173,16 +144,35 @@ CREATE TABLE Phuong_xa (
       ON UPDATE NO ACTION
 );
 
+CREATE TABLE Bantin_khachhang_doanhgnhiep (
+  idBantin_khachhang_doanhgnhiep INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Khachhang_ID_khach_hang INTEGER UNSIGNED NOT NULL,
+  Loai_du_an_idLoai_du_an INTEGER UNSIGNED NOT NULL,
+  Chi_tiet_du_an TEXT NULL,
+  Tieu_de TEXT NULL,
+  Vitri TEXT NULL,
+  PRIMARY KEY(idBantin_khachhang_doanhgnhiep),
+  INDEX Bantin_khachhang_doanhgnhiep_FKIndex1(Loai_du_an_idLoai_du_an),
+  INDEX Bantin_khachhang_doanhgnhiep_FKIndex2(Khachhang_ID_khach_hang),
+  FOREIGN KEY(Loai_du_an_idLoai_du_an)
+    REFERENCES Loai_du_an(idLoai_du_an)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION,
+  FOREIGN KEY(Khachhang_ID_khach_hang)
+    REFERENCES Khachhang(ID_khach_hang)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
 CREATE TABLE Ban_tin_khachhang_canhan_doanhgnhiep (
   id_bantin INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  Khachhang_doanhnghiep_idKhachhang_doanhnghiep INTEGER UNSIGNED NOT NULL,
+  Khachhang_ID_khach_hang INTEGER UNSIGNED NOT NULL,
   Chuyen_muc_idChuyen_muc INTEGER UNSIGNED NOT NULL,
   Bat_dong_san_idBat_dong_san INTEGER UNSIGNED NOT NULL,
   Hinh_anh_nha_dat_idanh_nha_dat INTEGER UNSIGNED NOT NULL,
   Quan_huyen_idQuan_huyen INTEGER UNSIGNED NOT NULL,
   Tinh_thanh_pho_idTinh_thanh_pho INTEGER UNSIGNED NOT NULL,
   Quoc_gia_idQuoc_gia INTEGER UNSIGNED NOT NULL,
-  Khachhang_canhan_idKhachhang_canhan INTEGER UNSIGNED NOT NULL,
   So_nha VARCHAR(50) NULL,
   Duong_pho VARCHAR(100) NULL,
   Gia FLOAT NULL,
@@ -215,18 +205,13 @@ CREATE TABLE Ban_tin_khachhang_canhan_doanhgnhiep (
   Dia_chi_nguoi_lien_he VARCHAR(200) NULL,
   Ten_du_an VARCHAR(500) NULL,
   PRIMARY KEY(id_bantin),
-  INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex1(Khachhang_canhan_idKhachhang_canhan),
   INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex2(Quoc_gia_idQuoc_gia),
   INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex3(Tinh_thanh_pho_idTinh_thanh_pho),
   INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex4(Quan_huyen_idQuan_huyen),
   INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex5(Hinh_anh_nha_dat_idanh_nha_dat),
   INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex6(Bat_dong_san_idBat_dong_san),
   INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex7(Chuyen_muc_idChuyen_muc),
-  INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex8(Khachhang_doanhnghiep_idKhachhang_doanhnghiep),
-  FOREIGN KEY(Khachhang_canhan_idKhachhang_canhan)
-    REFERENCES Khachhang_canhan(idKhachhang_canhan)
-      ON DELETE NO ACTION
-      ON UPDATE NO ACTION,
+  INDEX Ban_tin_khachhang_canhan_doanhgnhiep_FKIndex7(Khachhang_ID_khach_hang),
   FOREIGN KEY(Quoc_gia_idQuoc_gia)
     REFERENCES Quoc_gia(idQuoc_gia)
       ON DELETE NO ACTION
@@ -251,8 +236,21 @@ CREATE TABLE Ban_tin_khachhang_canhan_doanhgnhiep (
     REFERENCES Chuyen_muc(idChuyen_muc)
       ON DELETE NO ACTION
       ON UPDATE NO ACTION,
-  FOREIGN KEY(Khachhang_doanhnghiep_idKhachhang_doanhnghiep)
-    REFERENCES Khachhang_doanhnghiep(idKhachhang_doanhnghiep)
+  FOREIGN KEY(Khachhang_ID_khach_hang)
+    REFERENCES Khachhang(ID_khach_hang)
+      ON DELETE NO ACTION
+      ON UPDATE NO ACTION
+);
+
+CREATE TABLE Tin_tuc (
+  idTin_tuc INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  Danh_muc_con_idDanh_muc_con INTEGER UNSIGNED NOT NULL,
+  Noi_dung TEXT NULL,
+  Ngay_gio DATETIME NULL,
+  PRIMARY KEY(idTin_tuc),
+  INDEX Tin_tuc_FKIndex1(Danh_muc_con_idDanh_muc_con),
+  FOREIGN KEY(Danh_muc_con_idDanh_muc_con)
+    REFERENCES Danh_muc_con(idDanh_muc_con)
       ON DELETE NO ACTION
       ON UPDATE NO ACTION
 );
