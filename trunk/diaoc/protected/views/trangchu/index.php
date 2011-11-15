@@ -358,74 +358,420 @@
             </div>
         </div>
 
-        <div class="tabs">
+        <div class="tabs" id="brand_intro">
             <ul>
-                <li><a href="#tabs-1">Tài sản mới</a></li>
+                <li><a href="#tabs-1">Doanh nghiệp địa ốc</a></li>
                 <li><a href="#tabs-2">Tài sản chính chủ</a></li>
             </ul>
             <div id="tabs-1">
-                <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+                <div id="featured_brand" class="clearfix">
+                    <div class="brand_info">
+                        <h3>Green Sun Coop</h3>
+                        <div class="brand_image">
+                        <img src="images/brand_logo/12_TUILDONAI_75x75.jpg" />
+                        </div>
+                        <div class="brand_txt">
+                            Khởi nghiệp từ một công ty dệt nhỏ ở tỉnh Thái Bình, thuộc miền Bắc Việt Nam năm 1985. Chỉ trong 25 năm hoạt động, Tập đoàn Bitexco đã phát triển lớn mạnh, trở thành một trong những tập đoàn kinh tế...
+                        </div>
+                    </div>
+                    <ul class="brand_projects">
+                        <li><a href="#">Khu công nghiệp Đồng Xoài III</a></li>
+                        <li><a href="#">Goe fi9yp fd qqdb</a></li>
+                        <li><a href="#">Goe fi9yp fd qqdb</a></li>
+                    </ul>
+                </div>
             </div>
             <div id="tabs-2">
                 <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
             </div>
         </div>
-        <div class="tabs">
-            <ul>
-                <li><a href="#tabs-1">Giới thiệu doanh nghiệp</a></li>
-                <li><a href="#tabs-2">Doanh nghiệp địa ốc</a></li>
-            </ul>
-            <div id="tabs-1">
-                <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-            </div>
-            <div id="tabs-2">
-                <p>aMorbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-            </div>
+        <!--<div class="tabs">
+        <ul>
+        <li><a href="#tabs-1">Giới thiệu doanh nghiệp</a></li>
+        <li><a href="#tabs-2">Doanh nghiệp địa ốc</a></li>
+        </ul>
+        <div id="tabs-1" class="plain_module">
+        <div class="two_div_property clearfix">
+        <div class="left">
+        <div class="customize">
+        <div class="a_property clearfix">
+        <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+        <div class="p"><h4><a href="#">Bán nhà trong hẻm, đường Trương Quyền, phường 6, quận 3</a></h4>
+        <h5>TP.HCM - Quận 12<br />
+        Giá: 5 tỷ 200 triệu
+        </h5>
         </div>
-        <div class="tabs">
+        </div>
+        <div class="a_property clearfix">
+        <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+        <div class="p"><h4><a href="#">Bán nhà trong hẻm, đường Trương Quyền, phường 6, quận 3</a></h4>
+        <h5>TP.HCM - Quận 12<br />
+        Giá: 5 tỷ 200 triệu
+        </h5>
+        </div>
+        </div>
+        <div class="a_property clearfix">
+        <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+        <div class="p"><h4><a href="#">Bán nhà trong hẻm, đường Trương Quyền, phường 6, quận 3</a></h4>
+        <h5>TP.HCM - Quận 12<br />
+        Giá: 5 tỷ 200 triệu
+        </h5>
+        </div>
+        </div>
+        <div class="a_property clearfix">
+        <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+        <div class="p"><h4><a href="#">Bán nhà trong hẻm, đường Trương Quyền, phường 6, quận 3</a></h4>
+        <h5>TP.HCM - Quận 12<br />
+        Giá: 5 tỷ 200 triệu
+        </h5>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="right">
+        <div class="customize">
+        <div class="a_property clearfix">
+        <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+        <div class="p"><h4><a href="#">Bán nhà trong hẻm, đường Trương Quyền, phường 6, quận 3</a></h4>
+        <h5>TP.HCM - Quận 12<br />
+        Giá: 5 tỷ 200 triệu
+        </h5>
+        </div>
+        </div>
+        <div class="a_property clearfix">
+        <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+        <div class="p"><h4><a href="#">Bán nhà trong hẻm, đường Trương Quyền, phường 6, quận 3</a></h4>
+        <h5>TP.HCM - Quận 12<br />
+        Giá: 5 tỷ 200 triệu
+        </h5>
+        </div>
+        </div>
+        <div class="a_property clearfix">
+        <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+        <div class="p"><h4><a href="#">Bán nhà trong hẻm, đường Trương Quyền, phường 6, quận 3</a></h4>
+        <h5>TP.HCM - Quận 12<br />
+        Giá: 5 tỷ 200 triệu
+        </h5>
+        </div>
+        </div>
+        <div class="a_property clearfix">
+        <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+        <div class="p"><h4><a href="#">Bán nhà trong hẻm, đường Trương Quyền, phường 6, quận 3</a></h4>
+        <h5>TP.HCM - Quận 12<br />
+        Giá: 5 tỷ 200 triệu
+        </h5>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div id="tabs-2">
+        <p>aMorbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+        </div>
+        </div>-->
+        <div class="tabs" id="news_home">
             <ul>
                 <li><a href="#tabs-1">Tin thời sự</a></li>
                 <li><a href="#tabs-2">Phân tích nhận định</a></li>
                 <li><a href="#tabs-3">Thư viện địa ốc</a></li>
                 <li><a href="#tabs-4">Góc luật</a></li>
             </ul>
-            <div id="tabs-1">
-                <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+            <div id="tabs-1" class="plain_module">
+                <div class="two_div_property clearfix">
+                    <div class="left">
+                        <div class="customize">
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="customize">
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="tabs-2">
-                <p>aMorbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+            <div id="tabs-2" class="plain_module">
+                <div class="two_div_property clearfix">
+                    <div class="left">
+                        <div class="customize">
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="customize">
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="tabs-3">
-                <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-            </div>
-            <div id="tabs-4">
-                <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-            </div>
+            <div id="tabs-3" class="plain_module">
+                <div class="two_div_property clearfix">
+                    <div class="left">
+                        <div class="customize">
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="customize">
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>            </div>
+            <div id="tabs-4" class="plain_module">
+                <div class="two_div_property clearfix">
+                    <div class="left">
+                        <div class="customize">
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Bộ Xây dựng không đề nghị bơm tiền cứu bất...</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="customize">
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                            <div class="a_property clearfix">
+                                <h5 class="news_title"><a href="#">Mẹo giúp nhà rộng rãi thoáng mát</a></h5>
+                                <a class="image_pro" href="#"><img src="images/user/upload/du-an-cao-oc-hiep-phu-quan-9-tphcm.jpg" /></a>
+                                <div class="p">
+                                    Tập đoàn HUD tập trung xây dựng dự án nhà giá rẻ 300-600 triệu đồng/căn, Vinaconex Xuân Mai xây nhà giá 150 triệu đồng/căn.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>            </div>
         </div>
-        <div class="tabs">
-            <ul>
-                <li><a href="#tabs-1">Khám phá</a></li>
-                <li><a href="#tabs-2">Thế giới kiến trúc</a></li>
-                <li><a href="#tabs-3">Mách bạn</a></li>
-                <li><a href="#tabs-4">Không gian sống</a></li>
-                <li><a href="#tabs-5">Phong thủy</a></li>
-            </ul>
-            <div id="tabs-1">
-                <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-            </div>
-            <div id="tabs-2">
-                <p>aMorbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
-            </div>
-            <div id="tabs-3">
-                <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-            </div>
-            <div id="tabs-4">
-                <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-            </div>
-            <div id="tabs-5">
-                <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
-            </div>
+        <!--<div class="tabs">
+        <ul>
+        <li><a href="#tabs-1">Khám phá</a></li>
+        <li><a href="#tabs-2">Thế giới kiến trúc</a></li>
+        <li><a href="#tabs-3">Mách bạn</a></li>
+        <li><a href="#tabs-4">Không gian sống</a></li>
+        <li><a href="#tabs-5">Phong thủy</a></li>
+        </ul>
+        <div id="tabs-1">
+        <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
         </div>
+        <div id="tabs-2">
+        <p>aMorbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+        </div>
+        <div id="tabs-3">
+        <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+        </div>
+        <div id="tabs-4">
+        <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+        </div>
+        <div id="tabs-5">
+        <p>aaProin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+        </div>
+        </div>-->
 
     </div>
     <?php
