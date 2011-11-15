@@ -183,9 +183,14 @@ class KhachhangCanhanController extends Controller {
     }
 
     public function actionDangky() {
-        $model = new DangkyForm_khachhangCanhan;
+        $model = new Dangkiform;
         if($model->Gioi_tinh==NULL)
              $model->Gioi_tinh=0;
+         if($model->Ladoanhgnhiep==NULL)
+             $model->Ladoanhgnhiep=0;
+
+
+            // $model->Gioi_tinh=0;
      // echo Yii::app()->getBaseUrl(true).'/images/user/upload/';
       //  echo Yii::app()->getBasePath().'\model';
         
@@ -199,8 +204,8 @@ class KhachhangCanhanController extends Controller {
             Yii::app()->end();
         }
 
-        if (isset($_POST['Dangkyform_KhachhangCanhan'])) {      
-            $model->attributes = $_POST['Dangkyform_KhachhangCanhan'];
+        if (isset($_POST['Dangkiform'])) {
+            $model->attributes = $_POST['Dangkiform'];
 
             if(isset($_POST['Ngay_sinh'])){
 
@@ -232,30 +237,32 @@ class KhachhangCanhanController extends Controller {
 
                 if ($model->hasExistUserName()) {
                     $model->addError('Ten_dang_nhap', 'Tên đăng nhập đã tồn tại');
-                   $this->render('Dangkymoi', array('model' => $model));
+                   $this->render('dangkymoi', array('model' => $model));
                 } elseif ($model->hasExistEmail()) {
                    $model->addError('Email', 'Email đã tồn tại');
-                    $this->render('Dangkymoi', array('model' => $model));
+                    $this->render('dangkymoi', array('model' => $model));
                 } else {
                                    
                    $model->insert();
                  
                   $dir = Yii::getPathOfAlias('webroot.images\user\upload\\');
                  // echo $dir;
-                 $model->image->saveAs($dir.$model->Url_anh_dai_dien);
-
+                  if($model->Url_anh_dai_dien)
+                         $model->image->saveAs($dir.$model->Url_anh_dai_dien);
+                 if($model->Ladoanhgnhiep==1)
+                    $model->insertToThongtin_doanhnghiep();
 
              
 
                 // redirect to success page
                      
-                    $this->render('Dangkymoi', array('model' => $model));
+                    $this->render('dangkymoi', array('model' => $model));
 
                 }
                 return;
             }
         }
-        $this->render('Dangkymoi', array('model' => $model));
+        $this->render('dangkymoi', array('model' => $model));
     }
 
     public function actions() {
