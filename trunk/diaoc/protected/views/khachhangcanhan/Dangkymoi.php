@@ -65,9 +65,7 @@ $this->breadcrumbs=array(
         echo "<br/>{$form->labelEx($model,'Gioi_tinh')}<br/>";
         echo $form->radioButtonList($model,'Gioi_tinh',array('nam','nu'));
 
-        echo "<br/>{$form->labelEx($model,'Ten_cong_ty')}<br/>";
-        echo $form->textField($model,'Ten_cong_ty');
-        echo "{$form->error($model,'Ten_cong_ty')}";
+      
         
         echo "<br/>{$form->labelEx($model,'Dia_chi')}<br/>";
         echo $form->textField($model,'Dia_chi');
@@ -80,6 +78,30 @@ $this->breadcrumbs=array(
         echo $form->textField($model,'Dien_thoai_di_dong');
         echo "{$form->error($model,'Dien_thoai_di_dong')}";
 
+        echo "<br/>{$form->labelEx($model,'Ladoanhgnhiep')}<br/>";
+        echo $form->radioButtonList($model,'Ladoanhgnhiep',array('Cá nhân','Nhà môi giới'));
+        echo "{$form->error($model,'Ladoanhgnhiep')}";
+
+        echo "<br/>{$form->labelEx($model,'Ten_cong_ty')}<br/>";
+        echo $form->textField($model,'Ten_cong_ty');
+        echo "{$form->error($model,'Ten_cong_ty')}";
+        
+        echo "<br/>{$form->labelEx($model,'Dia_chi_cong_ty')}<br/>";
+        echo $form->textField($model,'So_dien_thoai_cong_ty');
+        echo "{$form->error($model,'So_dien_thoai_cong_ty')}";
+    
+        echo "<br/>{$form->labelEx($model,'linh_vuc_hoat_dong')}<br/>";
+        echo $form->textField($model,'linh_vuc_hoat_dong');
+        echo "{$form->error($model,'linh_vuc_hoat_dong')}";
+
+        echo "<br/>{$form->labelEx($model,'gioi_thieu_cong_ty')}<br/>";
+        echo $form->textArea($model,'gioi_thieu_cong_ty');
+        echo "{$form->error($model,'gioi_thieu_cong_ty')}";
+
+        echo "<br/>{$form->labelEx($model,'website')}<br/>";
+        echo $form->textField($model,'website');
+        echo "{$form->error($model,'website')}";
+        
         echo "<br/>{$form->labelEx($model,'Url_anh_dai_dien')}";
         echo CHtml::activeFileField($model, 'image');
         echo "<br/>";
