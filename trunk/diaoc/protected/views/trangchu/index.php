@@ -360,8 +360,8 @@
 
         <div class="tabs" id="brand_intro">
             <ul>
-                <li><a href="#tabs-1">Doanh nghiệp địa ốc</a></li>
-                <li><a href="#tabs-2">Tài sản chính chủ</a></li>
+                <li><a href="#tabs-1">Giới thiệu doanh nghiệp</a></li>
+                <li><a href="#tabs-2">Doanh nghiệp địa ốc</a></li>
             </ul>
             <div id="tabs-1">
                 <div id="featured_brand" class="clearfix">
