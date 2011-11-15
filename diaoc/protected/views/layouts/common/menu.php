@@ -50,10 +50,10 @@
         if(Yii::app()->user->isGuest):
     ?>
     <li class="right">
-        <a href="<?php  echo $this->createUrl('khachhangCanhan/Dangky');?>"><span>Đăng ký<span></a>
+        <a href="<?php  echo $this->createUrl('khachhang/dangky');?>"><span>Đăng ký<span></a>
     </li>
     <li class="right">
-        <a href="<?php  echo $this->createUrl('khachhangcanhan/dangnhap');?>"><span>Đăng nhập<span></a>
+        <a href="<?php  echo $this->createUrl('khachhang/dangnhap');?>"><span>Đăng nhập<span></a>
     </li>
     <?php
         else:
