@@ -1,5 +1,5 @@
 <?php
-$this->beginContent('//layouts/main');
+//$this->beginContent('//layouts/main');
 
 
 $this->breadcrumbs=array(
@@ -131,6 +131,6 @@ $this->breadcrumbs=array(
 
     echo "\n";
 ?>
-<?php $this->endContent(); ?>
+<?php// $this->endContent(); ?>
 
 
