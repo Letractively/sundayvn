@@ -30,7 +30,8 @@ return array(
         'administrator'=>array(
             'defaultController'=>'Default'
         ),
-		'quantri',
+	'bangdieukhien'
+	'quantri',
 	),
 
 	// application components
