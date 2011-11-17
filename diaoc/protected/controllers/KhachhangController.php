@@ -174,24 +174,6 @@ class KhachHangController extends Controller
 		}
 	}
     
-    public function actionDangnhap() {
-        $model = new DangnhapForm;
-
-        // if it is ajax validation request
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'dangnhap-form') {
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
-        }
-
-        // collect user input data
-        if (isset($_POST['DangnhapForm'])) {
-            $model->attributes = $_POST['DangnhapForm'];
-            // validate user input and redirect to the previous page if valid
-            if ($model->validate() && $model->login())
-                $this->redirect(Yii::app()->user->returnUrl);
-        }
-
-        $this->render('dangnhap', array('model' => $model));
-    }
+    
     
 }

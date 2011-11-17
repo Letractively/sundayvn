@@ -73,7 +73,7 @@ class DangnhapForm extends CFormModel
             //$auth->createOperation('create');
 //            $role = $auth->createRole('canhan');
 //            $role->addChild('create');
-            if(Yii::app()->user->getState('ladoanhnghiep')){
+            if(Yii::app()->user->getState('loai')===1){
                 if(!$auth->isAssigned('doanhnghiep',Yii::app()->user->getId()))
                 {
                     if($auth->assign('doanhnghiep',Yii::app()->user->getId()))
@@ -81,10 +81,18 @@ class DangnhapForm extends CFormModel
                         $auth->save();
                     }           
                 }    
-            }else{
+            }else if(Yii::app()->user->getState('loai')===0){
                 if(!$auth->isAssigned('canhan',Yii::app()->user->getId()))
                 {
                     if($auth->assign('canhan',Yii::app()->user->getId()))
+                    {
+                        $auth->save();
+                    }           
+                }    
+            }else if(Yii::app()->user->getState('loai')===2){
+                if(!$auth->isAssigned('admin',Yii::app()->user->getId()))
+                {
+                    if($auth->assign('admin',Yii::app()->user->getId()))
                     {
                         $auth->save();
                     }           
