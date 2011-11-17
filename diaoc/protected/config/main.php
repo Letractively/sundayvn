@@ -30,7 +30,7 @@ return array(
         'administrator'=>array(
             'defaultController'=>'Default'
         ),
-	'bangdieukhien'
+	'bangdieukhien',
 	'quantri',
 	),
 
