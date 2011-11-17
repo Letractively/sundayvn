@@ -7,7 +7,7 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
         $page = preg_split('/\=/',Yii::app()->user->returnUrl);
-        if($page=="quantri"){
+        if($page[1]=="quantri"){
             if($this->username != "admin")
             {
                 $this->errorCode = self::ERROR_USERNAME_INVALID;
