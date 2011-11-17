@@ -30,4 +30,24 @@ return array (
       ),
     ),
   ),
+  'admin' => 
+  array (
+    'type' => 2,
+    'description' => 'quan tri',
+    'bizRule' => '',
+    'data' => '',
+    'assignments' => 
+    array (
+      2 => 
+      array (
+        'bizRule' => NULL,
+        'data' => NULL,
+      ),
+      9999 => 
+      array (
+        'bizRule' => NULL,
+        'data' => NULL,
+      ),
+    ),
+  ),
 );
