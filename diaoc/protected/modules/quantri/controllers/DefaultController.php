@@ -21,7 +21,8 @@ class DefaultController extends Controller
         );
     }
 	public function actionIndex()
-	{
-		$this->render('index');
+	{   
+        $curpage = Yii::app()->controller->module->id;
+        $this->render('index',array('curpage'=>$curpage));
 	}
 }
