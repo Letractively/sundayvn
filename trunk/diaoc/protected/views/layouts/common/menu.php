@@ -1,9 +1,16 @@
 <ul id="nav-one" class="nav clearfix">
-    <li>
-
+    <li> 
         <a href="<?php echo Yii::app()->request->baseUrl; ?> "><span>Trang chủ<span></a>
-
     </li>
+<?php if(Yii::app()->controller->module && Yii::app()->controller->module->id=="quantri"): ?>
+    <li>
+        <a href="<?php  echo $this->createUrl('danhmuc/index');?>"><span>Danh mục<span></a>
+        <ul>
+            <li><a href="<?php  echo $this->createUrl('danhmuc/quanly');?>">Quản lý danh mục</a></li>    
+            <li><a href="<?php  echo $this->createUrl('danhmuc/them');?>">Thêm danh mục</a></li>    
+        </ul>
+    </li>
+<?php else: ?>
     <li>
         <a href="<?php  echo $this->createUrl('site/contact');?>"><span>Tin tức &amp; Trải nghiệm<span></a>
         <ul>
@@ -45,26 +52,27 @@
     </li>
     <li>
         <a href="<?php  echo $this->createUrl('site/contact');?>"><span>Liên hệ<span></a>
-    </li>
-    <?php
-        if(Yii::app()->user->isGuest):
-    ?>
+    </li>    
+<?php
+    endif;
+    if(Yii::app()->user->isGuest):
+?>
     <li class="right">
         <a href="<?php  echo $this->createUrl('khachhang/dangky');?>"><span>Đăng ký<span></a>
     </li>
     <li class="right">
         <a href="<?php  echo $this->createUrl('trangchu/dangnhap');?>"><span>Đăng nhập<span></a>
     </li>
-    <?php
-        else:
-    ?>
+<?php
+    else:
+?>
     <li class="right">
         <a href="<?php  echo $this->createUrl('trangchu/dangxuat');?>"><span>Đăng xuất<span></a>
     </li>
     <li class="right"> 
         <a href="#">Chào bạn <?php echo Yii::app()->user->name; ?></a>
     </li>
-    <?php
-        endif;
-    ?>
+<?php
+    endif;
+?>                 
 </ul>

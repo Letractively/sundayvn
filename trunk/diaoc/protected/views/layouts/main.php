@@ -46,7 +46,7 @@
                     <div id="sidebar">
                     <?php
                         $this->beginWidget('zii.widgets.CPortlet', array(
-                            'title'=>'Operations',
+                            'title'=>'Thao tác',
                         ));
                         $this->widget('zii.widgets.CMenu', array(
                             'items'=>$this->menu,
@@ -54,7 +54,7 @@
                         ));
                         $this->endWidget();
                     ?>
-                    </div><!-- sidebar -->
+                    </div><br/><!-- sidebar -->
                 </div>
             </div>
             <div id="footer">
