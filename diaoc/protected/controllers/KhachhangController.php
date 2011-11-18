@@ -173,7 +173,90 @@ class KhachHangController extends Controller
 			Yii::app()->end();
 		}
 	}
-    
+    public function actionDangky() {
+        $model = new Dangkiform;
+        if ($model->Gioi_tinh == NULL)
+            $model->Gioi_tinh = 0;
+        if ($model->Ladoanhgnhiep == NULL)
+            $model->Ladoanhgnhiep = 0;
+
+
+        // $model->Gioi_tinh=0;
+        // echo Yii::app()->getBaseUrl(true).'/images/user/upload/';
+        //  echo Yii::app()->getBasePath().'\model';
+        //echo $dir;
+        //$dir = Yii::getPathOfAlias('webroot.images');
+        //    echo $dir;
+
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'RegisterForm') {
+
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+
+        if (isset($_POST['Dangkiform'])) {
+            $model->attributes = $_POST['Dangkiform'];
+
+            if (isset($_POST['Ngay_sinh'])) {
+
+                $temp = $_POST['Ngay_sinh'];
+
+                $model->Ngay_sinh = $temp;
+            }
+
+
+
+            $model->image = CUploadedFile::getInstance($model, 'image');
+
+            if ($model->image) {
+                $model->Url_anh_dai_dien = $model->image;
+            }
+
+
+
+
+
+            if ($model->validate()) {
+
+
+
+                if ($model->hasExistUserName()) {
+                    $model->addError('Ten_dang_nhap', 'T�n dang nh?p d� t?n t?i');
+                    $this->render('dangkymoi', array('model' => $model));
+                } elseif ($model->hasExistEmail()) {
+                    $model->addError('Email', 'Email d� t?n t?i');
+                    $this->render('dangkymoi', array('model' => $model));
+                } else {
+
+                    $model->insert();
+
+                    $dir = Yii::getPathOfAlias('webroot.images\user\upload\\');
+                    // echo $dir;
+                    if ($model->Url_anh_dai_dien)
+                        $model->image->saveAs($dir . $model->Url_anh_dai_dien);
+                    if ($model->Ladoanhgnhiep == 1)
+                        $model->insertToThongtin_doanhnghiep();
+
+
+
+                    // redirect to success page
+
+                    $this->redirect(Yii::app()->homeUrl);
+                }
+                return;
+            }
+        }
+        $this->render('dangkymoi', array('model' => $model));
+    }
+
+    public function actions() {
+        return array(
+            'captcha' => array(
+                'class' => 'CCaptchaAction'
+            ),
+        );
+    }
+
     
     
 }
