@@ -425,3 +425,6 @@ height: 100px;
     float: left;
     width: 60%;
 }
+.list-view .view{
+    margin-bottom: 10px;
+}
