@@ -20,5 +20,28 @@ class Controller extends CController
     */
     public $breadcrumbs=array();
 
-}
-	
+    public function init()
+    {
+        $cs = App::getClientScript();
+        $baseURL = App::getAbsoluteBaseUrl();
+        $cs->registerCssFile ( $baseURL . '/css/addons.css' );
+        $cs->registerCssFile ( $baseURL . '/css/main.css' );
+        $cs->registerCssFile ( $baseURL . '/css/form.css' );
+        $cs->registerCssFile ( $baseURL . '/css/star-light.css' );
+        $cs->registerCssFile ( $baseURL . '/css/redmond/jquery-ui-1.8.16.custom.css' ); 
+        $cs->registerScriptFile( $baseURL . "/js/jquery-ui-1.8.16.custom.min.js" );
+        $cs->registerScriptFile( $baseURL . "/js/common-script.js" );
+    }
+    
+    //
+    //    public function beforeAction()
+    //    {
+    //dang ky css cho module nay
+    //        $cs = App::getClientScript();
+
+    //        $baseURL = App::getAbsoluteBaseUrl();
+    //        
+    //        Yii::app()->clientScript->registerCssFile ( $baseURL . '/css/main.css' );
+
+    //    }
+}	
