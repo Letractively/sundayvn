@@ -14,6 +14,7 @@ class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
         $rows = Yii::app()->db->createCommand($sql
                 )->queryAll();
 
+      
         $first_id_tp = $rows[0]['idTinh_thanh_pho'];
         $sql = 'SELECT * FROM quan_huyen where Tinh_thanh_pho_idTinh_thanh_pho=' . $first_id_tp;
 
@@ -179,20 +180,20 @@ class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
     }
 
      public function actionThemPhuongXa() {
-        $tttp = $_POST['idqh'];
-        $tenqh = $_POST['tenpx'];
-        echo 'aaaaa';
-        if ($tenqh != "") {
-            $idtp = $tttp;
+        $idqh = $_POST['idqh'];
+        $tenpx = $_POST['tenpx'];
+
+        if ($tenpx != "") {
+           // $idtp = $tttp;
             $model = new PhuongXa;
-            $model->quanHuyenIdQuanHuyen = $tttp;
-            $model->Ten_phuong_xa= $tenqh;
+            $model->Quan_huyen_idQuan_huyen = $idqh;
+            $model->Ten_phuong_xa= $tenpx;
             $model->insert();
-            $stringHTML = $this->generateGridPhuongXa($tttp);
-            //echo $stringHTML;
+            $stringHTML = $this->generateGridPhuongXa($idqh);
+            echo $stringHTML;
         } else {
-            $stringHTML = $this->generateGridPhuongXa($tttp);
-            //echo $stringHTML;
+            $stringHTML = $this->generateGridPhuongXa($idqh);
+            echo $stringHTML;
         }
     }
     public function actionLoadQuanHuyen() {
