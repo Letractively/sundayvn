@@ -1,6 +1,6 @@
 <ul id="nav-one" class="nav clearfix">
     <li> 
-        <a href="<?php echo Yii::app()->request->baseUrl; ?> "><span>Trang chủ<span></a>
+        <a href="<?php echo App::getUrl(); ?> "><span>Trang chủ<span></a>
     </li>
 <?php if(Yii::app()->controller->module && Yii::app()->controller->module->id=="quantri"): ?>
     <li>
