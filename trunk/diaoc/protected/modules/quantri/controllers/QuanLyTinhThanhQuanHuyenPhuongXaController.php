@@ -2,7 +2,7 @@
 
 class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
 
-    public $layout = '//layouts/main';
+    // ko can thiet phai co dong nay public $layout = '//layouts/main';
 
     public function actionQuanly() {
 
@@ -127,7 +127,8 @@ class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
 
         return $stringHTMl;
     }
-    public function generateGridPhuongXa($idqh){
+    
+	public function generateGridPhuongXa($idqh){
       
         $sql = 'SELECT * FROM phuong_xa where Quan_huyen_idQuan_huyen=' . $idqh . ' order by Ten_phuong_xa';
         $arrayqh = Yii::app()->db->createCommand($sql
