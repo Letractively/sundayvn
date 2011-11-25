@@ -77,7 +77,7 @@
 <script type="text/javascript">
 
 $().ready(function(){
-        $('.btdelete_thanhpho').click(function() {
+        $('.btdelete_thanhpho').live('click',function() {
             //var t = confirm('Bạn thấy có muốn xóa tỉnh thành này không');
             // if(t){
             var id=$(this).attr('id');
@@ -92,7 +92,8 @@ $().ready(function(){
 
             })
         });
-        $('.btdelete_qh').click(function() {
+
+        $('.btdelete_qh').live('click',(function() {
                 var idtp= $('#hiddenTTP').val();
                // var t = confirm('Bạn thấy có muốn xóa quận huyện này không');
                 //if(t){
@@ -108,7 +109,31 @@ $().ready(function(){
 
                     })
                // }
-            });
+            })
+            );
+          
+
+
+        $('.btdelete_px').live('click',(function() {
+                var idqh= $('#hiddenQH').val();
+               // var t = confirm('Bạn thấy có muốn xóa quận huyện này không');
+                //if(t){
+                    var id=$(this).attr('id');
+                    $.ajax({
+                        type:'POST',
+                        data:'idpx='+id+'&idqh='+idqh,
+                        url:'index.php?r=quantri/QuanLyTinhThanhQuanHuyenPhuongXa/XoaPhuongXa',
+                        success: function (html){
+                            $('#Grid_px').html(html);
+                            
+                            return false;
+                        }
+
+                    })
+               // }
+            })
+            );
+          
 
          $('.row_ttp').click(function(){
            
