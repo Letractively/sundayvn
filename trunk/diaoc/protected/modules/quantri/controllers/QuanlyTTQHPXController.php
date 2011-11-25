@@ -1,10 +1,10 @@
 <?php
 
-class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
+class QuanlyTTQHPXController extends Controller {
 
     // ko can thiet phai co dong nay public $layout = '//layouts/main';
-
-    public function actionQuanly() {
+  
+    public function actionIndex() {
 
         $sql = 'SELECT * FROM tinh_thanh_pho';
         $arrayTinhtp = Yii::app()->db->createCommand($sql
@@ -32,7 +32,7 @@ class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
 
 
         $data = array($arrayTinhtp, $arrQuanHuyen, $arrPhuongXa, $first_id_tp, $first_id_quanhuyen);
-        $this->render('quanly', array('data' => $data)
+        $this->render('index', array('data' => $data)
         );
     }
 
