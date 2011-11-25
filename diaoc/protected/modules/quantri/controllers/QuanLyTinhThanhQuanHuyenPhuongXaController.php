@@ -141,7 +141,7 @@ class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
         foreach ($arrayqh as &$value):
             $stringHTMl.="<tr>";
             $stringHTMl.="<td class='row_px' value=" . $value["idPhuong_xa"] . ">" . $value['Ten_phuong_xa'] . "</td>";
-            $stringHTMl.="<td>" . "<input class='btdelete_qh' id=" . $value['idPhuong_xa'] . " type='button' value='Delete' name='yt0'>" . "</td>";
+            $stringHTMl.="<td>" . "<input class='btdelete_px' id=" . $value['idPhuong_xa'] . " type='button' value='Delete' name='yt0'>" . "</td>";
 
             $stringHTMl.="</tr>";
         endforeach;
@@ -161,7 +161,38 @@ class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
         // $html.=$this->getJS();
         echo $html;
     }
+       public function actionXoaQuanHuyen() {
+        $idqh = $_POST['idqh'];
+        $idtp = $_POST['idtp'];
+        if ($idqh != "") {
 
+            $model = new QuanHuyen;
+            $model->deleteAll('idQuan_huyen=' . $idqh);
+            $html = $this->generateGridPhuongXa($idqh);
+            echo $html;
+
+        } else {
+
+           $html = $this->generateGridPhuongXa($idqh);
+            echo $html;
+        }
+    }
+     public function actionXoaPhuongXa() {
+        $idpx = $_POST['idpx'];
+        $idqh = $_POST['idqh'];
+        if ($idpx != "") {
+
+            $model = new PhuongXa;
+            $model->deleteAll('idPhuong_xa=' . $idpx);
+            $html = $this->generateGridPhuongXa($idqh);
+            echo $html;
+
+        } else {
+
+            $html = $this->generateGridPhuongXa($idqh);
+            echo $html;
+        }
+    }
     public function actionThemquanhuyen() {
         $tttp = $_POST['idttp'];
         $tenqh = $_POST['tenqh'];
@@ -216,22 +247,7 @@ class QuanLyTinhThanhQuanHuyenPhuongXaController extends Controller {
         echo $html;
     }
 
-    public function actionXoaQuanHuyen() {
-        $idqh = $_POST['idqh'];
-        $idtp = $_POST['idtp'];
-        if ($idqh != "") {
-            
-            $model = new QuanHuyen;
-            $model->deleteAll('idQuan_huyen=' . $idqh);
-            $html = $this->generateGridQuanHuyen($idtp);
-            echo $html;
-            
-        } else {
-     
-            $html = $this->generateGridQuanHuyen($idtp);
-          //  echo $html;
-        }
-    }
+ 
 
     // Uncomment the following methods and override them if needed
     /*
