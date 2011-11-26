@@ -6,7 +6,10 @@ class TrangchuController extends Controller
     
 	public function actionIndex()
 	{
-		$this->render('index');
+        $cs = App::getClientScript();
+        //đẩy script lên thẻ head
+        $cs->registerScriptFile(App::getAbsoluteBaseUrl() . '/js/jquery.bxSlider.min.js');
+       	$this->render('index');
 	}
 
     public function actionDangnhap() {
