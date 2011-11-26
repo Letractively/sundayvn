@@ -1,9 +1,9 @@
 <?php
 
-class DefaultController extends Bangdieukhien
+class DefaultController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index');
+		$this->forward('taisan/');
 	}
 }

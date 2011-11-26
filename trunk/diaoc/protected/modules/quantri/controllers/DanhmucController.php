@@ -40,7 +40,7 @@ class DanhmucController extends Controller
 	 */
 	public function actionThem()
 	{
-		$model=new DanhMuc;
+		$model = new DanhMuc;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
