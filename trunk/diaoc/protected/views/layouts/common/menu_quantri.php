@@ -12,6 +12,13 @@
             <li><a href="<?php  echo $this->createUrl('/quantri/danhmuc/them');?>">Thêm danh mục</a></li>    
         </ul>
     </li>
+    <li>
+        <a href="<?php  echo $this->createUrl('/quantri/tintuc/index');?>"><span>Tin tức<span></a>
+        <ul>
+            <li><a href="<?php  echo $this->createUrl('/quantri/danhmuc/quanly');?>">Quản lý danh mục</a></li>    
+            <li><a href="<?php  echo $this->createUrl('/quantri/tintuc/them');?>">Thêm tin tức</a></li>    
+        </ul>
+    </li>
 <?php
     if(Yii::app()->user->isGuest):
 ?>
