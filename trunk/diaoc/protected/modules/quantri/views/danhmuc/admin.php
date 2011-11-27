@@ -1,8 +1,8 @@
 <?php
-$this->breadcrumbs=array(
-	'Danh mục'=>array('index'),
-	'Quản lý',
-);
+//$this->breadcrumbs=array(
+//	'Danh mục'=>array('index'),
+//	'Quản lý',
+//);
 
 //$this->menu=array(
 //	array('label'=>'List DanhMuc', 'url'=>array('index')),
