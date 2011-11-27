@@ -2,8 +2,8 @@
 
 class DanhmucController extends Controller
 {
-	public $layout='//layouts/main';
-
+	public $layout='//layouts/quantri';
+       
 	public function filters()
     {
         return array(

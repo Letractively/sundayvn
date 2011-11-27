@@ -2,6 +2,8 @@
 
 class DefaultController extends Controller
 {
+    public $layout='//layouts/quantri';
+    
     public function filters()
     {
         return array(
