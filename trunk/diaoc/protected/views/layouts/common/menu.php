@@ -2,15 +2,6 @@
     <li> 
         <a href="<?php echo App::getUrl(); ?> "><span>Trang chủ<span></a>
     </li>
-<?php if(Yii::app()->controller->module && Yii::app()->controller->module->id=="quantri"): ?>
-    <li>
-        <a href="<?php  echo $this->createUrl('/danhmuc/index');?>"><span>Danh mục<span></a>
-        <ul>
-            <li><a href="<?php  echo $this->createUrl('/danhmuc/quanly');?>">Quản lý danh mục</a></li>    
-            <li><a href="<?php  echo $this->createUrl('/danhmuc/them');?>">Thêm danh mục</a></li>    
-        </ul>
-    </li>
-<?php else: ?>
     <li>
         <a href="<?php  echo $this->createUrl('/site/contact');?>"><span>Tin tức &amp; Trải nghiệm<span></a>
         <ul>
@@ -54,7 +45,6 @@
         <a href="<?php  echo $this->createUrl('/site/contact');?>"><span>Liên hệ<span></a>
     </li>    
 <?php
-    endif;
     if(Yii::app()->user->isGuest):
 ?>
     <li class="right">
