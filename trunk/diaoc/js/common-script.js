@@ -1,12 +1,7 @@
 
 $(document).ready(function() 
 {
-    $('#home_slideshow').bxSlider({
-        auto: true,
-        autoControls: true,
-        //                    nextSelector: '#next',
-        //                    prevSelector: '#prev',
-    });
+
     $( "input:submit, .button" ).button();
     $( ".tabs" ).tabs();
     $('.tooltip_listen').mousemove(function(e){
