@@ -1,4 +1,12 @@
-body
+
+.bangdieukhien_module
 {
-    background: #000;
+    border: 1px solid #476A03;
+    padding: 1%;
+}
+.bangdieukhien_module .box_header
+{
+    margin-bottom: 15px;
+    line-height: 30px;
+    border-bottom: 1px solid #476A03;
 }
