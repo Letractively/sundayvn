@@ -2,15 +2,24 @@
 
 class TrangchuController extends Controller
 {
-    
-    
-	public function actionIndex()
-	{
+
+    public function actionIndex()
+    {
         $cs = App::getClientScript();
         //đẩy script lên thẻ head
+        $script = <<<END
+        $('#home_slideshow').bxSlider({
+        auto: true,
+        autoControls: true,
+        //                    nextSelector: '#next',
+        //                    prevSelector: '#prev',
+    });
+END;
+        $cs->registerScript('invoke_slideshow', $script, CClientScript::POS_READY);
+
         $cs->registerScriptFile(App::getAbsoluteBaseUrl() . '/js/jquery.bxSlider.min.js');
-       	$this->render('index');
-	}
+        $this->render('index');
+    }
 
     public function actionDangnhap() {
         $model = new DangnhapForm;
@@ -31,37 +40,37 @@ class TrangchuController extends Controller
 
         $this->render('dangnhap', array('model' => $model));
     }
-    
+
     public function actionDangxuat()
     {
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
-    
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
-	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
 
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-	*/
+    // Uncomment the following methods and override them if needed
+    /*
+    public function filters()
+    {
+    // return the filter configuration for this controller, e.g.:
+    return array(
+    'inlineFilterName',
+    array(
+    'class'=>'path.to.FilterClass',
+    'propertyName'=>'propertyValue',
+    ),
+    );
+    }
+
+    public function actions()
+    {
+    // return external action classes, e.g.:
+    return array(
+    'action1'=>'path.to.ActionClass',
+    'action2'=>array(
+    'class'=>'path.to.AnotherActionClass',
+    'propertyName'=>'propertyValue',
+    ),
+    );
+    }
+    */
 }
