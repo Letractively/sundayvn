@@ -36,7 +36,7 @@ $arrphuongxa = $data[2];
                 <?php
                 echo CHtml::ajaxButton(
                         'Thêm',
-                        'index.php?r=quantri/QuanLyTinhThanhQuanHuyenPhuongXa/Themmoitinhthanh',
+                        'index.php?r=quantri/Quanlytthp/Themmoitinhthanh',
                         array(
                             'type' => 'post',
                             'update' => '#Grid_tinh_thanh_pho',
@@ -46,7 +46,7 @@ $arrphuongxa = $data[2];
             </td>
         </tr>
     </table>
-    
+
 </div>
 
 <div class="wrapperqh">
@@ -55,7 +55,7 @@ $arrphuongxa = $data[2];
             <th>Quận Huyện</th><th><?php echo "....."; ?></th>
             <?php foreach ($arrquanhuyen as &$value): ?>
                     <tr>
-                        <td class="row_qh" id="<?php echo $value['idQuan_huyen'];?>"><?php echo $value['Ten_quan_huyen'] ?></td>
+                        <td class="row_qh" id="<?php echo $value['idQuan_huyen']; ?>"><?php echo $value['Ten_quan_huyen'] ?></td>
                         <td><input class="btdelete_qh" id=<?php echo $value['idQuan_huyen']; ?> type="button" value="Delete" name="yt0"/></td>
                     </tr>
             <?php endforeach; ?>
@@ -74,7 +74,7 @@ $arrphuongxa = $data[2];
                 <?php
                     echo CHtml::ajaxButton(
                             'Thêm',
-                            'index.php?r=quantri/QuanLyTinhThanhQuanHuyenPhuongXa/Themquanhuyen',
+                            'index.php?r=quantri/Quanlytthp/Themquanhuyen',
                             array(
                                 'type' => 'post',
                                 'update' => '#Grid_qh',
@@ -94,7 +94,7 @@ $arrphuongxa = $data[2];
                 <th>Phường xã</th><th><?php echo "....."; ?></th>
             <?php foreach ($arrphuongxa as &$value): ?>
                         <tr>
-                            <td class="row_px" id="<?php echo $value['idPhuong_xa'];?>"><?php echo $value['Ten_phuong_xa'] ?></td>
+                            <td class="row_px" id="<?php echo $value['idPhuong_xa']; ?>"><?php echo $value['Ten_phuong_xa'] ?></td>
                             <td><input class="btdelete_px" id=<?php echo $value['idPhuong_xa'] ?> type="button" value="Delete" name="yt0"/></td>
                         </tr>
             <?php endforeach; ?>
@@ -113,16 +113,21 @@ $arrphuongxa = $data[2];
                 <?php
                         echo CHtml::ajaxButton(
                                 'Thêm',
-                                'index.php?r=quantri/QuanLyTinhThanhQuanHuyenPhuongXa/ThemPhuongXa',
+                                'index.php?r=quantri/Quanlytthp/ThemPhuongXa',
                                 array(
                                     'type' => 'post',
                                     'update' => '#Grid_px',
                                     'data' => "js:{tenpx: $('#tb_phuong_xa').val(),idqh:$('#hiddenQH').val()}")
                         );
                 ?>
-            </td>
-        </tr>
-    </table>
-   
+                    </td>
+                </tr>
+            </table>
+    <?php
+                        $baseUrl = Yii::app()->baseUrl;
+                        $cs = Yii::app()->getClientScript();
+                        $cs->registerScriptFile($baseUrl . '/js/quanlyttpx.js');
+                       
+    ?>
 </div>
 
