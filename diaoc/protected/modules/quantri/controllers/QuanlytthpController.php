@@ -3,9 +3,13 @@
 class QuanlytthpController extends Controller {
 
     // ko can thiet phai co dong nay public $layout = '//layouts/main';
-  
+
     public function actionIndex() {
 
+        $arrQuanHuyen = array();
+        $arrPhuongXa = array();
+        $first_id_tp = 0;
+        $first_id_quanhuyen = 0;
         $sql = 'SELECT * FROM tinh_thanh_pho';
         $arrayTinhtp = Yii::app()->db->createCommand($sql
                 )->queryAll();
@@ -14,23 +18,24 @@ class QuanlytthpController extends Controller {
         $rows = Yii::app()->db->createCommand($sql
                 )->queryAll();
 
-      
-        $first_id_tp = $rows[0]['idTinh_thanh_pho'];
-        $sql = 'SELECT * FROM quan_huyen where Tinh_thanh_pho_idTinh_thanh_pho=' . $first_id_tp;
+
+        if ($rows) {
+            $first_id_tp = $rows[0]['idTinh_thanh_pho'];
+            $sql = 'SELECT * FROM quan_huyen where Tinh_thanh_pho_idTinh_thanh_pho=' . $first_id_tp;
 
 
-        $arrQuanHuyen = Yii::app()->db->createCommand($sql
-                )->queryAll();
+            $arrQuanHuyen = Yii::app()->db->createCommand($sql
+                    )->queryAll();
 
-        // print_r($arrQuanHuyen);
-        $first_id_quanhuyen = $arrQuanHuyen[0]['idQuan_huyen'];
-
-
-        $sql = 'SELECT * FROM phuong_xa where 	Quan_huyen_idQuan_huyen=' . $first_id_quanhuyen;
-        $arrPhuongXa = Yii::app()->db->createCommand($sql
-                )->queryAll();
+            // print_r($arrQuanHuyen);
+            if($arrQuanHuyen)
+            $first_id_quanhuyen = $arrQuanHuyen[0]['idQuan_huyen'];
 
 
+            $sql = 'SELECT * FROM phuong_xa where 	Quan_huyen_idQuan_huyen=' . $first_id_quanhuyen;
+            $arrPhuongXa = Yii::app()->db->createCommand($sql
+                    )->queryAll();
+        }
         $data = array($arrayTinhtp, $arrQuanHuyen, $arrPhuongXa, $first_id_tp, $first_id_quanhuyen);
         $this->render('index', array('data' => $data)
         );
@@ -94,7 +99,7 @@ class QuanlytthpController extends Controller {
         $stringHTMl.="<th>Tỉnh Thành Phố</th><th>.....</th>";
         foreach ($arrayTinhtp as &$value):
             $stringHTMl.="<tr>";
-            $stringHTMl.="<td class='r_tinh_thanh_pho' value=" . $value["idTinh_thanh_pho"] . ">" . $value['Ten_tinh_thanhpho'] . "</td>";
+            $stringHTMl.="<td class='row_ttp' value=" . $value["idTinh_thanh_pho"] . ">" . $value['Ten_tinh_thanhpho'] . "</td>";
             $stringHTMl.="<td>" . "<input class='btdelete_thanhpho' id=" . $value['idTinh_thanh_pho'] . " type='button' value='Delete' name='yt0'/>" . "</td>";
 
             $stringHTMl.="</tr>";
@@ -128,9 +133,9 @@ class QuanlytthpController extends Controller {
 
         return $stringHTMl;
     }
-    
-	public function generateGridPhuongXa($idqh){
-      
+
+    public function generateGridPhuongXa($idqh) {
+
         $sql = 'SELECT * FROM phuong_xa where Quan_huyen_idQuan_huyen=' . $idqh . ' order by Ten_phuong_xa';
         $arrayqh = Yii::app()->db->createCommand($sql
                 )->queryAll();
@@ -161,7 +166,8 @@ class QuanlytthpController extends Controller {
         // $html.=$this->getJS();
         echo $html;
     }
-       public function actionXoaQuanHuyen() {
+
+    public function actionXoaQuanHuyen() {
         $idqh = $_POST['idqh'];
         $idtp = $_POST['idtp'];
         if ($idqh != "") {
@@ -170,14 +176,14 @@ class QuanlytthpController extends Controller {
             $model->deleteAll('idQuan_huyen=' . $idqh);
             $html = $this->generateGridPhuongXa($idqh);
             echo $html;
-
         } else {
 
-           $html = $this->generateGridPhuongXa($idqh);
+            $html = $this->generateGridPhuongXa($idqh);
             echo $html;
         }
     }
-     public function actionXoaPhuongXa() {
+
+    public function actionXoaPhuongXa() {
         $idpx = $_POST['idpx'];
         $idqh = $_POST['idqh'];
         if ($idpx != "") {
@@ -186,13 +192,13 @@ class QuanlytthpController extends Controller {
             $model->deleteAll('idPhuong_xa=' . $idpx);
             $html = $this->generateGridPhuongXa($idqh);
             echo $html;
-
         } else {
 
             $html = $this->generateGridPhuongXa($idqh);
             echo $html;
         }
     }
+
     public function actionThemquanhuyen() {
         $tttp = $_POST['idttp'];
         $tenqh = $_POST['tenqh'];
@@ -210,15 +216,15 @@ class QuanlytthpController extends Controller {
         }
     }
 
-     public function actionThemPhuongXa() {
+    public function actionThemPhuongXa() {
         $idqh = $_POST['idqh'];
         $tenpx = $_POST['tenpx'];
 
         if ($tenpx != "") {
-           // $idtp = $tttp;
+            // $idtp = $tttp;
             $model = new PhuongXa;
             $model->Quan_huyen_idQuan_huyen = $idqh;
-            $model->Ten_phuong_xa= $tenpx;
+            $model->Ten_phuong_xa = $tenpx;
             $model->insert();
             $stringHTML = $this->generateGridPhuongXa($idqh);
             echo $stringHTML;
@@ -227,6 +233,7 @@ class QuanlytthpController extends Controller {
             echo $stringHTML;
         }
     }
+
     public function actionLoadQuanHuyen() {
         $id = $_POST['idtp'];
         $html = "";
@@ -236,18 +243,34 @@ class QuanlytthpController extends Controller {
         //  $html.=$this->getJS();
         echo $html;
     }
-     public function actionLoadPhuongXa() {
+
+    public function actionLoadPhuongXa() {
         $id = $_POST['idqh'];
         $html = "";
         if ($id != "") {
             $html = $this->generateGridPhuongXa($id);
-         
         }
         //  $html.=$this->getJS();
         echo $html;
     }
 
- 
+    public function actionThemdulieu() {
+        $xml = new XMLReader();
+        $xml->open(Yii::app()->request->baseUrl . '/@DATABASE/DMDiaban.xml');
+        // echo Yii::app()->request->baseUrl.'/@DATABASE/DMDiaban.xml';
+        // $xml->setParserProperty(2, true); // This seems a little unclear to me - but it worked :)
+        //while ($xml->read()) {
+        //switch ($xml->name) {
+        //     case "Item":
+        //    echo 'aaaa';
+        //$xml->read();
+        //$conf["mysql_host"] = $xml->value;
+        //$xml->read();
+        //   break;
+        //}
+        //}
+        $xml->close();
+    }
 
     // Uncomment the following methods and override them if needed
     /*
