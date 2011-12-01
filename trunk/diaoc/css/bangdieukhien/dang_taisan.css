@@ -1,12 +1,57 @@
 
 .bangdieukhien_module
 {
-    border: 1px solid #476A03;
-    padding: 1%;
 }
 .bangdieukhien_module .box_header
 {
     margin-bottom: 15px;
     line-height: 30px;
     border-bottom: 1px solid #476A03;
+}
+#bang_dang_taisan .input_title
+{
+    width: 17%;
+    padding-right: 3%;
+    float: left;
+    text-align: right;
+    font-weight: bold;
+}
+#bang_dang_taisan .input_title .required
+{
+    color:#FE3C3A;
+    padding: 0% 7px;
+}
+#bang_dang_taisan .input_content
+{
+    width: 80%;
+    float: left;
+}
+#bang_dang_taisan .form_row
+{
+    margin: 1% 0%;
+}
+#bang_dang_taisan .input_content.chonloaitin label
+{
+    margin-right: 9%;
+    padding-left: 2%;
+}
+#bang_dang_taisan .input_content.chonloaidiaoc .tcleft
+{
+    width: 50%;
+}
+#bang_dang_taisan .input_content.chonloaidiaoc .tcleft .customize
+{
+    margin-right: 2%;
+}
+#bang_dang_taisan .input_content.chonloaidiaoc .tcright .customize
+{
+    margin-left: 2%;
+}
+#bang_dang_taisan .input_content.chonloaidiaoc .tcright
+{
+    width: 50%;
+}
+#bang_dang_taisan .input_content.chonloaidiaoc select
+{
+    width: 100%;
 }
