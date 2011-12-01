@@ -3,7 +3,7 @@ body
     font-family: arial, helvetica, clean, sans-serif;
     color:#333;
     font-size: 12px;
-/*    line-height: 18px;*/
+    /*    line-height: 18px;*/
 }
 a
 {
@@ -14,6 +14,11 @@ h3
 {
     color:#0F9191;
     font-size: 1.3em;
+}
+h4
+{
+    color:#FE3C3A;
+    font-size: 1.2em;
 }
 h5
 {
@@ -33,6 +38,14 @@ input
 .tooltip_listen
 {
     cursor: pointer;
+}
+.twocol .tcleft
+{
+    float: left;
+}
+.twocol .tcright
+{
+    float: left;
 }
 .main
 {
@@ -387,11 +400,11 @@ input
 }
 #home_content #brand_intro  #featured_brand .brand_projects li
 {
- 
 
-line-height: 35px;
-border-bottom: 1px solid #CCC;
-height: 35px;
+
+    line-height: 35px;
+    border-bottom: 1px solid #CCC;
+    height: 35px;
 
 }
 #home_content #brand_intro  #featured_brand .brand_projects li a
@@ -399,7 +412,7 @@ height: 35px;
     text-decoration: none;
     color:#476A03;
     font-weight: bold;
-   
+
 
 }
 #home_content #brand_intro  #featured_brand .brand_projects li a:hover
@@ -417,8 +430,8 @@ height: 35px;
     display: block;
     margin: auto;
     width: 100px;
-border: none;
-height: 100px;
+    border: none;
+    height: 100px;
 }
 #featured_brand .brand_info .brand_image .brand_txt
 {
