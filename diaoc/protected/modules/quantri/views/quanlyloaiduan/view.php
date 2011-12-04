@@ -5,11 +5,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Quanlyloaiduan', 'url'=>array('index')),
-	array('label'=>'Create Quanlyloaiduan', 'url'=>array('create')),
-	array('label'=>'Update Quanlyloaiduan', 'url'=>array('update', 'id'=>$model->idLoai_du_an)),
-	array('label'=>'Delete Quanlyloaiduan', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idLoai_du_an),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Quanlyloaiduan', 'url'=>array('admin')),
+	array('label'=>'Danh mục dự án', 'url'=>array('index')),
+	array('label'=>'Tạo mới dự án', 'url'=>array('create')),
+	array('label'=>'Cập nhật', 'url'=>array('update', 'id'=>$model->idLoai_du_an)),
+	array('label'=>'Xóa', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idLoai_du_an),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Quản lý danh mục dự án', 'url'=>array('admin')),
 );
 ?>
 

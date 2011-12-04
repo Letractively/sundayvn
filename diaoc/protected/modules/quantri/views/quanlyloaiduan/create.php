@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Quanlyloaiduan', 'url'=>array('index')),
-	array('label'=>'Manage Quanlyloaiduan', 'url'=>array('admin')),
+	array('label'=>'Manage Quanlyloaiduan', 'url'=>array('quanly')),
 );
 ?>
 
