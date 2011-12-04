@@ -43,8 +43,85 @@
                         </div>
                     </div>
                 </div>
-                <div class="extra">&nbsp;</div>
+
             </div>
+            <div class="extra">&nbsp;</div>
+        </div>
+        <!--Tinh thanh pho-->
+        <div class="form_row clearfix">
+            <div class="input_title">Tỉnh / Thành phố:<span class="required">*</span></div>
+            <div class="input_content chonloaidiaoc">
+                <select name="vitridiaoc">
+                    <option>Hồ Chí Minh</option>
+                    <option>Hà Nội</option>
+                    <option>Đà Nẵng</option>
+                </select>
+
+            </div>
+        </div>
+
+        <div class="form_row clearfix">
+            <div class="input_title">Địa điểm: <span class="required">*</span></div>
+            <div class="input_content chonloaidiaoc">
+                <div class="twocol clearfix">
+                    <div class="tcleft">
+                        <div class="customize">
+                            <select name="loaidiaoc">
+                                <option>Vui lòng chọn Quận / Huyện</option>
+                                <option>Nhà phố</option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tcright">
+                        <div class="customize">
+                            <select name="vitridiaoc">
+                                <option>Vui lòng chọn Phường / Xã</option>
+                                <option>Mặt hẻm</option>
+                                <option>Hẻm lớn</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>                
+
+            </div>
+            <div class="extra">Khác&nbsp;<input type="checkbox" /></div>
+        </div>
+        <div class="form_row clearfix">
+            <div class="input_title">Địa chỉ: <span class="required">*</span></div>
+            <div class="input_content chonloaidiaoc">
+                <div class="twocol clearfix">
+                    <div class="tcleft">
+                        <div class="customize border_input">
+                            <input type="text" value="Vui lòng nhập số nhà" />
+                        </div>
+                    </div>
+                    <div class="tcright">
+                        <div class="customize">
+                            <select name="vitridiaoc">
+                                <option>Vui lòng chọn Đường / Khu phố</option>
+                                <option>Mặt hẻm</option>
+                                <option>Hẻm lớn</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>                
+
+            </div>
+            <div class="extra">Khác&nbsp;<input type="checkbox" /></div>
+        </div>
+        <!--Ten du an-->
+        <div class="form_row clearfix">
+            <div class="input_title">Tên dự án:</div>
+            <div class="input_content chonloaidiaoc">
+                <select name="vitridiaoc">
+                    <option>Green Sun Office</option>
+                    <option>Hà Nội</option>
+                    <option>Đà Nẵng</option>
+                </select>
+
+            </div>
+             <div class="extra">Khác&nbsp;<input type="checkbox" /></div>
         </div>
     </div>
 </div>
