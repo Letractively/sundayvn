@@ -23,12 +23,28 @@
 }
 #bang_dang_taisan .input_content
 {
-    width: 80%;
+    width: 70%;
     float: left;
 }
+#bang_dang_taisan .extra
+{
+    float: left;
+    font-weight: bold;
+    width: 8%;
+    padding-left: 2%;
+}
+#bang_dang_taisan input[type=text]
+{
+    width: 100%;
+}
+
 #bang_dang_taisan .form_row
 {
     margin: 1% 0%;
+}
+#bang_dang_taisan label
+{
+    cursor: pointer;
 }
 #bang_dang_taisan .input_content.chonloaitin label
 {
@@ -51,7 +67,7 @@
 {
     width: 50%;
 }
-#bang_dang_taisan .input_content.chonloaidiaoc select
+#bang_dang_taisan select
 {
     width: 100%;
 }
