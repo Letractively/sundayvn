@@ -26,7 +26,19 @@ h5
 }
 input
 {
-    border:1px solid #ccc;
+    border:none;
+}
+.border_input 
+{
+    border: 1px solid #7F9DB9
+}
+.note
+{
+    background: #F3FFD9;
+}
+.fifty_percent
+{
+    width: 50%;
 }
 .tooltip
 {
@@ -198,12 +210,11 @@ input
 {
     float: left;
     width: 35%; 
+
 }
 #giavang_ngoaite .content
 {    
-    border: 1px solid #93B54C;
     padding: 2px 10px 10px 10px;
-    border-radius: 5px 5px 5px 5px;
 }
 #giavang_ngoaite .content h3
 {
@@ -321,6 +332,7 @@ input
 .two_div_property .customize .a_property div.p  a
 {
     color:#476A03;
+    font-size: 12px;
     font-weight: normal;
     text-decoration: none;
 }
@@ -396,7 +408,7 @@ input
 {
     float: left;
     margin-top: 10px;
-    width: 39%;
+    width: 38.5%;
 }
 #home_content #brand_intro  #featured_brand .brand_projects li
 {
