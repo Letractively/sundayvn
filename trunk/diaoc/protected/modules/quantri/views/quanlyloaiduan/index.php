@@ -4,12 +4,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Quanlyloaiduan', 'url'=>array('create')),
-	array('label'=>'Manage Quanlyloaiduan', 'url'=>array('admin')),
+	array('label'=>'Create Quanlyloaiduan', 'url'=>array('tao')),
+	array('label'=>'Manage Quanlyloaiduan', 'url'=>array('quanly')),
 );
 ?>
 
-<h1>Quanlyloaiduans</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
