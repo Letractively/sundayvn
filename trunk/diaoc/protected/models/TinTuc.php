@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'tin_tuc':
  * @property string $idTin_tuc
  * @property string $idDanhmuc
+ * @property string $Tieu_de
  * @property string $Hinh_anh
  * @property string $Noi_dung_ngan
  * @property string $Noi_dung
@@ -16,6 +17,8 @@
  */
 class TinTuc extends CActiveRecord
 {
+    public $hinhanh;
+    
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return TinTuc the static model class
@@ -41,14 +44,14 @@ class TinTuc extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('idDanhmuc, Hinh_anh, Noi_dung_ngan', 'required'),
-			array('Ngay_dang', 'numerical', 'integerOnly'=>true),
-			array('idDanhmuc', 'length', 'max'=>11),
-			array('Hinh_anh', 'length', 'max'=>255),
+			array('Tieu_de, Noi_dung_ngan', 'required', 'message'=>'Vui lòng nhập {attribute}.'),
+            array('idDanhmuc', 'length', 'max'=>11),
+            array('Hinh_anh', 'length', 'max'=>255),
+            array('hinhanh', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>true, 'wrongType'=>'Tập tin ảnh không hợp lệ (JPG, GIF, PNG).'),
 			array('Noi_dung', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idTin_tuc, idDanhmuc, Hinh_anh, Noi_dung_ngan, Noi_dung, Ngay_dang', 'safe', 'on'=>'search'),
+			array('idTin_tuc, idDanhmuc, Tieu_de, Hinh_anh, Noi_dung_ngan, Noi_dung, Ngay_dang', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -70,12 +73,13 @@ class TinTuc extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idTin_tuc' => 'Id Tin Tuc',
-			'idDanhmuc' => 'Id Danhmuc',
-			'Hinh_anh' => 'Hinh Anh',
-			'Noi_dung_ngan' => 'Noi Dung Ngan',
-			'Noi_dung' => 'Noi Dung',
-			'Ngay_dang' => 'Ngay Dang',
+			'idTin_tuc' => 'ID tin tức',
+			'idDanhmuc' => 'Danh mục',
+			'Tieu_de' => 'Tiêu đề',
+			'Hinh_anh' => 'Hình ảnh',
+			'Noi_dung_ngan' => 'Giới thiệu',
+			'Noi_dung' => 'Nội dung',
+			'Ngay_dang' => 'Ngày đăng',
 		);
 	}
 
@@ -92,6 +96,7 @@ class TinTuc extends CActiveRecord
 
 		$criteria->compare('idTin_tuc',$this->idTin_tuc,true);
 		$criteria->compare('idDanhmuc',$this->idDanhmuc,true);
+		$criteria->compare('Tieu_de',$this->Tieu_de,true);
 		$criteria->compare('Hinh_anh',$this->Hinh_anh,true);
 		$criteria->compare('Noi_dung_ngan',$this->Noi_dung_ngan,true);
 		$criteria->compare('Noi_dung',$this->Noi_dung,true);
