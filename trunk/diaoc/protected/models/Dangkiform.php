@@ -100,17 +100,18 @@ class Dangkiform extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'ID_khach_hang' => 'Id Khach Hang',
-            'Ten_dang_nhap' => 'Ten Dang Nhap',
-            'Mat_khau' => 'Mat Khau',
-            'Ho_va_ten' => 'Ho Va Ten',
+            'Ten_dang_nhap' => 'Tên đăng nhập',
+            'Mat_khau' => 'Mật khẩu',
+            'Ho_va_ten' => 'Họ và tên',
             'Email' => 'Email',
-            'Ngay_sinh' => 'Ngay Sinh',
-            'Gioi_tinh' => 'Gioi Tinh',
-            'Dia_chi' => 'Dia Chi',
-            'Dien_thoai_ban' => 'Dien Thoai Ban',
-            'Dien_thoai_di_dong' => 'Dien Thoai Di Dong',
-            'Url_anh_dai_dien' => 'Url Anh Dai Dien',
-            'Ladoanhgnhiep' => 'Ladoanhgnhiep',
+            'Ngay_sinh' => 'Ngày sinh',
+            'Gioi_tinh' => 'Giới tính',
+            'Dia_chi' => 'Địa chỉ',
+            'Dien_thoai_ban' => 'Số điện thoại bàn',
+            'Dien_thoai_di_dong' => 'Số điện thoại di động',
+            'Url_anh_dai_dien' => 'Hình đại diện',
+            'Ladoanhgnhiep' => 'Bạn là',
+            'Nhap_lai_pass'=> 'Nhập lại mật khẩu'
         );
     }
 
