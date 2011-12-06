@@ -105,11 +105,19 @@ class DanhmucController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('DanhMuc');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+	{        
+        $model=new DanhMuc('search');
+        $model->unsetAttributes();  // clear any default values
+        if(isset($_GET['DanhMuc']))
+            $model->attributes=$_GET['DanhMuc'];
+
+        $this->render('admin',array(
+            'model'=>$model,
+        ));
+//		$dataProvider=new CActiveDataProvider('DanhMuc');
+//		$this->render('index',array(
+//			'dataProvider'=>$dataProvider,
+//		));
 	}
 
 	/**

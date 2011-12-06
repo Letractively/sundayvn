@@ -2,22 +2,28 @@
 
 class TintucController extends Controller
 {
+	/**
+	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
+	 * using two-column layout. See 'protected/views/layouts/column2.php'.
+	 */
 	public $layout='//layouts/quantri';
-    public $Hinh_anh;
 
-    public function rules()
-    {
-        return array(
-            array('image', 'file', 'types'=>'jpg, gif, png'),
-        );
-    }
-	public function filters()
-    {
-        return array(
-            'accessControl', // perform access control for CRUD operations
-        );
-    }
-    public function accessRules()
+	/**
+	 * @return array action filters
+	 */
+    public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+		);
+	}
+
+	/**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
+	 */
+	public function accessRules()
     {
         return array(
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -51,21 +57,22 @@ class TintucController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
-        $danhmuc = CHtml::listData(DanhMuc::model()->findAll(), 'idDanhmuc', 'Ten_Danhmuc');
         
+        $danhmuc = CHtml::listData(DanhMuc::model()->findAll(), 'idDanhmuc', 'Ten_Danhmuc');
+
 		if(isset($_POST['TinTuc']))
-		{   
+		{
 			$model->attributes=$_POST['TinTuc'];
-            $model->Hinh_anh=CUploadedFile::getInstance($model,'Hinh_anh');
+            $model->hinhanh=CUploadedFile::getInstance($model,'hinhanh');
             if($model->save())
-            {
-                $model->Hinh_anh->saveAs('images/tintuc');
+            {  
+                $model->hinhanh->saveAs(Yii::app()->basePath . '/../images/tintuc/'. $model->hinhanh);
+                $model->Hinh_anh = $model->hinhanh;
                 // redirect to success page
             }
-            
+            $model->Ngay_dang = time();
 			if($model->save())
-				$this->redirect(array('xem','id'=>$model->idTin_tuc));
+				$this->redirect(array('view','id'=>$model->idTin_tuc));
 		}
 
 		$this->render('create',array(
@@ -79,7 +86,7 @@ class TintucController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionCapnhat($id)
 	{
 		$model=$this->loadModel($id);
 
@@ -103,7 +110,7 @@ class TintucController extends Controller
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
 	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
+	public function actionXoa($id)
 	{
 		if(Yii::app()->request->isPostRequest)
 		{
@@ -112,7 +119,7 @@ class TintucController extends Controller
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('quanly'));
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
@@ -122,17 +129,25 @@ class TintucController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('TinTuc');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+	{  
+        $model=new TinTuc('search');
+        $model->unsetAttributes();  // clear any default values
+        if(isset($_GET['TinTuc']))
+            $model->attributes=$_GET['TinTuc'];
+                                    
+        $this->render('admin',array(
+            'model'=>$model,
+        ));
+		//$dataProvider=new CActiveDataProvider('TinTuc');
+//		$this->render('index',array(
+//			'dataProvider'=>$dataProvider,
+//		));
 	}
 
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionQuanly()
 	{
 		$model=new TinTuc('search');
 		$model->unsetAttributes();  // clear any default values

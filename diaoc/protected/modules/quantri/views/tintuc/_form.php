@@ -3,22 +3,26 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'tin-tuc-form',
 	'enableAjaxValidation'=>false,
+    'htmlOptions'=>array('enctype' => 'multipart/form-data'),
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<?php echo $form->errorSummary($model); ?>
+    
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'idDanhmuc'); ?>
-        <?php echo CHtml::activeDropDownList($model,'idDanhmuc',$danhmuc); ?>
+		<?php echo CHtml::activeDropDownList($model,'idDanhmuc',$danhmuc); ?>
 		<?php echo $form->error($model,'idDanhmuc'); ?>
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'Tieu_de'); ?>
+		<?php echo $form->textArea($model,'Tieu_de',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'Tieu_de'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'Hinh_anh'); ?>
-        <?php echo CHtml::activeFileField($model, 'Hinh_anh'); ?>
-		<?php echo $form->error($model,'Hinh_anh'); ?>
+		<?php echo CHtml::activeFileField($model,'hinhanh'); ?> 
+		<?php echo $form->error($model,'hinhanh'); ?>
 	</div>
 
 	<div class="row">
@@ -31,13 +35,7 @@
 		<?php echo $form->labelEx($model,'Noi_dung'); ?>
 		<?php echo $form->textArea($model,'Noi_dung',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'Noi_dung'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'Ngay_dang'); ?>
-		<?php echo $form->textField($model,'Ngay_dang'); ?>
-		<?php echo $form->error($model,'Ngay_dang'); ?>
-	</div>
+	</div> 
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
