@@ -71,3 +71,20 @@
 {
     width: 100%;
 }
+#bang_dang_taisan .xacdinhgia .ctr
+{
+    float: left;    
+    margin-right: 1%;
+}
+#bang_dang_taisan .xacdinhgia .gia
+{
+width: 30%;
+}
+#bang_dang_taisan .xacdinhgia .donvigia
+{
+width: 20%;
+}
+#bang_dang_taisan .xacdinhgia .tongdientich
+{
+width: 30%;
+}
