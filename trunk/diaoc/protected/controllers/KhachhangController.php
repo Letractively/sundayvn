@@ -174,11 +174,12 @@ class KhachhangController extends Controller
 		}
 	}
     public function actionDangky() {
+       
         $model = new Dangkiform;
         if ($model->Gioi_tinh == NULL)
             $model->Gioi_tinh = 0;
         if ($model->Ladoanhgnhiep == NULL)
-            $model->Ladoanhgnhiep = 0;
+            $model->Ladoanhgnhiep = 1;
 
 
         // $model->Gioi_tinh=0;
