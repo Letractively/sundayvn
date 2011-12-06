@@ -1,3 +1,5 @@
+
+
 body
 {
     font-family: arial, helvetica, clean, sans-serif;
@@ -24,10 +26,7 @@ h5
 {
     font-size: 1em;
 }
-input
-{
-    border:none;
-}
+
 .border_input 
 {
     border: 1px solid #7F9DB9
