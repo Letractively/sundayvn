@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Quanlyloaiduan', 'url'=>array('tao')),
-	array('label'=>'Manage Quanlyloaiduan', 'url'=>array('quanly')),
+	array('label'=>'Danh sách danh mục dự án', 'url'=>array('tao')),
+	array('label'=>'Quản lý danh mục dự án', 'url'=>array('quanly')),
 );
 ?>
 

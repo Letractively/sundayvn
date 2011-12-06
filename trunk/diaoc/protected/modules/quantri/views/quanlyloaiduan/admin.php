@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
 ?>
 <!-- search-form -->
 
-<h1>Quản lý danh mục</h1>
+<h1>Quản lý danh mục dự án</h1>
 
 <p>
 Bạn có thể tùy chọn nhập vào biểu thức so sánh (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
