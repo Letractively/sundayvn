@@ -6,7 +6,7 @@
         <a href="<?php echo $this->createUrl('/quantri'); ?> "><span>Quản trị<span></a>
     </li>
     <li>
-        <a href="<?php  echo $this->createUrl('/quantri/danhmuc/index');?>"><span>Danh mục<span></a>
+        <a href="<?php  echo $this->createUrl('/quantri/danhmuc/quanly');?>"><span>Danh mục<span></a>
         <ul>
             <li><a href="<?php  echo $this->createUrl('/quantri/danhmuc/quanly');?>">Quản lý danh mục</a></li>    
             <li><a href="<?php  echo $this->createUrl('/quantri/danhmuc/them');?>">Thêm danh mục</a></li>    
@@ -15,7 +15,7 @@
     <li>
         <a href="<?php  echo $this->createUrl('/quantri/tintuc/index');?>"><span>Tin tức<span></a>
         <ul>
-            <li><a href="<?php  echo $this->createUrl('/quantri/danhmuc/quanly');?>">Quản lý danh mục</a></li>    
+            <li><a href="<?php  echo $this->createUrl('/quantri/tintuc/quanly');?>">Quản lý tin tức</a></li>    
             <li><a href="<?php  echo $this->createUrl('/quantri/tintuc/them');?>">Thêm tin tức</a></li>    
         </ul>
     </li>
