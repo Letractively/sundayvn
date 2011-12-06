@@ -5,11 +5,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Quanlyloaiduan', 'url'=>array('index')),
-	array('label'=>'Manage Quanlyloaiduan', 'url'=>array('quanly')),
+	array('label'=>'Danh sách danh mục dự án', 'url'=>array('index')),
+	array('label'=>'Quản lý danh mục dự án', 'url'=>array('quanly')),
 );
 ?>
 
-<h1>Create Quanlyloaiduan</h1>
+<h1>Tạo mới danh mục dự án</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
