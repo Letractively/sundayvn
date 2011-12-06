@@ -8,6 +8,10 @@
 	<?php echo CHtml::encode($data->idDanhmuc); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Tieu_de')); ?>:</b>
+	<?php echo CHtml::encode($data->Tieu_de); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Hinh_anh')); ?>:</b>
 	<?php echo CHtml::encode($data->Hinh_anh); ?>
 	<br />

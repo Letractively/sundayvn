@@ -16,6 +16,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'Tieu_de'); ?>
+		<?php echo $form->textArea($model,'Tieu_de',array('rows'=>6, 'cols'=>50)); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'Hinh_anh'); ?>
 		<?php echo $form->textField($model,'Hinh_anh',array('size'=>60,'maxlength'=>255)); ?>
 	</div>

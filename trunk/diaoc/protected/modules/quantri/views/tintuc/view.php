@@ -5,21 +5,22 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List TinTuc', 'url'=>array('index')),
-	array('label'=>'Create TinTuc', 'url'=>array('create')),
-	array('label'=>'Update TinTuc', 'url'=>array('update', 'id'=>$model->idTin_tuc)),
-	array('label'=>'Delete TinTuc', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idTin_tuc),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage TinTuc', 'url'=>array('admin')),
+	//array('label'=>'List TinTuc', 'url'=>array('index')),
+//	array('label'=>'Create TinTuc', 'url'=>array('create')),
+	array('label'=>'Cập nhật', 'url'=>array('capnhat', 'id'=>$model->idTin_tuc)),
+	array('label'=>'Xóa', 'url'=>'#', 'linkOptions'=>array('submit'=>array('xoa','id'=>$model->idTin_tuc),'confirm'=>'Bạn có chắc là muốn xóa Tin tức #'.$model->idTin_tuc.'?')),
+	//array('label'=>'Manage TinTuc', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View TinTuc #<?php echo $model->idTin_tuc; ?></h1>
+<h1>Tin tức #<?php echo $model->idTin_tuc; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idTin_tuc',
 		'idDanhmuc',
+		'Tieu_de',
 		'Hinh_anh',
 		'Noi_dung_ngan',
 		'Noi_dung',
