@@ -56,9 +56,7 @@ class TintucController extends Controller
 		$model=new TinTuc;
 
 		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-        
-        $danhmuc = CHtml::listData(DanhMuc::model()->findAll(), 'idDanhmuc', 'Ten_Danhmuc');
+		// $this->performAjaxValidation($model); 
 
 		if(isset($_POST['TinTuc']))
 		{
@@ -77,7 +75,6 @@ class TintucController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
-            'danhmuc'=>$danhmuc,
 		));
 	}
 
