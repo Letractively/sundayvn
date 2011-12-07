@@ -74,7 +74,7 @@ class TinTuc extends CActiveRecord
 	{
 		return array(
 			'idTin_tuc' => 'ID tin tức',
-			'idDanhmuc' => 'Danh mục',
+            'idDanhmuc' => 'Danh mục',
 			'Tieu_de' => 'Tiêu đề',
 			'Hinh_anh' => 'Hình ảnh',
 			'Noi_dung_ngan' => 'Giới thiệu',
@@ -95,7 +95,7 @@ class TinTuc extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('idTin_tuc',$this->idTin_tuc,true);
-		$criteria->compare('idDanhmuc',$this->idDanhmuc,true);
+        $criteria->compare('idDanhmuc',$this->idDanhmuc,true);
 		$criteria->compare('Tieu_de',$this->Tieu_de,true);
 		$criteria->compare('Hinh_anh',$this->Hinh_anh,true);
 		$criteria->compare('Noi_dung_ngan',$this->Noi_dung_ngan,true);
