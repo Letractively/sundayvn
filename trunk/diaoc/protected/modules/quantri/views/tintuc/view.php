@@ -19,7 +19,11 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idTin_tuc',
-		'idDanhmuc',
+		array(
+            'header'=>'Danh mục',
+            'value'=>'$data->idDanhmuc',
+            'name'=>'idDanhmuc',                 
+        ),
 		'Tieu_de',
 		'Hinh_anh',
 		'Noi_dung_ngan',

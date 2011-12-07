@@ -45,7 +45,9 @@ hoặc <b>=</b>) vào đầu giá trị tìm kiếm của bạn để xác đị
 		'idTin_tuc',
         array(
             'header'=>'Danh mục',
-            'value'=>'DanhMuc::model()->find("idDanhmuc=1")->Ten_Danhmuc',
+            'value'=>'$data->idDanhmuc0->Ten_Danhmuc',
+            'name'=>'idDanhmuc',
+            'filter' => CHtml::listData(DanhMuc::model()->findAll(),'idDanhmuc','Ten_Danhmuc'),  
         ),
 		'Tieu_de',
 		'Hinh_anh',

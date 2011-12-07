@@ -9,7 +9,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'idDanhmuc'); ?>
-		<?php echo CHtml::activeDropDownList($model,'idDanhmuc',$danhmuc); ?>
+		<?php echo CHtml::activeDropDownList($model,'idDanhmuc',CHtml::listData(DanhMuc::model()->findAll(),'idDanhmuc','Ten_Danhmuc')); ?>
 		<?php echo $form->error($model,'idDanhmuc'); ?>
 	</div>
 

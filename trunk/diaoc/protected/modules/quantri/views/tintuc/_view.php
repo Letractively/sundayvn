@@ -5,7 +5,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idDanhmuc')); ?>:</b>
-	<?php echo CHtml::encode($data->idDanhmuc); ?>
+	<?php echo CHtml::encode($data->idDanhmuc0->Ten_Danhmuc); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Tieu_de')); ?>:</b>
