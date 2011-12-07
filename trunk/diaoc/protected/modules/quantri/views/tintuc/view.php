@@ -21,7 +21,7 @@ $this->menu=array(
 		'idTin_tuc',
 		array(
             'header'=>'Danh mục',
-            'value'=>'$data->idDanhmuc',
+            'value'=>DanhMuc::model()->findByPk($model->idDanhmuc)->Ten_Danhmuc,
             'name'=>'idDanhmuc',                 
         ),
 		'Tieu_de',
