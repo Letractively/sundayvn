@@ -70,7 +70,7 @@ class TintucController extends Controller
             }
             $model->Ngay_dang = time();
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idTin_tuc));
+				$this->redirect(array('xem','id'=>$model->idTin_tuc));
 		}
 
 		$this->render('create',array(
@@ -94,7 +94,7 @@ class TintucController extends Controller
 		{
 			$model->attributes=$_POST['TinTuc'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->idTin_tuc));
+				$this->redirect(array('xem','id'=>$model->idTin_tuc));
 		}
 
 		$this->render('update',array(
