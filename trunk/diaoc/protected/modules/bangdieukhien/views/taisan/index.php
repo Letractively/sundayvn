@@ -176,9 +176,86 @@
                 <input type='text' style="width: 20%;" value="Chiều ngang" /><span>&nbsp;m&nbsp;<strong>X</strong>&nbsp;</span><input type='text' style="width: 20%;" value="Chiều rộng" /><span>&nbsp;m</span><input type="checkbox" id="dien_tich_xay_dung_nohau" /><label for="dien_tich_xay_dung_nohau"><b>Nở hậu</b></label>
             </div>
         </div>
+
         <h4>Đặc điểm &amp; tiện ích</h4>
         <div id="dacdiem_dientich_panel" class="clearfix">
-            
+            <div class="one listofselect">
+                <b>Tình trạng pháp lý:</b>
+                <select name="tinh_trang_phap_ly">
+                    <option>Vui lòng chọn...</option>
+                </select>
+                <b>Hướng tài sản:</b>
+                <select name="huong_tai_san">
+                    <option>Vui lòng chọn...</option>
+                </select>
+                <b>Đường trước nhà:</b>
+                <select name="tinh_trang_phap_ly">
+                    <option>Vui lòng chọn...</option>
+                </select>
+                <b>Số lầu:</b>
+                <select name="duong_truoc_nha">
+                    <option>Vui lòng chọn...</option>
+                </select>
+            </div>
+            <div class="two listofselect">
+                <b>Số phòng khách:</b>
+                <select name="tinh_trang_phap_ly">
+                    <option>Vui lòng chọn...</option>
+                </select>
+                <b>Số phòng ngủ:</b>
+                <select name="tinh_trang_phap_ly">
+                    <option>Vui lòng chọn...</option>
+                </select>
+                <b>Số phòng tắm/vệ sinh:</b>
+                <select name="tinh_trang_phap_ly">
+                    <option>Vui lòng chọn...</option>
+                </select>
+                <b>Số phòng khác:</b>
+                <select name="tinh_trang_phap_ly">
+                    <option>Vui lòng chọn...</option>
+                </select>
+            </div>
+            <div class="three">
+                <b>Các tiện ích:</b>
+                <p><input type="checkbox" id="tien_ich_1" /><label for="tien_ich_1">Đầy đủ tiện nghi</label></p>
+                <p><input type="checkbox" id="tien_ich_2" /><label for="tien_ich_2">Chỗ đậu xe hơi</label></p>
+                <p><input type="checkbox" id="tien_ich_3" /><label for="tien_ich_3">Sân vườn</label></p>
+                <p><input type="checkbox" id="tien_ich_4" /><label for="tien_ich_4">Hồ bơi</label></p>
+                <p><input type="checkbox" id="tien_ich_5" /><label for="tien_ich_5">Tiện kinh doanh</label></p>
+                <p><input type="checkbox" id="tien_ich_6" /><label for="tien_ich_6">Tiện để ở</label></p>
+                <p><input type="checkbox" id="tien_ich_7" /><label for="tien_ich_7">Tiện làm văn phòng</label></p>
+                <p><input type="checkbox" id="tien_ich_8" /><label for="tien_ich_8">Tiện cho sản xuất</label></p>
+                <p><input type="checkbox" id="tien_ich_9" /><label for="tien_ich_9">Cho sinh viên thuê
+                    </label></p>
+
+
+            </div>
         </div>
+
+        <h4>Mô tả chi tiết tài sản</h4>
+        <p><b>Vùng nội dung mô tả này sẽ được kiểm duyệt thông tin trước khi cho phép hiển thị trên DiaOcXanhOnline.vn</b></p>
+        <div id="bang_mota_chitiet" class="clearfix">
+            <div class="form_row clearfix">
+                <div class="input_title">Tiêu đề:<span class="required">*</span></div>
+                <div class="input_content ">
+                    <div class="customize border_input">
+                        <input type="text" style="border: none;" value="Vui lòng nhập số nhà">
+                    </div>
+                </div>
+                <div class="extra">&nbsp;</div>
+            </div>  
+            <div class="form_row clearfix">
+                <div class="input_title">Nội dung mô tả:<span class="required">*</span></div>
+                <div class="input_content ">
+
+                    <div class="customize border_input">
+                        <textarea style="width: 100%;border: none;height: 150px;"></textarea>
+                    </div>
+                </div>
+                <div class="extra">&nbsp;</div>
+            </div>      
+        </div>
+
+        <h4>Cập nhật hình ảnh</h4>
     </div>
 </div>
