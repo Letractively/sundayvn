@@ -32,6 +32,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+    
 	/*font-size: 100%; -- Keeping the default behavior on font aesthetic*/
 	/*font: inherit; -- Keeping the default behavior on font aesthetic*/
 	/*vertical-align: baseline;*/
