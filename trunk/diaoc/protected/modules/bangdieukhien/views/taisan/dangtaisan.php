@@ -257,5 +257,17 @@
         </div>
 
         <h4>Cập nhật hình ảnh</h4>
+        <div id="bang_cap_nhat_hinh" class="clearfix">
+            <input type="file" />
+            <ul class="upload_rule">
+                <li>Tối đa 10 hình</li>
+                <li>Định dạng hình ảnh .jpg, .jpeg</li>
+                <li>Dung lượng tối đa 2MB / 1 hình</li>
+                <li>Không đăng các hình ảnh mờ hoặc hình có kích thước nhỏ hơn 360x300 pixel.</li>
+                <li>Không đăng các hình ảnh có gắn kèm logo hoặc thông điệp quảng cáo.</li>
+                <li>Nếu bạn không tải hình ảnh, hệ thống sẽ lấy hình minh hoạ tự động tương ứng với loại địa ốc mà bạn chọn.</li>
+            </ul>
+        </div>
+
     </div>
 </div>
