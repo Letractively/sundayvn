@@ -14,7 +14,7 @@ class TaisanController extends Controller
         //css chung cho module
         $module_url = App::getAbsoluteBaseUrl() . '/css/bangdieukhien/dang_taisan.css'; 
         $cs->registerCssFile($module_url);
-        $this->render('index');
+        $this->render('dangtaisan');
     }
 
     // Uncomment the following methods and override them if needed
