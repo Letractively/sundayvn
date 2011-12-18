@@ -2,6 +2,13 @@
     <div class="box_header">
         <h3>Đăng tài sản</h3>
     </div>
+    <div id="noiquy" class="note">
+        Những mục có dấu * là thông tin phải điền đầy đủ.
+        <br />Chỉ khi bạn hoàn tất những thông tin được yêu cầu điền đầy đủ thì các chức năng Xem trước hay Đăng tài sản mới được kích hoạt
+        <br />DiaOcXanhOnline không chịu trách nhiệm về những nội dung (chữ/ hình ảnh/ Video) do bạn đăng tải
+        <br />Giá tài sản sẽ mặc định thể hiện theo giá VNĐ và quy đổi theo ngân hàng nhà nước tại thời điểm xem tài sản
+        <br />Khi nhấn nút đăng tài sản, bạn đã xác nhận hoàn toàn đồng ý với những <a href="#" >Điều khoản đăng tin</a>
+    </div>
     <div class="box-content">
         <h4>Thông tin cơ bản</h4>
 
@@ -268,6 +275,60 @@
                 <li>Nếu bạn không tải hình ảnh, hệ thống sẽ lấy hình minh hoạ tự động tương ứng với loại địa ốc mà bạn chọn.</li>
             </ul>
         </div>
+        <h4>Liên hệ</h4>
+        <div id="bang_mota_chitiet" class="clearfix">
+            <div class="form_row clearfix">
+                <div class="input_title">Người liên hệ:<span class="required">*</span></div>
+                <div class="input_content ">
+                    <div class="customize border_input">
+                        <input type="text" style="border: none;" value="Vui lòng nhập số nhà">
+                    </div>
+                </div>
+                <div class="extra">&nbsp;</div>
+            </div>  
+            <div class="form_row clearfix">
+                <div class="input_title">Điện thoại:</div>
+                <div class="input_content ">
+                    <div class="customize border_input">
+                        <input type="text" style="border: none;" value="Vui lòng nhập số nhà">
+                    </div>
+                </div>
+                <div class="extra">&nbsp;</div>
+            </div>
+            <div class="form_row clearfix">
+                <div class="input_title">Di động:</div>
+                <div class="input_content ">
+                    <div class="customize border_input">
+                        <input type="text" style="border: none;" value="Vui lòng nhập số nhà">
+                    </div>
+                </div>
+                <div class="extra">&nbsp;</div>
+            </div>
+            <div class="form_row clearfix">
+                <div class="input_title">Địa chỉ:</div>
+                <div class="input_content ">
+                    <div class="customize border_input">
+                        <input type="text" style="border: none;" value="Vui lòng nhập số nhà">
+                    </div>
+                </div>
+                <div class="extra">&nbsp;</div>
+            </div>
+            <div class="form_row clearfix">
+                <div class="input_title">Ghi chú:</div>
+                <div class="input_content ">
 
+                    <div class="customize border_input">
+                        <textarea style="width: 100%;border: none;height: 150px;"></textarea>
+                    </div>
+                </div>
+                <div class="extra">&nbsp;</div>
+            </div>      
+        </div>
+        
+        <div id="buttons_function">
+        <input type="submit" value="Xem trước" />
+        <input type="submit" value="Lưu lại" />
+        <input type="submit" value="Đăng tài sản" />
+        </div>
     </div>
 </div>

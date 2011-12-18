@@ -121,3 +121,25 @@ textarea
 {
     margin-bottom: 4px;
 }
+
+#bang_dang_taisan #bang_cap_nhat_hinh .upload_rule
+{
+    margin-top: 15px;
+    color: #999;
+    font-style: italic;
+    line-height: 1.5em;
+    list-style: circle;
+    padding-left: 15px;
+}
+#bang_dang_taisan #noiquy
+{
+    line-height: 1.5em;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#bang_dang_taisan #buttons_function
+{
+    text-align: center;
+    margin: 20px;
+}

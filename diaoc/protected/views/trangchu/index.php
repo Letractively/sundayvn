@@ -59,7 +59,7 @@
 
                 </div>
             </div>
-            <div id="giavang_ngoaite">
+            <div id="giavang_ngoaite" class="note">
                 <div class="content">
                     <h3>Giá vàng</h3>
                     <p><b>Mua</b>: 45,600 - <b>Bán</b>: 47,600</p>
@@ -368,7 +368,7 @@
                     <div class="brand_info">
                         <h3>Green Sun Coop</h3>
                         <div class="brand_image">
-                        <img src="images/brand_logo/12_TUILDONAI_75x75.jpg" />
+                            <img src="images/brand_logo/12_TUILDONAI_75x75.jpg" />
                         </div>
                         <div class="brand_txt">
                             Khởi nghiệp từ một công ty dệt nhỏ ở tỉnh Thái Bình, thuộc miền Bắc Việt Nam năm 1985. Chỉ trong 25 năm hoạt động, Tập đoàn Bitexco đã phát triển lớn mạnh, trở thành một trong những tập đoàn kinh tế...
