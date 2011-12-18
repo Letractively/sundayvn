@@ -19,6 +19,12 @@
             <li><a href="<?php  echo $this->createUrl('/quantri/tintuc/them');?>">Thêm tin tức</a></li>    
         </ul>
     </li>
+    <li>
+        <a href="#"><span>Địa ốc<span></a>
+        <ul>
+            <li><a href="<?php  echo $this->createUrl('/quantri/batdongsan');?>">Loại địa ốc</a></li>        
+        </ul>
+    </li>
 <?php
     if(Yii::app()->user->isGuest):
 ?>
