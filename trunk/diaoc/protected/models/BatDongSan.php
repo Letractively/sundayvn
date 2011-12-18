@@ -38,6 +38,7 @@ class BatDongSan extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('Ten_bat_dong_san', 'length', 'max'=>100),
+            array('order_num', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('idBat_dong_san, Ten_bat_dong_san', 'safe', 'on'=>'search'),
@@ -64,6 +65,7 @@ class BatDongSan extends CActiveRecord
 		return array(
 			'idBat_dong_san' => 'Id Bat Dong San',
 			'Ten_bat_dong_san' => 'Ten Bat Dong San',
+            'order_num' => 'Thứ_tự',
 		);
 	}
 
