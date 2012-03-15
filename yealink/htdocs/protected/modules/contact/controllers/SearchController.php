@@ -62,10 +62,14 @@ class SearchController extends Controller
 		if(isset($xmlC))
 		{
 			$dataRender['xmlC'] = $xmlC;
+			$this->layout = false;
+			header('Content-Type: text/xml');
+			echo $xmlC;
 		}
-		$this->layout = false;
-		header('Content-Type: text/xml');
-		$this->render('index',$dataRender);
+		else
+		{
+			$this->render('index',$dataRender);
+		}
 	}
 	
 }
