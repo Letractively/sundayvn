@@ -1,0 +1,1568 @@
+2012/03/02 22:51:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yealink.{{users}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{users}}`.
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/models/User.php (28)
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/components/UserIdentity.php (27)
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/models/UserLogin.php (52)
+2012/03/02 22:51:51 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{users}}" for active record class "User" cannot be found in the database.' in /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#1 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/models/User.php(28): CActiveRecord::model('User')
+#2 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/components/UserIdentity.php(27): User::model()
+#3 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/models/UserLogin.php(52): UserIdentity->authenticate()
+#4 /home/svincoll4/projects/yealink/framework/validators/CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#5 /home/svincoll4/projects/yealink/framework/validators/CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#6 /home/svincoll4/projects/yealink/framework/base/CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#7 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/LoginController.php(19): CModel->validate()
+#8 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): LoginController->actionLogin()
+#9 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/svincoll4/projects/yealink/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#11 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#13 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/login')
+#14 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=user/login
+HTTP_REFERER=http://yealink.local/index.php?r=user/login
+---
+2012/03/03 16:45:52 [error] [php] strtotime() expects at least 1 parameter, 0 given (/home/svincoll4/projects/yealink/htdocs/protected/components/Helpers.php:8)
+Stack trace:
+#0 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php(53): RegistrationForm->save()
+#1 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#2 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/svincoll4/projects/yealink/framework/web/CController.php(287): RegistrationController->runAction()
+#4 /home/svincoll4/projects/yealink/framework/web/CController.php(266): RegistrationController->runActionWithFilters()
+#5 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): RegistrationController->run()
+#6 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /home/svincoll4/projects/yealink/htdocs/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/registration
+in /home/svincoll4/projects/yealink/htdocs/protected/components/Helpers.php (8)
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/models/RegistrationForm.php (32)
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (53)
+2012/03/03 17:57:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('index')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('index')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profile/in...')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/profile/index
+HTTP_REFERER=http://yealink.local/index.php?r=site/index
+---
+2012/03/03 17:57:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('index')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('index')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/login/inde...')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/login/index
+HTTP_REFERER=http://yealink.local/index.php?r=user/profile/profile
+---
+2012/03/03 17:58:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('index')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('index')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/registration/index
+HTTP_REFERER=http://yealink.local/index.php?r=site/index
+---
+2012/03/03 18:01:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/admin')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/admin
+HTTP_REFERER=http://yealink.local/index.php?r=user/profile/index
+---
+2012/03/03 18:01:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/svincoll4/projects/yealink/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/svincoll4/projects/yealink/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/svincoll4/projects/yealink/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /home/svincoll4/projects/yealink/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('index')
+#8 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/admin/inde...')
+#9 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=user/admin/index
+---
+2012/03/03 18:01:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('index')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('index')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/admin/inde...')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/admin/index
+---
+2012/03/03 18:02:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/logout')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/logout
+HTTP_REFERER=http://yealink.local/index.php?r=site/index
+---
+2012/03/03 18:59:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/svincoll4/projects/yealink/framework/web/auth/CAccessControlFilter.php:157
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/auth/CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/svincoll4/projects/yealink/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/svincoll4/projects/yealink/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /home/svincoll4/projects/yealink/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#8 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/admin')
+#9 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=user/admin
+HTTP_REFERER=http://yealink.local/index.php?r=user/profile/index
+---
+2012/03/03 18:59:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/login')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/login
+HTTP_REFERER=http://yealink.local/index.php?r=user/profile/index
+---
+2012/03/03 19:00:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "profile".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profile')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/profile
+HTTP_REFERER=http://yealink.local/index.php?r=user/profile/index
+---
+2012/03/03 21:38:13 [error] [php] trim() expects parameter 2 to be string, array given (/home/svincoll4/projects/yealink/htdocs/protected/components/RequireLogin.php:18)
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/base/CApplication.php(189): CWebApplication->raiseEvent()
+#1 /home/svincoll4/projects/yealink/framework/base/CApplication.php(161): CWebApplication->onBeginRequest()
+#2 /home/svincoll4/projects/yealink/htdocs/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/registration/index
+in /home/svincoll4/projects/yealink/htdocs/protected/components/RequireLogin.php (18)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 21:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "registration".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/registration/
+---
+2012/03/03 22:09:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('contact')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('contact')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('site/contact')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=site/contact
+HTTP_REFERER=http://yealink.local/index.php?r=user/login
+---
+2012/03/03 22:09:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('contact')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('contact')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('site/contact')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=site/contact
+---
+2012/03/03 22:09:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /home/svincoll4/projects/yealink/framework/web/CController.php:484
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(271): CController->missingAction('contact')
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('contact')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('syn/contact')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=syn/contact
+---
+2012/03/03 22:15:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yealink.tbl_profiles' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_profiles`.
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (26)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:15:07 [error] [exception.CDbException] exception 'CDbException' with message 'The table "tbl_profiles" for active record class "Profile" cannot be found in the database.' in /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Profile))
+#1 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(394): CActiveRecord::model('Profile')
+#2 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php(26): CActiveRecord->__construct()
+#4 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): RegistrationController->actionIndex()
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/svincoll4/projects/yealink/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('index')
+#9 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#10 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=user/registration/index
+HTTP_REFERER=http://yealink.local/index.php?r=user/registration/index
+---
+2012/03/03 22:16:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yealink.tbl_profiles' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `tbl_profiles`.
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (26)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:16:22 [error] [exception.CDbException] exception 'CDbException' with message 'The table "tbl_profiles" for active record class "Profile" cannot be found in the database.' in /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php:2264
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Profile))
+#1 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(394): CActiveRecord::model('Profile')
+#2 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php(26): CActiveRecord->__construct()
+#4 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): RegistrationController->actionIndex()
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /home/svincoll4/projects/yealink/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('index')
+#9 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#10 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=user/registration/index
+HTTP_REFERER=http://yealink.local/index.php?r=user/registration/index
+---
+2012/03/03 22:33:38 [warning] [application] Failed to set unsafe attribute "firstname" of "RegistrationForm".
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (38)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:33:38 [warning] [application] Failed to set unsafe attribute "lastname" of "RegistrationForm".
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (38)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:47:58 [warning] [application] Failed to set unsafe attribute "firstname" of "RegistrationForm".
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (38)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:47:58 [warning] [application] Failed to set unsafe attribute "lastname" of "RegistrationForm".
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (38)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:49:54 [warning] [application] Failed to set unsafe attribute "firstname" of "RegistrationForm".
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (38)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:49:54 [warning] [application] Failed to set unsafe attribute "lastname" of "RegistrationForm".
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (38)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:50:51 [warning] [application] Failed to set unsafe attribute "firstname" of "RegistrationForm".
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (38)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:50:51 [warning] [application] Failed to set unsafe attribute "lastname" of "RegistrationForm".
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/RegistrationController.php (38)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 22:56:37 [error] [exception.CException] exception 'CException' with message 'Property "User.profile" is not defined.' in /home/svincoll4/projects/yealink/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(144): CComponent->__get('profile')
+#1 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/ProfileController.php(19): CActiveRecord->__get('profile')
+#2 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): ProfileController->actionIndex()
+#3 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /home/svincoll4/projects/yealink/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('index')
+#7 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profile/in...')
+#8 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=user/profile/index
+HTTP_REFERER=http://yealink.local/index.php
+---
+2012/03/03 22:59:43 [error] [exception.CException] exception 'CException' with message 'Property "User.profile" is not defined.' in /home/svincoll4/projects/yealink/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(144): CComponent->__get('profile')
+#1 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/ProfileController.php(30): CActiveRecord->__get('profile')
+#2 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): ProfileController->actionEdit()
+#3 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /home/svincoll4/projects/yealink/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('edit')
+#7 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profile/ed...')
+#8 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=user/profile/edit
+HTTP_REFERER=http://yealink.local/index.php?r=user/profile
+---
+2012/03/03 23:00:29 [error] [exception.CException] exception 'CException' with message 'Property "User.profile" is not defined.' in /home/svincoll4/projects/yealink/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(144): CComponent->__get('profile')
+#1 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/ProfileController.php(30): CActiveRecord->__get('profile')
+#2 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): ProfileController->actionEdit()
+#3 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /home/svincoll4/projects/yealink/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('edit')
+#7 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profile/ed...')
+#8 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=user/profile/edit
+HTTP_REFERER=http://yealink.local/index.php?r=user/profile
+---
+2012/03/03 23:02:17 [error] [php] include(ProfileField.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/svincoll4/projects/yealink/framework/YiiBase.php:418)
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/db/ar/CActiveRecord.php(378): spl_autoload_call()
+#1 /home/svincoll4/projects/yealink/framework/web/CActiveDataProvider.php(75): model()
+#2 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/ProfileFieldController.php(463): CActiveDataProvider->__construct()
+#3 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): ProfileFieldController->actionAdmin()
+#4 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams()
+#5 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(134): ProfileFieldController->runAction()
+#6 /home/svincoll4/projects/yealink/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /home/svincoll4/projects/yealink/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#8 /home/svincoll4/projects/yealink/framework/web/filters/CInlineFilter.php(59): ProfileFieldController->filterAccessControl()
+#9 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#10 /home/svincoll4/projects/yealink/framework/web/CController.php(292): CFilterChain->run()
+#11 /home/svincoll4/projects/yealink/framework/web/CController.php(266): ProfileFieldController->runActionWithFilters()
+#12 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): ProfileFieldController->run()
+#13 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#14 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#15 /home/svincoll4/projects/yealink/htdocs/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/profileField/admin
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/ProfileFieldController.php (463)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 23:04:07 [error] [php] include(Profile.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/svincoll4/projects/yealink/framework/YiiBase.php:418)
+Stack trace:
+#0 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php(70): spl_autoload_call()
+#1 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): AdminController->actionCreate()
+#2 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(134): AdminController->runAction()
+#4 /home/svincoll4/projects/yealink/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#6 /home/svincoll4/projects/yealink/framework/web/filters/CInlineFilter.php(59): AdminController->filterAccessControl()
+#7 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/svincoll4/projects/yealink/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/svincoll4/projects/yealink/framework/web/CController.php(266): AdminController->runActionWithFilters()
+#10 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): AdminController->run()
+#11 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#12 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/svincoll4/projects/yealink/htdocs/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/admin/create
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php (70)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 23:04:51 [error] [php] include(Profile.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/svincoll4/projects/yealink/framework/YiiBase.php:418)
+Stack trace:
+#0 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php(70): spl_autoload_call()
+#1 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): AdminController->actionCreate()
+#2 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(134): AdminController->runAction()
+#4 /home/svincoll4/projects/yealink/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#6 /home/svincoll4/projects/yealink/framework/web/filters/CInlineFilter.php(59): AdminController->filterAccessControl()
+#7 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/svincoll4/projects/yealink/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/svincoll4/projects/yealink/framework/web/CController.php(266): AdminController->runActionWithFilters()
+#10 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): AdminController->run()
+#11 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#12 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/svincoll4/projects/yealink/htdocs/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/admin/create
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php (70)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 23:06:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php:152
+Stack trace:
+#0 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php(57): AdminController->loadModel()
+#1 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): AdminController->actionView()
+#2 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /home/svincoll4/projects/yealink/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /home/svincoll4/projects/yealink/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/svincoll4/projects/yealink/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('view')
+#11 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/admin/view')
+#12 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=user/admin/view&id=
+HTTP_REFERER=http://yealink.local/index.php?r=user/admin/create
+---
+2012/03/03 23:07:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php:152
+Stack trace:
+#0 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php(57): AdminController->loadModel()
+#1 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): AdminController->actionView()
+#2 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /home/svincoll4/projects/yealink/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /home/svincoll4/projects/yealink/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /home/svincoll4/projects/yealink/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('view')
+#11 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('user/admin/view')
+#12 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=user/admin/view&id=
+HTTP_REFERER=http://yealink.local/index.php?r=user/admin/create
+---
+2012/03/03 23:07:35 [error] [php] include(ProfileField.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/home/svincoll4/projects/yealink/framework/YiiBase.php:418)
+Stack trace:
+#0 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/views/admin/view.php(23): spl_autoload_call()
+#1 /home/svincoll4/projects/yealink/framework/web/CBaseController.php(127): require()
+#2 /home/svincoll4/projects/yealink/framework/web/CBaseController.php(96): AdminController->renderInternal()
+#3 /home/svincoll4/projects/yealink/framework/web/CController.php(870): AdminController->renderFile()
+#4 /home/svincoll4/projects/yealink/framework/web/CController.php(783): AdminController->renderPartial()
+#5 /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php(60): AdminController->render()
+#6 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): AdminController->actionView()
+#7 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(134): AdminController->runAction()
+#9 /home/svincoll4/projects/yealink/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#10 /home/svincoll4/projects/yealink/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#11 /home/svincoll4/projects/yealink/framework/web/filters/CInlineFilter.php(59): AdminController->filterAccessControl()
+#12 /home/svincoll4/projects/yealink/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#13 /home/svincoll4/projects/yealink/framework/web/CController.php(292): CFilterChain->run()
+#14 /home/svincoll4/projects/yealink/framework/web/CController.php(266): AdminController->runActionWithFilters()
+#15 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): AdminController->run()
+#16 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#17 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /home/svincoll4/projects/yealink/htdocs/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/admin/view&id=7
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/views/admin/view.php (23)
+in /home/svincoll4/projects/yealink/htdocs/protected/modules/user/controllers/AdminController.php (60)
+in /home/svincoll4/projects/yealink/htdocs/index.php (13)
+2012/03/03 23:23:07 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/svincoll4/projects/yealink/framework/gii/GiiModule.php:165
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2012/03/03 23:23:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/svincoll4/projects/yealink/framework/gii/GiiModule.php:165
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2012/03/03 23:23:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/svincoll4/projects/yealink/framework/gii/GiiModule.php:165
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2012/03/03 23:24:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/svincoll4/projects/yealink/framework/gii/GiiModule.php:165
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2012/03/03 23:24:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/svincoll4/projects/yealink/framework/gii/GiiModule.php:165
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2012/03/03 23:24:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/svincoll4/projects/yealink/framework/gii/GiiModule.php:165
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2012/03/03 23:25:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/svincoll4/projects/yealink/framework/gii/GiiModule.php:165
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('')
+#2 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('gii')
+#3 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2012/03/03 23:45:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contact".' in /home/svincoll4/projects/yealink/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('contact')
+#1 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=contact
+---
+2012/03/03 23:45:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contact/index".' in /home/svincoll4/projects/yealink/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('contact/index')
+#1 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=contact/index
+---
+2012/03/03 23:48:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contact/index".' in /home/svincoll4/projects/yealink/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('contact/index')
+#1 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=contact/index
+HTTP_REFERER=http://yealink.local/index.php?r=contact
+---
+2012/03/03 23:48:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contact/index".' in /home/svincoll4/projects/yealink/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('contact/index')
+#1 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=contact/index
+HTTP_REFERER=http://yealink.local/index.php?r=contact
+---
+2012/03/04 00:06:59 [error] [exception.CException] exception 'CException' with message 'GoogleController cannot find the requested view "index".' in /home/svincoll4/projects/yealink/framework/web/CController.php:879
+Stack trace:
+#0 /home/svincoll4/projects/yealink/framework/web/CController.php(783): CController->renderPartial('index', NULL, true)
+#1 /home/svincoll4/projects/yealink/htdocs/protected/modules/contact/controllers/GoogleController.php(16): CController->render('index')
+#2 /home/svincoll4/projects/yealink/framework/web/actions/CInlineAction.php(50): GoogleController->actionCallback()
+#3 /home/svincoll4/projects/yealink/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#4 /home/svincoll4/projects/yealink/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#5 /home/svincoll4/projects/yealink/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(276): CController->run('callback')
+#7 /home/svincoll4/projects/yealink/framework/web/CWebApplication.php(135): CWebApplication->runController('contact/google/...')
+#8 /home/svincoll4/projects/yealink/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /home/svincoll4/projects/yealink/htdocs/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=contact/google/callback
+---
+2012/03/08 04:01:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yealink.sessions' doesn't exist. The SQL statement executed was: DELETE FROM sessions WHERE expire<1331175677.
+in C:\xampp\htdocs\yealink\htdocs\protected\components\Controller.php (45)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:01:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "searchcontact".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('searchcontact')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/
+---
+2012/03/08 04:10:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "searchcontact/SearchByName".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('searchcontact/S...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/SearchByName
+---
+2012/03/08 04:10:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "searchcontact/searchbyname".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('searchcontact/s...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/searchbyname
+---
+2012/03/08 04:10:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "searchcontact/SearchByName".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('searchcontact/S...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/SearchByName
+---
+2012/03/08 04:10:45 [error] [php] Non-static method Contact::search_contacts_by_name() should not be called statically, assuming $this from incompatible context (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/SearchByName
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (12)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:10:57 [error] [php] Non-static method Contact::search_contacts_by_name() should not be called statically, assuming $this from incompatible context (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (12)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:11:11 [error] [php] Non-static method Contact::search_contacts_by_name() should not be called statically, assuming $this from incompatible context (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (12)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:11:14 [error] [php] Non-static method Contact::search_contacts_by_name() should not be called statically, assuming $this from incompatible context (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (12)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:12:05 [error] [php] Undefined index: name (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (21)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:12:18 [error] [php] Undefined index: name (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname/100/at
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (21)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:14:00 [error] [php] Undefined index: name (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname/100/at
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (21)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:14:17 [error] [php] Undefined index: name (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname/100/at
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (21)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:14:19 [error] [php] Undefined index: name (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname/100/at
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (21)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:14:21 [error] [php] Undefined index: name (C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/searchcontact/search/searchbyname/100/at
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\searchcontact\controllers\SearchController.php (21)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:36:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "GII".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('GII')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/GII
+---
+2012/03/08 04:41:42 [error] [php] Non-static method CActiveRecord::findByAttributes() should not be called statically, assuming $this from incompatible context (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:12)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/100/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (12)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:42:11 [error] [exception.CDbException] exception 'CDbException' with message 'Table "tbl_user_phones" does not have a column named "0".' in C:\xampp\htdocs\yealink\framework\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\db\ar\CActiveRecord.php(1454): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, NULL, Array, '`t`.')
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php(13): CActiveRecord->findByAttributes(Array, NULL, Array)
+#2 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): SearchController->actionSearchByName()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('searchbyname')
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/search/...')
+#8 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/100/PH
+---
+2012/03/08 04:42:58 [error] [exception.CDbException] exception 'CDbException' with message 'Table "tbl_user_phones" does not have a column named "0".' in C:\xampp\htdocs\yealink\framework\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\db\ar\CActiveRecord.php(1454): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, NULL, Array, '`t`.')
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php(13): CActiveRecord->findByAttributes(Array, NULL, Array)
+#2 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): SearchController->actionSearchByName()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('searchbyname')
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/search/...')
+#8 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/100/PH
+---
+2012/03/08 04:45:01 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `tbl_user_phones` `t` WHERE `t`.`phoneid`=? LIMIT 1.
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (13)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:45:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `tbl_user_phones` `t` WHERE `t`.`phoneid`=? LIMIT 1' in C:\xampp\htdocs\yealink\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yealink\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yealink\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php(13): CActiveRecord->findByAttributes(Array, NULL, Array)
+#4 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): SearchController->actionSearchByName()
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yealink\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yealink\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('searchbyname')
+#9 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/search/...')
+#10 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/100/PH
+---
+2012/03/08 04:47:09 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where phoneid='100' LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_user_phones` `t` WHERE where phoneid='100' LIMIT 1.
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (13)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:47:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where phoneid='100' LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tbl_user_phones` `t` WHERE where phoneid='100' LIMIT 1' in C:\xampp\htdocs\yealink\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yealink\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yealink\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php(13): CActiveRecord->find('where phoneid='...')
+#4 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): SearchController->actionSearchByName()
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yealink\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yealink\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('searchbyname')
+#9 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/search/...')
+#10 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/100/PH
+---
+2012/03/08 04:48:54 [error] [exception.CException] exception 'CException' with message 'Property "UserPhones._attributes" is not defined.' in C:\xampp\htdocs\yealink\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\db\ar\CActiveRecord.php(144): CComponent->__get('_attributes')
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php(14): CActiveRecord->__get('_attributes')
+#2 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): SearchController->actionSearchByName()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('searchbyname')
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/search/...')
+#8 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/PH
+---
+2012/03/08 04:49:54 [error] [exception.CException] exception 'CException' with message 'Property "UserPhones._attributes" is not defined.' in C:\xampp\htdocs\yealink\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\db\ar\CActiveRecord.php(144): CComponent->__get('_attributes')
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php(15): CActiveRecord->__get('_attributes')
+#2 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): SearchController->actionSearchByName()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('searchbyname')
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/search/...')
+#8 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/PH
+---
+2012/03/08 04:49:56 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/100/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (15)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:52:54 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (14)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 04:53:49 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/13307902009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (14)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 05:07:11 [error] [php] Undefined variable: user_id (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/13307902009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (22)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 05:10:02 [error] [php] Undefined variable: user_id (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/13307902009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (22)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 05:14:19 [error] [php] Undefined variable: user_id (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/13307902009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (22)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 05:14:38 [error] [php] Undefined variable: arrUserContacts (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/13307902009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (30)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 05:24:12 [error] [php] Undefined variable: doc (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:39)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (39)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 05:59:48 [error] [php] Undefined index: result (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:44)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (44)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 06:04:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/133d0790009/PH".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/133d0790...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/133d0790009/PH
+---
+2012/03/08 06:04:50 [error] [php] Undefined variable: xmlC (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php:66)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): SearchController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): SearchController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): SearchController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/search/13330790009/PH
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\SearchController.php (66)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/08 07:19:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/1333079dd0009".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/1333079d...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1333079dd0009/?name=keywordhere
+---
+2012/03/08 07:19:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/13330790009'.'".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/13330790...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/13330790009'.'/?name=keywordhere
+---
+2012/03/08 07:23:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/13330790009'.'".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/13330790...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/13330790009'.'/?name=keywordhe''re
+---
+2012/03/08 07:24:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/13330790009'".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/13330790...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/13330790009'/?name=keywordhe''re
+---
+2012/03/09 04:11:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/1330790009/PH".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/13307900...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/PH
+---
+2012/03/09 04:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/1330790009/PH".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/13307900...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/PH
+---
+2012/03/09 04:20:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/1330790009/PH".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/13307900...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/PH
+---
+2012/03/09 04:38:22 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/lf7vW4A1u_-lm8VdUh2mleYHxNxX
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:38:53 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/bA7B59OFCww8fHtG-cpeEVl3AvJZ
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:39:14 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/bA7B59OFCww8fHtG-cpeEVl3AvJZ
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:39:16 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/bA7B59OFCww8fHtG-cpeEVl3AvJZ
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:39:39 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:140)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/bA7B59OFCww8fHtG-cpeEVl3AvJZ
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (140)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:46:08 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/l72fBYerMH_i0qA2eMte_LsZwHgu
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:51:16 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/TFYe9Y0HTG0ApQlwmbDzUpAQWh-x
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:53:49 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:54:32 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 04:54:35 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (138)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 05:01:01 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:150)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/63_vE8IR5Nrp6GvCFS_HkU7Ljai3
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (150)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 05:01:15 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:150)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (150)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 05:37:12 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:149)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (149)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 05:45:50 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:149)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (149)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 05:48:06 [error] [php] Undefined property: Curl::$last_response (C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php:332)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(147): GoogleController->get_access_token()
+#1 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionCallback()
+#2 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#5 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#6 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php (332)
+in C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php (292)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (233)
+2012/03/09 06:22:04 [error] [exception.CException] exception 'CException' with message 'GoogleController and its behaviors do not have a method or closure named "debug".' in C:\xampp\htdocs\yealink\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(148): CComponent->__call('debug', Array)
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(148): GoogleController->debug()
+#2 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionCallback()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('callback')
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/google/...')
+#8 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+HTTP_REFERER=http://localhost/yealink/htdocs/index.php/user/login
+---
+2012/03/09 06:22:43 [error] [exception.CException] exception 'CException' with message 'GoogleController and its behaviors do not have a method or closure named "debug".' in C:\xampp\htdocs\yealink\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(234): CComponent->__call('debug', Array)
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(234): GoogleController->debug()
+#2 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(147): GoogleController->get_access_token('4/Sjs90phSbhdCG...')
+#3 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionCallback()
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yealink\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('callback')
+#8 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/google/...')
+#9 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+HTTP_REFERER=http://localhost/yealink/htdocs/index.php/user/login
+---
+2012/03/09 06:22:55 [error] [php] Undefined property: Curl::$last_response (C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php:332)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionCallback()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#4 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#5 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php (332)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (234)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (147)
+2012/03/09 06:44:52 [error] [php] Undefined property: Curl::$last_response (C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php:332)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionCallback()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#4 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#5 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/Sjs90phSbhdCGoCAhWCkGEsSnle8
+in C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php (332)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (235)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (147)
+2012/03/09 06:45:15 [error] [php] Undefined property: Curl::$last_response (C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php:332)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionCallback()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#4 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#5 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/iOiMLBn1tZov-piGbeI4452zXQox
+in C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php (332)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (235)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (147)
+2012/03/09 06:45:54 [error] [php] Undefined property: Curl::$last_response (C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php:329)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionCallback()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#3 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#4 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#5 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=4/bYbclgMvFXRJZaTunMz4vTGjsdeE
+in C:\xampp\htdocs\yealink\htdocs\protected\components\Curl.php (329)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (235)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (147)
+2012/03/09 06:58:44 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:174)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#2 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#4 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=kACAH-1Ng0gr53gf8kjTuvpkr1d3BVj6WDTr4771jOfOIKyQoIGj8GASFH-wsgI1nJqcl5dqpH2snN_GqKRbhvmCkAmIWFljCWuD4ta3YkYNkVuwpXqNTIxgAI
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (174)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (149)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 06:58:54 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:174)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#2 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#4 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=kACAH-1Ng1_j7_qFalAf4WT8TP3hzWbaKC2ug7A-ELzDRbgPnTvEH0bFu0yek0EHoq8jRZRF8GGG-UF6HHbBxz9prJjeDWLgBzqKIm_2kfcal1UvNyxJw8daO8
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (174)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (149)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 07:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contact/googleBzqKIm_2kfcal1UvNyxJw8daO8".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/googleB...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/contact/googleBzqKIm_2kfcal1UvNyxJw8daO8
+---
+2012/03/09 07:00:46 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:174)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#2 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#4 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=kACAH-1Ng0k8ksKTc8E3JsRoAfg1PUqhs3_AS0uBL5ffQLAyRKY2CKpEy4WjVwXPa-raE_SKsHn9d_3yrWVOOQRin4UvYPJMkRTSrZaZeBGU1S75vsLya4gO6Q
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (174)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (149)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/09 07:02:48 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php:149)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#3 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/callback?code=kACAH-1Ng0k8ksKTc8E3JsRoAfg1PUqhs3_AS0uBL5ffQLAyRKY2CKpEy4WjVwXPa-raE_SKsHn9d_3yrWVOOQRin4UvYPJMkRTSrZaZeBGU1S75vsLya4gO6Q
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (149)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/12 05:10:10 [error] [php] Undefined variable: idx (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\views\google\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(870): GoogleController->renderFile()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(783): GoogleController->renderPartial()
+#2 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(42): GoogleController->render()
+#3 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionIndex()
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#6 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#8 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/index
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\views\google\index.php (15)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (42)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/12 05:11:08 [error] [php] Undefined variable: idx (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\views\google\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(870): GoogleController->renderFile()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(783): GoogleController->renderPartial()
+#2 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(42): GoogleController->render()
+#3 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionIndex()
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#6 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#8 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/index
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\views\google\index.php (15)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (42)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/12 05:11:23 [error] [php] Undefined variable: idx (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\views\google\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(870): GoogleController->renderFile()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(783): GoogleController->renderPartial()
+#2 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(42): GoogleController->render()
+#3 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionIndex()
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#6 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#8 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/index
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\views\google\index.php (15)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (42)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/12 05:11:31 [error] [php] Undefined variable: idx (C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\views\google\index.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(870): GoogleController->renderFile()
+#1 C:\xampp\htdocs\yealink\framework\web\CController.php(783): GoogleController->renderPartial()
+#2 C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php(42): GoogleController->render()
+#3 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): GoogleController->actionIndex()
+#4 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yealink\framework\web\CController.php(287): GoogleController->runAction()
+#6 C:\xampp\htdocs\yealink\framework\web\CController.php(266): GoogleController->runActionWithFilters()
+#7 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): GoogleController->run()
+#8 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/contact/google/index
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\views\google\index.php (15)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\contact\controllers\GoogleController.php (42)
+in C:\xampp\htdocs\yealink\htdocs\index.php (13)
+2012/03/13 04:27:59 [error] [php] Declaration of User::save() should be compatible with that of CActiveRecord::save() (C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\User.php:4)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\components\UserIdentity.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yealink\framework\validators\CInlineValidator.php(43): UserLogin->authenticate()
+#3 C:\xampp\htdocs\yealink\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#4 C:\xampp\htdocs\yealink\framework\base\CModel.php(158): CInlineValidator->validate()
+#5 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\controllers\LoginController.php(19): UserLogin->validate()
+#6 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): LoginController->actionIndex()
+#7 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yealink\framework\web\CController.php(287): LoginController->runAction()
+#9 C:\xampp\htdocs\yealink\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#10 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): LoginController->run()
+#11 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/user/login
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\User.php (4)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\user\components\UserIdentity.php (27)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\UserLogin.php (52)
+2012/03/13 04:28:36 [error] [php] Declaration of User::save() should be compatible with that of CActiveRecord::save() (C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\User.php:4)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\components\UserIdentity.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yealink\framework\validators\CInlineValidator.php(43): UserLogin->authenticate()
+#3 C:\xampp\htdocs\yealink\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#4 C:\xampp\htdocs\yealink\framework\base\CModel.php(158): CInlineValidator->validate()
+#5 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\controllers\LoginController.php(19): UserLogin->validate()
+#6 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): LoginController->actionIndex()
+#7 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yealink\framework\web\CController.php(287): LoginController->runAction()
+#9 C:\xampp\htdocs\yealink\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#10 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): LoginController->run()
+#11 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/user/login
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\User.php (4)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\user\components\UserIdentity.php (27)
+in C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\UserLogin.php (52)
+2012/03/13 04:39:32 [error] [php] Declaration of User::save() should be compatible with that of CActiveRecord::save() (C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\User.php:4)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\components\UserIdentity.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yealink\framework\validators\CInlineValidator.php(43): UserLogin->authenticate()
+#3 C:\xampp\htdocs\yealink\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#4 C:\xampp\htdocs\yealink\framework\base\CModel.php(158): CInlineValidator->validate()
+#5 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\controllers\LoginController.php(19): UserLogin->validate()
+#6 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): LoginController->actionIndex()
+#7 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yealink\framework\web\CController.php(287): LoginController->runAction()
+#9 C:\xampp\htdocs\yealink\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#10 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): LoginController->run()
+#11 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/user/login
+2012/03/13 04:47:15 [error] [php] Declaration of User::save() should be compatible with that of CActiveRecord::save() (C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\User.php:4)
+Stack trace:
+#0 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\components\UserIdentity.php(27): spl_autoload_call()
+#1 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#2 C:\xampp\htdocs\yealink\framework\validators\CInlineValidator.php(43): UserLogin->authenticate()
+#3 C:\xampp\htdocs\yealink\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#4 C:\xampp\htdocs\yealink\framework\base\CModel.php(158): CInlineValidator->validate()
+#5 C:\xampp\htdocs\yealink\htdocs\protected\modules\user\controllers\LoginController.php(19): UserLogin->validate()
+#6 C:\xampp\htdocs\yealink\framework\web\actions\CInlineAction.php(50): LoginController->actionIndex()
+#7 C:\xampp\htdocs\yealink\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yealink\framework\web\CController.php(287): LoginController->runAction()
+#9 C:\xampp\htdocs\yealink\framework\web\CController.php(266): LoginController->runActionWithFilters()
+#10 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): LoginController->run()
+#11 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\yealink\htdocs\index.php(13): CWebApplication->run()
+REQUEST_URI=/yealink/htdocs/index.php/user/login
+2012/03/13 10:35:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "456564".' in C:\xampp\htdocs\yealink\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(271): CController->missingAction('456564')
+#1 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('456564')
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/search/...')
+#3 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yealink/htdocs/index.php/contact/search/456564/?name=23d
+---
+2012/03/13 10:35:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "1330790009".' in C:\xampp\htdocs\yealink\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CController.php(271): CController->missingAction('1330790009')
+#1 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(276): CController->run('1330790009')
+#2 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('contact/search/...')
+#3 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yealink/htdocs/index.php/contact/search/1330790009/?name=23d
+---
+2012/03/13 11:13:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=23d
+---
+2012/03/13 11:13:06 [error] [exception.CDbException] SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2012/03/13 11:13:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=23d
+---
+2012/03/13 11:13:13 [error] [exception.CDbException] SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2012/03/13 11:13:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=23d
+---
+2012/03/13 11:13:27 [error] [exception.CDbException] SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2012/03/13 11:13:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=23d
+---
+2012/03/13 11:13:29 [error] [exception.CDbException] SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2012/03/13 11:13:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=23d
+---
+2012/03/13 11:13:31 [error] [exception.CDbException] SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+2012/03/13 11:13:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=23d
+---
+2012/03/13 11:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/133079d0009".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/133079d0...')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/133079d0009/?name=23d
+---
+2012/03/13 11:14:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=23d
+---
+2012/03/13 11:15:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=dd
+---
+2012/03/13 11:15:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "search/view".' in C:\xampp\htdocs\yealink\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yealink\framework\web\CWebApplication.php(135): CWebApplication->runController('search/view')
+#1 C:\xampp\htdocs\yealink\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yealink\htdocs\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yealink/htdocs/index.php/search/1330790009/?name=dd
+---
