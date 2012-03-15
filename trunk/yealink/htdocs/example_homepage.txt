@@ -1,0 +1,1403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+                <script type="text/javascript" language="javaScript">
+            document.domain='zing.vn';
+            zaConfig = {
+                beginTime : (new Date()).getTime(),
+                parentid : '0',
+                pageid : '1',
+                pagename : 'home',
+                articleid : '',
+                articlename : ''
+            }
+        </script>
+        <!-- add meta for page -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="robots" content="INDEX,FOLLOW" />
+        <meta name="description" content="Zing tin tức, giải trí, Zing News, Âm nhạc, Zing Mp3, Hình ảnh, Zing Photo, Zing Video, Mạng xã hội, Zing Me, Thư điện tử, Zing Mail, Tin nhắn, Zing Chat"/>
+        <title>Zing tin tức & giải trí - Mạng xã hội </title>
+        <meta name="keywords" content="Zing tin tức, giải trí, Zing News, xã hội, thế giới, thể thao, sống trẻ, sành điệu, âm nhạc, phim ảnh, tình yêu, giải trí, phong cách, đẹp, hình sự" />	
+        <meta http-equiv="REFRESH" content="5400" />
+        <!-- end meta for page -->
+
+        <!-- add favicon for page -->
+        <link type="image/x-icon" href="http://static2.news.zing.vn/v3/images/favicon.ico" rel="shortcut icon" />
+        <link rel="apple-touch-icon" href="http://static2.news.zing.vn/v3/images/zing-touch-icon.png" />
+        <!-- add script for page -->
+
+        <!-- include javascript -->
+        <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/detectmobile-1.02.js"></script>  
+        <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/jquery-1.4.1.min.js"></script>
+        <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/config_production-1.03.js"></script> 
+        <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/zmCore-1.45.min.js"></script> 
+        <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/slideshow-1.09.js"></script>     
+
+        <!--[if IE 6]>
+            <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/iemenu-1.00.js"></script>
+        <![endif]-->
+        <!-- end include js-->
+
+        <link href="http://static2.news.zing.vn/v3/css/header-1.18.css" rel="stylesheet" type="text/css" />
+        <link href="http://static2.news.zing.vn/v3/css/styles-1.25.css" rel="stylesheet" type="text/css" />
+        <link href="http://img.ad.zing.vn/css/adstyle.css" rel="stylesheet" type="text/css" />
+        <!--[if lte IE 7]>
+            <link href="http://static2.news.zing.vn/v3/css/ie-1.01.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+    </head>
+    <body>
+        <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/zm.tooltip-1.04.js"></script> 
+        
+<div class="zingheader znews_header">
+    <div class="zingtop">
+        <div class="zingmain">
+            <h1 class="zinglogo">
+                <a href="/" title="Về trang chủ">
+                    <img border="0" alt="" src="http://static2.news.zing.vn/v3/images/header/znews_logo_1.01.jpg" alt="Zing News" width="145" height="35">
+                </a>
+            </h1>
+            <div class="zingsearch">
+                <!--google search--> 
+                <form action="http://www.zing.vn/news/search.html"> 
+                    <input type="hidden" value="partner-pub-8762170010044479:ugwuo5-glpw" name="cx" /> 
+                    <input type="hidden" value="FORID:10" name="cof" /> 
+                    <input type="hidden" value="UTF-8" name="ie" /> 
+                    <input class="zingbxsearch inputzing" type="text" value="Nhập nội dung cần tìm" onblur="if(this.value=='') this.value='Nhập nội dung cần tìm'" onfocus="if(this.value=='Nhập nội dung cần tìm') this.value=''" class="inputTextGoogle" name="q" /> 
+                    <input class="zingbtnsearch btnnews" type="submit" value=" " /> 
+                </form> 
+                <script src="http://www.google.com.vn/cse/brand?form=cse-search-box&amp;lang=vi" type="text/javascript"></script>
+                <!--End Google search-->
+            </div>
+            <div class="zingfamily">
+                <ul class="zingtab">
+                    <li>
+                        <a target="_blank" href="http://me.zing.vn"><span><strong>ME</strong></span></a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://mp3.zing.vn"><span><strong>MP3</strong></span></a>
+                    </li>
+                    <li>
+                        <a class="selected" href="/">
+                            <span>
+                                <strong>NEWS</strong>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="zinguser" id="zing_header">
+                <p class="zingtxtuser" id="default_header" style="display: none">
+                    <a href="javascript:znCore.setHomePage();">Đặt
+                        <span class="zingtxthome">
+                            <strong>Zing</strong>
+                        </span>làm trang chủ
+                    </a> 
+                    |
+                    <a href="javascript:znCore.addFavorite();">Bookmark
+                        <span class="zingtxthome">
+                            <strong>Zing</strong>
+                        </span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="zingcomponent">
+        <div class="zingmain">
+            <span class="zingicohome">
+                <a href="/">Trang chủ</a>
+            </span>
+            <ul class="zingmenuchild">
+                                            <li>
+                                <a href="http://www.zing.vn/news/xa-hoi.html"  target="">Xã hội</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/xa-hoi/phong-su.html" target="">Phóng sự</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/xa-hoi/doi-song.html" target="">Đời sống</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/xa-hoi/kinh-doanh.html" target="">Kinh doanh</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/xa-hoi/tu-thien.html" target="">Từ thiện</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/the-thao.html"  target="">Thể thao</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-thao/the-thao-hau-truong.html" target="">Hậu trường</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-thao/the-thao-clip.html" target="">Clip</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-thao/the-thao-duc.html" target="">Bundesliga</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-thao/bong-da-viet-nam.html" target="">Việt Nam</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-thao/the-thao-anh.html" target="">NH Anh</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-thao/the-thao-tbn.html" target="">La Liga</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-thao/the-thao-italy.html" target="">Serie A</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-thao/bong-da-chau-au.html" target="">Bóng đá Châu Âu</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/the-gioi.html"  target="">Thế giới</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-gioi/chuyen-la.html" target="">Chuyện bốn phương</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-gioi/anh-va-video-clip.html" target="">Ảnh/Video clip</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-gioi/kham-pha.html" target="">Khám phá</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/the-gioi/khoa-hoc-quan-su.html" target="">Khoa học - Quân sự</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/sanh-dieu.html"  target="">Sành điệu</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/sanh-dieu/oto-xe-may.html" target="">Ôtô xe máy</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/sanh-dieu/mobile.html" target="">Mobile</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/sanh-dieu/cong-nghe.html" target="">Công nghệ</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/nhip-song-tre.html"  target="">Sống trẻ</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/nhip-song-tre/tuyen-sinh.html" target="">Tuyển sinh</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/nhip-song-tre/giao-duc.html" target="">Giáo dục</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/nhip-song-tre/viec-lam.html" target="">Việc làm</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/nhip-song-tre/teen-viet.html" target="">Gương mặt trẻ</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/nhip-song-tre/trac-nghiem.html" target="">Trắc nghiệm</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/tinh-yeu-gioi-tinh.html"  target="">Tình yêu</a>
+                                                               </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/am-nhac.html"  target="">Âm nhạc</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/am-nhac/nhac-viet-nam.html" target="">Việt Nam</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/am-nhac/nhac-chau-a.html" target="">Châu Á</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/am-nhac/nhac-quoc-te.html" target="">Quốc Tế</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/phim-anh.html"  target="">Phim ảnh</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/phim-anh/phim-viet-nam.html" target="">Việt Nam</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/phim-anh/phim-chau-a.html" target="">Châu Á</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/phim-anh/phim-quoc-te.html" target="">Quốc tế</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/giai-tri.html"  target="">Giải trí</a>
+                                                               </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/phong-cach.html"  target="">Phong cách</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/phong-cach/an-ngon.html" target="">Ẩm thực</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/phong-cach/choi-vui.html" target="">Du lịch</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/dep.html"  target="">Đẹp</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/dep/thoi-trang.html" target="">Thời trang</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/dep/lam-dep.html" target="">Làm đẹp</a>
+                                            </li>
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/dep/nguoi-dep.html" target="">Người đẹp</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/hinh-su.html"  target="">Hình sự</a>
+                                                                       <ul class="zingsubmenu">
+                                                                                    <li>
+                                                <a href="http://www.zing.vn/news/hinh-su/dang-sau-vu-an.html" target="">Đằng sau vụ án</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/my-work.html"  target="_blank">Tìm việc</a>
+                                                               </li>
+                                        </ul>
+        </div>
+    </div>
+</div>
+        <!-- begin: Body site -->
+        <div class="znews_body">
+            <div class="top_ads"><div id="advTop"></div></div>
+            <div class="znews_cont_wrapper">
+                <!-- begin: Home left column -->
+                <div class="znews_leftcol">
+                    <p class="local_timer">
+                        <span class="txtgrey">Thứ Sáu, 09/03/12 10:57 GMT+7</span>
+                    </p>
+                    <!-- begin: Typical events -->
+                    <div class="typical_news">
+                        <!-- begin: Left Slideshow -->
+                        
+<div id="topnew_slideshow" class="topnews_slideshow_wrapper">
+                <div class="topnews_slideshow" id="topnew_slideshow_1">
+                <div class="topnews_photo"><a href="http://www.zing.vn/news/bong-da-viet-nam/bau-thang-s-thue-chuyen-gia-nhat-dieu-hanh-v-league/a239322.html"><img border="0" src="http://img2.news.zing.vn/2012/03/09/1-6.jpg" alt="" /></a></div>
+                <h2 style="width: 322px"><a href="http://www.zing.vn/news/bong-da-viet-nam/bau-thang-s-thue-chuyen-gia-nhat-dieu-hanh-v-league/a239322.html">‘Bầu’ Thắng sẽ thuê chuyên gia Nhật điều hành V-League</a></h2>
+                <div class="topnews_desc" style="width: 364px"><p>(Zing) - Chủ tịch HĐQT VPF - ông Võ Quốc Thắng cho biết, ông đang có kế hoạch thuê chuyên gia điều hành bóng đá của Nhật Bản sang Việt Nam giúp việc cho VPF.</p></div>
+            </div>
+                    <div class="topnews_slideshow" id="topnew_slideshow_2">
+                <div class="topnews_photo"><a href="http://www.zing.vn/news/choi-vui/viet-nam-dep-lung-linh-tren-tap-chi-thoi-trang-nuoc-ngoai/a239284.html"><img border="0" src="http://img2.news.zing.vn/2012/03/08/a-7.jpg" alt="" /></a></div>
+                <h2 style="width: 322px"><a href="http://www.zing.vn/news/choi-vui/viet-nam-dep-lung-linh-tren-tap-chi-thoi-trang-nuoc-ngoai/a239284.html">Việt Nam đẹp lung linh trên tạp chí thời trang nước ngoài</a></h2>
+                <div class="topnews_desc" style="width: 364px"><p>(Zing) - Ngất ngây trước khung cảnh non nước nên thơ hữu tình của đất nước chúng ta, hãng thời trang Free People đã quyết định chọn Việt Nam làm bối cảnh chụp hình cho cuốn catalogue số tháng 3.</p></div>
+            </div>
+                    <div class="topnews_slideshow" id="topnew_slideshow_3">
+                <div class="topnews_photo"><a href="http://www.zing.vn/news/kinh-doanh/nhung-nu-doanh-nhan-viet-khien-nguoi-khac-nga-mu/a239253.html"><img border="0" src="http://img2.news.zing.vn/2012/03/08/doanhnhanl.jpg" alt="" /></a></div>
+                <h2 style="width: 322px"><a href="http://www.zing.vn/news/kinh-doanh/nhung-nu-doanh-nhan-viet-khien-nguoi-khac-nga-mu/a239253.html">Những nữ doanh nhân Việt khiến người khác 'ngả mũ'</a></h2>
+                <div class="topnews_desc" style="width: 364px"><p>Họ là những nữ doanh nhân thành đạt trên nhiều lĩnh vực kinh doanh bên cạnh một gia đình hạnh phúc khiến người ngoài phải ghen tị.</p></div>
+            </div>
+            <p class="topnews_slideshow_btns" id="news_button">
+        <a href="javascript:znSlideshow.clickPrev('topnew_slideshow')" class="prev_btn icn" title="Prev">Prev</a>
+        <a href="javascript:znSlideshow.clickNext('topnew_slideshow')" class="next_btn icn" title="Next">Next</a>
+    </p>
+</div>
+<script type="text/javascript">
+    znSlideshow.startshow('topnew_slideshow', 1, 6000);
+</script>
+                        <!-- end: Left Slideshow -->
+                        <!-- begin: Typical Event list -->
+                        
+<ul class="typicalevents">
+                <li >
+                <a href="http://www.zing.vn/news/xa-hoi/ha-noi-sap-co-hang-loat-bai-do-xe-moi/a239338.html" title="Trong tháng 3 này, Sở Quy hoạch Kiến trúc đề xuất, trình UBND thành phố xem xét những vấn đề liên quan đến 3 điểm đỗ xe trên khu vực quận Đống Đa.">
+                    <img class="newsphoto_small imgleft" border="0" src="http://img2.news.zing.vn/2012/03/09/bai-do-xe00.jpg" alt="Hà Nội sắp có hàng loạt bãi đỗ xe mới" />
+                    <strong>Hà Nội sắp có hàng loạt bãi đỗ xe mới</strong>                </a>
+            </li>
+                        <li >
+                <a href="http://www.zing.vn/news/nhac-viet-nam/dam-vinh-hung-noi-bat-tren-san-catwalk/a239316.html" title="(Zing) - Sự tự tin và bộ đồ hàng hiệu màu vàng chanh khiến quý ông nhạc Việt đầy sức hútgiữa dàn người mẫu nam.">
+                    <img class="newsphoto_small imgleft" border="0" src="http://img2.news.zing.vn/2012/03/09/140-1.jpg" alt="Đàm Vĩnh Hưng nổi bật trên sàn catwalk" />
+                    <strong>Đàm Vĩnh Hưng nổi bật trên sàn catwalk</strong>&nbsp;<img src="http://static2.news.zing.vn/v3/images/video.gif" alt="New - Zing News - Tin mới 24h">                </a>
+            </li>
+                        <li >
+                <a href="http://www.zing.vn/news/xa-hoi/hoi-ky-cay-dang-cua-co-dau-bi-nghi-mat-cai-ngan-vang/a239319.html" title="”Chồng em đã chở em lại nhà cô Ngọc Anh uống thuốc bỏ thai...Tới tối bụng em lại đau hơn nữa, em có điện thoại kêu chồng về nhưng anh tàn nhẫn hơn nói: Xe anh mới rửa chạy về dơ xe, em xuống phòng chị ba ngủ đi...”.">
+                    <img class="newsphoto_small imgleft" border="0" src="http://img2.news.zing.vn/2012/03/09/co00.jpg" alt="Hồi ký cay đắng của cô dâu bị nghi mất 'cái ngàn vàng'" />
+                    <strong>Hồi ký cay đắng của cô dâu bị nghi mất 'cái ngàn vàng'</strong>                </a>
+            </li>
+                        <li >
+                <a href="http://www.zing.vn/news/xa-hoi/meo-tiet-kiem-xang-thoi-tang-gia/a239299.html" title="Cách tiết kiệm xăng phổ biến của nhiều người vẫn là hạn chế đi lại. Tuy nhiên, bạn vẫn có thể đi lại ”xông xênh” mà rất tiết kiệm xăng với những mẹo nhỏ do CNN đưa ra dưới đây.">
+                    <img class="newsphoto_small imgleft" border="0" src="http://img2.news.zing.vn/2012/03/08/atin-xang.jpg" alt="Mẹo tiết kiệm xăng thời tăng giá " />
+                    <strong>Mẹo tiết kiệm xăng thời tăng giá </strong>                </a>
+            </li>
+                        <li class="last">
+                <a href="http://www.zing.vn/news/oto-xe-may/yamaha-nouvo-sx-voi-dn-pha-kieu-may-chieu-sap-ban-o-vn/a239262.html" title="(Zing) - Yamaha Nouvo SX là mẫu xe tay ga đầu tiên tại thị trường Đông Nam Á được trang bị đèn pha kiểu máy chiếu công suất 55W, giúp tăng khả năng chiếu sáng, bên cạnh nhiều nâng cấp về thiết kế đầu xe, kích thước lốp, hay đèn xi-nhan.">
+                    <img class="newsphoto_small imgleft" border="0" src="http://img2.news.zing.vn/2012/03/08/n14.jpg" alt="Yamaha Nouvo SX với đèn pha kiểu máy chiếu sắp bán ở VN" />
+                    <strong>Yamaha Nouvo SX với đèn pha kiểu máy chiếu sắp bán ở VN</strong>&nbsp;<img src="http://static2.news.zing.vn/v3/images/image.gif" alt="New - Zing News - Tin mới 24h">                </a>
+            </li>
+            </ul>
+
+                        <!-- end: Typical Event list -->
+                        <div class="clr"></div>
+                    </div>
+                    <!-- end: Typical events -->
+                    
+<!-- begin: Videoclip list-box -->
+    <div class="cate_review_blk01">
+        <div class="crblk_title">
+            <h2><a href="/news/video-clip/t705.html">Video clip</a></h2>
+        </div>
+        <div class="crblk_cont">
+            <span class="cate_boldline"></span>
+            <div class="crblk_inner">
+                <!-- begin block content -->
+                <div class="videoclip_blk">
+                    <ul>
+                                                    <li>
+                                <a href="http://www.zing.vn/news/nguoi-dep/marc-jacobs-dua-tau-hoa-len-san-dien-thoi-trang/a239351.html" class="video_thumb">
+                                    <span class="icn_play icn"></span>
+                                    <img class="newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/nho-1.jpg" alt="Marc Jacobs đưa tàu hỏa lên sàn diễn thời trang" />
+                                </a>
+                                <a href="http://www.zing.vn/news/nguoi-dep/marc-jacobs-dua-tau-hoa-len-san-dien-thoi-trang/a239351.html" class="video_title" title="(Zing) - Tối qua, Louis Vuitton đã khép lại Tuần lễ thời trang Paris với màn trình diễn vô cùng ấn tượng và đẹp mắt.">
+                                    Marc Jacobs đưa tàu hỏa lên sàn diễn thời trang                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/the-thao-clip/fan-dot-ao-dau-nm-lon-bia-vao-becks/a239328.html" class="video_thumb">
+                                    <span class="icn_play icn"></span>
+                                    <img class="newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/1s-2.jpg" alt="Fan đốt áo đấu, ném lon bia vào Becks" />
+                                </a>
+                                <a href="http://www.zing.vn/news/the-thao-clip/fan-dot-ao-dau-nm-lon-bia-vao-becks/a239328.html" class="video_title" title="(Zing) - Chiếc áo số 23 của Becks ở LA Galaxy đã bị một nhóm CĐV đối địch đốt và giẫm đạp. Chưa hết, Becks còn hứng chịu vô số “vật thể lạ” khi thực hiện quả phạt góc…">
+                                    Fan đốt áo đấu, ném lon bia vào Becks                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/cong-nghe/anh-chup-va-video-sieu-nt-tu-camera-5-cham-cua-ipad-moi/a239331.html" class="video_thumb">
+                                    <span class="icn_play icn"></span>
+                                    <img class="newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/2-2.jpg" alt="Ảnh chụp và video siêu nét từ camera 5 'chấm' của iPad mới" />
+                                </a>
+                                <a href="http://www.zing.vn/news/cong-nghe/anh-chup-va-video-sieu-nt-tu-camera-5-cham-cua-ipad-moi/a239331.html" class="video_title" title="(Zing) - Với camera 5 megapixel trang bị ống kính 5 lớp, những bức ảnh chụp bởi iPad mới cho chất lượng tốt hơn nhiều lần so với iPad thế hệ thứ hai.">
+                                    Ảnh chụp và video siêu nét từ camera 5 'chấm' của iPad mới                                </a>
+                            </li>
+                                                        <li>
+                                <a href="http://www.zing.vn/news/europa-league/mu-thua-bac-nhuoc-ngay-tren-san-nha-old-trafford/a239314.html" class="video_thumb">
+                                    <span class="icn_play icn"></span>
+                                    <img class="newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/1s.jpg" alt="MU thua bạc nhược ngay trên sân nhà Old Trafford" />
+                                </a>
+                                <a href="http://www.zing.vn/news/europa-league/mu-thua-bac-nhuoc-ngay-tren-san-nha-old-trafford/a239314.html" class="video_title" title="(Zing) - Vẫn biết Europa League không phải đấu trường ưa thích của Quỷ đỏ, nhưng màn trình diễn thất vọng trước Athletic Bilbao khiến các CĐV không thể hài lòng với thầy trò Alex Ferguson. Thua 2-3 ở lượt đi vòng 1/8, MU cần thắng cách biệt 2 bàn ở lượt về mới có cơ hội đi tiếp.">
+                                    MU thua bạc nhược ngay trên sân nhà Old Trafford                                </a>
+                            </li>
+                                                </ul>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+<!-- end: Videoclip list-box -->
+        <div class="cate_review_blk01">
+            <div class="crblk_title">
+                <h2><a href="http://www.zing.vn/news/xa-hoi.html">Xã hội</a></h2>
+                                <p class="cate_sublinks">
+                    <span class="arr_bullet icn">&raquo;</span>
+                                                <a  href="http://www.zing.vn/news/xa-hoi/phong-su.html">Phóng sự</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/xa-hoi/doi-song.html">Đời sống</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/xa-hoi/kinh-doanh.html">Kinh doanh</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/xa-hoi/tu-thien.html">Từ thiện</a>
+                                                                        </p>
+                            </div>
+            <div class="crblk_cont">
+                <span class="cate_boldline"></span>
+                <div class="crblk_inner">
+                    <!-- begin block content -->
+                    <div class="fl cate_newsexcerpt">
+                                                        <a href="http://www.zing.vn/news/xa-hoi/di-hoc-thoi-mien-phi-sieu-khung-o-ha-noi/a239354.html" title="Đi học thôi miên phí siêu khủng ở Hà Nội"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/thoimien00.jpg" alt="Đi học thôi miên phí siêu khủng ở Hà Nội" /></a>
+                                <div class="fl news_excerpt_text">
+                                    <p><a href="http://www.zing.vn/news/xa-hoi/di-hoc-thoi-mien-phi-sieu-khung-o-ha-noi/a239354.html" title="Đi học thôi miên phí siêu khủng ở Hà Nội"><strong>Đi học thôi miên phí siêu khủng ở Hà Nội</strong></a></p>
+                                    <p>Gần đây cư dân mạng đang xôn xao bàn tán về một lớp học có giá ”cắt cổ”- còn khá mới ở Việt Nam: Thôi miên trị liệu.</p>
+                                </div>
+                                                    </div>
+                    <div class="fl cate_rightpart">
+                        <ul class="excerpt_title_list">
+                             
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/xa-hoi/mot-hoc-sinh-lop-10-danh-ban-nut-so-nao/a239352.html">Một học sinh lớp 10 đánh bạn nứt sọ não</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/xa-hoi/gai-mai-dam-lay-trom-tien-khoa-than-lam-nao-loan-nha-nghi-dem-83/a239308.html">Gái mại dâm lấy trộm tiền, khỏa thân làm náo loạn nhà nghỉ đêm 8/3</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/xa-hoi/hoi-ky-cay-dang-cua-co-dau-bi-nghi-mat-cai-ngan-vang/a239319.html">Hồi ký cay đắng của cô dâu bị nghi mất 'cái ngàn vàng'</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/kinh-doanh/lon-coca-cola-trong-khong-khi-nap-con-nguyen-ven/a239307.html">Lon Coca Cola trống không khi 'nắp còn nguyên vẹn'</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                                            </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+                <div class="cate_review_blk01">
+            <div class="crblk_title">
+                <h2><a href="http://www.zing.vn/news/the-gioi.html">Thế giới</a></h2>
+                                <p class="cate_sublinks">
+                    <span class="arr_bullet icn">&raquo;</span>
+                                                <a  href="http://www.zing.vn/news/the-gioi/chuyen-la.html">Chuyện bốn phương</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-gioi/anh-va-video-clip.html">Ảnh/Video clip</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-gioi/kham-pha.html">Khám phá</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-gioi/khoa-hoc-quan-su.html">Khoa học - Quân sự</a>
+                                                                        </p>
+                            </div>
+            <div class="crblk_cont">
+                <span class="cate_boldline"></span>
+                <div class="crblk_inner">
+                    <!-- begin block content -->
+                    <div class="fl cate_newsexcerpt">
+                                                        <a href="http://www.zing.vn/news/chuyen-la/tro-lai-thi-tran-ma-mot-nam-sau-tham-hoa-kp-nhat-ban/a239317.html" title="Trở lại 'thị trấn ma' một năm sau thảm họa kép Nhật Bản"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/delano-fukushima-nuke-a2.jpg" alt="Trở lại 'thị trấn ma' một năm sau thảm họa kép Nhật Bản" /></a>
+                                <div class="fl news_excerpt_text">
+                                    <p><a href="http://www.zing.vn/news/chuyen-la/tro-lai-thi-tran-ma-mot-nam-sau-tham-hoa-kp-nhat-ban/a239317.html" title="Trở lại 'thị trấn ma' một năm sau thảm họa kép Nhật Bản"><strong>Trở lại 'thị trấn ma' một năm sau thảm họa kép Nhật Bản</strong></a></p>
+                                    <p>(Zing) - Một năm sau thảm họa động đất và sóng thần Nhật Bản, những con đường tại ngôi làng vốn rất trù phú Kawauchi vẫn vắng vẻ, nhà cửa trống rỗng và các cửa hàng vẫn đóng cửa im ỉm.</p>
+                                </div>
+                                                    </div>
+                    <div class="fl cate_rightpart">
+                        <ul class="excerpt_title_list">
+                             
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/the-gioi/ma-tuy-hoanh-hanh-o-nhung-ngoi-lang-xa-xoi-cua-an-do/a239329.html">Ma túy hoành hành ở những ngôi làng xa xôi của Ấn Độ</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/the-gioi/cuu-thu-tuong-italy-chuc-mung-ong-putin/a239323.html">Cựu thủ tướng Italy chúc mừng ông Putin</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/anh-va-video-clip/cuoc-song-yen-binh-o-thu-do-nuoc-nga/a238912.html">Cuộc sống yên bình ở thủ đô nước Nga</a>
+                                                                            </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/the-gioi/pakistan-buoc-toi-vo-cua-trum-khung-bo-bin-laden/a239313.html">Pakistan buộc tội vợ của trùm khủng bố Bin Laden</a>
+                                                                            </li>
+                                                            </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+                <div class="cate_review_blk01">
+            <div class="crblk_title">
+                <h2><a href="http://www.zing.vn/news/the-thao.html">Thể thao</a></h2>
+                                <p class="cate_sublinks">
+                    <span class="arr_bullet icn">&raquo;</span>
+                                                <a  href="http://www.zing.vn/news/the-thao/the-thao-hau-truong.html">Hậu trường</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-thao/the-thao-clip.html">Clip</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-thao/the-thao-duc.html">Bundesliga</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-thao/bong-da-viet-nam.html">Việt Nam</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-thao/the-thao-anh.html">NH Anh</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-thao/the-thao-tbn.html">La Liga</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-thao/the-thao-italy.html">Serie A</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/the-thao/bong-da-chau-au.html">Bóng đá Châu Âu</a>
+                                                                        </p>
+                            </div>
+            <div class="crblk_cont">
+                <span class="cate_boldline"></span>
+                <div class="crblk_inner">
+                    <!-- begin block content -->
+                    <div class="fl cate_newsexcerpt">
+                                                        <a href="http://www.zing.vn/news/europa-league/cu-danh-got-dieu-nghe-khien-man-city-dut-mach-thang/a239305.html" title="Cú đánh gót điệu nghệ khiến Man City đứt mạch thắng"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/aguero-13.jpg" alt="Cú đánh gót điệu nghệ khiến Man City đứt mạch thắng" /></a>
+                                <div class="fl news_excerpt_text">
+                                    <p><a href="http://www.zing.vn/news/europa-league/cu-danh-got-dieu-nghe-khien-man-city-dut-mach-thang/a239305.html" title="Cú đánh gót điệu nghệ khiến Man City đứt mạch thắng"><strong>Cú đánh gót điệu nghệ khiến Man City đứt mạch thắng</strong></a>&nbsp;<img src="http://static2.news.zing.vn/v3/images/video.gif" alt="New - Zing News - Tin mới 24h"></p>
+                                    <p>(Zing) - Dù bị xếp ở cửa dưới trong trận tiếp đón Man xanh, nhưng Sporting đã giành chiến thắng với tỉ số 1-0. Bàn thắng của Xandao ở phút 51 đã cắt đứt mạch 6 trận thắng liên tiếp của thầy trò HLV Mancini.</p>
+                                </div>
+                                                    </div>
+                    <div class="fl cate_rightpart">
+                        <ul class="excerpt_title_list">
+                             
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/the-thao-clip/fan-dot-ao-dau-nm-lon-bia-vao-becks/a239328.html">Fan đốt áo đấu, ném lon bia vào Becks</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/bong-da-chau-au/diem-tin-sang-93-redknapp-vuot-mat-mourinho-ve-thu-nhap/a239359.html">Điểm tin sáng 9/3: Redknapp vượt mặt Mourinho về thu nhập</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/europa-league/ferguson-hy-vong-ferdinand-giup-mu-doi-no-bilbao/a239326.html">Ferguson hy vọng Ferdinand giúp MU đòi nợ Bilbao</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/the-thao-hau-truong/sieu-xe-lamborghini-cua-cr7-gap-bien/a239330.html">Siêu xe Lamborghini của CR7 'gặp biến'</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                                            </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+                <div class="cate_review_blk01">
+            <div class="crblk_title">
+                <h2><a href="http://www.zing.vn/news/phim-anh.html">Phim ảnh</a></h2>
+                                <p class="cate_sublinks">
+                    <span class="arr_bullet icn">&raquo;</span>
+                                                <a  href="http://www.zing.vn/news/phim-anh/phim-viet-nam.html">Việt Nam</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/phim-anh/phim-chau-a.html">Châu Á</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/phim-anh/phim-quoc-te.html">Quốc tế</a>
+                                                                        </p>
+                            </div>
+            <div class="crblk_cont">
+                <span class="cate_boldline"></span>
+                <div class="crblk_inner">
+                    <!-- begin block content -->
+                    <div class="fl cate_newsexcerpt">
+                                                        <a href="http://www.zing.vn/news/phim-viet-nam/dang-minhquang-da-can-nhac-rat-ky-ve-canh-goi-duc/a239347.html" title="Đặng Minh Quang 'đã cân nhắc rất kỹ' về cảnh 'gợi dục'"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/avabe.jpg" alt="Đặng Minh Quang 'đã cân nhắc rất kỹ' về cảnh 'gợi dục'" /></a>
+                                <div class="fl news_excerpt_text">
+                                    <p><a href="http://www.zing.vn/news/phim-viet-nam/dang-minhquang-da-can-nhac-rat-ky-ve-canh-goi-duc/a239347.html" title="Đặng Minh Quang 'đã cân nhắc rất kỹ' về cảnh 'gợi dục'"><strong>Đặng Minh Quang 'đã cân nhắc rất kỹ' về cảnh 'gợi dục'</strong></a></p>
+                                    <p>(Zing) - 'Khi chúng tôi quyết định dùng đoạn hình ảnh này đều cân nhắc rất kỹ.  Cả ê kíp đồng lòng để hoàn thành một đoạn ngắn nhằm giống lên hồi chuông  cảnh báo”, Đạo diễn phim ”Hoa nắng” lên tiếng về cảnh phim được cho là đầy gợi dục.</p>
+                                </div>
+                                                    </div>
+                    <div class="fl cate_rightpart">
+                        <ul class="excerpt_title_list">
+                             
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/phim-chau-a/nhung-bo-canh-doc-dao-cua-pham-bang-bang/a239358.html">Những 'bộ cánh' độc đáo của Phạm Băng Băng</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/phim-chau-a/nguoi-dep-hoa-ngu-coi-ao-bai-tru-do-long-thu/a239339.html">Người đẹp Hoa ngữ cởi áo, bài trừ đồ lông thú</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/phim-chau-a/h-lo-moi-tinh-thoi-chien-cua-duong-thieu-ham/a239324.html">Hé lộ 'mối tình thời chiến' của Dương Thiệu Hàm</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/phim-viet-nam/choang-voi-canh-liem-nguc-goi-duc-tren-vtv/a239292.html">Choáng với cảnh liếm ngực gợi dục trên VTV</a>
+                                                                            </li>
+                                                            </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+                <div class="cate_review_blk01">
+            <div class="crblk_title">
+                <h2><a href="http://www.zing.vn/news/am-nhac.html">Âm nhạc</a></h2>
+                                <p class="cate_sublinks">
+                    <span class="arr_bullet icn">&raquo;</span>
+                                                <a  href="http://www.zing.vn/news/am-nhac/nhac-viet-nam.html">Việt Nam</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/am-nhac/nhac-chau-a.html">Châu Á</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/am-nhac/nhac-quoc-te.html">Quốc Tế</a>
+                                                                        </p>
+                            </div>
+            <div class="crblk_cont">
+                <span class="cate_boldline"></span>
+                <div class="crblk_inner">
+                    <!-- begin block content -->
+                    <div class="fl cate_newsexcerpt">
+                                                        <a href="http://www.zing.vn/news/nhac-viet-nam/tuan-hung-khoe-hinh-xam-hoa-hong-cuc-khung/a239312.html" title="Tuấn Hưng khoe hình xăm hoa hồng cực khủng"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/09/140.jpg" alt="Tuấn Hưng khoe hình xăm hoa hồng cực khủng" /></a>
+                                <div class="fl news_excerpt_text">
+                                    <p><a href="http://www.zing.vn/news/nhac-viet-nam/tuan-hung-khoe-hinh-xam-hoa-hong-cuc-khung/a239312.html" title="Tuấn Hưng khoe hình xăm hoa hồng cực khủng"><strong>Tuấn Hưng khoe hình xăm hoa hồng cực khủng</strong></a></p>
+                                    <p>(Zing) - Anh chàng đào hoa của showbiz Việt lại mới bổ sung thêm một ấn tượng mới vào bộ sưu tập hình xăm trên cơ thể.</p>
+                                </div>
+                                                    </div>
+                    <div class="fl cate_rightpart">
+                        <ul class="excerpt_title_list">
+                             
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nhac-quoc-te/cha-rihanna-khen-hung-than-cua-con-gai/a239357.html">Cha Rihanna khen 'hung thần' của con gái</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nhac-viet-nam/minh-hang-sexy-nhu-mieu-nu/a239335.html">Minh Hằng sexy như miêu nữ</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nhac-quoc-te/lady-gaga-sanh-vai-cong-nuong-kate-middleton/a239325.html">Lady Gaga sánh vai Công nương Kate Middleton</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nhac-viet-nam/dam-vinh-hung-noi-bat-tren-san-catwalk/a239316.html">Đàm Vĩnh Hưng nổi bật trên sàn catwalk</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                                            </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+                <div class="cate_review_blk01">
+            <div class="crblk_title">
+                <h2><a href="http://www.zing.vn/news/nhip-song-tre.html">Sống trẻ</a></h2>
+                                <p class="cate_sublinks">
+                    <span class="arr_bullet icn">&raquo;</span>
+                                                <a style="background-color:#F57706;color:#FFFFFF;padding: 3px 3px;" href="http://www.zing.vn/news/nhip-song-tre/tuyen-sinh.html">Tuyển sinh</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/nhip-song-tre/giao-duc.html">Giáo dục</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/nhip-song-tre/viec-lam.html">Việc làm</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/nhip-song-tre/teen-viet.html">Gương mặt trẻ</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/nhip-song-tre/trac-nghiem.html">Trắc nghiệm</a>
+                                                                        </p>
+                            </div>
+            <div class="crblk_cont">
+                <span class="cate_boldline"></span>
+                <div class="crblk_inner">
+                    <!-- begin block content -->
+                    <div class="fl cate_newsexcerpt">
+                                                        <a href="http://www.zing.vn/news/nhip-song-tre/nu-vu-cong-belly-dance-khoe-duong-cong-dip-83/a239291.html" title="Nữ vũ công belly dance khoe đường cong dịp 8/3"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/08/1-21.jpg" alt="Nữ vũ công belly dance khoe đường cong dịp 8/3" /></a>
+                                <div class="fl news_excerpt_text">
+                                    <p><a href="http://www.zing.vn/news/nhip-song-tre/nu-vu-cong-belly-dance-khoe-duong-cong-dip-83/a239291.html" title="Nữ vũ công belly dance khoe đường cong dịp 8/3"><strong>Nữ vũ công belly dance khoe đường cong dịp 8/3</strong></a>&nbsp;<img src="http://static2.news.zing.vn/v3/images/video.gif" alt="New - Zing News - Tin mới 24h"></p>
+                                    <p>(Zing) - Màn trình diễn belly dance nóng bỏng của những cô bạn còn rất trẻ cuốn hút mọi ánh nhìn.</p>
+                                </div>
+                                                    </div>
+                    <div class="fl cate_rightpart">
+                        <ul class="excerpt_title_list">
+                             
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nhip-song-tre/nguoi-viet-duy-nhat-trong-top-192-lanh-dao-tre-toan-cau/a239364.html">Người Việt duy nhất trong top 192 lãnh đạo trẻ toàn cầu</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/viec-lam/3-loi-khuyen-dam-bao-ho-so-khong-ti-vet/a239065.html">3 lời khuyên đảm bảo hồ sơ 'không tì vết'</a>
+                                                                            </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nhip-song-tre/nt-duyen-dang-cua-nu-sinh-viet-tai-phap/a238734.html">Nét duyên dáng của nữ sinh Việt tại Pháp</a>
+                                                                            </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/tuyen-sinh/thu-khoa-2-truong-dai-hoc-quan-trong-nhat-la-tu-hoc/a239260.html">Thủ khoa 2 trường Đại học: 'Quan trọng nhất là tự học'</a>
+                                                                            </li>
+                                                            </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+                <div class="cate_review_blk01">
+            <div class="crblk_title">
+                <h2><a href="http://www.zing.vn/news/sanh-dieu.html">Sành điệu</a></h2>
+                                <p class="cate_sublinks">
+                    <span class="arr_bullet icn">&raquo;</span>
+                                                <a  href="http://www.zing.vn/news/sanh-dieu/oto-xe-may.html">Ôtô xe máy</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/sanh-dieu/mobile.html">Mobile</a>
+                                                            |
+                                                                                    <a  href="http://www.zing.vn/news/sanh-dieu/cong-nghe.html">Công nghệ</a>
+                                                                        </p>
+                            </div>
+            <div class="crblk_cont">
+                <span class="cate_boldline"></span>
+                <div class="crblk_inner">
+                    <!-- begin block content -->
+                    <div class="fl cate_newsexcerpt">
+                                                        <a href="http://www.zing.vn/news/cong-nghe/nhung-diem-that-vong-o-chiec-ipad-moi/a239300.html" title="Những điểm thất vọng ở chiếc iPad mới"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/08/new-ipad32.jpg" alt="Những điểm thất vọng ở chiếc iPad mới" /></a>
+                                <div class="fl news_excerpt_text">
+                                    <p><a href="http://www.zing.vn/news/cong-nghe/nhung-diem-that-vong-o-chiec-ipad-moi/a239300.html" title="Những điểm thất vọng ở chiếc iPad mới"><strong>Những điểm thất vọng ở chiếc iPad mới</strong></a></p>
+                                    <p>(Zing) - Sau cảm giác ngây ngất ban đầu về một chiếc máy tính bảng trang bị màn hình siêu nét Retina, người dùng chợt nhận ra rằng, đây đã là lần thứ hai liên tiếp, Apple không thay đổi chút nào về thiết kế sản phẩm của mình.</p>
+                                </div>
+                                                    </div>
+                    <div class="fl cate_rightpart">
+                        <ul class="excerpt_title_list">
+                             
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/cong-nghe/samsung-sap-ra-tablet-nt-hon-ca-ipad-moi/a239346.html">Samsung sắp ra tablet 'nét' hơn cả iPad mới</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/cong-nghe/anh-chup-va-video-sieu-nt-tu-camera-5-cham-cua-ipad-moi/a239331.html">Ảnh chụp và video siêu nét từ camera 5 'chấm' của iPad mới</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/oto-xe-may/lamborghini-aventador-do-thap-lua-tai-geneva/a239259.html">Lamborghini Aventador độ 'thắp lửa' tại Geneva</a>
+                                                                            </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/oto-xe-may/yamaha-nouvo-sx-voi-dn-pha-kieu-may-chieu-sap-ban-o-vn/a239262.html">Yamaha Nouvo SX với đèn pha kiểu máy chiếu sắp bán ở VN</a>
+                                                                            </li>
+                                                            </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+                <div class="cate_review_blk01">
+            <div class="crblk_title">
+                <h2><a href="http://www.zing.vn/news/hinh-su.html">Hình sự</a></h2>
+                                <p class="cate_sublinks">
+                    <span class="arr_bullet icn">&raquo;</span>
+                                                <a  href="http://www.zing.vn/news/hinh-su/dang-sau-vu-an.html">Đằng sau vụ án</a>
+                                                                        </p>
+                            </div>
+            <div class="crblk_cont">
+                <span class="cate_boldline"></span>
+                <div class="crblk_inner">
+                    <!-- begin block content -->
+                    <div class="fl cate_newsexcerpt">
+                                                        <a href="http://www.zing.vn/news/hinh-su/dieu-tra-vu-vo-chu-tich-xa-to-chuc-danh-ghen-da-man/a239235.html" title="Điều tra vụ vợ chủ tịch xã tổ chức đánh ghen dã man"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/08/ab00.jpg" alt="Điều tra vụ vợ chủ tịch xã tổ chức đánh ghen dã man" /></a>
+                                <div class="fl news_excerpt_text">
+                                    <p><a href="http://www.zing.vn/news/hinh-su/dieu-tra-vu-vo-chu-tich-xa-to-chuc-danh-ghen-da-man/a239235.html" title="Điều tra vụ vợ chủ tịch xã tổ chức đánh ghen dã man"><strong>Điều tra vụ vợ chủ tịch xã tổ chức đánh ghen dã man</strong></a></p>
+                                    <p>Cơ quan điều tra Công an huyện Đức Cơ (Gia Lai) cho biết, đơn vị này đang thu thập tài liệu, củng cố lời khai từ các đối tượng để khởi tố vụ án đánh ghen hội đồng gây mất an ninh trật tự vừa xảy ra trên địa bàn.</p>
+                                </div>
+                                                    </div>
+                    <div class="fl cate_rightpart">
+                        <ul class="excerpt_title_list">
+                             
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/hinh-su/hai-nhom-con-do-mang-vu-khi-den-quan-karaoke-de-xu-nhau/a239311.html">Hai nhóm côn đồ mang vũ khí đến quán karaoke để 'xử nhau'</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/hinh-su/quan-hang-hieu-bi-nhai-nhu-that/a239310.html">
+Quần hàng hiệu bị nhái như thật</a>
+                                        <span class="icn_new icn">new</span>                                    </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/hinh-su/bat-2-doi-tuong-chan-cuop-hang-chuc-hoc-sinh/a239294.html">Bắt 2 đối tượng chặn cướp hàng chục học sinh</a>
+                                                                            </li>
+                                     
+                                    <li>
+                                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/hinh-su/bat-khan-cap-nguyen-pho-tgd-cong-ty-du-lich-binh-thuan/a239233.html">Bắt khẩn cấp nguyên phó TGĐ công ty du lịch Bình Thuận</a>
+                                                                            </li>
+                                                            </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+        
+
+<!-- begin: Phong cach list-box -->
+<div class="cate_review_blk01">
+    <div class="crblk_title">
+        <h2><a href="/news/phong-cach.html">Phong cách</a></h2>
+        <p class="cate_sublinks">
+            <span class="arr_bullet">&raquo;</span>
+            <a href="/news/tinh-yeu-gioi-tinh.html">Tình yêu</a>|<a href="/news/dep/lam-dep.html">Làm đẹp</a>|<a href="/news/giai-tri/an-ngon.html">Ẩm thực</a>|<a href="/news/giai-tri/choi-vui.html">Du lịch</a>
+        </p>
+    </div>
+    <div class="crblk_cont">
+        <span class="cate_boldline"></span>
+        <div class="crblk_inner">
+            <!-- begin block content -->
+            <div class="fl cate_newsexcerpt">
+                <h3 class="cateheading01"><span><strong><a style="color: #fff" href="/news/dep.html">Đẹp</a></strong></span></h3>
+                <br class="clr" />
+                                    <a href="http://www.zing.vn/news/nguoi-dep/nhung-tinh-huong-hai-huoc-tai-cac-cuoc-thi-sac-dep-quoc-te/a238927.html" title="Những tình huống hài hước tại các cuộc thi sắc đẹp quốc tế"><img class="imgleft newsphoto_med" border="0" src="http://img2.news.zing.vn/2012/03/06/n-ho.jpg" alt="Những tình huống hài hước tại các cuộc thi sắc đẹp quốc tế" /></a>
+                    <div class="fl news_excerpt_text">
+                        <p><a title="Những tình huống hài hước tại các cuộc thi sắc đẹp quốc tế" href="http://www.zing.vn/news/nguoi-dep/nhung-tinh-huong-hai-huoc-tai-cac-cuoc-thi-sac-dep-quoc-te/a238927.html"><strong>Những tình huống hài hước tại các cuộc thi sắc đẹp quốc tế</strong></a></p>
+                        <p>(Zing) - Trong số 7 cuộc thi sắc đẹp xảy ra những sự cố hy hữu được liệt kê dưới đây, có đến 6 cuộc thi của nước Mỹ.</p>
+                    </div>
+                                    <ul class="excerpt_title_list">
+                                                <li><a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nguoi-dep/marc-jacobs-dua-tau-hoa-len-san-dien-thoi-trang/a239351.html">Marc Jacobs đưa tàu hỏa lên sàn diễn thời trang</a><span class="icn_new icn">new</span></li>
+                                                        <li><a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nguoi-dep/bong-mat-ngam-noi-y-kate-upton-tu-thiet-ke/a239134.html">'Bỏng mắt' ngắm nội y Kate Upton tự thiết kế</a><span class="icn_new icn">new</span></li>
+                                                        <li><a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/nguoi-dep/trang-tran-toi-co-cho-dung-cua-rieng-minh/a239298.html">Trang Trần: 'Tôi có chỗ đứng của riêng mình'</a></li>
+                                            </ul>
+            </div>
+            <div class="fl cate_rightpart">
+                <h3 class="cateheading01"><span><strong><a style="color: #fff" href="/news/phong-cach.html">Du lịch - Ẩm thực</a></strong></span></h3>
+                <div class="photoslideshow travelphoto">
+                    <a title="Next" class="next_btn" href="javascript:znSlideshow.clickNext('travel_slideshow')">Next</a>
+                    <a title="Previous" class="prev_btn" href="javascript:znSlideshow.clickPrev('travel_slideshow')">Previous</a>
+                    <div class="slider_wrapper" id="travel_slideshow">
+                                                        <div class="slider_item" id="travel_slideshow_1">
+                                    <a title="Việt Nam đẹp lung linh trên tạp chí thời trang nước ngoài" href="http://www.zing.vn/news/choi-vui/viet-nam-dep-lung-linh-tren-tap-chi-thoi-trang-nuoc-ngoai/a239284.html">
+                                        <img border="0" alt="Việt Nam đẹp lung linh trên tạp chí thời trang nước ngoài" src="http://img2.news.zing.vn/2012/03/08/a-7.jpg" />
+                                        <strong class="photo_title"><span>Việt Nam đẹp lung linh trên tạp chí thời trang nước ngoài</span></strong>
+                                    </a>
+                                </div>
+                                                                <div class="slider_item" id="travel_slideshow_2">
+                                    <a title="Những khoảng trời xanh đẹp tuyệt vời dọc chiều dài đất nước" href="http://www.zing.vn/news/choi-vui/nhung-khoang-troi-xanh-dep-tuyet-voi-doc-chieu-dai-dat-nuoc/a238369.html">
+                                        <img border="0" alt="Những khoảng trời xanh đẹp tuyệt vời dọc chiều dài đất nước" src="http://img2.news.zing.vn/2012/03/08/a-1.jpg" />
+                                        <strong class="photo_title"><span>Những khoảng trời xanh đẹp tuyệt vời dọc chiều dài đất nước</span></strong>
+                                    </a>
+                                </div>
+                                                                <div class="slider_item" id="travel_slideshow_3">
+                                    <a title="Điểm hẹn cà phê 8/3 hấp dẫn cho giới trẻ Hà Nội" href="http://www.zing.vn/news/an-ngon/diem-hen-ca-phe-83-hap-dan-cho-gioi-tre-ha-noi/a238933.html">
+                                        <img border="0" alt="Điểm hẹn cà phê 8/3 hấp dẫn cho giới trẻ Hà Nội" src="http://img2.news.zing.vn/2012/03/06/a-16.jpg" />
+                                        <strong class="photo_title"><span>Điểm hẹn cà phê 8/3 hấp dẫn cho giới trẻ Hà Nội</span></strong>
+                                    </a>
+                                </div>
+                                   
+                    </div>
+                    <script type="text/javascript">
+                        znSlideshow.startshow('travel_slideshow', 1, 5000);
+                    </script>
+                </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+</div>
+<!-- end: Phong cach list-box -->
+<!-- begin: Thoi trang -->
+<div class="cate_review_blk02">
+    <h3 class="cateheading01"><span><strong><a style="color: #fff" href="/news/dep/thoi-trang.html">Thời trang</a></strong></span></h3>
+    <br class="clr" />
+    <div class="crblk_inner">
+        <div class="fashion_photoshow">
+            <ul>
+                                <li><a href="http://www.zing.vn/news/thoi-trang/ngam-bo-suu-tap-do-nam-cua-ngo-thanh-van/a238753.html"><img border="0" src="http://img2.news.zing.vn/2012/03/05/380-14.jpg" alt="" class="fsnewsphoto" /><span class="fsnews_title">Ngắm bộ sưu tập đồ nam của Ngô Thanh Vân</span></a></li>
+                                    <li><a href="http://www.zing.vn/news/thoi-trang/vay-xinh-cho-nang-sanh-dieu/a238739.html"><img border="0" src="http://img2.news.zing.vn/2012/03/05/m2-1.jpg" alt="" class="fsnewsphoto" /><span class="fsnews_title">Váy xinh cho nàng sành điệu</span></a></li>
+                                    <li><a href="http://www.zing.vn/news/thoi-trang/cap-doi-ngot-ngao-ngay-83/a239032.html"><img border="0" src="http://img2.news.zing.vn/2012/03/08/a-2.jpg" alt="" class="fsnewsphoto" /><span class="fsnews_title">Cặp đôi ngọt ngào ngày 8/3</span></a></li>
+                                </ul>
+        </div>
+    </div>
+<!--    <div class="blk_botshadow"><span class="shadowleft fl"></span><span class="shadowright fr"></span></div>-->
+</div>
+<!-- end: Thoi trang -->
+<div class="cate_review_blk03">
+    <h3 class="mp3_box_top"><span><strong><a target="_blank" href="http://mp3.zing.vn/">MP3</a> - <a target="_blank" href="http://movie.zing.vn/">Movie</a></strong></span></h3>
+    <div class="crblk_cont">
+        <div class="crblk_inner"> 
+            <!-- begin block content -->
+            <div class="album_hot_box fr">
+                <ul class="mp3alb_list">
+                    <p class="clip_name">ALBUM HOT</p>
+                                                <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Ai-Cho-Toi-Tinh-Yeu-Quang-Le-Nguyen-Le/ZWZ9FWB8.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/9a152f3a7c8f694322710e562d645e64_1330590589.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Ai-Cho-Toi-Tinh-Yeu-Quang-Le-Nguyen-Le/ZWZ9FWB8.html" target="_blank"><strong>Ai Cho Tôi Tình Yêu</strong><span class="singer">Quang Lê,Nguyên Lê</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Trang-Khoc-Bang-Cuong/ZWZ9FU8O.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/efaf98db2eac3a61946ca0282ae6ddd4_1331094516.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Trang-Khoc-Bang-Cuong/ZWZ9FU8O.html" target="_blank"><strong>Trăng Khóc</strong><span class="singer">Bằng Cường</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Noi-Cuoi-Thien-Duong-Quang-Ha-Ha-Vy/ZWZ9FUU0.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/b98ae4fd18f0cb49df1fe5d1231128b3_1330927928.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Noi-Cuoi-Thien-Duong-Quang-Ha-Ha-Vy/ZWZ9FUU0.html" target="_blank"><strong>Nơi Cuối Thiên Đường</strong><span class="singer">Quang Hà,Hà Vy</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Co-Nhung-Luc-Em-Thay-OST-Le-Phi-Tinh-Yeu-Minh-Thu/ZWZ9FU8W.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/f3ccdd27d2000e3f9255a7e3e2c48800_1331091230.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Co-Nhung-Luc-Em-Thay-OST-Le-Phi-Tinh-Yeu-Minh-Thu/ZWZ9FU8W.html" target="_blank"><strong>Có Những Lúc Em Thấy (OST Lệ Phí Tình Yêu)</strong><span class="singer">Minh Thư</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Chiec-Ao-Son-Vai-Vy-Oanh/ZWZ9FUUI.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/c1c69dd9a431f6972d22891e6d25664c_1330930184.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Chiec-Ao-Son-Vai-Vy-Oanh/ZWZ9FUUI.html" target="_blank"><strong>Chiếc Áo Sờn Vai</strong><span class="singer">Vy Oanh</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Vui-Va-Buon-Khanh-Don/ZWZ9FUOC.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/e0d28fd61b29adb0267598f66a991e0d_1330920189.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Vui-Va-Buon-Khanh-Don/ZWZ9FUOC.html" target="_blank"><strong>Vui Và Buồn</strong><span class="singer">Khánh Đơn</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Anh-Can-Co-Em-Trieu-Hai/ZWZ9FWDE.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/0bc0423854d575ec8e8da6843119dacb_1330658089.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Anh-Can-Co-Em-Trieu-Hai/ZWZ9FWDE.html" target="_blank"><strong>Anh Cần Có Em</strong><span class="singer">Triều Hải</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Roly-Poly-Japanese-T-Ara/ZWZ9FUU6.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/3840cf3756ed27c030f58f8e3e279087_1331000880.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Roly-Poly-Japanese-T-Ara/ZWZ9FUU6.html" target="_blank"><strong>Roly-Poly (Japanese)</strong><span class="singer">T-Ara</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="ablum_thumbnail"><a href="http://mp3.zing.vn/album/Renai-Jidai-Lee-Seung-Gi/ZWZ9FUUZ.html" target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/889b058a2621e8ffd61255748b6ffb46_1331000237.jpg"></a></p>
+                                <p class="album_title"><a href="http://mp3.zing.vn/album/Renai-Jidai-Lee-Seung-Gi/ZWZ9FUUZ.html" target="_blank"><strong>Renai Jidai</strong><span class="singer">Lee Seung Gi</span></a></p>
+                            </li>
+                                 
+                </ul>
+            </div>
+            <div class="mp3movie_box fl">
+                <ul class="movie_list">
+                    <p class="clip_name">ZING MP3 - HOT VIDEOCLIP</p>
+                                                <li>
+                                <p class="movie_thumbnail"><a href="http://mp3.zing.vn/video-clip/Hay-Noi-Voi-Em-Ho-Ngoc-Ha/ZWZF7C6U.html"  target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/0cb0a356add503a1fde1d9e3843254e6_1331106367.jpg"></a> </p>
+                                <p class="movie_title"><a href="http://mp3.zing.vn/video-clip/Hay-Noi-Voi-Em-Ho-Ngoc-Ha/ZWZF7C6U.html"  target="_blank"><strong>Hãy Nói Với Em</strong><span class="singer">Hồ Ngọc Hà</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="movie_thumbnail"><a href="http://mp3.zing.vn/video-clip/Mot-Chut-Quen-Anh-Thoi-Bao-Thy/ZWZF7C66.html"  target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/dcd37f70aefa93dea20549a744b6156a_1331190493.jpg"></a> </p>
+                                <p class="movie_title"><a href="http://mp3.zing.vn/video-clip/Mot-Chut-Quen-Anh-Thoi-Bao-Thy/ZWZF7C66.html"  target="_blank"><strong>Một Chút Quên Anh Thôi</strong><span class="singer">Bảo Thy</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="movie_thumbnail"><a href="http://mp3.zing.vn/video-clip/Fantastic-Baby-BIGBANG/ZWZF7C8E.html"  target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/2b135e901fc2965b241c285687739581_3.jpg"></a> </p>
+                                <p class="movie_title"><a href="http://mp3.zing.vn/video-clip/Fantastic-Baby-BIGBANG/ZWZF7C8E.html"  target="_blank"><strong>Fantastic Baby</strong><span class="singer">BIGBANG</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="movie_thumbnail"><a href="http://mp3.zing.vn/video-clip/Noi-Cuoi-Thien-Duong-Quang-Ha,Ha-Vy/ZWZF7ABB.html"  target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/178ff75782d035aa4317f58fa83c5dfa_1331002085.jpg"></a> </p>
+                                <p class="movie_title"><a href="http://mp3.zing.vn/video-clip/Noi-Cuoi-Thien-Duong-Quang-Ha,Ha-Vy/ZWZF7ABB.html"  target="_blank"><strong>Nơi Cuối Thiên Đường</strong><span class="singer">Quang Hà,Hà Vy</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="movie_thumbnail"><a href="http://mp3.zing.vn/video-clip/Anh-Yeu-Em-Nguyen-Phi-Hung/ZWZFUF6W.html"  target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/16131d958eaade885fa1d7e96c7ecc0c_1329794141.jpg"></a> </p>
+                                <p class="movie_title"><a href="http://mp3.zing.vn/video-clip/Anh-Yeu-Em-Nguyen-Phi-Hung/ZWZFUF6W.html"  target="_blank"><strong>Anh Yêu Em</strong><span class="singer">Nguyễn Phi Hùng</span></a></p>
+                            </li>
+                                                        <li>
+                                <p class="movie_thumbnail"><a href="http://mp3.zing.vn/video-clip/Scream-2NE1/ZWZF7D6F.html"  target="_blank"><img border="0" alt="" src="http://img2.news.zing.vn/image_xml/2012/03/09/9b08ef3543cd091540fd1e93a057b7ca_3.jpg"></a> </p>
+                                <p class="movie_title"><a href="http://mp3.zing.vn/video-clip/Scream-2NE1/ZWZF7D6F.html"  target="_blank"><strong>Scream</strong><span class="singer">2NE1</span></a></p>
+                            </li>
+                                
+                </ul>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var tabs1='tabs1';var tabs2='tabs3';function muashow(layerName){document.getElementById(layerName).style.display='';}
+    function muahide(layerName){document.getElementById(layerName).style.display='none';}
+    function show_next1(tab_name){document.getElementById(tabs1).className='';var curr=document.getElementById(tab_name);curr.className='selected';muahide(tabs1+'_data');muashow(tab_name+'_data');tabs1=tab_name; return false;}
+    function show_next2(tab_name){document.getElementById(tabs2).className='';var curr=document.getElementById(tab_name);curr.className='selected';muahide(tabs2+'_data');muashow(tab_name+'_data');tabs2=tab_name; return false;}
+</script>
+<div class="cate_review_blk03">
+    <h3 class="cateheading02"><span style="text-transform:none"><strong><a target="_blank" href="http://123mua.vn/">123mua</a></strong></span></h3>
+    <div class="crblk_cont">
+        <div class="crblk_inner"> 
+            <!-- begin block content -->
+            <div class="123mua_box">
+                <div class="prolist">
+                    <div class="deal_menu"><a class="selected" href="#"  onclick="return show_next1('tabs1');"  id="tabs1">Thời trang Nam</a> | <a href="#" onclick="return show_next1('tabs2');" id="tabs2">Thời trang Nữ</a></div>
+                    <div id="tabs1_data">
+                                                        <p class="cell_list"><a href="http://www.123mua.vn/thoi-trang-nam/jean-nam-cheap-monday-hang-dep-gia-re-hot_33479577-483611.html" target="_blank" title="jean nam cheap monday hàng đẹp giá rẻ..........HOT"><img border="0" alt="jean nam cheap monday hàng đẹp giá rẻ..........HOT" src="http://img2.news.zing.vn/image_xml/2012/03/09/13304164121922067848_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/thoi-trang-nam/jean-nam-cheap-monday-hang-dep-gia-re-hot_33479577-483611.html" target="_blank">425.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/thoi-trang-nam/ao-thun-unisex-turn-back-the-clock-with-vintage_57726867-491119.html" target="_blank" title="Áo Thun UNISEX - Turn Back The Clock With Vintage"><img border="0" alt="Áo Thun UNISEX - Turn Back The Clock With Vintage" src="http://img2.news.zing.vn/image_xml/2012/03/09/13311446282121361480_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/thoi-trang-nam/ao-thun-unisex-turn-back-the-clock-with-vintage_57726867-491119.html" target="_blank">220.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/thoi-trang-nam/ao-khoac-100-nhap-tu-han-quoc-006z-black-13_52185740-419299.html" target="_blank" title="Áo khoác 100% nhập từ Hàn Quốc 006Z-BLACK 13"><img border="0" alt="Áo khoác 100% nhập từ Hàn Quốc 006Z-BLACK 13" src="http://img2.news.zing.vn/image_xml/2012/03/09/13225622631173544189_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/thoi-trang-nam/ao-khoac-100-nhap-tu-han-quoc-006z-black-13_52185740-419299.html" target="_blank">565.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/thoi-trang-nam/dep-kardas-thailand-12-2011_36329249-429182.html" target="_blank" title="DÉP KARDAS. THAILAND 12/2011"><img border="0" alt="DÉP KARDAS. THAILAND 12/2011" src="http://img2.news.zing.vn/image_xml/2012/03/09/13235098911241187784_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/thoi-trang-nam/dep-kardas-thailand-12-2011_36329249-429182.html" target="_blank">280.000 VNĐ</a> </p>
+                                                        <a href="http://www.123mua.vn/thoi-trang-nam/" class="view_more_sp fl" target="_blank"><span class="icn icn_morebul fl"></span> Xem tất cả</a>
+                    </div>
+                    <div id="tabs2_data" style="display: none;">
+                                                        <p class="cell_list"><a href="http://www.123mua.vn/thoi-trang-nu/j2k-ba-lo-di-hoc-di-choi-de-thuong-ca-tinh_40141294-481406.html" target="_blank" title="[J2K] Ba lô đi học, đi chơi dễ thương, cá tính..."><img border="0" alt="[J2K] Ba lô đi học, đi chơi dễ thương, cá tính..." src="http://img2.news.zing.vn/image_xml/2012/03/09/13301676851475109876_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/thoi-trang-nu/j2k-ba-lo-di-hoc-di-choi-de-thuong-ca-tinh_40141294-481406.html" target="_blank">218.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/thoi-trang-nu/j2k-ao-long-lanh-giu-am_40141294-481429.html" target="_blank" title="[J2K] Áo lông lạnh giữ ấm!"><img border="0" alt="[J2K] Áo lông lạnh giữ ấm!" src="http://img2.news.zing.vn/image_xml/2012/03/09/13301703811021814260_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/thoi-trang-nu/j2k-ao-long-lanh-giu-am_40141294-481429.html" target="_blank">188.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/thoi-trang-nu/quan-jeans-hang-chat_41213759-491625.html" target="_blank" title="quần jeans hàng chất"><img border="0" alt="quần jeans hàng chất" src="http://img2.news.zing.vn/image_xml/2012/03/09/1331201285446331360_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/thoi-trang-nu/quan-jeans-hang-chat_41213759-491625.html" target="_blank">100.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/thoi-trang-nu/j2k-tui-dung-iphone-dong-gia_40141294-481422.html" target="_blank" title="[J2K] Túi đựng iphone đồng giá!!!"><img border="0" alt="[J2K] Túi đựng iphone đồng giá!!!" src="http://img2.news.zing.vn/image_xml/2012/03/09/13301696322094223392_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/thoi-trang-nu/j2k-tui-dung-iphone-dong-gia_40141294-481422.html" target="_blank">58.000 VNĐ</a> </p>
+                                                        <a href="http://www.123mua.vn/thoi-trang-nu/" class="view_more_sp fl" target="_blank"><span class="icn icn_morebul fl"></span> Xem tất cả</a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="123mua_box">
+                <div class="clr"></div>
+                <div class="prolist end">
+                    <div class="deal_menu"><a class="selected" href="#" onclick="return show_next2('tabs3');" id="tabs3">Nước hoa - Mỹ phẩm</a> | <a href="#" onclick="return show_next2('tabs4');" id="tabs4">Quà tặng</a></a></div>
+                    <div id="tabs3_data">
+                                                        <p class="cell_list"><a href="http://www.123mua.vn/nuoc-hoa-my-pham/son-thoi-lipsticks-cac-hang-auth-100_20461175-340296.html" target="_blank" title="Son thỏi ( lipsticks) các hãng, Auth 100%"><img border="0" alt="Son thỏi ( lipsticks) các hãng, Auth 100%" src="http://img2.news.zing.vn/image_xml/2012/03/09/13146177311269887489_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/nuoc-hoa-my-pham/son-thoi-lipsticks-cac-hang-auth-100_20461175-340296.html" target="_blank">200.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/nuoc-hoa-my-pham/beyou-s-cung-cap-si-le-co-bobbibrown_20461175-36037.html" target="_blank" title="BEYOU's: Cung cấp sỉ lẻ cọ BOBBIBROWN"><img border="0" alt="BEYOU's: Cung cấp sỉ lẻ cọ BOBBIBROWN" src="http://img2.news.zing.vn/image_xml/2012/03/09/12910359725699569_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/nuoc-hoa-my-pham/beyou-s-cung-cap-si-le-co-bobbibrown_20461175-36037.html" target="_blank">350.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/nuoc-hoa-my-pham/kem-tan-mo-san-co-bung-va-dui-hang-my-phap_20461175-465159.html" target="_blank" title="Kem tan mỡ, săn cơ bụng và đùi Hàng Mỹ, Pháp"><img border="0" alt="Kem tan mỡ, săn cơ bụng và đùi Hàng Mỹ, Pháp" src="http://img2.news.zing.vn/image_xml/2012/03/09/1328369282397411001_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/nuoc-hoa-my-pham/kem-tan-mo-san-co-bung-va-dui-hang-my-phap_20461175-465159.html" target="_blank">350.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/nuoc-hoa-my-pham/olay-my-sua-tam-kem-duong-sua-rua-mat_20461175-489929.html" target="_blank" title="Olay Mỹ: sữa tắm, kem dưỡng, Sữa rửa mặt..."><img border="0" alt="Olay Mỹ: sữa tắm, kem dưỡng, Sữa rửa mặt..." src="http://img2.news.zing.vn/image_xml/2012/03/09/1331025606129177769_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/nuoc-hoa-my-pham/olay-my-sua-tam-kem-duong-sua-rua-mat_20461175-489929.html" target="_blank">430.000 VNĐ</a> </p>
+                                                        <a href="http://www.123mua.vn/nuoc-hoa-my-pham/" class="view_more_sp fl" target="_blank"><span class="icn icn_morebul fl"></span> Xem tất cả</a>
+                    </div>
+                    <div id="tabs4_data" style="display: none;">
+                                                        <p class="cell_list"><a href="http://www.123mua.vn/qua-tang/vai-ni-vai-da-vai-long-thu-phu-kien-handmade_16003143-248026.html" target="_blank" title="Vải nỉ,vải dạ,vải lông thú,phụ kiện handmade"><img border="0" alt="Vải nỉ,vải dạ,vải lông thú,phụ kiện handmade" src="http://img2.news.zing.vn/image_xml/2012/03/09/1309619094559870631_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/qua-tang/vai-ni-vai-da-vai-long-thu-phu-kien-handmade_16003143-248026.html" target="_blank">1.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/qua-tang/vai-may-goi-luoi-hat-xop-vai-ni_16003143-385170.html" target="_blank" title="Vải May Gối Lười, Hạt Xốp, Vải nỉ"><img border="0" alt="Vải May Gối Lười, Hạt Xốp, Vải nỉ" src="http://img2.news.zing.vn/image_xml/2012/03/09/1319088197927559941_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/qua-tang/vai-may-goi-luoi-hat-xop-vai-ni_16003143-385170.html" target="_blank">65.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/qua-tang/dat-set-nhat-thai-han-quoc-phu-kien-handmade_16003143-246584.html" target="_blank" title="Đất sét Nhật, Thái, Hàn Quốc, phụ kiện handmade"><img border="0" alt="Đất sét Nhật, Thái, Hàn Quốc, phụ kiện handmade" src="http://img2.news.zing.vn/image_xml/2012/03/09/130750878497162958_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/qua-tang/dat-set-nhat-thai-han-quoc-phu-kien-handmade_16003143-246584.html" target="_blank">15.000 VNĐ</a> </p>
+                                                                <p class="cell_list"><a href="http://www.123mua.vn/qua-tang/but-viet-thoi-trang-hang-moi-gia-re-day_2451489-430008.html" target="_blank" title="BÚT VIẾT THỜI TRANG...HÀNG MỚI GIÁ RẺ ĐÂY"><img border="0" alt="BÚT VIẾT THỜI TRANG...HÀNG MỚI GIÁ RẺ ĐÂY" src="http://img2.news.zing.vn/image_xml/2012/03/09/1323606929643062163_130_130.jpg" class="prothumb"></a> <a class="price" href="http://www.123mua.vn/qua-tang/but-viet-thoi-trang-hang-moi-gia-re-day_2451489-430008.html" target="_blank">12.000 VNĐ</a> </p>
+                                                        <a href="http://www.123mua.vn/qua-tang-hoa-thiep/qua-tang/" class="view_more_sp fl" target="_blank"><span class="icn icn_morebul fl"></span> Xem tất cả</a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div>
+</div>                </div>
+                <!-- end: Home left column -->
+                <div class="znews_rightcol">
+                    <div class="sidecol_blk03 hotline_box">
+                        <span class="topcolorline bgsprt"></span>
+                        <div class="scblk_inner">
+                            <p><span class="icn_mobile icn16x16"></span>Đường dây nóng: <strong class="txtred">0985.57.88.55</strong></p>
+                            <p><span class="icn_mail icn16x16"></span>Email: <a href="mailto:news@zing.vn"><strong>news@zing.vn</strong></a></p>
+                        </div>
+                    </div>
+                    <div class="right_ads">
+                        <div id="advR1"></div>
+                        <div id="advR2"></div>
+                        <div id="advR3"></div>
+                    </div>
+                    
+<!-- begin: Anh dep -->
+    <div class="sidecol_blk02 blk_topphoto">
+        <div class="scblk_title">
+            <a class="fr lk_viewmore" href="/news/anh-dep/t25.html">Xem thêm</a><span class="icn icn_morebul fr"></span>
+            <h3 class="cateheading02"><span><strong>Ảnh đẹp</strong></span></h3>
+        </div>
+        <div class="scblk_inner">
+            <div class="photoslideshow nicephoto" id="picturebox_slideshow">
+                <a title="Next" class="next_btn" href="javascript:znSlideshow.clickNext('picturebox_slideshow')">Next</a>
+                <a title="Previous" class="prev_btn" href="javascript:znSlideshow.clickPrev('picturebox_slideshow')">Previous</a>
+                                    <div class="slider_item" id="picturebox_slideshow_1">
+                        <a href="http://www.zing.vn/news/choi-vui/viet-nam-dep-lung-linh-tren-tap-chi-thoi-trang-nuoc-ngoai/a239284.html">
+                            <img border="0" alt="" src="http://img2.news.zing.vn/2012/03/08/a-7.jpg">
+                            <strong class="photo_title"><span>Việt Nam đẹp lung linh trên tạp chí thời trang nước ngoài</span></strong>
+                            <span class="phototext_desc">Ngất ngây trước khung cảnh non nước nên thơ hữu tình của đất nước chúng ta, hãng thời trang Free People đã quyết định chọn Việt Nam làm bối cảnh chụp hình cho cuốn catalogue số tháng 3.</span>
+                        </a>
+                    </div>
+                                        <div class="slider_item" id="picturebox_slideshow_2">
+                        <a href="http://www.zing.vn/news/nguoi-dep/tra-ngoc-hang-toc-xu-sexy/a238405.html">
+                            <img border="0" alt="" src="http://img2.news.zing.vn/2012/03/02/wu2k72331380.jpg">
+                            <strong class="photo_title"><span>Trà Ngọc Hằng tóc xù sexy</span></strong>
+                            <span class="phototext_desc">&quot;Người đẹp dòm ngực&quot; tự tin khoe những đường cong gợi cảm của mình và cá tính, quyến rũ hơn nhiều với mái tóc xù lạ lẫm.</span>
+                        </a>
+                    </div>
+                                        <div class="slider_item" id="picturebox_slideshow_3">
+                        <a href="http://www.zing.vn/news/nguoi-dep/sieu-vong-1-hoang-oanh-lai-tung-anh-goi-cam/a239061.html">
+                            <img border="0" alt="" src="http://img2.news.zing.vn/2012/03/07/a.jpg">
+                            <strong class="photo_title"><span>'Siêu vòng 1' Hoàng Oanh lại tung ảnh gợi cảm</span></strong>
+                            <span class="phototext_desc">Mặc dù chia sẻ không thích chụp nhiều bộ ảnh &quot;hot&quot; nữa vì sợ mang tiếng là người mẫu thích khoe thân, nhưng mới đây &quot;siêu vòng 1&quot; khiến mọi người bất ngờ khi hé lộ bộ ảnh bán nude nóng bỏng.</span>
+                        </a>
+                    </div>
+                                </div>
+        </div>
+    </div>
+    <div class="scblk02_botshadow"></div>
+    <script type="text/javascript">
+        znSlideshow.startshow('picturebox_slideshow', 1, 7000);
+    </script>
+<!-- end: Anh dep -->
+<!-- begin: Chuyen de -->
+<div class="sidecol_blk04 blk_topicnews">
+    <span class="blk_crn"></span>
+    <p class="scblk_title">
+                <a class="fr lk_viewmore" href="http://www.zing.vn/news/bau-cu-tong-thong-nga/t1455.html">Xem thêm</a><span class="icn icn_morebul fr"></span>
+        <strong><a style="color: #000;" href="http://www.zing.vn/news/bau-cu-tong-thong-nga/t1455.html">Bầu cử Tổng thống Nga</a></strong>
+    </p><span class="botborder"><em></em></span>
+    <div class="scblk_inner">
+                    <div class="typicalnewsfocus">
+                <a href="http://www.zing.vn/news/the-gioi/putin-thua-nhan-bat-thuong-trong-bau-cu-tong-thong-nga/a239236.html">
+                    <img border="0" class="imgleft newsphoto_small" alt="" src="http://img2.news.zing.vn/2012/03/08/pu-01.jpg">
+                </a>
+                <a href="http://www.zing.vn/news/the-gioi/putin-thua-nhan-bat-thuong-trong-bau-cu-tong-thong-nga/a239236.html">
+                    <strong>Putin thừa nhận ‘bất thường’ trong bầu cử Tổng thống Nga</strong>
+                </a><br>
+                <p>Phát biểu trong một cuộc họp báo tại thủ đô Moscow hôm thứ Tư, ông Putin, người chiến thắng trong cuộc chạy đua vào điện Kremlin đã thừa nhận những “bất thường” trong đợt bầu cử vừa qua.</p>
+                <div class="clr"></div></div>
+            <ul class="list_arrow_bul">
+                                    <li>
+                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/the-gioi/putin-chinh-thuc-dac-cu-tong-thong-nga/a238791.html">Putin chính thức đắc cử Tổng thống Nga</a> 
+                                            </li>
+                                        <li>
+                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/the-gioi/thach-thuc-don-cho-putin-trong-lan-thu-3-lam-tong-thong/a238690.html">Thách thức đón chờ Putin trong lần thứ 3 làm Tổng thống</a> 
+                                            </li>
+                                        <li>
+                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/the-gioi/putin-tu-diep-vien-kgb-den-ong-chu-dien-kremlin/a238651.html">Putin - từ điệp viên KGB đến ông chủ điện Kremlin</a> 
+                                            </li>
+                                </ul>
+            </div>
+    <span class="blk_crn"></span>
+</div>
+<!-- end: Chuyen de -->
+
+
+
+<iframe src="http://link.apps.zing.vn/mebox/news" width="100%" frameborder="0" scrolling="no" id="box_link" height="100%" style="height: 325px; margin-bottom:15px;"></iframe>
+<!-- begin: Chuyen de -->
+<div class="sidecol_blk04 blk_topicnews">
+    <span class="blk_crn"></span>
+    <p class="scblk_title">
+                <a class="fr lk_viewmore" href="http://www.zing.vn/news/viet-cho-nguoi-xua/t1439.html">Xem thêm</a><span class="icn icn_morebul fr"></span>
+        <strong><a style="color: #000;" href="http://www.zing.vn/news/viet-cho-nguoi-xua/t1439.html">Viết cho người xưa</a></strong>
+    </p><span class="botborder"><em></em></span>
+    <div class="scblk_inner">
+                    <div class="typicalnewsfocus">
+                <a href="http://www.zing.vn/news/tinh-yeu-gioi-tinh/viet-cho-nguoi-khong-con-o-ben-em-nua/a238337.html">
+                    <img border="0" class="imgleft newsphoto_small" alt="" src="http://img2.news.zing.vn/2012/03/06/3-3.jpg">
+                </a>
+                <a href="http://www.zing.vn/news/tinh-yeu-gioi-tinh/viet-cho-nguoi-khong-con-o-ben-em-nua/a238337.html">
+                    <strong>Viết cho người không còn ở bên em nữa</strong>
+                </a><br>
+                <p>2 năm trôi qua, thời gian tuy không quá dài nhưng cũng đủ để người ta quên đi những kỉ niệm những lỗi lầm trong quá khứ. Còn em thì không anh à! Em biết em sai nhiều nhưng có lẽ đã không còn cơ hội để nói với anh lời xin lỗi.</p>
+                <div class="clr"></div></div>
+            <ul class="list_arrow_bul">
+                                    <li>
+                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/tinh-yeu-gioi-tinh/gui-ve-mien-qua-khu/a238018.html">Gửi về miền quá khứ</a> 
+                                            </li>
+                                        <li>
+                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/tinh-yeu-gioi-tinh/loi-cuoi-truoc-khi-em-len-xe-hoa/a236014.html">Lời cuối trước khi em lên xe hoa</a> 
+                                            </li>
+                                        <li>
+                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/tinh-yeu-gioi-tinh/em-phai-tin-minh-da-mat-anh/a235991.html">Em phải tin mình đã mất anh</a> 
+                                            </li>
+                                        <li>
+                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/tinh-yeu-gioi-tinh/mua-roi-uot-mot-goc-troi-ngay-anh-di/a236460.html">Mưa rơi ướt một góc trời ngày anh đi</a> 
+                                            </li>
+                                        <li>
+                        <a onmouseover="zmPW.sm(this)" onmouseout="zmPW.hm();" href="http://www.zing.vn/news/tinh-yeu-gioi-tinh/em-s-bien-mat-khoi-cuoc-song-cua-anh/a236780.html">Em sẽ biến mất khỏi cuộc sống của anh</a> 
+                                            </li>
+                                </ul>
+            </div>
+    <span class="blk_crn"></span>
+</div>
+<!-- end: Chuyen de -->
+
+
+
+<!-- begin:Sao tren ZingMe -->
+<div class="sidecol_blk01 blk_zingstar">
+    <div class="scblk_title bgsprt">
+        <a href="http://me.zing.vn/apps/vbc?_src=znews" target="_blank" class="fr lk_viewmore">Xem thêm</a>
+        <strong class="bgsprt fl">Sao trên Zing Me</strong>
+    </div>
+    <div class="scblk_cont">
+        <i class="arrow bgsprt"></i>
+
+        <div class="scblk_inner">
+            <ul class="article_list">
+                                        <li >
+                            <div class="article_thumb fl">
+                                <a target="_blank" href="http://me.zing.vn/singer.trucnhi"><img border="0" class="avatar_small imgleft" src="http://0.1.s50.avatar.zdn.vn/avatar_files/0/8/8/b/singer.trucnhi_50_42.jpg" alt="" /></a>
+                                <br class="clr" />
+                                <span class="tinystar star_5"></span>
+                            </div>
+                            <p class="article_text">
+                                <a title="12.866" target="_blank" href="http://me.zing.vn/singer.trucnhi">
+                                    <strong>Trúc Nhi</strong>
+                                </a> <span class="icn icn_quote">"</span>Cúp điện ùi.   ngày mới zui ze nhoa                                <span class="time grey">Vào lúc: 3 phút trước</span>
+                            </p>
+                        </li>
+                                                <li >
+                            <div class="article_thumb fl">
+                                <a target="_blank" href="http://me.zing.vn/lyhaonam.singer"><img border="0" class="avatar_small imgleft" src="http://c.1.s50.avatar.zdn.vn/avatar_files/c/d/0/4/lyhaonam.singer_50_54.jpg" alt="" /></a>
+                                <br class="clr" />
+                                <span class="tinystar star_5"></span>
+                            </div>
+                            <p class="article_text">
+                                <a title="12.612" target="_blank" href="http://me.zing.vn/lyhaonam.singer">
+                                    <strong>Lý Hào Nam</strong>
+                                </a> <span class="icn icn_quote">"</span>Cái ngày mà một phụ nữ đi qua trước mặt bạn, tỏa ánh sáng cho bạn bước theo chân nàng, thì cái n...                                <span class="time grey">Vào lúc: 22 phút trước</span>
+                            </p>
+                        </li>
+                                                <li >
+                            <div class="article_thumb fl">
+                                <a target="_blank" href="http://me.zing.vn/trieuhai_singer"><img border="0" class="avatar_small imgleft" src="http://1.1.s50.avatar.zdn.vn/avatar_files/5/7/b/5/trieuhai_singer_50_73.jpg" alt="" /></a>
+                                <br class="clr" />
+                                <span class="tinystar star_5"></span>
+                            </div>
+                            <p class="article_text">
+                                <a title="16.895" target="_blank" href="http://me.zing.vn/trieuhai_singer">
+                                    <strong>Triều Hải</strong>
+                                </a> <span class="icn icn_quote">"</span>ca nha nghe album ANH CẦN CÓ EM ung ho hai nhe                                <span class="time grey">Vào lúc: 30 phút trước</span>
+                            </p>
+                        </li>
+                                                <li >
+                            <div class="article_thumb fl">
+                                <a target="_blank" href="http://me.zing.vn/singer.ungdaive"><img border="0" class="avatar_small imgleft" src="http://3.1.s50.avatar.zdn.vn/avatar_files/3/7/f/e/singer.ungdaive_50_17.jpg" alt="" /></a>
+                                <br class="clr" />
+                                <span class="tinystar star_5"></span>
+                            </div>
+                            <p class="article_text">
+                                <a title="46.876" target="_blank" href="http://me.zing.vn/singer.ungdaive">
+                                    <strong>Ưng Đại Vệ</strong>
+                                </a> <span class="icn icn_quote">"</span>chào buổi sáng nhé các đồng chí , hôm này 9/3 chắc là đến lượt ngày của con trai quá                                <span class="time grey">Vào lúc: 32 phút trước</span>
+                            </p>
+                        </li>
+                                                <li class="last">
+                            <div class="article_thumb fl">
+                                <a target="_blank" href="http://me.zing.vn/khanhtrungcasi"><img border="0" class="avatar_small imgleft" src="http://3.1.s50.avatar.zdn.vn/avatar_files/3/d/9/9/khanhtrungcasi_50_36.jpg" alt="" /></a>
+                                <br class="clr" />
+                                <span class="tinystar star_6"></span>
+                            </div>
+                            <p class="article_text">
+                                <a title="60.276" target="_blank" href="http://me.zing.vn/khanhtrungcasi">
+                                    <strong>Khánh Trung</strong>
+                                </a> <span class="icn icn_quote">"</span>Thời gian thay đổi tất cả                                <span class="time grey">Vào lúc: 52 phút trước</span>
+                            </p>
+                        </li>
+                                    </ul>
+        </div>
+    </div>
+
+</div>
+<!-- end:Sao tren ZingMe -->
+
+<!-- begin: Zing Top Songs -->
+<div class="sidecol_blk01 blk_zingtopsong">
+    <div class="scblk_title bgsprt">
+        <a href="http://mp3.zing.vn/bang-xep-hang/bai-hat/Viet-Nam/IWZ9Z08I.html" target="_blank" class="fr lk_viewmore">Xem thêm</a>
+        <strong class="bgsprt fl">Zing Top Song</strong>
+    </div>
+    <div class="scblk_cont">
+        <i class="arrow bgsprt"></i>
+        <div class="scblk_inner">
+            <ul class="topmuzikboard">
+                                        <li>
+                            <span class="num01 ranking">01</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Chi-Con-Trong-Mo-Minh-Vuong-M4U/ZWZFOA7A.html" target="_blank"><strong>Chỉ Còn Trong Mơ</strong> <span>- Minh Vương M4U</span></a>
+                        </li>
+                                                <li>
+                            <span class="num02 ranking">02</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Thu-Cuoi-Yanbi,Mr-T/ZWZECED8.html" target="_blank"><strong>Thu Cuối</strong> <span>- Yanbi,Mr T</span></a>
+                        </li>
+                                                <li>
+                            <span class="num03 ranking">03</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Tim-Lai-Bau-Troi-Tuan-Hung/ZWZEB0C7.html" target="_blank"><strong>Tìm Lại Bầu Trời</strong> <span>- Tuấn Hưng</span></a>
+                        </li>
+                                                <li>
+                            <span class="num04 ranking">04</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Co-Khi-Nao-Roi-Xa-Bich-Phuong/ZWZE6OOC.html" target="_blank"><strong>Có Khi Nào Rời Xa</strong> <span>- Bích Phương</span></a>
+                        </li>
+                                                <li>
+                            <span class="num05 ranking">05</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Xin-Anh-Dung-Lil-Knight,Emily,JustaTee/ZWZE6WF0.html" target="_blank"><strong>Xin Anh Đừng</strong> <span>- Lil' Knight,Emily,JustaTee</span></a>
+                        </li>
+                                                <li>
+                            <span class="num06 ranking">06</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Ngay-Tan-The-Lam-Chan-Khang/ZWZFI6I9.html" target="_blank"><strong>Ngày Tận Thế</strong> <span>- Lâm Chấn Khang</span></a>
+                        </li>
+                                                <li>
+                            <span class="num07 ranking">07</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Em-Nho-Anh-Miu-Le/ZWZECEBE.html" target="_blank"><strong>Em Nhớ Anh</strong> <span>- Miu Lê</span></a>
+                        </li>
+                                                <li>
+                            <span class="num08 ranking">08</span>
+                            <a href="http://mp3.zing.vn/bai-hat/No-Pham-Truong/ZWZF0F8D.html" target="_blank"><strong>Nợ</strong> <span>- Phạm Trưởng</span></a>
+                        </li>
+                                                <li>
+                            <span class="num09 ranking">09</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Khat-Vong-Thuong-Luu-Nguyen-Dinh-Vu/ZWZE8F9B.html" target="_blank"><strong>Khát Vọng Thượng Lưu</strong> <span>- Nguyễn Đình Vũ</span></a>
+                        </li>
+                                                <li>
+                            <span class="num10 ranking">10</span>
+                            <a href="http://mp3.zing.vn/bai-hat/Noi-Ay-Ngon-Doi-Tinh-Yeu-Ong-Cao-Thang/ZWZFI0E9.html" target="_blank"><strong>Nơi Ấy Ngọn Đồi Tình Yêu</strong> <span>- Ông Cao Thắng</span></a>
+                        </li>
+                                    </ul>
+        </div>
+    </div>
+</div>
+<!-- end: Zing Top Songs -->
+
+<div style="height:292px" class="sidecol_blk04 blk_topicnews">
+<div id="zme-root"></div>
+                
+                <script>(function(d, s, id) {                   
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) {return;}
+                        js = d.createElement(s); js.id = id;
+                        js.src = "http://static.me.zing.vn/sp/js/all-1.10.js#&appId=6f42aa969a8648f3d1c0fd86f83fa551&status=true";
+                        fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'zingme-jssdk'));</script>
+                  
+                
+                <div class="zme-fan-box" data-profile="zingnews" data-width="300" data-numoffan="15" data-pad-left="20" data-pad-right="4"></div>
+</div>
+
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div id="advFooter" style="width:980px; margin: 0 auto !important"></div>
+        </div>
+        <!-- end: Body site -->
+        <!-- begin: Footer -->
+                <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/znFunction-1.05.js"></script> 
+        <div class="znews_footer">
+            <div class="znews_fwrapper">
+                <div class="footer_left">
+                    <p class="flinks">
+                        <a href="http://www.zing.vn">Zing.vn</a> | 
+                        <a target="_blank" href="http://www.zing.vn/news/tos.html">Thỏa thuận sử dụng</a> | 
+                        <a target="_blank" href="http://www.zing.vn/news/privacy.html">Bảo vệ riêng tư</a> | 
+                        <a target="_blank" href="http://www.zing.vn/zing/Chinh-sach-Quyen-SHTT.zip">Chính sách Quyền SHTT</a> | 
+                        <a target="_blank" href="http://ads.zing.vn">Đăng quảng cáo</a> | 
+                        <a target="_blank" href="/news/feedback">Liên hệ</a> |
+                        <a class="rss_icon imgsprt" href="/news/rss/rss.html">Rss</a></p>
+                    <p>
+                        <strong>Copyright © Zing, Thư điện tử: ZingNews@vng.com.vn</strong><br />
+                        Đơn vị chủ quản: Công ty Cổ phần VNG. Điện thoại: 1900 561 558 - Fax: (84 8)3832 8425<br />
+                        Địa chỉ: Flemington Tower, 182 Lê Đại Hành, Phường 15, Quận 11, Thành phố Hồ Chí Minh<br />
+                        Giấy phép ICP số: 41/GP-TTĐT. Chịu trách nhiệm quản lý nội dung: Lê Hồng Minh
+                    </p>
+                </div>
+                <div class="footer_right">
+                    <p>Một sản phẩm của <span class="footer_zinglogo imgsprt"></span></p>
+                    <script type="text/javascript"> 
+                        document.write(znCore._zproducts());
+                    </script> 
+                </div>
+            </div>
+            <script type="text/javascript" src="http://static2.news.zing.vn/v3/js/za_news-1.00.js"></script>
+            <script type="text/javascript" src="http://static.me.zing.vn/widget/widget_header-1.03.js"></script>
+        </div>
+        <!-- end: Footer -->
+        <script type="text/javascript">
+            var query = window.location.search.substring(1);
+            var parms = query.split('&');
+            if (parms[0] != 'utm_source=hp') {
+                var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
+        <script type="text/javascript">
+            if (parms[0] != 'utm_source=hp') {
+                var firstTracker = _gat._getTracker("UA-4695288-1");
+                firstTracker._setDomainName('zing.vn');
+                firstTracker._initData();
+                firstTracker._trackPageview();
+                var secondTracker = _gat._getTracker("UA-5394279-1");
+                secondTracker._initData();
+                secondTracker._trackPageview();
+            }
+        </script>
+        <script src="http://img.ad.zing.vn/js/vng_ads-2.5.js" type="text/javascript"></script>
+        <div id="advTop_temp">
+            <script type="text/javascript">
+                vng_ads.showBannerTop();
+            </script>
+        </div>
+        <div id="advR1_temp">
+            <script type="text/javascript">
+                vng_ads.showBannerR1();
+            </script>
+        </div>
+        <div id="advR2_temp">
+            <script type="text/javascript">
+                vng_ads.showBannerR2();
+            </script>
+        </div>
+        <div id="advR3_temp">
+            <script type="text/javascript">
+                vng_ads.showBannerR3();
+            </script>
+        </div>
+        <div id="advLeft" class="ad_none">
+            <script type="text/javascript">
+                vng_ads.showBannerLeft();
+            </script>
+        </div>
+        <div id="advRight" class="ad_none">
+            <script type="text/javascript">
+                vng_ads.showBannerRight();
+            </script>
+        </div>
+        <div id="advBottom">
+            <script type="text/javascript">
+                vng_ads.showBannerPopup();
+            </script>
+        </div>
+        <div id="advFooter_temp">
+            <script type="text/javascript">
+                vng_ads.showBannerFooter();
+            </script>
+        </div>
+        <div id="advFloat_temp">
+            <script type="text/javascript">
+                vng_ads.showBannerFloat();
+            </script>
+        </div>
+
+        <div id="zIframe1"></div>
+        <script type="text/javascript" src="http://promotion.ad.zing.vn/g3promotion-22022029.js"></script>
+    </body>
+</html>
