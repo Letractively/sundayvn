@@ -1,0 +1,222 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*font-size: 100%; -- Keeping the default behavior on font aesthetic*/
+    /*font: inherit; -- Keeping the default behavior on font aesthetic*/
+    /*vertical-align: baseline;*/
+}
+
+ul { list-style: none; }
+/*body { line-height: 1; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }*/
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+:focus { outline: none; }
+
+/* Clearfix
+-------------------------------------------------------------*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+/* Generic Styles
+-------------------------------------------------------------*/
+.clear, .divider {clear: both;}
+
+.no-display {display: none !important;}
+
+.nowrap,.nobr {white-space: nowrap !important;}
+
+.no-border {
+    border: 0 !important;
+}
+
+.no-padding {padding: 0 !important}
+.no-margin     {margin: 0 !important;}
+
+/*Alignment---*/
+.v-top         {vertical-align: top;}
+.v-middle    {vertical-align: middle;}
+.v-bottom     {vertical-align: bottom;}
+
+.a-left        {text-align: left;}
+.a-center    {text-align: center;}
+.a-right        {text-align: right;}
+
+.left        {float: left;}
+.right    {float: right;}
+
+.auto-width {width: auto;}
+body
+{
+    font-family: arial, tahoma, sans-serif;
+    font-size: 12px;
+    color: #333;
+    background: #439CDE;
+}
+.main
+{
+    width: 960px;
+    margin: auto;
+}
+#TopLink
+{
+    height: 25px;
+    line-height: 25px;
+    background: #1760A5;
+    text-align: right;
+    color: white;
+}
+#TopLink a
+{
+    color: white;
+    text-decoration: none;
+}
+#TopBanner
+{
+
+}
+#MainMenu .main
+{
+    width: 960px;
+    min-height: 62px;
+    background: url('images/menubg.png') no-repeat ;
+}
+#MainMenu .main ul
+{
+    float: left;
+    padding-left: 19px;
+}
+#MainMenu .main ul li
+{
+    float: left;
+    line-height: 62px;
+    height: 62px;
+    margin-right: 19px;
+    color: #fff;
+}
+#MainMenu .main ul li a
+{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    
+}
+#ContentWrapp
+{
+    background: url(images/bodycontentbg.jpg) repeat-x ;
+    min-height: 190px;
+}
+#Search
+{
+    float: right;
+    background: url(images/searchbg.png) no-repeat;
+    width: 144px;
+    height: 24px;
+    margin-top: 19px;
+    margin-right: 18px;
+}
+#Search .textArea
+{
+width: 110px;
+border: none;
+background: none;
+margin-left: 10px;
+height: 20px;
+line-height: 20px;
+color: #A8ABCA;
+}
+#Content
+{
+    margin-top: 15px;
+}
+#Search label
+{
+    padding-right: 25px;
+}
+#mainSearch
+{
+    display: none;
+}
+#ContentTop
+{
+    background: url(images/contentT.png) no-repeat;
+    height: 10px;
+}
+#ContentBody
+{
+    padding: 0px 10px 10px 10px;
+    background: #EBF2F8;
+}
+#ContentBodyInnerT
+{
+height: 10px;
+line-height: 10px;
+background: url(images/contentInnerT.png) no-repeat;
+}
+#ContentBodyInnerB
+{
+    background: #fff;
+}
+#Copyright .main .customize
+{
+    padding-left: 10px;
+    padding-top: 15px;
+}
+#Copyright .main
+{
+    margin-top: 20px;
+    background: url(images/copyrightbg.png) no-repeat;
+    height: 106px;
+    font-size: 13px;
+    
+}
+#TagsCloud
+{
+    margin-top: 20px;
+}
+#TagsCloud ul li 
+{
+    float: left;
+    margin-right: 10px;
+    color: #fff;
+}
+#TagsCloud ul li a
+{
+    color: #fff;
+    text-decoration: none;
+}
