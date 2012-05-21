@@ -18,7 +18,11 @@ time, mark, audio, video {
     /*font: inherit; -- Keeping the default behavior on font aesthetic*/
     /*vertical-align: baseline;*/
 }
-
+h2
+{
+    margin-bottom: 10px;
+    color: #439CDE;
+}
 ul { list-style: none; }
 /*body { line-height: 1; }
 blockquote, q { quotes: none; }
@@ -56,6 +60,8 @@ html[xmlns] .clearfix {
 -------------------------------------------------------------*/
 .clear, .divider {clear: both;}
 
+.no-float{float: none !important;}
+.full-width{width: 100% !important;}
 .no-display {display: none !important;}
 
 .nowrap,.nobr {white-space: nowrap !important;}
@@ -79,13 +85,17 @@ html[xmlns] .clearfix {
 .left        {float: left;}
 .right    {float: right;}
 
-.auto-width {width: auto;}
+.auto-width {width: auto !important;}
 body
 {
     font-family: arial, tahoma, sans-serif;
     font-size: 12px;
     color: #333;
     background: #439CDE;
+}
+a
+{
+    color: #333;
 }
 .main
 {
@@ -125,7 +135,7 @@ body
     float: left;
     line-height: 62px;
     height: 62px;
-    margin-right: 19px;
+    margin-right: 11px;
     color: #fff;
 }
 #MainMenu .main ul li a
@@ -134,7 +144,7 @@ body
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
-    
+    text-decoration: none;
 }
 #ContentWrapp
 {
@@ -152,7 +162,7 @@ body
 }
 #Search .textArea
 {
-width: 110px;
+width: 100px;
 border: none;
 background: none;
 margin-left: 10px;
@@ -191,6 +201,7 @@ background: url(images/contentInnerT.png) no-repeat;
 #ContentBodyInnerB
 {
     background: #fff;
+    padding: 7px;
 }
 #Copyright .main .customize
 {
@@ -219,4 +230,298 @@ background: url(images/contentInnerT.png) no-repeat;
 {
     color: #fff;
     text-decoration: none;
+}
+.modTitleBar
+{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 3px;
+    background: url(images/modtit_left.png) no-repeat;
+}
+.modTitleBar .modTitleBarInner
+{
+    padding-right: 3px;
+       background: url(images/modtit_r.png) no-repeat right;
+     height: 30px;line-height: 30px;
+}
+.modTitleBar .modTitleBarInner .modTitleBarInner1
+{
+background: #F9CB20 url(images/whitearr.jpg) no-repeat 5px 7px;
+height: 30px;
+line-height: 32px;
+text-transform: uppercase;
+padding-left: 22px;
+}
+.modTitleBar .modTitleBarInner .modTitleBarInner1 a
+{
+    color: #000;
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: none;
+}
+.BorderBox
+{
+    height: 6px;
+    line-height: 6px;
+    padding-left: 6px;
+    background: url(images/whiteborderTL.png) no-repeat;
+}
+.BorderBox .BorderBoxInner
+{
+    padding-right: 6px;
+       background: url(images/whiteborderTR.png) no-repeat right;
+    
+}
+.BorderBox .BorderBoxInner .BorderBoxInner1
+{
+background: #fff;
+text-transform: uppercase;
+}
+.BorderBox.BoxWhiteBot
+{
+     background: url(images/whiteborderBL.png) no-repeat;
+}
+.BorderBox.BoxWhiteBot .BorderBoxInner
+{
+     background: url(images/whiteborderBR.png) no-repeat right;
+}
+#ContentLeft
+{
+    width: 648px;
+    margin-right: 10px;
+}
+#ContentSBar
+{
+     width: 282px;
+   
+}
+
+#IntroArticle
+{
+    line-height: 17px;
+}
+#IntroArticle p
+{
+    margin-bottom: 10px;
+}
+#ContentSBar .BoxWhiteBot
+{
+    margin-bottom: 7px;
+}
+.ContentSBarBody
+{
+    background: #fff;
+}
+.ContentSBarBody .customize
+{  padding: 5px 11px;}
+.ContentSBarBody .ListModule li
+{
+    padding: 10px 0px;
+   
+    border-bottom: 1px dotted #ddd;
+}
+.ContentSBarBody .ListModule li.First
+{
+    border-top: none;
+}
+.ContentSBarBody .ListModule li.Last
+{
+        border-bottom: none;
+}
+.ContentSBarBody .TextList li
+{
+    line-height: 15px;
+    padding-left: 25px;
+   
+}
+.ContentSBarBody .TextList li a
+{
+     color: #000;
+    text-decoration: none;
+}
+.ContentSBarBody .TextList li a:hover
+{
+    color:#069;
+}
+#TwoColProductL,
+#TwoColProductR
+{
+    float: left;
+width: 313px;
+}
+#TwoColProductL
+{
+margin-right: 8px;
+}
+.ProItem 
+{
+    border: 1px solid #E5E5E5;
+    margin-bottom: 7px;
+    width: 311px;
+    float: left;
+    margin-right: 7px;
+    min-height: 206px;
+}
+.ProItem.NoMarginR
+{
+    margin-right: 0px;
+}
+.ProItem .ProItemTitle 
+{
+    height: 25px;
+    line-height: 25px;
+    background: #F6F6F6;
+}
+.ProItem .ProItemTitle  a
+{
+    padding-left: 10px;
+    color: #0065CD;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+}
+.ProItem .ProItemBody
+{
+    padding: 10px;
+}
+.ProItem .ProItemBody .ImageInfo
+{
+    float: left;
+    width: 161px;
+}
+.ProItem .ProItemBody .imageContain
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.ProItem .ProItemBody .imageContain img
+{
+    border: none;
+    max-width: 135px;
+}
+.ProItem .ProItemBody .price b
+{
+    color: #CC0001;
+}
+.ProItem .ProItemBody  .Intro
+{
+    margin-bottom: 10px;
+}
+.ProItem .ProItemBody .FeatureInfo
+{
+    float: left;
+    width: 130px;
+}
+.ProItem .ProItemBody .FeatureInfo li
+{
+background: url(images/grayarr.jpg) no-repeat 0px 5px;
+padding-left: 8px;
+line-height: 15px;
+margin-bottom: 4px;
+}
+#ContentLeft .modTitleBar
+{
+    margin-bottom: 7px;
+}
+.ListModule.ImageList .ImgIntro
+{
+    margin-top: 10px;
+}
+.ListModule.ImageList .ImgIntro img
+{
+    max-width: 133px;
+    float: left;
+    margin-right: 5px;
+}
+.ListModule.ImageList .readmore
+{
+    text-align: right;
+}
+.ListModule.ImageList .readmore a
+{
+    color: red;
+    text-decoration: none;
+}
+#MainMenu .BorderBox
+{
+    margin-top: 17px;
+}
+.BorderBox.Menuhover
+{
+    background: url(images/menuhoverL.png) no-repeat;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.BorderBox.Menuhover .BorderBoxInner
+{
+    background-image : url(images/menuhoverR.png) ;
+    padding-right: 10px;
+}
+.BorderBox.Menuhover .BorderBoxInner1
+{
+    background: url(images/menuhoverCtn.png) repeat-x;
+
+}
+.BorderBox.Menuhover a
+{
+    color: #000 !important;
+}
+.BorderBox.Menuhover.Menunormal a
+{
+    color: #fff !important;
+}
+.BorderBox.Menuhover.Menunormal *,
+.BorderBox.Menuhover.Menunormal 
+{
+    background: none;
+}
+.paging a
+{
+    margin-right: 10px;
+}
+.paging a.active
+{
+    font-weight: bold;
+    color: #069;
+}
+#single-product-div .product-full-text
+{
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 15px;
+    padding: 15px 0px;
+}
+.older-items
+{
+    padding-top: 10px;
+}
+.older-items li 
+{
+    list-style: circle;
+    margin-left: 20px;
+}
+.older-items li a
+{
+    text-decoration: none;
+}
+.older-items li a:hover
+{
+      text-decoration: underline;
+}
+#single-product-div .imageContain img
+{
+    max-width: 100%;
+}
+.postlistitem
+{
+    margin: 10px 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #ccc;
+}
+.postlistitem .post-title a
+{
+    text-decoration: none;
+    font-weight: bold;
 }

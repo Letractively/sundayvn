@@ -1448,8 +1448,8 @@ function get_next_posts_page_link($max_page = 0) {
 		if ( !$paged )
 			$paged = 1;
 		$nextpage = intval($paged) + 1;
-		if ( !$max_page || $max_page >= $nextpage )
-			return get_pagenum_link($nextpage);
+      if ( !$max_page || $max_page >= $nextpage )
+      	return get_pagenum_link($nextpage);
 	}
 }
 
