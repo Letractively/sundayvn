@@ -1,0 +1,62 @@
+html, body, div, span, p, pre, a, address, big, cite, code, del, em, font, img, strong, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {margin:0; padding:0; border:0; outline:0;vertical-align:baseline; background:transparent;}
+
+
+.body{
+	background: url("../images/body.jpg") center;
+}
+
+
+ol, ul {
+	list-style:none;
+}
+
+:focus {
+	outline:0;
+}
+
+del {
+	text-decoration:line-through;
+}
+
+a {
+	text-decoration:none;
+	color:#FFFFFF;
+}
+
+a:hover {
+	color:#54c2dc;
+}
+
+input, select, textarea { 
+	border:0;
+}
+
+#container {
+	overflow:hidden
+}
+
+#header{
+	text-align:center;
+	background:url('../images/header_bg.jpg');
+	padding: 5px 5px 5px 5px;
+}
+
+#footer{
+	padding-bottom: 10px;
+}
+
+.clear{
+	clear:both;
+}
+#logo
+{
+	position: relative;
+	z-index: 10000;
+}
+#logo img
+{
+	width: 50px;
+	float: left;
+	padding: 5px;
+}

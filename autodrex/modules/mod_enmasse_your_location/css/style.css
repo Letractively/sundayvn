@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+.menu_head{border:1px solid #998675;}
+.menu_body {
+	min-width:184px;
+	border-right:1px solid #998675;
+	border-bottom:1px solid #998675;
+	border-left:1px solid #998675;
+	border-top:1px solid #998675;
+	text-align: center;
+	}
+
+.menu_body li{background:#355780;list-style:none;margin:0; padding:0;}
+.menu_body li a{color:#FFFFFF; text-decoration:none; padding:10px; display:block;}
+.menu_body li.alt{background:#335973;}
+.menu_body li a:hover{padding:15px 10px; font-weight:bold;}
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+}
+
+#boxes #dialog {
+  min-width:184px; 
+  height:auto;
+  padding:10px;
+  background-color:transparent;
+}

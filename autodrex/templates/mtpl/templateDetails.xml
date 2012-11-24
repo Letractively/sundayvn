@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="1.6" type="template" client="site">
+	<name>mtpl</name>
+	<creationDate>20120530</creationDate>
+	<author>Le Trung Hieu</author>
+	<authorEmail>mr.letrunghieu@live.com</authorEmail>
+	<authorUrl>Le Trung Hieu</authorUrl>
+	<copyright>Copyright (C) mr.letrunghieu@live.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.8</version>
+	<description>Template for mobile</description>
+	<files>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>html</folder>
+		<filename>index.php</filename>
+		<filename>header.php</filename>
+		<filename>home_header.php</filename>
+		<filename>footer.php</filename>
+		<filename>icons.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+	</files>
+	<positions>
+		<position>debug</position>
+		<position>location</position>
+		<position>position-menu</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_mtpl.ini</language>
+	</languages>	
+	<config>
+	</config>
+</extension>

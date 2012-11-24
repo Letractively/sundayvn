@@ -1,0 +1,9 @@
+
+@import url(../../../../css/color1/rose.css);
+
+#system .pagination strong,
+#system .pagination a:hover {
+	border-color: #DE5A51;
+	background-color: #DE5A51;
+}
+

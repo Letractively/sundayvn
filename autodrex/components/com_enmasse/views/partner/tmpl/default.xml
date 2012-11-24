@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Partner page">
+		<message>Partner page</message>
+	</layout>
+	<view title="Partner page" >
+		<message><![CDATA[Partner page]]></message>
+	</view>
+	<state>
+		<name>Partner page</name>
+		<description>Partner page</description>
+	</state>
+</metadata>
+

@@ -1,0 +1,9 @@
+
+@import url(../../../../css/color1/red.css);
+
+#system .pagination strong,
+#system .pagination a:hover {
+	border-color: #D33;
+	background-color: #D33;
+}
+

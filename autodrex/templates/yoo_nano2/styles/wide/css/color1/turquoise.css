@@ -1,0 +1,9 @@
+
+@import url(../../../../css/color1/turquoise.css);
+
+#system .pagination strong,
+#system .pagination a:hover {
+	border-color: #2fb4af;
+	background-color: #2fb4af;
+}
+

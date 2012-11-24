@@ -1,0 +1,55 @@
+[11-Jul-2012 18:42:14] PHP Warning:  constant() [<a href='function.constant'>function.constant</a>]: Couldn't find constant JPATH_ in /home/ydesign/public_html/cartacs/libraries/joomla/installer/adapters/module.php on line 117
+[11-Jul-2012 18:42:14] PHP Warning:  constant() [<a href='function.constant'>function.constant</a>]: Couldn't find constant JPATH_ in /home/ydesign/public_html/cartacs/libraries/joomla/installer/adapters/module.php on line 119
+[11-Jul-2012 18:42:24] PHP Warning:  constant() [<a href='function.constant'>function.constant</a>]: Couldn't find constant JPATH_ in /home/ydesign/public_html/cartacs/libraries/joomla/installer/adapters/module.php on line 117
+[11-Jul-2012 18:42:24] PHP Warning:  constant() [<a href='function.constant'>function.constant</a>]: Couldn't find constant JPATH_ in /home/ydesign/public_html/cartacs/libraries/joomla/installer/adapters/module.php on line 119
+[11-Jul-2012 18:42:31] PHP Warning:  constant() [<a href='function.constant'>function.constant</a>]: Couldn't find constant JPATH_ in /home/ydesign/public_html/cartacs/libraries/joomla/installer/adapters/module.php on line 117
+[11-Jul-2012 18:42:31] PHP Warning:  constant() [<a href='function.constant'>function.constant</a>]: Couldn't find constant JPATH_ in /home/ydesign/public_html/cartacs/libraries/joomla/installer/adapters/module.php on line 119
+[12-Jul-2012 12:29:26] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/ydesign/public_html/cartacs/libraries/joomla/database/database/mysql.php on line 293
+[12-Jul-2012 07:39:40] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[12-Jul-2012 07:53:33] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[12-Jul-2012 07:55:35] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[13-Jul-2012 00:52:20] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[13-Jul-2012 01:01:42] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[13-Jul-2012 02:31:03] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[13-Jul-2012 02:37:22] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[13-Jul-2012 02:37:46] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[13-Jul-2012 02:45:18] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[14-Jul-2012 00:44:26] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[14-Jul-2012 00:49:38] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[16-Jul-2012 07:13:58] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[16-Jul-2012 07:14:27] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[17-Jul-2012 20:20:18] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/ydesign/public_html/cartacs/libraries/joomla/database/database/mysql.php on line 293
+[17-Jul-2012 20:33:33] PHP Warning:  mysql_num_rows(): supplied argument is not a valid MySQL result resource in /home/ydesign/public_html/cartacs/libraries/joomla/database/database/mysql.php on line 293
+[24-Jul-2012 15:42:13] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[24-Jul-2012 15:43:50] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[24-Jul-2012 16:37:08] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 01:27:15] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 01:41:46] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 01:43:00] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 01:53:58] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:00:37] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:03:32] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:09:26] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:11:26] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:15:52] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:20:43] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:21:57] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:32:21] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:41:47] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:43:53] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[25-Jul-2012 02:57:46] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 392
+[28-Jul-2012 12:36:32] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[28-Jul-2012 12:39:50] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[28-Jul-2012 12:40:13] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[13-Aug-2012 12:08:29] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:18:18] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:19:42] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:21:12] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:22:18] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:23:19] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:23:53] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:24:12] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:25:13] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:25:54] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:26:37] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381
+[10-Oct-2012 01:27:12] PHP Warning:  Attempt to assign property of non-object in /home/ydesign/public_html/cartacs/administrator/components/com_enmasse/models/deal.php on line 381

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5.0"
+	client="site"
+	method="upgrade">
+	<name>Easy Script</name>
+	<author>Ciro Artigot</author>
+	<creationDate>November 2011</creationDate>
+	<copyright>GNU/GPL license</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@aixeena.org</authorEmail>
+	<authorUrl>www.aixeena.org</authorUrl>
+	<version>1.0.1</version>
+	<description>Easy script is the simplest module you have ever seen. Just paste the code in the texarea!</description>
+	<files>
+	<filename module="mod_easyscript">mod_easyscript.php</filename>
+	<filename>index.html</filename>
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+	</files>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="Code" type="textarea" rows="10" cols="50" default="" description="Just past the code here!" filter="raw"  />
+				<field name="php" type="list" default="0" label="PHP code" description="">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>	
+			</fieldset>
+		</fields>
+	</config>
+</extension>

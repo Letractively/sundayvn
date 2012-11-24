@@ -1,0 +1,9 @@
+
+@import url(../../../../css/color1/orange.css);
+
+#system .pagination strong,
+#system .pagination a:hover {
+	border-color: #f16d1a;
+	background-color: #f16d1a;
+}
+

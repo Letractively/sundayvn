@@ -1,0 +1,14 @@
+
+@import url(../../../css/menus.css);
+
+
+/* Mega Drop-Down Menu
+----------------------------------------------------------------------------------------------------*/
+
+/* Level 1 */
+.menu-dropdown li.level1 { margin-right: 0; }
+
+/* Drop-Down */
+.menu-dropdown .dropdown,
+.menu-dropdown .dropdown-bg > div { border-radius: 4px; }
+
