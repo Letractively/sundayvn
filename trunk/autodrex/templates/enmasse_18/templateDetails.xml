@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install version="1.7.0" type="template">
+	<name>enmasse_18</name>
+	<creationDate>20120912</creationDate>
+	<author>Le Trung Hieu</author>
+	<authorEmail>mr.letrunghieu@live.com</authorEmail>
+	<authorUrl>http://www.enmasse.matamko.com</authorUrl>
+	<copyright>Copyright (C) 2011- 2015 Enmasse Matamko</copyright>
+	<license>GPL</license>
+	<version>1.8.0</version>
+	<description>EnMasse 4.0.0 Template</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>params.ini</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>html</folder>
+	</files>
+	<positions>
+		<position>breadcrumbs</position>
+		<position>left</position>
+		<position>right</position>
+		<position>top</position>
+		<position>footer</position>
+		<position>position-main-menu</position>
+		<position>position-login-menu</position>
+		<position>position-logout-menu</position>
+		<position>footer-columns-1</position>
+		<position>footer-columns-2</position>
+		<position>footer-columns-3</position>
+		<position>footer-columns-4</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="colorVariation"
+					type="list"
+					default="blue"
+					label="Color Variation"
+					description="Base Color of template">
+					<option
+						value="blue">blue</option>
+					<option
+						value="red">green</option>
+					<option
+						value="red">violet</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</install>

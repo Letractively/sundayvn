@@ -1,0 +1,17 @@
+
+@import url(../../../../css/color1/navy.css);
+
+#logo,
+#system .pagination strong,
+#system .pagination a:hover {
+	border-color: #36b;
+	background-color: #36b;
+}
+
+/* Only Phones */
+@media (max-width: 767px) {
+
+	#page #header-responsive .logo { background: #36b; }
+
+}
+

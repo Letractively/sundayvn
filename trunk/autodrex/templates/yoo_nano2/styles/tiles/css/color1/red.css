@@ -1,0 +1,17 @@
+
+@import url(../../../../css/color1/red.css);
+
+#logo,
+#system .pagination strong,
+#system .pagination a:hover {
+	border-color: #D33;
+	background-color: #D33;
+}
+
+/* Only Phones */
+@media (max-width: 767px) {
+
+	#page #header-responsive .logo { background: #D33; }
+
+}
+

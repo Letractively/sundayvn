@@ -1,0 +1,42 @@
+<?php
+
+
+class TableDeal extends JTable
+{
+	var $id = null;
+    var $deal_code = null;
+	var $name = null;
+	var $slug_name = null;
+	var $short_desc = null;
+	var $description = null;
+	var $min_needed_qty = null;
+	var $max_buy_qty = null;
+	var $max_coupon_qty = null;
+	var $max_qty = null;
+	var $cur_sold_qty = null;
+	var $origin_price = null;
+	var $price = null;
+	var $start_at = null;
+	var $end_at = null;
+	var $merchant_id = null;
+	var $sales_person_id = null;
+	var $highlight = null;
+	var $pic_dir = null;
+	var $terms = null;
+	var $status = null;
+	var $published = null;
+	var $position = null;
+	var $pay_by_point = null;
+	var $prepay_percent = null;
+	var $commission_percent = null;
+	var $auto_confirm   = null;
+	var $created_at = null;
+	var $updated_at = null;
+
+	function __construct(&$db)
+	{
+		parent::__construct( '#__enmasse_deal', 'id', $db );
+	}
+
+}
+?>

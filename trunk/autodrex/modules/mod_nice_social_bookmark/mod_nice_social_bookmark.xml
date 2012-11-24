@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.4" client="site" method="upgrade">
+    <name>Nice Social Bookmark</name>
+    <author>Nikola Biškup</author>
+    <creationDate>May 2012</creationDate>
+    <copyright>Copyright (C) 2012</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>nikola@salamander-studios.com</authorEmail>
+    <authorUrl>www.salamander-studios.com</authorUrl>
+    <version>1.7.4</version>
+    <description>Nice Social Bookmark 1.7.4 - Joomla 1.7/2.5 module for displaying links to most common social sites.</description>
+	<files>
+        <folder module="mod_nice_social_bookmark">icons</folder>
+        <folder module="mod_nice_social_bookmark">css</folder>
+        <filename module="mod_nice_social_bookmark">mod_nice_social_bookmark.php</filename>
+        <filename module="mod_nice_social_bookmark">mod_nice_social_bookmark.xml</filename>
+    </files>
+    
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_WEBLINKS" />
+ 
+	<config>
+	   <fields name="params">
+		<fieldset name="basic">
+        <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />	
+		<field  type="spacer" default="" label="" description="" />
+        <field name="isize" type="radio" label="Icon Size" default="32" description="Size of icons to be displayed">
+		<option value="24">24px</option>
+		<option value="32">32px</option>
+		<option value="48">48px</option>
+		<option value="64">64px</option>
+   	</field>
+	<field name="iset" type="list" default="aqu" label="Icon Set" description="Set of icons to be desplayed, u can check icons on website">
+		<option value="aqu">Aquatic</option>
+		<option value="ora">Orange round</option>
+		<option value="log">Logorunner</option>
+		<option value="rou">White round</option>
+		<option value="gls">Glass</option>
+		<option value="iph">IPhone</option>
+	</field>
+	<field name="iposition" type="list" default="center" label="Icon position" description="Set positioin of icons to be desplayed">
+		<option value="left">Left</option>
+		<option value="center">Center</option>
+		<option value="right">Right</option>
+	</field>
+	<field name="s1" type="radio" label="Facebook" default="yes" description="Display the icon of Facebook?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s2" type="radio" label="MySpace" default="yes" description="Display the icon of MySpace?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s3" type="radio" label="Twitter" default="yes" description="Display the icon of Twitter?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s4" type="radio" label="Digg" default="yes" description="Display the icon of Digg?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s5" type="radio" label="Delicious" default="yes" description="Display the icon of Delicious?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s6" type="radio" label="Stumbleupon" default="yes" description="Display the icon of Stumbleupon?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s7" type="radio" label="Google Bookmarks" default="yes" description="Display the icon of Google Bookmarks?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s8" type="radio" label="Reddit" default="yes" description="Display the icon of Reddit?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s9" type="radio" label="Newsvine" default="yes" description="Display the icon of Newsvine?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s10" type="radio" label="Technorati" default="yes" description="Display the icon of Technorati?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s11" type="radio" label="LinkedIn" default="yes" description="Display the icon of LinkedIn?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s12" type="radio" label="Mixx" default="yes" description="Display the icon of Mixx?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+	<field name="s14" type="radio" label="RSS Feed" default="yes" description="Display the icon of RSS Feed?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>	
+   	<field name="s21" type="radio" label="Pinterest follow me button" default="yes" description="Display the icon of Pinterest with a link to your Pinterest profile?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+    	<field name="piname" type="text" default="" label="Pinterest profile name" description="Enter here your Pinterest profile name(for follow me button) You need to enter this othervise it just links to Pinterest" />
+    <field type="spacer"  />   	
+	<field name="opac" type="radio" label="Mouseover effect" default="no" description="Mouseover opacity effect, you can choose two different effects normal and inverted opacity">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+		<option value="invert">Invert opacity</option>
+   	</field>
+  <field type="spacer"  />	
+  <field type="spacer" class="text" label="Custom Links" />
+  <field type="spacer"  hr="true" />
+    <field name="twlink" type="text" default="" label="Twitter Page Link" description="Enter here your twitter page link if you want to change default status update feature (no http://)" />	
+    <field name="fblink" type="text" default="" label="Facebook Page Link" description="Enter here your facebook page link if you want to change default status update feature (no http://)" />	
+	<field name="mslink" type="text" default="" label="My Space Page Link" description="Enter here your myspace page link if you want to change default status update feature (no http://)" />
+	<field name="lilink" type="text" default="" label="LinkedIn Page Link" description="Enter here your linkedin page link if you want to change default status update feature (no http://)" />
+	<field name="rsslink" type="text" default="" label="RSS Page Link" description="Enter here your rss page link if you want to change default rss link (no http://)" />
+    <field type="spacer"  />	
+    <field type="spacer" class="text" label="Google +1 button settings" />
+    <field type="spacer"  hr="true" />  
+   	<field name="s15" type="radio" label="Google +1" default="yes" description="Display the icon of Google +1?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+    <field name="url" type="text" default="" label="Page URL" description="The URL address of the google page for this google plus Button.(Ex: http://www.google.com)" />   	
+	<field name="size" type="list" default="standard" label="Layout Style" description="Determines the size and amount of social context next to the button.">
+	   <option value="standard">Standard</option>
+	   <option value="small">Small</option>
+	   <option value="medium">Medium</option>
+	   <option value="tall">Tall</option>
+	</field>
+	<field name="count" type="list" default="true" label="Show Count" description="Show counter with your button or not.">
+	   <option value="true">Yes</option>	
+	   <option value="false">No</option>
+    </field>
+	<field name="Locale" type="list" default="en-US" label="Language" description="A list with locations and language for the widget. Default location - English [en_US].">
+                        <option value="ar">Arabic</option>
+						<option value="bg">Bulgarian</option>
+						<option value="ca">Catalan</option>
+						<option value="cs">Czech</option>
+						<option value="hr">Croatian</option>
+						<option value="nl">Dutch</option>
+						<option value="da">Danish</option>
+						<option value="en-GB">English (UK)</option>
+						<option value="en-US">English [US]</option>
+						<option value="et">Estonian</option>
+						<option value="fi">Finnish</option>
+						<option value="fr">French</option>
+						<option value="de">German</option>
+						<option value="el">Greek</option>
+						<option value="iw">Hebrew</option>
+						<option value="hi">Hindi</option>
+						<option value="hu">Hungarian</option>
+						<option value="id">Indonesian</option>
+						<option value="it">Italian</option>
+						<option value="ja">Japanese</option>
+						<option value="ko">Korean</option>
+						<option value="lv">Latvian</option>
+						<option value="lt">Lithuanian</option>
+						<option value="ms">Malay</option>
+						<option value="no">Norwegian</option>
+						<option value="fa">Persian</option>
+						<option value="pl">Polish</option>
+						<option value="pt-BR">Portuguese (Brazil)</option>
+						<option value="pt-PT">Portuguese (Portugal)</option>
+						<option value="ro">Romanian</option>
+						<option value="sr">Serbian</option>
+						<option value="sk">Slovak</option>
+						<option value="sl">Slovenian</option>
+						<option value="es">Spanish</option>
+						<option value="es-419">Spanish (Latin America)</option>
+						<option value="sv">Swedish</option>
+						<option value="th">Thai</option>
+						<option value="tr">Turkish</option>
+						<option value="uk">Ukrainian</option>
+						<option value="vi">Vietnamese</option>
+						<option value="zh-CN">Simplified Chinese (China)</option>
+						<option value="zh-TW">Traditional Chinese (Taiwan)</option>
+						<option value="zu">Zulu</option>
+    </field>
+    <field type="spacer"  />	
+    <field type="spacer" class="text" label="Pinterest - pin it button settings" />
+    <field type="spacer"  hr="true" />  
+   	<field name="s20" type="radio" label="Pinterest pin it button" default="yes" description="Display the icon of Pinterest pin it button?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+    <field name="imagetobepinned" type="text" default="" label="Image to be pinned" description="A link to an image you want to be pinned at pinterest (eg. your site logo)" />
+    <field name="porient" type="list" default="" label="Count number" description="where do you want pin count number to appear?" >
+        <option value="none">None</option>
+        <option value="horizontal">Horizontal</option>
+        <option value="vertical">Vertical</option>
+    </field>
+
+    
+    <field type="spacer"  />	
+    <field type="spacer" class="text" label="Custom Icons" />
+    <field type="spacer" hr="true" />  
+  	<field name="s16" type="radio" label="Show Icon 1" default="no" description="Display the icon custom 1?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+    <field name="customicon1" type="text" default="" label="Custom Icon-1" description="Custom icon link (absolute link (with http://) for items located outside the server and relative link for items located on localhost)" />
+    <field name="customlink1" type="text" default="" label="Custom Link-1" description="Custom link (absolute link (with http://) for items located outside the server and relative link for items located on localhost)" />
+    <field type="spacer"  />
+    <field name="s17" type="radio" label="Show Icon 1" default="no" description="Display the icon custom 2?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+   	</field>
+    <field name="customicon2" type="text" default="" label="Custom Icon-2" description="Custom icon link (absolute link (with http://) for items located outside the server and relative link for items located on localhost)" />
+    <field name="customlink2" type="text" default="" label="Custom Link-2" description="Custom link (absolute link (with http://) for items located outside the server and relative link for items located on localhost)" />
+    <field type="spacer"  />
+    <field name="s18" type="radio" label="Show Icon 1" default="no" description="Display the icon custom 3?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+    </field>
+    <field name="customicon3" type="text" default="" label="Custom Icon-3" description="Custom icon link (absolute link (with http://) for items located outside the server and relative link for items located on localhost)" />
+    <field name="customlink3" type="text" default="" label="Custom Link-3" description="Custom link (absolute link (with http://) for items located outside the server and relative link for items located on localhost)" /> 
+    <field type="spacer"  />
+    <field name="s19" type="radio" label="Show Icon 4" default="no" description="Display the icon custom 4?">
+		<option value="yes">Yes</option>
+		<option value="no">No</option>
+    </field>
+    <field name="customicon4" type="text" default="" label="Custom Icon-4" description="Custom icon link (absolute link (with http://) for items located outside the server and relative link for items located on localhost)" />
+    <field name="customlink4" type="text" default="" label="Custom Link-4" description="Custom link (absolute link (with http://) for items located outside the server and relative link for items located on localhost)" />  
+             </fieldset>
+		</fields>
+    </config>
+</extension>

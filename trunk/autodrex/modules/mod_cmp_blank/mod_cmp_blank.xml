@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension  type="module"  version="2.5.0"  client="site">
+  <name>Compago Blank Module</name>
+  <author>Compago</author>
+  <creationDate>Dec 2011</creationDate>
+  <copyright>Copyright Compago. All rights reserved.</copyright>
+  <license>GNU General Public License version 3 - http://www.gnu.org/licenses/</license>
+  <authorEmail>compagotlc@gmail.com</authorEmail>
+  <authorUrl>www.compago.it</authorUrl>
+  <version>1.1</version>
+  <description>This module displays output generated from your code &#40;html/php/css/javascript&#41;.</description>
+  <languages>
+      <language tag="en-GB">language/en-GB/en-GB.mod_cmp_blank.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_cmp_blank">mod_cmp_blank.php</filename>
+    <filename>index.html</filename>
+    <filename>helper.php</filename>
+    <folder>tmpl</folder>
+    <filename>mod_cmp_blank.xml</filename>
+	<filename>gpl-3.0.txt</filename>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="SETTINGS">	 
+         <field name="htmlenable" type="radio" default="1" label="CMP_BM_HTMLENABLE_L" description="CMP_BM_HTMLENABLE_D">
+                   <option value="1">Yes</option>
+                   <option value="0">No</option>
+         </field>
+         <field name="htmlcode" type="textarea" filter="raw" default="" label="CMP_BM_HTML_L" rows="12"  cols="50" description="CMP_BM_HTML_D" >
+         </field>
+		 <field type="spacer" hr="true" />
+         <field name="phpenable" type="radio" default="0" label="CMP_BM_PHPENABLE_L" description="CMP_BM_PHPENABLE_D">
+                   <option value="1">Yes</option>
+                   <option value="0">No</option>
+         </field>
+         <field name="phpcode" type="textarea" filter="raw" default="" label="CMP_BM_PHP_L" rows="8"  cols="50" description="CMP_BM_PHP_D" >
+         </field>
+		 <field type="spacer" hr="true" />
+		 <field name="tagenable" type="radio" default="0" label="CMP_BM_TAGENABLE_L" description="CMP_BM_TAGENABLE_D">
+                   <option value="1">Yes</option>
+                   <option value="0">No</option>
+         </field>
+         <field name="tag" type="textarea" filter="raw" default="" label="CMP_BM_TAG_L" rows="5"  cols="50" description="CMP_BM_TAG_D" >
+         </field>
+		 <field type="spacer" hr="true" />
+         <field name="scriptenable" type="radio" default="0" label="CMP_BM_SCRIPTENABLE_L" description="CMP_BM_SCRIPTENABLE_D">
+                   <option value="1">Yes</option>
+                   <option value="0">No</option>
+         </field>
+         <field name="script" type="textarea" filter="raw" default="" label="CMP_BM_SCRIPT_L" rows="5"  cols="50" description="CMP_BM_SCRIPT_D" >
+         </field>
+		 <field type="spacer" hr="true" />
+		 <field name="scriptfileenable" type="radio" default="0" label="CMP_BM_SCRIPTFILEENABLE_L" description="CMP_BM_SCRIPTFILEENABLE_D">
+                   <option value="1">Yes</option>
+                   <option value="0">No</option>
+         </field>
+         <field name="scriptfile" type="textarea" filter="raw" default="" label="CMP_BM_SCRIPTFILE_L" rows="3"  cols="50" description="CMP_BM_SCRIPTFILE_D" >
+         </field>
+		 <field type="spacer" hr="true" />
+         <field name="cssenable" type="radio" default="0" label="CMP_BM_CSSENABLE_L" description="CMP_BM_CSSENABLE_D">
+                   <option value="1">Yes</option>
+                   <option value="0">No</option>
+         </field>
+         <field name="css" type="textarea" filter="raw" default="" label="CMP_BM_CSS_L" rows="5"  cols="50" description="CMP_BM_CSS_D" >
+         </field>
+		 <field type="spacer" hr="true" />
+		 <field name="csssheetenable" type="radio" default="0" label="CMP_BM_CSSSHEETENABLE_L" description="CMP_BM_CSSSHEETENABLE_D">
+                   <option value="1">Yes</option>
+                   <option value="0">No</option>
+         </field>
+         <field name="csssheet" type="textarea" filter="raw" default="" label="CMP_BM_CSSSHEET_L" rows="3"  cols="50" description="CMP_BM_CSSSHEET_D" >
+         </field>
+		 <field type="spacer" hr="true" />
+         <field name="idmodule" type="text" default="" label="CMP_BM_IDMOD_L" description="CMP_BM_IDMOD_D">
+         </field>
+         <field name="classmodule" type="text" default="" label="CMP_BM_CLASSMOD_L" description="CMP_BM_CLASSMOD_D">
+         </field>
+         <field name="stylecss" type="text" default="" label="CMP_BM_STYLE_L" description="CMP_BM_STYLE_D">
+         </field>
+         <field name="codeorder" type="list" default="0" label="CMP_ORDER_L" description="CMP_ORDER_D">
+                <option value="0">CMP_ORDER_HTML_PHP</option>
+                <option value="1">CMP_ORDER_PHP_HTML</option>
+         </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

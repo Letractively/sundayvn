@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Welcome page">
+		<message>Welcome page</message>
+	</layout>
+	<view title="Welcome page" >
+		<message><![CDATA[Welcome page.]]></message>
+	</view>
+	<state>
+		<name>Welcome page</name>
+		<description>Welcome page</description>
+	</state>
+</metadata>
+

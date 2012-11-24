@@ -1,0 +1,47 @@
+
+@import url(../../../css/responsive.css);
+
+
+/* Breakpoints
+----------------------------------------------------------------------------------------------------*/
+
+/* Only Phones and Tablets (Portrait) */
+@media (max-width: 959px) {
+
+	/* Layout */
+	body#page { padding: 10px; }
+
+	.wrapper > div { margin: 0; }
+
+}
+
+/* Only Tablets (Portrait) and Phones (Landscape) */
+@media (min-width: 480px) and (max-width: 959px) {
+
+	/* Modules */
+	.grid-h.width25:first-child > .mod-line:before {
+		left: -20px;
+		right: -20px;
+		padding: 0 40px;
+	}
+
+}
+
+/* Only Phones */
+@media (max-width: 767px) {
+
+	/* Layout */
+	#header { padding: 0 10px 15px 10px;  background:#227db8; }
+
+}
+
+/* Only Phones (Portrait) */
+@media (max-width: 479px) {
+
+	/* Modules */
+	.grid-h .mod-line:before {
+		left: -20px;
+		right: -20px;
+	}
+
+}

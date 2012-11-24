@@ -1,0 +1,14 @@
+
+@import url(../../../css/system.css);
+
+
+/* Search
+----------------------------------------------------------------------------------------------------*/
+
+.searchbox { background-color: #FFF; }
+
+.searchbox .results {
+	top: 43px;
+	right: -8px;
+}
+

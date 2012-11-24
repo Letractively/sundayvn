@@ -1,0 +1,10 @@
+
+@import url(../../../css/custom.css);
+
+#logo { margin: -10px 0; }
+
+.custom-logo {
+	background-image: url(../../../../../images/yootheme/logo_wide.png);
+	vertical-align: middle;
+}
+
