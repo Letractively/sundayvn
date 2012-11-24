@@ -13,7 +13,7 @@ JHtml::_('behavior.tooltip');
 
 	<?php echo $this->loadTemplate('core'); ?>
 
-	<?php echo $this->loadTemplate('params'); ?>
+
 
 	<?php echo $this->loadTemplate('custom'); ?>
 
