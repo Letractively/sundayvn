@@ -100,6 +100,7 @@ JHTML::_('behavior.formvalidation');
 		<br/><br/>
 		<?php if($item_price !=0) 
 		{?>
+		<button onclick='paypaldo();'><img src="components/com_enmasse/theme/<?php echo $theme?>/images/pay-using-paypal.png"  /></button>
 		<div id="Order_Information">
 			<div class="top">
 		    	<div class="line"><span>Please enter your information:</span></div>
@@ -225,4 +226,3 @@ document.orderDetail.submit();
 </script>
 
 <style>#top-a{display:none;}</style>
-<button onclick='paypaldo();'>dsdas</button>
