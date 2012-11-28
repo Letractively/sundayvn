@@ -151,8 +151,7 @@ $buy4friend = $buy4friend?'<input type="hidden" name="buy4friend" value="1"/>':'
 		    			<br />
 				        <input type="checkbox" name="terms" id="terms" class="required" <?php if(isset($this->arData['terms'])) echo "checked=\"checked\""?>>
 				    	<?php echo JText::_('SHOP_CARD_CHECK_OUT_TERM_CONDITION');?>
-				        <a style="float:none" href="<?php echo JURI::base();?>components/com_enmasse/theme/<?php echo $this->theme; ?>/tmpl/term.php?artId=<?php echo $this->termArticleId ?>"
-							onclick="window.open('<?php echo JURI::base();?>components/com_enmasse/theme/<?php echo $this->theme; ?>/tmpl/term.php?artId=<?php echo $this->termArticleId ?>','name','height=600,width=400,toolbar=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no'); return false;">
+				        <a style="float:none" href="<?php echo JRoute::_('index.php?option=com_content&view=article&id='.$this->termArticleId); ?>" target='_blank'>
 				        	<?php echo JText::_('SHOP_CARD_CHECK_OUT_TERM_CONDITION_LINK');?>
 				    	</a>
 			        <?php else:?>
@@ -175,7 +174,7 @@ $buy4friend = $buy4friend?'<input type="hidden" name="buy4friend" value="1"/>':'
 			
 		<p align="right">
 			<br />
-			<input type="button" class="button_big" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" onclick="document.orderDetail.submit();" />
+			<input type="submit" class="button_big" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" />
 		</p>
 		<div class="clear"></div>
 	</form>
