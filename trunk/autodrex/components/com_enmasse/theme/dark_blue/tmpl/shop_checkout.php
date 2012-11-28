@@ -141,7 +141,7 @@ JHTML::_('behavior.formvalidation');
 					
                 <p style="clear: both;text-align: center;"><input style="margin-top:0px;" type="checkbox" name="agree" id="agree"  />I agree to all the <a class='modal' href="<?=JRoute::_('index.php?option=com_enmasse&view=term');?>">terms and conditions.</a></p>
 					<img src="components/com_enmasse/theme/<?php echo $theme?>/images/credit.png" width="350" height="45" />
-					<input type="hidden" name="payGtyId" value="4" />
+					<input type="hidden" name="payGtyId" value="4" id="payGtyIdInpt" />
 		        	<input type="hidden" name="check" value="post" /> 
 		        	<input type="hidden" name="option" value="com_enmasse" /> 
 		        	<input type="hidden" name="controller" value="shopping" /> 
@@ -216,7 +216,13 @@ JHTML::_('behavior.formvalidation');
 		if ( form.agree.checked == false ) { alert ( "Please check the Terms & Conditions box." ); return false; }
 		
 		form.submit();
-	}		
+	}
+function paypaldo()
+{
+jQuery('#payGtyIdInpt').val('2');
+document.orderDetail.submit();
+}	
 </script>
 
 <style>#top-a{display:none;}</style>
+<button onclick='paypaldo();'>dsdas</button>
