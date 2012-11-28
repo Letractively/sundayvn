@@ -119,13 +119,14 @@
   width: 100%;
 }
 #Order_Information .top span {
-  color: #666666;
-  float: left;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 12px;
-  padding: 10px;
-  width: 100%;
+color: #666;
+float: left;
+font-size: 16px;
+font-weight: bold;
+line-height: 12px;
+padding: 10px;
+
+margin-left: 86px;
 }
 #Order_Information .bottom {
   background-color: #0169ad;
