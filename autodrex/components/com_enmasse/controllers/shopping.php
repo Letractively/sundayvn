@@ -362,8 +362,8 @@ JFactory::getApplication()->setUserState("com_enmasse.checkout.dataautho", $arDa
 		if($cart->getTotalPrice() > 0)
 		{
 			//deal is not free
-			//$payGtyId 	= JRequest::getVar('payGtyId');
-			$payGty = JModel::getInstance('payGty','enmasseModel')->getById(4); //Authorize.Net
+			$payGtyId 	= JRequest::getVar('payGtyId');
+			$payGty = JModel::getInstance('payGty','enmasseModel')->getById($payGtyId); //Authorize.Net
 			
 			// checking gateway configuration
 			if(CartHelper::checkGty($payGty)==false)
