@@ -36,7 +36,7 @@ $cart = $this->cart;
 foreach($cart->getAll() as $cartItem) {
 	$item = $cartItem; 
 }
-
+	$approved = true;
 if(isset($_POST['x_process']))
 {
 	$transaction = new AuthorizeNetAIM;
@@ -67,9 +67,10 @@ if(isset($_POST['x_process']))
 	{
 		echo "<span style=\"color: red;\">There is an error when making the transaction, please contact Administrator!</span><br/>";
 	}
-var_dump($response->approved);
+
     if ($response->approved)
     {
+	$approved = true;
 		JFactory::getSession()->set('cart', null);
 ?>	
 		<form name="paymentForm" method="post" action="<?php echo JURI::base() . "index.php?option=com_enmasse&controller=payment&task=notifyUrl&payClass=authorizenet"; ?>" id="checkout_form">
@@ -91,6 +92,7 @@ exit;
     }
     else
     {
+		$approved = false;
     	echo "<span style=\"color: red;\">".$response->response_reason_text."</span><br/>";
     }
 }
@@ -99,12 +101,20 @@ exit;
 
 <?php
 $arrPost = JFactory::getApplication()->getUserState("com_enmasse.checkout.dataautho");
+if (!empty($arrPost))
+{
 $_POST = $arrPost;
+}
 $cartItem = array_pop($this->cart->getAll());
 $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent / 100, 2);
 ?>
+<?php if ($approved) {?>
+<h2>Please wait the payment is processing</h2>
+<?php } else {?>
+
 <h1>Please enter your information:</h1>
-<form method="post" name="checkoutForm" action="<?php echo $pageURL . $_SERVER["REQUEST_URI"]; ?>">
+<?php } ?>
+<form method="post" name="checkoutForm" action="<?php echo $pageURL . $_SERVER["REQUEST_URI"]; ?>" <?php if ($approved) echo "style='display:none;'"?>>
 <table>
 <tr><td>Credit Card Number (without spaces): </td><td><input type="text" size="25" name="x_card_num" value="<?php echo $_POST['x_card_num']; ?>"></input></td></tr>
 <tr><td>Expired Date (MM/YY): </td><td><select name="x_exp_month">
@@ -144,16 +154,29 @@ $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent 
 <input type="hidden" type="text" name="x_type" value="<?php echo $this->attributeConfig->type; ?>">
 </td></tr>
 </table>
-</form>
 
-
+<?php
+if ($approved)
+{
+?>
 <script type='text/javascript'>
 document.checkoutForm.submit();
    // setTimeout(document.checkoutForm.submit(), 3000);    
 
 </script>
 <?php 
+}
+else
 
+{
+?>
+<input type="submit" value="Pay now" />
+<?php
+}
+?>
+</form>
+
+<?php
 	//$this->cart->deleteAll();
 JFactory::getApplication()->setUserState("com_enmasse.checkout.dataautho", NULL);
 
