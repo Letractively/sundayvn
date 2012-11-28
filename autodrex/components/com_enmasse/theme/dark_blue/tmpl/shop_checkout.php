@@ -3,8 +3,11 @@
 require_once(JPATH_ADMINISTRATOR . DS ."components". DS ."com_enmasse". DS ."helpers". DS ."EnmasseHelper.class.php");
  	
 $theme =  EnmasseHelper::getThemeFromSetting();
+
+
 JFactory::getDocument()->addStyleSheet('components/com_enmasse/theme/' . $theme . '/css/screen.css');
 $oItem = array_pop($this->cart->getAll());
+JHTML::_('behavior.modal') ;
 JHTML::_('behavior.formvalidation');
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -136,7 +139,7 @@ JHTML::_('behavior.formvalidation');
 					<tr><td align="left">Email: </td><td><input type="text" size="30" name="x_email" class="required validate-email" value="<?php echo $this->arData['email']?>"></input></td></tr>
 					</table>
 					
-                <p style="clear: both;text-align: center;"><input style="margin-top:0px;" type="checkbox" name="agree" id="agree"  />I agree to all the <a href="http://rockdesigning.com/cartacs/index.php/terms-conditions">terms and conditions.</a></p>
+                <p style="clear: both;text-align: center;"><input style="margin-top:0px;" type="checkbox" name="agree" id="agree"  />I agree to all the <a class='modal' href="<?=JRoute::_('index.php?option=com_enmasse&view=term');?>">terms and conditions.</a></p>
 					<img src="components/com_enmasse/theme/<?php echo $theme?>/images/credit.png" width="350" height="45" />
 					<input type="hidden" name="payGtyId" value="4" />
 		        	<input type="hidden" name="check" value="post" /> 
