@@ -100,7 +100,7 @@ JHTML::_('behavior.formvalidation');
 		<br/><br/>
 		<?php if($item_price !=0) 
 		{?>
-		<button onclick='paypaldo();'><img src="components/com_enmasse/theme/<?php echo $theme?>/images/pay-using-paypal.png"  /></button>
+		
 		<div id="Order_Information">
 			<div class="top">
 		    	<div class="line"><span>Please enter your information:</span></div>
@@ -139,8 +139,10 @@ JHTML::_('behavior.formvalidation');
 					<tr><td align="left">Last Name: </td><td><input type="text" size="30" name="x_last_name" class="required" value=""></input></td></tr>
 					<tr><td align="left">Email: </td><td><input type="text" size="30" name="x_email" class="required validate-email" value="<?php echo $this->arData['email']?>"></input></td></tr>
 					</table>
-					
-                <p style="clear: both;text-align: center;"><input style="margin-top:0px;" type="checkbox" name="agree" id="agree"  />I agree to all the <a class='modal' href="<?=JRoute::_('index.php?option=com_enmasse&view=term');?>">terms and conditions.</a></p>
+					<button onclick="paypaldo();" style="
+    border: none;
+"><img src="/autodrex/components/com_enmasse/theme/dark_blue/images/pay-using-paypal.png" style="border: none;margin-top: 30px;"></button>
+                <p style="clear: left;text-align: center;float: left;margin-left: 279px;"><input style="margin-top:0px;" type="checkbox" name="agree" id="agree"  />I agree to all the <a class='modal' href="<?=JRoute::_('index.php?option=com_enmasse&view=term');?>">terms and conditions.</a></p>
 					<img src="components/com_enmasse/theme/<?php echo $theme?>/images/credit.png" width="350" height="45" />
 					<input type="hidden" name="payGtyId" value="4" id="payGtyIdInpt" />
 		        	<input type="hidden" name="check" value="post" /> 
@@ -154,6 +156,8 @@ JHTML::_('behavior.formvalidation');
 				<input type="button" class="button" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" onclick="validateForm()"></input>
 		    </div>
 		</div>
+		
+		
 		<?php }
 		 else
 		 {
