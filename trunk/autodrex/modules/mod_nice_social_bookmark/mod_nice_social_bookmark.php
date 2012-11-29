@@ -207,8 +207,7 @@ gapi.plusone.render("plusone",
 $tt = $params->get('s20', 'yes');
 if ($tt == "yes"){
 ?>
-<a href="http://pinterest.com/pin/create/button/?url=<?php echo $url?>&media=<?php echo $imagetobepinned?>&description=<?php echo $title?>" class="pin-it-button" count-layout="<?php echo $porient?>"><img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
-<script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>
+<a href="http://pinterest.com/pin/create/button/?url=<?php echo $url?>&media=<?php echo $imagetobepinned?>&description=<?php echo $title?>" class="pin-it-button" count-layout="<?php echo $porient?>"><img border="0" src="http://assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
 <?php
  }
 
