@@ -39,7 +39,7 @@ $lang->load( 'plg_user_profile', JPATH_ADMINISTRATOR);
 					<?php endif; ?>
 					<?php endforeach; ?>
 				</fieldset>
-			<?php endif; ?>
+			<?php endif; ?>		<?php break; ?>
 		<?php endforeach; ?>
 
 		<div class="submit">

@@ -1,14 +1,13 @@
 <?php
-
+$isDie = JRequest::getVar('isdie');
 require_once( JPATH_ADMINISTRATOR . DS ."components". DS ."com_enmasse".DS."helpers". DS ."EnmasseHelper.class.php");
 $theme =  EnmasseHelper::getThemeFromSetting();
 JFactory::getDocument()->addStyleSheet('components/com_enmasse/theme/' . $theme . '/css/screen.css');
 ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<div class="maincol_full_cont">
-	<h3><?php echo JText::_("LIST_YOUR_ORDER")?></h3>
-	<hr />
-	<br/>
+<div class="maincol_full_cont"><?phpif(!$isDie) {?>
+	<h3><?php echo JText::_("LIST_YOUR_ORDER")?></h3>		<hr />	<br/><?php }?>
+
 	<div id="OrderList">
 	  <div class="top">
 			<table width="100%" class="oderList">
@@ -82,3 +81,4 @@ JFactory::getDocument()->addStyleSheet('components/com_enmasse/theme/' . $theme 
 	</div>
 
 </div>
+<?phpif ($isDie){die;} ?>

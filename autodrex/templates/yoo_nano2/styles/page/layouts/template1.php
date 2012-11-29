@@ -9,7 +9,7 @@ include($this['path']->path('layouts:template.config.php'));
 
 <head>
 <?php echo $this['template']->render('head'); ?>
-<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+
 </head>
 
 <body id="page" class="page <?php echo $this['config']->get('body_classes'); ?>" data-config='<?php echo $this['config']->get('body_config','{}'); ?>'>
