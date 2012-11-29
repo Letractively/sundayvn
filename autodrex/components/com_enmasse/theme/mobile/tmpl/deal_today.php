@@ -81,7 +81,7 @@ $shareImages = JURI::base(). str_replace("\\","/",$imageUrlArr[0]);
 				<strong><?php echo JText::_('SHARE_BOX_TITLE');?></strong> &nbsp;&nbsp;
 				<a href="http://www.facebook.com/share.php?u=<?php echo urlencode($shareUrl); ?>" target="blank"><img src="components/com_enmasse/images/social_media/facebook.png"></a>
 				<a href="http://twitter.com/share?url=<?php echo urlencode($shareUrl); ?>" class="" data-url="" data-text="<?php echo $shareShortDesc; ?>" data-count="none" data-via="<?php echo $shareName; ?>" target="_blank"><img src="components/com_enmasse/images/social_media/twitter.png"></a>
-				<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>					
+		
 				<script language="JavaScript" type="text/javascript">
 					function mailToFriend() {
 						window.open ("index.php?option=com_enmasse&controller=mail&task=mailForm&tmpl=component&dealid=<?php echo $deal->id; ?>&userid=<?php echo $userID; ?>&itemid=<?php echo $oItem->id; ?>", "mywindow","location=0,status=0,scrollbars=0, width=500,height=400");
@@ -133,9 +133,9 @@ endif;?>
 </div>
 
 <div align="center" class="row btn_orange">
-	<a class="deal_status" href="<?php echo empty($link)?'#':$link;?>"><?php echo $text;?></a>
-</div>
-
+	<a class="deal_status" href="<?php echo empty($link)?'#':$link;?>"><?php echo $text;?></a>
+</div>	<p style="text-align:center"><a onclick="dotooglemore()"  id="showMore"  style="background: #E0FFD8;border: none;color: #339937;font-weight: bold;padding: 5px 12px;margin-top: 10px;">More information</a></p>
+<div id="more_info_deal" style="display:none"><div  class="row"> <?php echo $deal->description?> </div> <div  class="row">	<strong><?php echo JText::_('DEAL_HIGHLIGHT');?></strong>	<?php echo $deal->highlight?></div><div  class="row">	<strong><?php echo JText::_('DEAL_TERM_CONDITION');?></strong>	<?php echo $deal->terms?></div></div><div  class="row">            <?php // ==== Start Rating and Review ==== //			$nItemId = JFactory::getApplication()->getMenu()->getItems('link','index.php?option=com_enmasse&view=dealtoday',true)->id;            $sCommentLink = JRoute::_('index.php?option=com_enmasse&controller=deal&task=comment&id=' . $deal->id . '&Itemid=' . $nItemId, false);            ?>            <?php            $nRating = EnmasseHelper::countDealRatingByDealId($deal->id);            $nRating = round($nRating);            ?>            <p class="average_rating"><?php echo JText::_('AVERAGE_RATING');?>            <span class="rating">                                <?php for($i = 1; $i <= $nRating; $i++): ?>                    <span class="ratingStar filled">&nbsp;</span>                <?php endfor;?>                <?php for($i = $nRating; $i < 5; $i++): ?>                    <span class="ratingStar">&nbsp;</span>                <?php endfor;?>            </span>             </p>            <div class="comment_button">            	<br />                <button class="button_big"  onclick="window.location='<?php echo $sCommentLink; ?>'" style="font-size:100%;"><?php echo JText::_('COMMENT_BUTTON');?></button>			</div></div>
 <script language="JavaScript">
 	TargetDate = "<?php echo date('Y/m/d H:i:s', strtotime($deal->end_at));?>";
     CurrentDate = "<?php echo date('Y/m/d H:i:s', strtotime(DatetimeWrapper::getDatetimeOfNow())); ?>";
@@ -213,7 +213,7 @@ foreach ($localist as $item)
 jQuery(document).ready(function() {
 	jQuery('#closeLink').click(function(){
 		jQuery('#overlay, #lightbox').css({'display':'none'});
-	});
+	});	jQuery('#showMore').click(function(){	jQuery('#more_info_deal').toggle();	});
 
 	jQuery('.btn_localtion a').click(function(){
 		jQuery('#overlay, #lightbox').css({'display':'block'});
@@ -224,7 +224,7 @@ jQuery(document).ready(function() {
 		jQuery(document.form_location).submit();
 	}
 	
-});
+});
 </script>
 
 <div id="cover_list_location">

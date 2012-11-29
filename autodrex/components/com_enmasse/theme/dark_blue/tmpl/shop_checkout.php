@@ -15,7 +15,7 @@ JHTML::_('behavior.formvalidation');
 	<div class="main_deal">
 		<?php include "cart_manage.php";?>
 		<div class="h13"></div>
-		<form action='index.php' id="orderDetail" name="orderDetail"  class="form-validate" method="post" onSubmit="return myValidate(this);">
+		<form action='index.php' id="orderDetail" name="orderDetail"  class="" method="post" onSubmit="return myValidate(this);">
 			<div class="infor_person_wrapper">
 				<div class="infor_person_header">
 					<b><?php echo JText::_('SHOP_CARD_CHECK_OUT_MESSAGE_LINE1');?></b>
