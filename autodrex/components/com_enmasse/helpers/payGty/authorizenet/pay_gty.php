@@ -70,13 +70,14 @@ if(isset($_POST['x_process']))
 
     if ($response->approved)
     {
-		
+	
 		if (!empty($_POST['save_cc'] )&& !empty($juser->id))
 		{
 			$db= JFactory::getDBO();
 			$time = time();
 			$xexpire = $_POST['x_exp_month'] . '/'.$_POST['x_exp_year'];
-			$db->setQuery ("INSERT INTO `#__vows8_cc_info` ( `cc_number`, `cc_expire`, `cc_cvv`, `updated_at`, `userid`) VALUES ( '{$_POST['x_card_num']}', '{$xexpire}', '{$_POST['x_card_code']}', '{$time}', '{$juser->id}' ");
+			$db->setQuery ("INSERT INTO `#__vows8_cc_info` ( `cc_number`, `cc_expire`, `cc_cvv`, `updated_at`, `userid`) VALUES ( '{$_POST['x_card_num']}', '{$xexpire}', '{$_POST['x_card_code']}', '{$time}', '{$juser->id}' )");
+
 			$db->query();
 		}
 	$approved = true;
@@ -160,13 +161,21 @@ $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent 
 if (	!empty($juser->id))
 {
 ?>
-<tr><td>Save credit card: </td><td><input type="checkbox"  name="save_cc" value="<?php echo $_POST['save_cc']; ?>"></input></td></tr>
+<tr><td>Save credit card: </td><td><input type="checkbox"  name="save_cc" value="<?php echo $_POST['save_cc']; ?>" /></td></tr>
 <?php
 }
 ?>
 <tr><td><input name="x_process" type="hidden" value="Process" ></td><td>
 <input type="hidden" type="text" name="x_invoice_num" value="<?php echo $this->orderId; ?>"/>
-<input type="hidden" type="text" name="x_description" value="<?php echo $item->item->short_desc; ?>"/>
+<?php
+if (	!empty($juser->id))
+{
+?>
+<input type="hidden" type="text" name="save_cc" value="<?php echo $item->item->short_desc; ?>"/>
+<?php
+}
+?>
+<input type="hidden" type="text" name="x_description" value="<?php echo $_POST['save_cc']; ?>"  />
 <input type="hidden" type="text" name="x_amount" value="<?php echo ($price * $cartItem->getCount()); ?>">
 <input type="hidden" type="text" name="x_type" value="<?php echo $this->attributeConfig->type; ?>">
 </td></tr>
