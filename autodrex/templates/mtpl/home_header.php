@@ -1,5 +1,6 @@
 <div id="header">
     <div  class="btn_localtion">
+	
 	<a onclick="#">
 		<?php 
 			if(empty($_COOKIE['CS_SESSION_LOCATIONID'])){

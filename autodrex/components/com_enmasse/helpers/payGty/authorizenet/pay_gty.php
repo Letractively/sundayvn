@@ -15,7 +15,7 @@ define("AUTHORIZENET_API_LOGIN_ID", $this->attributeConfig->api_login_id);
 define("AUTHORIZENET_TRANSACTION_KEY", $this->attributeConfig->transaction_key);
 define("AUTHORIZENET_SANDBOX", $this->attributeConfig->sandbox);
 define("TEST_REQUEST", $this->attributeConfig->test_request);
-	
+	$juser = JFactory::getUser();
 require_once 'sdk/AuthorizeNet.php';
 $pageURL = 'http';
 if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
@@ -70,6 +70,15 @@ if(isset($_POST['x_process']))
 
     if ($response->approved)
     {
+		
+		if (!empty($_POST['save_cc'] )&& !empty($juser->id))
+		{
+			$db= JFactory::getDBO();
+			$time = time();
+			$xexpire = $_POST['x_exp_month'] . '/'.$_POST['x_exp_year'];
+			$db->setQuery ("INSERT INTO `#__vows8_cc_info` ( `cc_number`, `cc_expire`, `cc_cvv`, `updated_at`, `userid`) VALUES ( '{$_POST['x_card_num']}', '{$xexpire}', '{$_POST['x_card_code']}', '{$time}', '{$juser->id}' ");
+			$db->query();
+		}
 	$approved = true;
 		JFactory::getSession()->set('cart', null);
 ?>	
@@ -147,6 +156,14 @@ $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent 
 <tr><td>First Name: </td><td><input type="text" size="25" name="x_first_name" value="<?php echo $_POST['x_first_name']; ?>"></input></td></tr>
 <tr><td>Last Name: </td><td><input type="text" size="25" name="x_last_name" value="<?php echo $_POST['x_last_name']; ?>"></input></td></tr>
 <tr><td>Email: </td><td><input type="text" size="25" name="x_email" value="<?php echo $_POST['x_email']; ?>"></input></td></tr>
+<?php
+if (	!empty($juser->id))
+{
+?>
+<tr><td>Save credit card: </td><td><input type="checkbox"  name="save_cc" value="<?php echo $_POST['save_cc']; ?>"></input></td></tr>
+<?php
+}
+?>
 <tr><td><input name="x_process" type="hidden" value="Process" ></td><td>
 <input type="hidden" type="text" name="x_invoice_num" value="<?php echo $this->orderId; ?>"/>
 <input type="hidden" type="text" name="x_description" value="<?php echo $item->item->short_desc; ?>"/>
