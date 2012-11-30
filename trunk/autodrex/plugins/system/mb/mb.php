@@ -7,6 +7,15 @@ class plgSystemMb extends JPlugin
 {    
 	function onAfterInitialise()
 	{
+
+	 $force = JRequest::getString('forcefullsite', '', 'cookie');
+		if ($force =='yes')
+		{
+				 JRequest::setVar('is_mobile_nano', 0);
+				 JRequest::setVar('is_mobile', 0);
+		}
+		else
+		{
 		$app = JFactory::getApplication();
 		if($app->isAdmin()) return;
 		
@@ -18,6 +27,7 @@ class plgSystemMb extends JPlugin
 			 JRequest::setVar('is_mobile', 1);
 		}else{
 			JRequest::setVar('is_mobile', 0);
+		}
 		}
 		
 	}

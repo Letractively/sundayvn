@@ -44,17 +44,15 @@ table td{
 }
 
 #cover_icon{
-	width:60px;
-	height:56px;
-	background: url("../images/bg_cover_icon.png") no-repeat center;
-	position: absolute;
+	background: black;
+	position: absolute;
 	right:6px;
 	top:33px;
 	display:none;
 	z-index:999;
 	padding-top:2px;
 }
-
+#cover_icon .blockbtn{display:block;text-align:left;padding: 5px 15px;}
 .btn_localtion{
 	background: url("../images/btn_location.png") no-repeat;
 	width: 130px;
@@ -69,7 +67,7 @@ table td{
 	color:white;
 	cursor:pointer;
 }
-
+#listCate{display:none;}
 #system-message-container{
 	margin:0px;
 	padding:0px;

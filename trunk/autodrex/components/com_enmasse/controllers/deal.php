@@ -55,8 +55,9 @@ class EnmasseControllerDeal extends JController {
         parent::display();
     }    
     function fullsite() {
-        JRequest::setVar('view', 'comment');
-        parent::display();
+      setcookie("forcefullsite", 'yes', time()+1800,'/');  /* expire in 1 hour */
+	 JFactory::getApplication()->redirect(JRoute::_('index.php?option=com_enmasse&controller=deal&task=deallisting'));
+       // parent::display();
     }    
 
     function dealSetLocationCookie() {

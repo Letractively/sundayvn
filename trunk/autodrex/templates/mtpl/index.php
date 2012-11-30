@@ -33,7 +33,7 @@ $home = ($view == 'dealtoday')?'home_':'';
 </head>
 
 <body class="body">
-	<?php include $home.'header.php';?>
+	<?php include 'header.php';?>
 	<div class="row error">
 	<jdoc:include type="message" />
 	</div>
@@ -42,5 +42,12 @@ $home = ($view == 'dealtoday')?'home_':'';
 		<?php include 'footer.php';?>
 	</div>
 	<p><a href='<?=JRoute::_('index.php?option=com_enmasse&controller=deal&task=fullsite');?>'>Go to fullsite</a></p>
-</body>
+	<script type='text/javascript'>
+		jQuery(document).ready(function(){
+			jQuery('.selectcate').click(function(){
+				jQuery('#listCate').toggle();
+			});
+		});
+	</script>
+	</body>
 </html>
