@@ -9,7 +9,7 @@ JHtml::_('behavior.framework');
 JHtml::_('behavior.formvalidation');
 JHtml::_('behavior.switcher');
 JHtml::_('behavior.tooltip');
-
+$jusr = JFactory::getUser();
 ?>
 
 <ul id="submenu" class="configuration">
@@ -49,7 +49,17 @@ JHtml::_('behavior.tooltip');
 <p><b>Card number: </b><?=$ccinfo['cc_number']?></p>
 <p><b>Card expiration: </b><?=$ccinfo['cc_expire']?></p>
 <p><b>CVV: </b><?=$ccinfo['cc_cvv']?></p>
-<?php } ?>
+
+<p><a href='<?=JRoute::_('index.php?option=com_enmasse&view=ccard&uid='.$jusr->id);?>'>Edit</a></p>
+<p><a href='<?=JRoute::_('index.php?option=com_enmasse&view=ccard&delete=yes');?>'>Remove</a></p>
+<?php }
+else
+{
+?>
+
+<p><a href='<?=JRoute::_('index.php?option=com_enmasse&view=ccard');?>'>Add</a></p>
+<?php
+} ?>
 </div>
 </div>
 </form>

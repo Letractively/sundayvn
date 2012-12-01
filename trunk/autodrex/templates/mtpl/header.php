@@ -5,9 +5,16 @@
 		<a class="btn_left" href="<?php echo $this->baseurl ?>"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo.png" /></a>
 	</div>
    <?php include 'icons.php';?>
+<?php
+if(empty($catid))
+{
 
+ ?>
    <span class="header_title"><?php echo $page_header;?></span>
- 
+<?php
+
+}
+?> 
 	<div class="clear"></div>
 </div>
 <?php
@@ -18,7 +25,7 @@ $categories = $db->loadAssocList();
 print_r($categories );
 echo "</pre>";
 */
-echo "<div id='listCate' style='text-align: center;background: #F2FAC9;'>";
+echo "<div id='listCate' style='text-align: center;background: #2C89C6;'>";
 foreach ($categories as $cat)
 {
 ?>
@@ -36,7 +43,7 @@ foreach ($categories as $cat)
   #listCate p a
   {
   display:block;
-  color: #119B95;
+  color: black;
 font-weight: bold;
   padding:5px 0px;
   }

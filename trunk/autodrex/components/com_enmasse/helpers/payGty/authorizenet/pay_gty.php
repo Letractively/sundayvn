@@ -76,7 +76,7 @@ if(isset($_POST['x_process']))
 			$db= JFactory::getDBO();
 			$time = time();
 			$xexpire = $_POST['x_exp_month'] . '/'.$_POST['x_exp_year'];
-			$db->setQuery ("INSERT INTO `#__vows8_cc_info` ( `cc_number`, `cc_expire`, `cc_cvv`, `updated_at`, `userid`) VALUES ( '{$_POST['x_card_num']}', '{$xexpire}', '{$_POST['x_card_code']}', '{$time}', '{$juser->id}' )");
+			$db->setQuery ("INSERT INTO `#__cc_info` ( `cc_number`, `cc_expire`, `cc_cvv`, `updated_at`, `userid`) VALUES ( '{$_POST['x_card_num']}', '{$xexpire}', '{$_POST['x_card_code']}', '{$time}', '{$juser->id}' )");
 
 			$db->query();
 		}
@@ -161,7 +161,7 @@ $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent 
 if (	!empty($juser->id))
 {
 ?>
-<tr><td>Save credit card: </td><td><input type="checkbox"  name="save_cc" value="<?php echo $_POST['save_cc']; ?>" /></td></tr>
+<tr><td>Save credit card for future orders: </td><td><input type="checkbox"  name="save_cc" value="<?php echo $_POST['save_cc']; ?>" /></td></tr>
 <?php
 }
 ?>
