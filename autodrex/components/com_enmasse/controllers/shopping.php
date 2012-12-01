@@ -274,7 +274,25 @@ class EnmasseControllerShopping extends JController
 		//save user input data into the session
 		if(JRequest::getMethod() == "POST")
 		{
+			$payGtyId 	= JRequest::getVar('payGtyId','2');
+			if ($payGtyId == 99)
+			{
+				$db= JFactory::getDbo();
+				$juser = JFactory::getUser();
+					$db->setQuery('select * from #__cc_info where `userid`="'. $juser->id  .'" order by id desc');
+	$cc = 		$db->loadAssoc();
+			$cc_expire = explode('/',$cc['cc_expire']);
+			$cc_month = $cc_expire[0];
+			$cc_year = $cc_expire[1];
+					$arData['x_card_num'] =  $cc['cc_number'];
+					$arData['x_exp_month'] =  $cc_month;
+					$arData['x_exp_year'] =  $cc_year;
+					$arData['x_card_code'] =  $cc['cc_cvv'];
+			}
+			else
+			{
 			$arData = JRequest::get('post');
+			}
 			JFactory::getApplication()->setUserState("com_enmasse.checkout.data", $arData);
 JFactory::getApplication()->setUserState("com_enmasse.checkout.dataautho", $arData);
 		}
@@ -363,6 +381,10 @@ JFactory::getApplication()->setUserState("com_enmasse.checkout.dataautho", $arDa
 		{
 			//deal is not free
 			$payGtyId 	= JRequest::getVar('payGtyId','2');
+			if ($payGtyId == 99)
+			{
+				$payGtyId = 4;
+			}
 			$payGty = JModel::getInstance('payGty','enmasseModel')->getById($payGtyId); //Authorize.Net
 			
 			// checking gateway configuration
