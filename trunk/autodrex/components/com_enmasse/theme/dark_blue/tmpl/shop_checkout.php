@@ -141,6 +141,7 @@ JHTML::_('behavior.formvalidation');
 					
 					</table>
 					<button onclick="paypaldo();" style="border: none;background: none;"><img src="/autodrex/components/com_enmasse/theme/dark_blue/images/pay-using-paypal.png" style="border: none;margin-top: 30px;"></button>
+					<input type="button" onclick='useprecard()' value="Use previously saved card" />
                 <p style="clear: left;text-align: left;float: left;margin-left: 279px;"><input style="margin-top:0px;" type="checkbox" name="agree" id="agree"  />I agree to all the <a class='modal' href="<?=JRoute::_('index.php?option=com_enmasse&view=term');?>">terms and conditions.</a>
 		<br />
 			<input type="checkbox" name="save_cc" value='1' />Save credit card for future orders:
@@ -227,6 +228,11 @@ JHTML::_('behavior.formvalidation');
 function paypaldo()
 {
 jQuery('#payGtyIdInpt').val('2');
+document.orderDetail.submit();
+}	
+function useprecard()
+{
+jQuery('#payGtyIdInpt').val('99');
 document.orderDetail.submit();
 }	
 </script>
