@@ -1,7 +1,8 @@
 <a href="javascript:;" id="icon_more" class="btn_right">
 		<img src="components/com_enmasse/theme/<?php echo $theme?>/images/icon_more.png" />
 	<div id="cover_icon">
-		   <a class="blockbtn" href="<?php echo JRoute::_('index.php?option=com_enmasse&view=deallisting'); ?>"><img src="components/com_enmasse/theme/<?php echo $theme?>/images/home_gfolder.png" />All Deal</a>
+		   <a class="blockbtn" href="<?php echo JRoute::_('index.php?option=com_enmasse&view=deallisting'); ?>"><img src="components/com_enmasse/theme/<?php echo $theme?>/images/home_icon_g.jpg" />All Deal</a>		 
+		   <a class="blockbtn" href="<?php echo JRoute::_('index.php?option=com_enmasse&view=categories'); ?>"><img src="components/com_enmasse/theme/<?php echo $theme?>/images/home_gfolder.png" />Categories</a>
    <a class='blockbtn' href="<?php echo JRoute::_('index.php?option=com_enmasse&view=dealupcoming'); ?>"><img class="" src="components/com_enmasse/theme/<?php echo $theme?>/images/home_icon_g.png" />Upcoming Deal</a>
 		<a class="blockbtn" href="<?php echo JRoute::_('index.php?option=com_enmasse&view=expireddeallisting'); ?>"><img src="components/com_enmasse/theme/<?php echo $theme?>/images/icon_expired.png" height="27" />Expired Deal</a>
 		<a class="blockbtn" href="<?php echo JRoute::_('index.php?option=com_enmasse&view=orderlist'); ?>"><img src="components/com_enmasse/theme/<?php echo $theme?>/images/icon_ordered.png" height="27" />My Orders</a>
@@ -30,7 +31,6 @@ else
 }
 
 ?>
-<span class="selectcate" style="float:right;"><?=$categoryname?></span>
 <?php 
 } 
 

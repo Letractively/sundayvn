@@ -52,7 +52,7 @@ class PayGtyPaypal
 		$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
 
 		// If possible, securely post back to paypal using HTTPS, cannot use http, as it don't recongize
-		$fp = fsockopen ('www.paypal.com', 80, $errno, $errstr, 30);
+		$fp = fsockopen ('www.sandbox.paypal.com', 80, $errno, $errstr, 30);
 
 		// assign posted variables to local variables
 
