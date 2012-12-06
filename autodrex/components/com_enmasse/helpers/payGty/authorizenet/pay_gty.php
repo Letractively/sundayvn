@@ -103,7 +103,7 @@ exit;
     else
     {
 		$approved = false;
-    	echo "<span style=\"color: red;\">No previousle saved credit card. Input information to proceed <br />".$response->response_reason_text."</span><br/>";
+    	echo "<span style=\"color: red;\">No previousle saved credit card. Input credit card to proceed. <br />".$response->response_reason_text."</span><br/>";
     }
 }
 ?>
