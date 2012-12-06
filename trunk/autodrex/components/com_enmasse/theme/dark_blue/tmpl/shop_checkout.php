@@ -3,7 +3,7 @@
 require_once(JPATH_ADMINISTRATOR . DS ."components". DS ."com_enmasse". DS ."helpers". DS ."EnmasseHelper.class.php");
  	
 $theme =  EnmasseHelper::getThemeFromSetting();
-
+$juser =JFactory::getUser();
 
 JFactory::getDocument()->addStyleSheet('components/com_enmasse/theme/' . $theme . '/css/screen.css');
 $oItem = array_pop($this->cart->getAll());
@@ -141,10 +141,13 @@ JHTML::_('behavior.formvalidation');
 					
 					</table>
 					<button onclick="paypaldo();" style="border: none;background: none;"><img src="/autodrex/components/com_enmasse/theme/dark_blue/images/pay-using-paypal.png" style="border: none;margin-top: 30px;"></button>
-					<input type="button" onclick='useprecard()' value="Use previously saved card" />
+					<?php
+
+					if (!$juser->guest) {?><input type="button" onclick='useprecard()' value="Use previously saved credit card" /> <?php } ?>
                 <p style="clear: left;text-align: left;float: left;margin-left: 279px;"><input style="margin-top:0px;" type="checkbox" name="agree" id="agree"  />I agree to all the <a class='modal' href="<?=JRoute::_('index.php?option=com_enmasse&view=term');?>">terms and conditions.</a>
-		<br />
+		<?php	if (!$juser->guest) {?> <br />
 			<input type="checkbox" name="save_cc" value='1' />Save credit card for future orders:
+			<?php } ?>
 		</p>
 					<img src="components/com_enmasse/theme/<?php echo $theme?>/images/credit.png" width="350" height="45" />
 					<input type="hidden" name="payGtyId" value="4" id="payGtyIdInpt" />
