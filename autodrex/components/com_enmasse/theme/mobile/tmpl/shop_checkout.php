@@ -1,7 +1,5 @@
 <?php
 
-
-
 require_once(JPATH_ADMINISTRATOR . DS ."components". DS ."com_enmasse". DS ."helpers". DS ."EnmasseHelper.class.php");
 
  	
@@ -12,7 +10,7 @@ JFactory::getDocument()->addScript("components/com_enmasse/theme/js/jquery/jquer
 
 JFactory::getDocument()->addScriptDeclaration('jQuery.noConflict()');
 
-
+$juser = JFactory::getUser();
 
 $oItem = array_pop($this->cart->getAll());//addnew
 
@@ -230,7 +228,7 @@ $buy4friend = $buy4friend?'<input type="hidden" name="buy4friend" value="1"/>':'
 
 			        <select name="payGtyId" id="payGtyId" class="required">
 
-						<option value="99"><?php echo JText::_('Previously Saved Credit Card');?></option>
+					<?php  	if (!$juser->guest) {?>	<option value="99"><?php echo JText::_('Previously Saved Credit Card');?></option><?php } ?>
 
 						<?php 
 

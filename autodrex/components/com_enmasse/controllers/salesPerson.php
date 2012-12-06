@@ -355,7 +355,15 @@ class EnmasseControllerSalesPerson extends JController
 		}
 		return $salesPersonId;
 	}
-	
+	function logout()
+	{
+	$app = JFactory::getApplication();              
+$user = JFactory::getUser();
+$user_id = $user->get('id');            
+$app->logout($user_id, array());
+			$link = JURI::base();
+				JFactory::getApplication()->redirect($link);
+	}
 	
 }
 ?>

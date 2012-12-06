@@ -4,9 +4,8 @@ $point = $this->cart->getPoint();
 $cartItem = array_pop($this->cart->getAll());
 $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent / 100, 2);
 ?>
-<div style="margin-top:0px"><?php $is_mobile = JRequest::getVar('is_mobile');if (!empty($is_mobile)){	$hosts = 'https://mobile.paypal.com/cgi-bin/webscr';}else{	$hosts = 'https://www.sandbox.paypal.com/cgi-bin/webscr';} ?>
-<form action="<?=$hosts?>" method="post" name="_xclick">
-<input type="hidden" name="cmd" value="_xclick">
+<div style="margin-top:0px"><?php 	$hosts = 'https://www.paypal.com/cgi-bin/webscr'; ?>
+<form action="<?=$hosts?>" method="post" name="orderform"><?php if (!empty($is_mobile)){?><input type="hidden" name="cmd" value="_express-checkout-mobile"><?php } else{?><input type="hidden" name="cmd" value="_xclick"><?php}?>
 <input type="hidden" name="business" value="<?php echo $this->attributeConfig->merchant_email; ?>">
 <input type="hidden" name="lc" value="<?php echo $this->attributeConfig->country_code; ?>">
 
@@ -28,7 +27,7 @@ $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent 
 <?php echo JText::_('PAYPAL_REDIRECT'); ?>
 </div>
 <script>
-    setTimeout(function(){document._xclick.submit()}, 3000);    
+    setTimeout(function(){document.orderform.submit()}, 3000);    
 </script>
 <?php 
 	$this->cart->deleteAll();
