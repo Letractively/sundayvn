@@ -267,10 +267,17 @@ class EnmasseControllerShopping extends JController
 
 	function submitCheckOut()
 	{
+			$agree 	= JRequest::getVar('agree');
+		
 		$activeGuestBuying = EnmasseHelper::isGuestBuyingEnable();
 		$bBuy4friend = JRequest::getVar('buy4friend', 0);
 		$sEmailPt = "/^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/";
-
+	if (empty($agree))
+			{
+				$msg = JText::_("AGREE_TERM_CONDITION_MSG");
+		$link = JRoute::_("index.php?option=com_enmasse&controller=shopping&task=checkout&buy4friend=$bBuy4friend", false);
+			JFactory::getApplication()->redirect($link, $msg, 'error');
+			}
 		//save user input data into the session
 		if(JRequest::getMethod() == "POST")
 		{
