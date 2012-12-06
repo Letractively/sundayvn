@@ -298,7 +298,7 @@ $buy4friend = $buy4friend?'<input type="hidden" name="buy4friend" value="1"/>':'
 
 		    			<br />
 
-				        <input type="checkbox" name="terms" id="terms" class="required" <?php if(isset($this->arData['terms'])) echo "checked=\"checked\""?>>
+				        <input type="checkbox" name="agree" id="terms" class="required" <?php if(isset($this->arData['terms'])) echo "checked=\"checked\""?>>
 
 				    	<?php echo JText::_('SHOP_CARD_CHECK_OUT_TERM_CONDITION');?>
 
