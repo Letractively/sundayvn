@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.5" method="upgrade">
+    <name>COM_GOOGLEMAPLOCATION</name>
+    <!-- The following elements are optional and free of formatting conttraints -->
+    <creationDate>August 2012</creationDate>
+    <author>Truong Cong Duc</author>
+    <authorEmail>duc.truong@beyondedge.com.sg</authorEmail>
+    <authorUrl>http://www.beyondedge.com.sg</authorUrl>
+    <copyright>Copyright Info</copyright>
+    <license>License Info</license>
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.0</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>COM_GOOGLEMAPLOCATION_DESCRIPTION</description>
+ 
+    <!-- Runs on install/uninstall/update; New in 1.6 -->
+    <scriptfile>install.php</scriptfile>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+ 
+    <files folder="com_googlemaplocation">
+        <filename>index.html</filename>
+        <filename>googlemaplocation.php</filename>
+        <filename>controller.php</filename>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>language</folder>
+        <folder>uploads</folder>
+    </files>
+ 
+    <administration>
+        <!-- Administration Menu Section -->
+        <menu img="templates/bluestork/images/menu/icon-16-component.png">COM_GOOGLEMAPLOCATION_MENU</menu>
+        <!-- Administration Main File Copy Section -->
+        <!-- Note the folder attribute: This attribute describes the folder
+        to copy FROM in the package to install therefore files copied
+        in this section are copied from /admin/ in the package -->
+        <files folder="admin">
+            <!-- Admin Main File Copy Section -->
+            <filename>index.html</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <filename>googlemaplocation.php</filename>
+            <filename>controller.php</filename>
+            <filename>toolbar.googlemaplocation.html.php</filename>
+            <!-- SQL files section -->
+            <folder>sql</folder>
+            <!-- tables files section -->
+            <folder>tables</folder>
+            <!-- models files section -->
+            <folder>models</folder>
+            <!-- views files section -->
+            <folder>views</folder>
+            <!-- controllers files section -->
+            <folder>controllers</folder>
+            <!-- helpers files section -->
+            <folder>helpers</folder>
+            
+            <folder>uploads</folder>
+        </files>
+ 
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_googlemaplocation.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_googlemaplocation.sys.ini</language>
+        </languages>
+    </administration>
+ 
+</extension>

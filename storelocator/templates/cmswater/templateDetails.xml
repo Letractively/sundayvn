@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+    <name>CMS Water</name>
+    <version>2.5</version>
+    <creationDate>May 20, 2012</creationDate>
+    <author>Luis Posselt</author>
+    <authorEmail>info@cmsteachings.com</authorEmail>
+    <authorUrl>http://cmsteachings.com</authorUrl>
+    <copyright>Free CMS Water Joomla Template</copyright>
+    <license>GNU/GPL</license>
+    <description>
+	<![CDATA[<h1>Free CMS Water Joomla Template</h1>
+		  	<p><img src="http://d22qpcd7e79tuf.cloudfront.net/images/2012/may2012/hd-small-cmswater.png" width="300" height="190" alt="CMS Template Installed Successfully" title="CMS Template Installed Successfully" /></p>
+			<h3><span style="color:red;font-weight:bold;">Free Templates are NOT for commercial use!!!</span></h3>
+			<p>We don't provide support for Free Templates more than the videos you can watch for FREE inside our <a href="http://cmsteachings.com/free-joomla-templates-videos" target="_blank">Free Joomla Templates Videos</a></p>
+			<h3><span style="color:red;font-weight:bold;">Need Commercial Permission and Support?</span></h3>
+			<p>We only develop commercial templates and provide support for our private members inside our Joomla Bootcamp Trainings. If you want to get our commercial templates, learn to develop Joomla Templates, and get professional support, you will need to become a member.</p>
+			<h3><span style="color:red;font-weight:bold;">How you can become a member?</span></h3> 
+			<p>You will need to start by watching our <a href="http://cmsteachings.com/how-build-joomla-template" target="_blank">Free Presentation.</a></p>
+			]]>
+	</description>
+  <files>
+  	<filename>component.php</filename>
+	<filename>favicon.ico</filename>
+  	<filename>error.php</filename>
+	<filename>index.php</filename>
+  	<filename>offline.php</filename>
+	<filename>optimizer.php</filename>
+  	<filename>template_thumbnail.png</filename>
+  	<filename>template_preview.png</filename>
+  	<filename>templateDetails.xml</filename>
+	<folder>css</folder>
+	<folder>html</folder>
+	<folder>images</folder>
+	<folder>js</folder>
+	<folder>language</folder>
+  </files>
+  <positions>
+  	<position>banner</position>
+  	<position>breadcrumb</position>
+  	<position>debug</position>
+  	<position>footer</position>
+  	<position>left</position>
+	<position>lefttopmenu</position>
+	<position>logo</position>
+	<position>mainmenu</position>
+	<position>right</position>
+	<position>search</position>
+	<position>showcase</position>
+	<position>social</position>
+  </positions>
+  <languages folder="language">
+      <language tag="en-GB">en-GB/en-GB.tpl_cmswater.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+        <fieldset name="advanced">
+            <field name="generator"  type="text" default="" label="GENERATOR_LABEL" description="GENERATOR_DESCRIPTION" filter="string" />
+            <field name="mootools_core_enabled" type="radio" default="1" label="MOOTOOLS_CORE_LABEL" description="MOOTOOLS_CORE_DESCRIPTION">
+                <option value="0">N</option>
+                <option value="1">Y</option>
+            </field>
+			<field name="mootools_more_enabled" type="radio" default="1" label="MOOTOOLS_MORE_LABEL" description="MOOTOOLS_MORE_DESCRIPTION">
+                <option value="0">N</option>
+                <option value="1">Y</option>
+            </field>
+            <field name="caption_enabled" type="radio" default="1" label="CAPTION_LABEL" description="CAPTION_DESCRIPTION">
+                <option value="0">N</option>
+                <option value="1">Y</option>
+            </field>
+        </fieldset>
+    </fields>
+  </config>
+</extension>

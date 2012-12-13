@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0.0" client="site" method="upgrade">
+    <name>mod_map_legend</name>
+    <author>BeyondEdge</author>
+    <creationDate>August 2012</creationDate>
+    <copyright>Copyright</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>duc.truong@beyondedge.com.sg</authorEmail>
+    <authorUrl>www.beyondedge.com.sg</authorUrl>
+    <version>2.5.0</version>
+    <description>MOD_MAP_LEGEND_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_map_legend">mod_map_legend.php</filename>
+        <filename>mod_map_legend.xml</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    
+    <languages>
+        <language tag="en-GB">languages/en-GB/en-GB.mod_map_legend.ini</language>
+        <language tag="en-GB">languages/en-GB/en-GB.mod_map_legend.sys.ini</language>
+    </languages>
+    
+    <params>
+    </params>
+</extension>
