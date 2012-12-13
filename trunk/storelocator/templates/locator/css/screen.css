@@ -1,0 +1,142 @@
+  /**************************/
+ /*        CSS reset       */
+/**************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+body {line-height:1;}
+ol, ul {list-style:none;}
+blockquote, q {quotes:none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content:''; content:none;}
+:focus {outline:0;}
+ins {text-decoration:none;}
+del {text-decoration:line-through;}
+/*caption, th, td {text-align: left; font-weight: normal;}
+table, caption, tbody, tfoot, thead, tr, th, td {font-size:100%; vertical-align:baseline; outline:0; margin:0; padding:0;}
+table { border-collapse:collapse; border-spacing: 0;}*/
+/******* Default rules tags *******/
+body {font-family:Arial, Helvetica, sans-serif; color:#333333; background:url(../images/bgd_body.png) repeat-x #fff; font-size:12px;}
+h1 {font-size:20px;}
+h2 {font-size:18px; }
+h3 {font-size:16px;}
+h4 {font-size:14px;}
+h5 {font-size:12px;}
+a{text-decoration:none; color:#000;}
+a:hover{text-decoration:underline;}
+input, select, textarea {font-size:11px; border:1px solid #b4d8e2; font-family:Arial, Helvetica, sans-serif; color:#939393;}
+/*0. ///////Structure all templates///////*/
+#container {width:970px; margin:0 auto; background:url(../images/bgd_body_light_transparent.png) no-repeat 50% 0;}
+	/*******Header*******/
+	#header {overflow:hidden; background:url(../images/line_header.png) repeat-x 0 100%; padding:18px 0 20px; margin:0 0 10px;}
+		#header h1 {text-align:center;}	
+		#header h1 span {display:block; padding:8px 0 0;}
+			.txtDecrTit {font-size:18px; font-family:Verdana, Geneva, sans-serif; line-height:23px; font-weight:normal; color:#585858; line-height:18px;}
+
+	/*******main*******/
+	#main {overflow:hidden;}
+		/********Context*******/			
+		#context {width:280px; padding:0 15px 0 0; float:left;}
+		
+		/********Content*******/
+		#content {width:674px; padding:10px 0 20px; float:left;}
+		#content h3 {font-size:18px; color:#333333; line-height:22px; padding:0 0 15px;}
+		
+		
+		/********Oveview class*******/
+		.contType1 {}
+		.wrapType1 {}
+	/********footer********/
+	#footer {}	
+		#footer p{}		
+/*1///////Style on ever page///////*/	
+	/*blockSearch*/
+	.blockSearch {overflow:hidden;}
+	.blockSearch h3 {background:url(../images/bgd_tit.png) no-repeat 0 0; color:#FFF; font-size:18px; line-height:23px; padding:10px 20px 0; height:34px;}
+		.listItemSearch {background-color:#FFF; padding:10px 10px 0; margin:0 25px 0 5px;}
+		.titSearchBy {padding:0 0 10px; display:block;}
+		.bgBot {display:block; background:url(../images/bgd_block_context.png) no-repeat 0 100%; height:10px; margin:0 0 0 5px;}
+	
+	/*blockContent*/
+	.blockContent {overflow:hidden; background:url(../images/bgd_content.png) no-repeat 0 0; padding:10px 0 0;}
+	.innerBlockCont {background:url(../images/bgd_content.png) no-repeat -690px 100% #FFF; padding:0 8px 10px 9px;}
+	
+	
+	/*search page*/
+	.txtResult {font-size:11px; color:#555; padding:0 0 20px;}
+	.listLocate {overflow:hidden; padding:20px 0 0;}
+	.listLocate li {padding:0 0 5px; line-height:15px; overflow:hidden; width:218px; float:left;}
+	.listLocate li img {padding:0 7px 0 0; float:left;}
+	.listLocate li span {overflow:hidden; width:160px; padding:5px 0 0; font-size:11px; font-weight:bold; float:left;}
+	.titNote, .listLocate li.titNote {font-weight:bold; padding:0 0 10px; font-size:14px; line-height:18px; width:100%;}
+		
+		
+/*2. ///////Block type of templates///////*/
+		/*hightlight*/	
+		.hightlight01 {}	
+		/*hightlight*/	
+		.blockType01 {}	
+/*3. ///////Block common of templates///////*/
+		/*breadcrumb*/
+		.breadcrumb {}	
+			.breadcrumb li{}
+		/*paging*/
+		.paging {}
+			.paging li{}
+			.paging ul{}		
+		/*fckDefault*/			
+		.fckDefault {overflow:hidden; line-height:16px }
+		.fckDefault ul , .editorInfo ol{ margin:0 0 10px 0;}
+		.fckDefault ul li { margin:0; list-style-type:disc; padding:0 0 10px 0; list-style:inside;}
+		.fckDefault ol li { margin:0; list-style-type:decimal!important; list-style:inside; padding:0 0 10px 0;}
+		
+/*4 ///////Layer common of templates///////*/	
+/*5 ///////Style add from js///////*/
+	/* Layer alert */	
+	.alertLayer {color:#424242; background:#edd540; padding:3px 5px; overflow:hidden; display:block; position:absolute; top:-1500px}
+		.alertLayer .message {color:#424242; padding:0 0 0 5px; margin:0}
+/*6. ///////Form common to all templates///////*/
+	/*class common on form : checkbox, radio*/
+	.chekbox { width:13px; height:13px; vertical-align:middle; border:0;}
+	/*form General*/
+	.frmGeneral {}
+		.frmGeneral input {}
+		.frmGeneral label {}
+	
+	/*frmSearch*/
+	.frmSearch {overflow:hidden;}
+	.frmSearch li {overflow:hidden; padding:0 0 10px;}
+	.frmSearch li label {width:50px; padding:0 7px 0 0; float:left;}
+	.frmSearch li select {width:173px; height:20px;}
+	.frmSearch li input {width:228px; margin:10px 0 0; height:18px;}
+	
+	
+/*7. ///////Buttons common to all templates///////*/
+	/*Button input*/
+	.btn {background:url(../images/uiButton.png) no-repeat 0 0; padding:0 0 0 9px; float:left;}	
+	.btn span {background:url(../images/uiButton.png) no-repeat 100% -30px; padding:0 9px 0 0; float:left;}
+	.btn span input {background:url(../images/uiButton.png) repeat-x 0 -60px; padding:0 10px; margin:0; width:auto; overflow:visible; border:0; color:#FFF; font-weight:bold; text-align:center; cursor:pointer; font-size:12px; height:25px;}
+	
+		
+/*8. ///////Classes common to all templates///////*/
+	.loading {}
+	.hidden {display:none}
+	.floatL { float:left}
+	.floatR { float:right}
+	
+/*9. CSS Sprites ///////Styles sprite to all templates///////*/
+/*10. End///////ID common to all templates///////*/
+		/*Id on tab body*/
+		/*Structute Style 01*/
+		#defauPage #main , #defauPage #wrapMain {}
+		#defauPage #content {}
+		/*Structute Style 01*/
+		#photoPage #wrapMain {}
+		#photoPage #main {}
+
+                #txtAddress {padding: 1px 0;}

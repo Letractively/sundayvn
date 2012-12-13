@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="1.6" type="template" client="site">
+    <name>google-map-locator</name>
+    <creationDate>21-08-2012</creationDate>
+    <author>Truong Cong Duc</author>
+    <authorEmail>duc.truong@beyondedge.com.sg</authorEmail>
+    <authorUrl>www.beyondedge.com.sg</authorUrl>
+    <copyright>Copyright (C) Your name here</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.0.0</version>
+    <description>Google Map Locator Template</description>
+    <files>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+        <filename>index.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+    </files>
+    <positions>
+        <position>left-menu</position>
+        <position>under-component</position>
+    </positions>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_starter-template.ini</language>
+    </languages>
+</extension>

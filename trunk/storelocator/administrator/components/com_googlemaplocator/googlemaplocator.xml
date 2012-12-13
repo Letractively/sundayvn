@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.5" method="upgrade">
+    <name>COM_GOOGLEMAPLOCATOR</name>
+    <!-- The following elements are optional and free of formatting conttraints -->
+    <creationDate>August 2012</creationDate>
+    <author>Truong Cong Duc</author>
+    <authorEmail>duc.truong@beyondedge.com.sg</authorEmail>
+    <authorUrl>http://www.beyondedge.com.sg</authorUrl>
+    <copyright>Copyright Info</copyright>
+    <license>License Info</license>
+    <!--  The version string is recorded in the components table -->
+    <version>1.0.0</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>COM_GOOGLEMAPLOCATOR_DESCRIPTION</description>
+ 
+    <scriptfile>install.php</scriptfile>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+ 
+    <files folder="com_googlemaplocator">
+        <filename>index.html</filename>
+        <filename>googlemaplocator.php</filename>
+        <filename>controller.php</filename>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>language</folder>
+        <folder>uploads</folder>
+    </files>
+ 
+    <administration>
+        <menu img="templates/bluestork/images/menu/icon-16-component.png">COM_GOOGLEMAPLOCATOR_MENU</menu>
+        <files folder="admin">
+            <filename>index.html</filename>
+            <filename>config.xml</filename>
+            <filename>access.xml</filename>
+            <filename>googlemaplocator.php</filename>
+            <filename>controller.php</filename>
+            <filename>toolbar.googlemaplocator.html.php</filename>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>uploads</folder>
+        </files>
+ 
+        <languages folder="admin">
+            <language tag="en-GB">language/en-GB/en-GB.com_googlemaplocator.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_googlemaplocator.sys.ini</language>
+        </languages>
+    </administration>
+ 
+</extension>

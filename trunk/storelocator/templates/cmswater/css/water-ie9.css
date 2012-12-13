@@ -1,0 +1,14 @@
+/* Search Module Goes Here */
+#search input#mod-search-searchword {
+  background: url(../images/header-water.png) no-repeat -180px 0;
+  height: 34px;
+  width: 218px;
+  border: none;
+  text-indent: 15px;
+}
+#search input#mod-search-searchword:focus {
+  background: url(../images/header-water.png) no-repeat -180px -36px;
+  height: 34px;
+  width: 218px;
+  color: #FFF;
+}
