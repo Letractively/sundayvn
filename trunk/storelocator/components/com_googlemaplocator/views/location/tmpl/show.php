@@ -5,6 +5,8 @@ $filter_zone = JRequest::getInt("filter_zone");
 $filter_type = JRequest::getInt("filter_type");
 $filter_address = JRequest::getString("filter_address");
 $filter_service = JRequest::getInt("filter_service");
+$geoData =  (unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=222.253.149.154')));
+JRequest::setVar('geoData',$geoData);
 ?>
 
 <script src="<?php echo JURI::root(); ?>components/com_googlemaplocator/helpers/jquery.min.js"></script>
@@ -12,68 +14,21 @@ $filter_service = JRequest::getInt("filter_service");
 <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
 <script>
     jQuery.noConflict();
-    /*jQuery(document).ready(function($) {
-        
-        // First load.
-        $("#filter_zone").val(<?php echo $filter_zone; ?>);
-        $("#filter_type").val(<?php echo $filter_type; ?>);
-        $("#filter_address").val("<?php echo $filter_address; ?>");
-        $("#filter_service").val(<?php echo $filter_service; ?>);
-        
-        var zone = $("#filter_zone").val();
-        var type = $("#filter_type").val();
-        var service = $("#filter_service").val();
-        var address = $("#filter_address").val();
-        
-        var strPath = "<?php echo JURI::root(); ?>index.php?option=com_googlemaplocator&controller=location&task=googlemap&tmpl=component";
-        
-        $.post(
-            strPath,
-            {
-                filter_zone: zone,
-                filter_type: type,
-                filter_service: service,
-                filter_address: address
-            },
-            function(data) {
-                $("#map_canvas").html(data);                  
-            }
-        );
-
-        // Click on submit.
-        $("#btnSearch").click(function() {
-            var zone = $("#filter_zone").val();
-            var type = $("#filter_type").val();
-            var service = $("#filter_service").val();
-            var address = $("#filter_address").val();
-            
-            $.post(
-                strPath,
-                {
-                    filter_zone: zone,
-                    filter_type: type,
-                    filter_service: service,
-                    filter_address: address
-                },
-                function(data) {
-                    $("#map_canvas").html(data);            
-                }
-            );
-        });
-    });
-	*/
+  
+	
 </script>
  <script>
       function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(-33.8688, 151.2195),
+        var mapOptions = 
+		{
+          center: new google.maps.LatLng(<?php echo $geoData['geoplugin_latitude'] ?>, <?php echo $geoData['geoplugin_longitude'] ?>),
           zoom: 13,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById('map_canvas'),
           mapOptions);
 
-        var input = document.getElementById('searchTextField');
+        var input = document.getElementById('filter_address');
         var autocomplete = new google.maps.places.Autocomplete(input);
 
         autocomplete.bindTo('bounds', map);
@@ -83,7 +38,8 @@ $filter_service = JRequest::getInt("filter_service");
           map: map
         });
 
-       google.maps.event.addListener(autocomplete, 'place_changed', function() {
+       google.maps.event.addListener(autocomplete, 'place_changed', function() 
+	   {
   var place = autocomplete.getPlace();
   if (!place.geometry) {
     // Inform the user that a place was not found and return.
@@ -105,9 +61,33 @@ $filter_service = JRequest::getInt("filter_service");
       new google.maps.Size(35, 35));
   marker.setIcon(image);
   marker.setPosition(place.geometry.location);
+  var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            '(last visited June 22, 2009).</p>'+
+            '</div>'+
+            '</div>';
 
-  infowindow.setContent(place.name);
-  infowindow.open(map, marker);
+  infowindow.setContent(contentString);
+  //infowindow.open(map, marker);
+     
+ google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
 });
 
         // Sets a listener on a radio button to change the filter type on Places
@@ -122,6 +102,19 @@ $filter_service = JRequest::getInt("filter_service");
         setupClickListener('changetype-all', []);
         setupClickListener('changetype-establishment', ['establishment']);
         setupClickListener('changetype-geocode', ['geocode']);
+		
+		
+   
+		var myLatlng = new google.maps.LatLng(10.822831,106.63201);
+        var marker2 = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Uluru (Ayers Rock)'
+        });
+		
+		
+		
+      
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
@@ -130,14 +123,6 @@ $filter_service = JRequest::getInt("filter_service");
 
 
 <div class="map" id="locator">
-	  <input id="searchTextField" type="text" size="50" />
-	    <input type="radio" name="type" id="changetype-all" checked="checked" />
-      <label for="changetype-all">All</label>
-
-      <input type="radio" name="type" id="changetype-establishment">
-      <label for="changetype-establishment">Establishments</label>
-
-      <input type="radio" name="type" id="changetype-geocode">
-      <label for="changetype-geocode">Geocodes</label>
+	
     <div id="map_canvas" style="width: 100%; height: 20em;"></div>
 </div>
