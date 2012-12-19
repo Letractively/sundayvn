@@ -13,7 +13,7 @@ class plgSystemMb extends JPlugin
 		if(!class_exists('Browser')) require_once 'Browser.php';
 		$browser = new Browser();
 		if($browser->isMobile()) {
-		die('a');
+	
 				$app->setTemplate('Cmswater');
 			JRequest::setVar('is_mobile', 1);
 		}else{

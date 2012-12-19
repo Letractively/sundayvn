@@ -5,7 +5,8 @@ $filter_zone = JRequest::getInt("filter_zone");
 $filter_type = JRequest::getInt("filter_type");
 $filter_address = JRequest::getString("filter_address");
 $filter_service = JRequest::getInt("filter_service");
-$geoData =  (unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=222.253.149.154')));
+$geoData =  (unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip='.$_SERVER['REMOTE_ADDR'])));
+//$geoData =  (unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=222.253.149.154')));
 JRequest::setVar('geoData',$geoData);
 ?>
 
@@ -18,7 +19,12 @@ JRequest::setVar('geoData',$geoData);
 	
 </script>
  <script>
-   	
+   	var myLatNumber = '<?php echo $geoData['geoplugin_latitude'] ?>';
+   	var myLongNumber = '<?php echo $geoData['geoplugin_longitude'] ?>';
+	  var directionsService = new google.maps.DirectionsService();
+  var directionsDisplay = new google.maps.DirectionsRenderer();
+    var myLocationMarker;
+	   var map;
       function initialize() {
         var mapOptions = 
 		{
@@ -26,9 +32,17 @@ JRequest::setVar('geoData',$geoData);
           zoom: 13,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        var map = new google.maps.Map(document.getElementById('map_canvas'),
+         map = new google.maps.Map(document.getElementById('map_canvas'),
           mapOptions);
 
+
+        var image = 'http://localhost/locator/components/com_googlemaplocator/uploads/police.png';
+        var myLatLng = new google.maps.LatLng(myLatNumber, myLongNumber);
+         myLocationMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: image
+        });
         var input = document.getElementById('filter_address');
         var autocomplete = new google.maps.places.Autocomplete(input);
 
@@ -53,10 +67,15 @@ JRequest::setVar('geoData',$geoData);
     map.setCenter(place.geometry.location);
     map.setZoom(17);
   }
-  var image = new google.maps.MarkerImage(
+  /*var image = new google.maps.MarkerImage(
       place.icon, new google.maps.Size(71, 71),
       new google.maps.Point(0, 0), new google.maps.Point(17, 34),
       new google.maps.Size(35, 35));
+	    marker.setPosition(place.geometry.location);  
+	*/
+	myLocationMarker.setPosition(place.geometry.location);
+	myLatNumber = place.geometry.location.lat();
+	myLongNumber = place.geometry.location.lng();
 });
 
 //get locations
@@ -76,13 +95,7 @@ var myLatlng = new google.maps.LatLng(<?php echo $itemL['loc_x'] ?>,<?php echo $
 	      marker<?php echo $itemL['id']; ?>.setVisible(true);
 	  
 	  
-	       var contentString = '<div id="content" style="width:50px">'+
-
-            '<h1 id="firstHeading" class="firstHeading"><?php echo $itemL['name'] ?></h1>'+
-            '<div id="bodyContent">'+
-            '<p><?php echo $itemL['description'] ?></p>'+
-            '</div>'+
-            '</div>';
+	       var contentString = '<p><b><?php echo $itemL['name'] ?></b><br /><?php echo $itemL['description'] ?></p>';
 
         var infowindow<?php echo $itemL['id'] ?> = new google.maps.InfoWindow({
             content: contentString
@@ -100,6 +113,9 @@ var myLatlng = new google.maps.LatLng(<?php echo $itemL['loc_x'] ?>,<?php echo $
 <?php
 }
 ?>
+
+    
+        
 //getlocation -end
  
 	
@@ -118,7 +134,30 @@ var myLatlng = new google.maps.LatLng(<?php echo $itemL['loc_x'] ?>,<?php echo $
 	
       
       }
-
+function getdirection()
+{
+var latNumber = jQuery(this).attr('lat');
+var longNumber = jQuery(this).attr('long');
+	  directionsDisplay.setMap(map);
+		  var myLatlng = new google.maps.LatLng(myLatNumber, myLongNumber);
+   var start = myLatlng;
+		  var myLatlng = new google.maps.LatLng(latNumber, longNumber);
+        var end =myLatlng;
+        var request = {
+            origin:start,
+            destination:end,
+            travelMode: google.maps.DirectionsTravelMode.DRIVING
+        };
+        directionsService.route(request, function(response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+          }
+        });
+      
+}
+jQuery(document).ready(function(){
+jQuery('.showdirect').click(getdirection);
+});
       google.maps.event.addDomListener(window, 'load', initialize);
    
 
@@ -130,4 +169,17 @@ var myLatlng = new google.maps.LatLng(<?php echo $itemL['loc_x'] ?>,<?php echo $
 <div class="map" id="locator">
 	
     <div id="map_canvas" style="width: 100%; height: 20em;"></div>
+	<div id="location_list">
+		<?php 
+		foreach ($result as $itemL)
+		{
+
+			$distance = LocatorHelperCls::distance($geoData['geoplugin_latitude'] ,$geoData['geoplugin_longitude'], $itemL['loc_x'] , $itemL['loc_y']  );
+			$distance = round($distance,2);
+			?>
+			<div style="overflow:hidden;"><?php echo $itemL['name']; ?>: <?php echo $distance ?>km <button type='button' class="showdirect" lat="<?php echo $itemL['loc_x'] ?>" long="<?php echo $itemL['loc_y'] ?>" style="cursor:pointer;float:right;" onclick=''>get direction</button></div>
+			<?php
+		}
+		?>
+	</div>
 </div>
