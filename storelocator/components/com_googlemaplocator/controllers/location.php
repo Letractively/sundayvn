@@ -71,5 +71,13 @@ class GoogleMapLocatorControllerLocation extends JController {
         echo '</select>';
         exit;
     }
+  
+ function ajax_get_locations()
+{
+	$result = JModel::getInstance('Location','GoogleMapLocatorModel')->listAllArr();
+	//$result = FALSE;
+	echo json_encode($result);
+	die;
+}
 
 }
