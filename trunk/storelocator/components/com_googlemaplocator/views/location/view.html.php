@@ -33,13 +33,7 @@ class GoogleMapLocatorViewLocation extends JView {
         
         $arTemp = array();
         
-        foreach ($locationList as $lList) {
-            $lList->typeImages = $oModelLocation->getTypeImageById($lList->type);
-            $lList->listService = $oModelLocation->getAllServiceByLocation($lList->id);
-            
-            if ($lList->typeImages)
-                $arTemp[] = $lList;
-        }
+    
         
         $locationList = $arTemp;
                 

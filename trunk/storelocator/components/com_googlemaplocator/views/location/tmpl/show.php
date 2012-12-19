@@ -18,6 +18,7 @@ JRequest::setVar('geoData',$geoData);
 	
 </script>
  <script>
+   	
       function initialize() {
         var mapOptions = 
 		{
@@ -33,10 +34,7 @@ JRequest::setVar('geoData',$geoData);
 
         autocomplete.bindTo('bounds', map);
 
-        var infowindow = new google.maps.InfoWindow();
-        var marker = new google.maps.Marker({
-          map: map
-        });
+
 
        google.maps.event.addListener(autocomplete, 'place_changed', function() 
 	   {
@@ -59,37 +57,52 @@ JRequest::setVar('geoData',$geoData);
       place.icon, new google.maps.Size(71, 71),
       new google.maps.Point(0, 0), new google.maps.Point(17, 34),
       new google.maps.Size(35, 35));
-  marker.setIcon(image);
-  marker.setPosition(place.geometry.location);
-  var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+});
+
+//get locations
+<?php 
+$result = JModel::getInstance('Location','GoogleMapLocatorModel')->listAllArr();
+foreach ($result as $itemL)
+{
+	?>
+	
+var myLatlng = new google.maps.LatLng(<?php echo $itemL['loc_x'] ?>,<?php echo $itemL['loc_y'] ?>);
+
+	  var   marker<?php echo $itemL['id'] ?> = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+       
+        });
+	      marker<?php echo $itemL['id']; ?>.setVisible(true);
+	  
+	  
+	       var contentString = '<div id="content" style="width:50px">'+
+
+            '<h1 id="firstHeading" class="firstHeading"><?php echo $itemL['name'] ?></h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-            'sandstone rock formation in the southern part of the '+
-            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-            'south west of the nearest large town, Alice Springs; 450&#160;km '+
-            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-            'Aboriginal people of the area. It has many springs, waterholes, '+
-            'rock caves and ancient paintings. Uluru is listed as a World '+
-            'Heritage Site.</p>'+
-            '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-            'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-            '(last visited June 22, 2009).</p>'+
+            '<p><?php echo $itemL['description'] ?></p>'+
             '</div>'+
             '</div>';
 
-  infowindow.setContent(contentString);
-  //infowindow.open(map, marker);
-     
- google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
+        var infowindow<?php echo $itemL['id'] ?> = new google.maps.InfoWindow({
+            content: contentString
         });
-});
 
+//	    google.maps.event.addListener(myArr[i][0] , 'click', function() {
+//          myArr[i][1].open(map,myArr[i][0]);
+//        });     
+ google.maps.event.addListener(marker<?php echo $itemL['id'] ?>, 'click', function() {
+        infowindow<?php echo $itemL['id'] ?>.open(map,marker<?php echo $itemL['id'] ?>);
+        });  
+
+
+
+<?php
+}
+?>
+//getlocation -end
+ 
+	
         // Sets a listener on a radio button to change the filter type on Places
         // Autocomplete.
         function setupClickListener(id, types) {
@@ -102,21 +115,13 @@ JRequest::setVar('geoData',$geoData);
         setupClickListener('changetype-all', []);
         setupClickListener('changetype-establishment', ['establishment']);
         setupClickListener('changetype-geocode', ['geocode']);
-		
-		
-   
-		var myLatlng = new google.maps.LatLng(10.822831,106.63201);
-        var marker2 = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title: 'Uluru (Ayers Rock)'
-        });
-		
-		
-		
+	
       
       }
+
       google.maps.event.addDomListener(window, 'load', initialize);
+   
+
     </script>
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

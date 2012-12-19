@@ -20,21 +20,37 @@ class GoogleMapLocatorModelLocation extends JModel {
 
         $query->join('left', '#__gm_type AS t ON t.id = l.type');
 
-        if ($filter_zone)
-            $query->where('l.zone_id = ' . intval($filter_zone));
-
-        if ($filter_type)
-            $query->where('l.type = ' . intval($filter_type));
-
-        if ($filter_service) {
-            $query->join('left', '#__gm_location_service AS ls ON ls.location_id = l.id');
-
-            $query->where('ls.service_id = ' . intval($filter_service));
-        }
+       
 
         $db->setQuery($query);
 
         $rows = $db->loadObjectList();
+
+        if ($db->getErrorNum()) {
+            JError::raiseError($db->getErrorNum(), $db->getErrorMsg());
+            return false;
+        }
+
+        return $rows;
+    }
+  function listAllArr() {
+        $db = JFactory::getDBO();
+
+       
+
+        $query = $db->getQuery(true);
+
+        $query->select('l.*, t.type as lc_type');
+
+        $query->from('#__gm_location AS l');
+
+        $query->join('left', '#__gm_type AS t ON t.id = l.type');
+
+       
+
+        $db->setQuery($query);
+
+        $rows = $db->loadAssocList();
 
         if ($db->getErrorNum()) {
             JError::raiseError($db->getErrorNum(), $db->getErrorMsg());
