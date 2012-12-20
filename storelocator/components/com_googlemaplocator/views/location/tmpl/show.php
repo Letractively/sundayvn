@@ -13,6 +13,10 @@ JRequest::setVar('geoData',$geoData);
 <script src="<?php echo JURI::root(); ?>components/com_googlemaplocator/helpers/jquery.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false&libraries=places"></script>
 <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
+
+	<script src="http://www.merkwelt.com/people/stan/geo_js/js/geo.js?id=1" type="text/javascript" charset="utf-8"></script>
+
+
 <script>
     jQuery.noConflict();
   
@@ -30,19 +34,41 @@ JRequest::setVar('geoData',$geoData);
 		{
           center: new google.maps.LatLng(<?php echo $geoData['geoplugin_latitude'] ?>, <?php echo $geoData['geoplugin_longitude'] ?>),
           zoom: 13,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+		    navigationControl: true,
+	      navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
         };
          map = new google.maps.Map(document.getElementById('map_canvas'),
           mapOptions);
+	if(geo_position_js.init()){
+			geo_position_js.getCurrentPosition(success_callback,error_callback,{enableHighAccuracy:true});
+		}
+		else{
+			alert("Functionality not available");
+		}
 
-
-        var image = 'http://localhost/locator/components/com_googlemaplocator/uploads/police.png';
+		function success_callback(p)
+		{
+			//alert('lat='+p.coords.latitude.toFixed(4)+';lon='+p.coords.longitude.toFixed(4));
+			myLatNumber = p.coords.latitude.toFixed(4);
+			myLongNumber = p.coords.longitude.toFixed(4);
+			  var image = 'http://localhost/locator/components/com_googlemaplocator/uploads/police.png';
         var myLatLng = new google.maps.LatLng(myLatNumber, myLongNumber);
          myLocationMarker = new google.maps.Marker({
             position: myLatLng,
             map: map,
             icon: image
+			
         });
+		
+		    map.setCenter(myLatLng);
+		}
+		
+		function error_callback(p)
+		{
+			alert('error='+p.code);
+		}
+      
         var input = document.getElementById('filter_address');
         var autocomplete = new google.maps.places.Autocomplete(input);
 
@@ -95,7 +121,8 @@ var myLatlng = new google.maps.LatLng(<?php echo $itemL['loc_x'] ?>,<?php echo $
 	      marker<?php echo $itemL['id']; ?>.setVisible(true);
 	  
 	  
-	       var contentString = '<p><b><?php echo $itemL['name'] ?></b><br /><?php echo $itemL['description'] ?></p>';
+	       var contentString = '<p><b><?php echo $itemL['name'] ?></b><br />'+
+		   '<?php echo strip_tags( $itemL['description'] )?></p>';
 
         var infowindow<?php echo $itemL['id'] ?> = new google.maps.InfoWindow({
             content: contentString
@@ -169,6 +196,7 @@ jQuery('.showdirect').click(getdirection);
 <div class="map" id="locator">
 	
     <div id="map_canvas" style="width: 100%; height: 20em;"></div>
+	<div id="current"></div>
 	<div id="location_list">
 		<?php 
 		foreach ($result as $itemL)
