@@ -166,3 +166,7 @@ border: none;
 			#location_list table td.nobor
 		{border-right:none;
 		}
+		#locator #map_canvas
+		{
+			height:420px;
+		}
