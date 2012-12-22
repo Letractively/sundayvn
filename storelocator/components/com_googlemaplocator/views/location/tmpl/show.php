@@ -195,7 +195,7 @@ jQuery('.showdirect').click(getdirection);
 
 <div class="map" id="locator">
 	
-    <div id="map_canvas" style="width: 100%; height: 20em;"></div>
+    <div id="map_canvas" style="width: 100%;"></div>
 	<div id="current"></div>
 	<div id="location_list">
 		
