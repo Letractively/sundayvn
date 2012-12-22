@@ -52,7 +52,7 @@ JRequest::setVar('geoData',$geoData);
 			//alert('lat='+p.coords.latitude.toFixed(4)+';lon='+p.coords.longitude.toFixed(4));
 			myLatNumber = p.coords.latitude.toFixed(4);
 			myLongNumber = p.coords.longitude.toFixed(4);
-			  var image = 'http://localhost/locator/components/com_googlemaplocator/uploads/police.png';
+			  var image = '<?php echo JURI::root() ?>user.png';
         var myLatLng = new google.maps.LatLng(myLatNumber, myLongNumber);
          myLocationMarker = new google.maps.Marker({
             position: myLatLng,
@@ -198,6 +198,17 @@ jQuery('.showdirect').click(getdirection);
     <div id="map_canvas" style="width: 100%; height: 20em;"></div>
 	<div id="current"></div>
 	<div id="location_list">
+		
+		<style>
+		.location-info-block
+		{
+		
+			padding:0px 10px;
+
+			height:100%;
+		}
+		</style>
+		<table style="width:100%">
 		<?php 
 		foreach ($result as $itemL)
 		{
@@ -205,9 +216,28 @@ jQuery('.showdirect').click(getdirection);
 			$distance = LocatorHelperCls::distance($geoData['geoplugin_latitude'] ,$geoData['geoplugin_longitude'], $itemL['loc_x'] , $itemL['loc_y']  );
 			$distance = round($distance,2);
 			?>
-			<div style="overflow:hidden;"><?php echo $itemL['name']; ?>: <?php echo $distance ?>km <button type='button' class="showdirect" lat="<?php echo $itemL['loc_x'] ?>" long="<?php echo $itemL['loc_y'] ?>" style="cursor:pointer;float:right;" onclick=''>get direction</button></div>
+			
+			<tr>
+				<td width='30%'>
+					<div class="location-info-block">
+						<h3><?php echo $itemL['name']; ?></h3>
+						<p><?php echo $itemL['address']; ?></p>
+					
+					</div>
+				</td>
+				<td width='50%'>					
+				<div class="location-info-block"><b>Description:</b><br />
+				<?php echo $itemL['description']; ?>
+				</div>
+				</td >
+				<td width='20%' class="nobor">					
+				<div class="location-info-block"><?php echo $distance; ?> km away<input class='get_direct showdirect' type="button"  lat="<?php echo $itemL['loc_x'] ?>" long="<?php echo $itemL['loc_y'] ?>" value="Get direction" /></div>
+				</td>
+			</tr>
 			<?php
 		}
 		?>
+			
+		</table>
 	</div>
 </div>

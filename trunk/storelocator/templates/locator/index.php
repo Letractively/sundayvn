@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
                     <jdoc:include type="modules" name="left-menu" />
                 </div><!--context-->
                 <div id="content" class="searchPage">
-                    <h3>Store Location(s)</h3>
+              
                     <p class="txtResult" id="txtResult"></p>
                     <jdoc:include type="message" />
                     <div class="blockContent">
