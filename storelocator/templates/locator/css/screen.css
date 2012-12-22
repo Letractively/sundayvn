@@ -140,3 +140,29 @@ input, select, textarea {font-size:11px; border:1px solid #b4d8e2; font-family:A
 		#photoPage #main {}
 
                 #txtAddress {padding: 1px 0;}
+		
+		#location_list h3
+		{
+			margin-bottom:5px;
+			padding:0px;
+			color: #3FB1D5;
+		}
+		#location_list  .get_direct
+		{
+			
+	background: #587AAC;
+color: white;
+padding: 5px 15px;
+border-radius: 7px;
+border: none;
+		}
+		#location_list table td
+		{
+			vertical-align: top;
+			border-right:1px solid #ccc;
+			border-bottom:1px solid #ccc;
+			padding-bottom:7px;
+		}
+			#location_list table td.nobor
+		{border-right:none;
+		}
