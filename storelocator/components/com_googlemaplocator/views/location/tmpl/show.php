@@ -148,17 +148,7 @@ var myLatlng = new google.maps.LatLng(<?php echo $itemL['loc_x'] ?>,<?php echo $
 	
         // Sets a listener on a radio button to change the filter type on Places
         // Autocomplete.
-        function setupClickListener(id, types) {
-          var radioButton = document.getElementById(id);
-          google.maps.event.addDomListener(radioButton, 'click', function() {
-            autocomplete.setTypes(types);
-          });
-        }
 
-        setupClickListener('changetype-all', []);
-        setupClickListener('changetype-establishment', ['establishment']);
-        setupClickListener('changetype-geocode', ['geocode']);
-	
       
       }
 function getdirection()

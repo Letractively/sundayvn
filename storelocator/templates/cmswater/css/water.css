@@ -720,3 +720,8 @@ a:hover {
   float: left;
 }
 }
+
+#map_canvas
+{
+	height:20em;
+}
