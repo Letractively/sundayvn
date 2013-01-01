@@ -90,13 +90,15 @@ if(isset($_POST['x_process']))
 		<input type="hidden" type="text" name="invoice_number" value="<?php echo $response->invoice_number;; ?>">
 		<input type="hidden" type="text" name="amount" value="<?php echo $response->amount; ?>">
 		<input type="hidden" type="text" name="account_number" value="<?php echo $response->account_number; ?>">
-		</form>	
+		</form>
+<p style="text-align:center">Your payment is processing. Please be patient and do not hit the refresh button until the payment is processed.</p>		
 	<script>
 		document.paymentForm.submit();
 
 	</script>	
 <?php 
-exit;
+echo '';
+return true;
 ?>	
 <?php
     }
