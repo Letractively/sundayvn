@@ -11,7 +11,7 @@ $integrationClass = EnmasseHelper::getSubscriptionClassFromSetting();
 $sub_page = JPATH_SITE . DS ."components". DS ."com_enmasse". DS ."helpers". DS ."subscription". DS .$integrationClass. DS."sub_page.php";
 $oMenu = JFactory::getApplication()->getMenu();
 $oItem = $oMenu->getItems('link','index.php?option=com_enmasse&view=dealtoday',true);
-$sRedirectLink = JRoute::_('index.php/home', false);
+$sRedirectLink = JRoute::_('index.php?option=com_enmasse&controller=deal&task=listing', false);
 if(!$sub_page){
 	JFactory::getApplication()->redirect($sRedirectLink,$msg);
 	exit;
