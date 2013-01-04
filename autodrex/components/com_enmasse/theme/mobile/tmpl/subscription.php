@@ -23,11 +23,11 @@ JFactory::getDocument()->addScript("components/com_enmasse/theme/js/jquery/jquer
 JFactory::getDocument()->addScriptDeclaration('jQuery.noConflict()');
 
 $app = JFactory::getApplication();
-$app->setUserState('staticTitle', JText::_('SUBSCRIPTION'));
+//$app->setUserState('staticTitle', JText::_('SUBSCRIPTION'));$app->setUserState('staticTitle', '');
 ?>
 
 <style>
-    body { font-size: 62.5%; }
+  
     label, input { display:block; }
     input.text { }
     h1 { font-size: 1.2em; margin: .6em 0; }
