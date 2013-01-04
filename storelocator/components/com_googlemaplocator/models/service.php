@@ -42,6 +42,14 @@ class GoogleMapLocatorModelService extends JModelList {
         $db->setQuery($query);
         $serviceList = $db->loadObjectList();
         return $serviceList;
+    }  
+  
+ public function getall() {
+        $db = JFactory::getDBO();
+        $query = 'SELECT * FROM #__gm_service ';
+        $db->setQuery($query);
+        $serviceList = $db->loadObjectList();
+        return $serviceList;
     }
 }
 
