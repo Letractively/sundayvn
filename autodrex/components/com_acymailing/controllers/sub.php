@@ -295,6 +295,7 @@ $xaviDB = JFactory::getDbo();
 		$this->_closepop($redirectUrl);
 		$session =& JFactory::getSession();
 		$ennewuser = $session->get( 'enmasse_new_user' );
+		$app->set( '_messageQueue', '' ); 
 		if(!empty($ennewuser))
 		{
 			$this->setRedirect(JRoute::_('index.php?option=com_users&view=registration'));
