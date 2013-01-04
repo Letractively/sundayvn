@@ -34,7 +34,21 @@ $deliverDetails = json_decode( $orderdetails->delivery_detail );
 $deal = JModel::getInstance('deal','EnmasseModel')->viewDeal($orderitemdetails->pdt_id);
 $url =JURI::root();
 ?>
-<div id='section_to_print'>
+<?php
+$isM =  JRequest::getVar('is_mobile');
+if (empty($isM))
+{
+echo '
+<style>
+#section_to_print{
+margin-right:20px;
+}
+
+</style>
+';
+}
+ ?>
+<div id='section_to_print' >
 <p  style='text-align:center'><img style='max-width:100%' src='<?php echo $url ?>logo.png'  /><p>
  <h1  style='text-align:center'>Order Confirmation</h1>
  
@@ -47,7 +61,7 @@ $url =JURI::root();
  </p>
 
 
-<table border="0">
+<table border="0" width="100%">
 <tbody>
 <tr>
 <td><strong>Order:</strong></td>
