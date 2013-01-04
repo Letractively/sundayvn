@@ -71,7 +71,7 @@ class EnmasseControllerPayment extends JController
 					JModel::getInstance('order','enmasseModel')->updatePayDetail($orderId, $payDetail);									$transactionid = stripslashes( $_POST['transaction_id']);
 					$msg = JText::_( "Thank you for purchasing! Your transaction ID is " . $transactionid . ".");
 				}
-				$link = JRoute::_("index.php?option=com_enmasse&controller=deal", false);
+				$link = JRoute::_("index.php?option=com_enmasse&controller=orderconf&oid={$orderId}", false);
 				JFactory::getApplication()->redirect($link, $msg);
 			}
 		}
