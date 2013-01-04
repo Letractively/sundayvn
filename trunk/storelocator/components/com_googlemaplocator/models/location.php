@@ -8,23 +8,40 @@ class GoogleMapLocatorModelLocation extends JModel {
     function listAll() {
         $db = JFactory::getDBO();
 
-        $filter_zone = JRequest::getVar("filter_zone");
-        $filter_type = JRequest::getVar("filter_type");
-        $filter_service = JRequest::getVar("filter_service");
+//        $filter_zone = JRequest::getVar("filter_zone");
+//        $filter_type = JRequest::getVar("filter_type");
 
+     $session = JFactory::getSession();
+	
+
+	$filter_array_serv =$session->get('checkboxsv');
+	      if (!empty($filter_array_serv)) {
+      
+            
+           $filter_service = implode(',',$filter_array_serv);
+$filter_service = "({$filter_service})";
+	 
+        }
+        
         $query = $db->getQuery(true);
 
-        $query->select('l.*, t.type as lc_type');
+        $query->select('distinct l.id,ls.*,l.name,	l.zone_id	,l.type	,l.address	,l.description	,l.postal_code	,l.loc_x	,l.loc_y, t.type as lc_type');
 
         $query->from('#__gm_location AS l');
 
         $query->join('left', '#__gm_type AS t ON t.id = l.type');
-
-       
-
+      $query->join('left', '#__gm_location_service AS ls ON ls.location_id = l.id');
+           if (!empty($filter_array_serv)) {
+      
+            
+            $query->where('ls.service_id  in '. $filter_service);
+	 
+        }
+	  
+            $query->group('l.id');
         $db->setQuery($query);
 
-        $rows = $db->loadObjectList();
+        $rows = $db->loadAssocList();
 
         if ($db->getErrorNum()) {
             JError::raiseError($db->getErrorNum(), $db->getErrorMsg());

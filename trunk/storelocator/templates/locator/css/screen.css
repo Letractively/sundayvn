@@ -156,14 +156,14 @@ padding: 5px 15px;
 border-radius: 7px;
 border: none;
 		}
-		#location_list table td
+		#location_list table.locationItem td
 		{
 			vertical-align: top;
 			border-right:1px solid #ccc;
 			border-bottom:1px solid #ccc;
 			padding-bottom:7px;
 		}
-			#location_list table td.nobor
+			#location_list table.locationItem td.nobor
 		{border-right:none;
 		}
 		#locator #map_canvas

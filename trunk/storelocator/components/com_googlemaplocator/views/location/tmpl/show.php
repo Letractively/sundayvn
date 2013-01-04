@@ -106,7 +106,8 @@ JRequest::setVar('geoData',$geoData);
 
 //get locations
 <?php 
-$result = JModel::getInstance('Location','GoogleMapLocatorModel')->listAllArr();
+
+$result = JModel::getInstance('Location','GoogleMapLocatorModel')->listAll();
 foreach ($result as $itemL)
 {
 	?>
@@ -198,7 +199,37 @@ jQuery('.showdirect').click(getdirection);
 			height:100%;
 		}
 		</style>
-		<table style="width:100%">
+		<table style="width:100%" border="0">
+		<form name="form_filter_form" method="POST" action="" id="form_filter_form">
+		<tr>
+		<?php
+		foreach ($this->servicesList as $serviceI)
+		{
+			?>
+			<td>
+			<?php echo $serviceI->service; ?>
+		
+			</td>
+			<?php
+		}
+		 ?>
+			</tr>
+			
+			<tr>
+		<?php
+		$filter_array_serv = $this->filter_array_serv;
+		foreach ($this->servicesList as $serviceI)
+		{
+			?>
+				<td><input type='checkbox' name="checkboxsv[]" <?php if (in_array($serviceI->id,$filter_array_serv) ) echo 'checked="checked"' ?> onclick="document.form_filter_form.submit();" value="<?php echo $serviceI->id; ?>" /></td>
+			<?php
+		}
+		 ?>
+			</tr>
+		<input  type="hidden" name="updatefilter" value="1" />
+			</form>
+		</table>
+		<table class="locationItem" style="width:100%">
 		<?php 
 		foreach ($result as $itemL)
 		{
