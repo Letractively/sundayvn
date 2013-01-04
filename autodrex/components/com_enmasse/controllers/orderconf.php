@@ -32,9 +32,11 @@ $orderitemdetails = JModel::getInstance('Orderitem','EnmasseModel')->getById($oi
 $buyerDetails = json_decode( $orderdetails->buyer_detail );
 $deliverDetails = json_decode( $orderdetails->delivery_detail );
 $deal = JModel::getInstance('deal','EnmasseModel')->viewDeal($orderitemdetails->pdt_id);
+$url =JURI::root();
 ?>
 <div id='section_to_print'>
- <h1>Order Confirmation</h1>
+<p  style='text-align:center'><img style='max-width:100%' src='<?php echo $url ?>logo.png'  /><p>
+ <h1  style='text-align:center'>Order Confirmation</h1>
  
  <h2>Dear <?php echo $buyerDetails->name; ?></h2>
 
