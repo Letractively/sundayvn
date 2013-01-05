@@ -30,21 +30,19 @@ defined('_JEXEC') or die;
                 <div id="context">
                     <jdoc:include type="modules" name="left-menu" />
                 </div><!--context-->
-                <div id="content" class="searchPage">
+         
               
                     <p class="txtResult" id="txtResult"></p>
                     <jdoc:include type="message" />
-                    <div class="blockContent">
-                        <div class="innerBlockCont">
+
                             
                             <jdoc:include type="component" />
                             
                             <jdoc:include type="modules" name="under-component" />
                             
-                        </div><!--innerBlockCont-->
-                    </div><!--blockContent-->
+            
 
-                </div><!--content-->
+             
             </div><!--main-->
         </div><!--container-->	
 

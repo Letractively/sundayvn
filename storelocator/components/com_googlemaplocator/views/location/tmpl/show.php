@@ -188,6 +188,8 @@ jQuery('.showdirect').click(getdirection);
 	
     <div id="map_canvas" style="width: 100%;"></div>
 	<div id="current"></div>
+
+</div>
 	<div id="location_list">
 		
 		<style>
@@ -199,15 +201,26 @@ jQuery('.showdirect').click(getdirection);
 			height:100%;
 		}
 		</style>
-		<table style="width:100%" border="0">
+		<table style="width:100%" border="0" id='tableform_filter_form'>
 		<form name="form_filter_form" method="POST" action="" id="form_filter_form">
-		<tr>
+	
+			<tr>
 		<?php
 		foreach ($this->servicesList as $serviceI)
 		{
+			if(empty($serviceI->img_url))
+		{
+			$img_url = JURI::root().'images/NO-IMAGE-AVAILABLE.jpg';
+		}
+		else
+		{
+			$img_url = JURI::root().$serviceI->img_url;
+		}
 			?>
-			<td>
-			<?php echo $serviceI->service; ?>
+			<td align="center">
+		<label style="cursor:pointer;" for ="service_item_<?php echo $serviceI->id; ?>">
+		<img src='<?php echo $img_url; ?>' width="50" /><br />
+		</label>
 		
 			</td>
 			<?php
@@ -220,12 +233,27 @@ jQuery('.showdirect').click(getdirection);
 		$filter_array_serv = $this->filter_array_serv;
 		foreach ($this->servicesList as $serviceI)
 		{
+		
+	
 			?>
-				<td><input type='checkbox' name="checkboxsv[]" <?php if (in_array($serviceI->id,$filter_array_serv) ) echo 'checked="checked"' ?> onclick="document.form_filter_form.submit();" value="<?php echo $serviceI->id; ?>" /></td>
+				<td align="center"><input id="service_item_<?php echo $serviceI->id; ?>" type='checkbox' name="checkboxsv[]" <?php if (in_array($serviceI->id,$filter_array_serv) ) echo 'checked="checked"' ?> onclick="document.form_filter_form.submit();" value="<?php echo $serviceI->id; ?>" /></td>
 			<?php
 		}
 		 ?>
 			</tr>
+	<tr>
+		<?php
+		foreach ($this->servicesList as $serviceI)
+		{
+			?>
+			<td align="center">
+			<?php echo $serviceI->service; ?>
+		
+			</td>
+			<?php
+		}
+		 ?>
+			</tr>	
 		<input  type="hidden" name="updatefilter" value="1" />
 			</form>
 		</table>
@@ -261,4 +289,6 @@ jQuery('.showdirect').click(getdirection);
 			
 		</table>
 	</div>
-</div>
+	
+<br />
+<br />

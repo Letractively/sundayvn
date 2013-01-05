@@ -166,7 +166,24 @@ border: none;
 			#location_list table.locationItem td.nobor
 		{border-right:none;
 		}
+		#locator
+		{
+			width: 654px;
+margin-left: 300px;
+padding: 5px;
+background: white;
+border: 1px solid #CCC;
+		}
 		#locator #map_canvas
 		{
 			height:420px;
+		}
+		#tableform_filter_form
+		{
+			padding: 7px 0px 7px 0px;
+margin-bottom: 15px;
+background: #F1DEC8;
+color: #069;
+font-weight: bold;
+margin-top: 15px;
 		}
