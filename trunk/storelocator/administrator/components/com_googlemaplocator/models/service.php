@@ -149,7 +149,7 @@ class GoogleMapLocatorModelService extends JModelList {
         
         $data['service'] = $db->getEscaped($data['service'], true);
 
-        $query = 'INSERT INTO #__gm_service (service,type_id) VALUES ("' . $data['service'] . '","' . $data['type_id'] . '")';
+        $query = 'INSERT INTO #__gm_service (service,type_id,img_url) VALUES ("' . $data['service'] . '","' . $data['type_id'] . '","' . $data['img_url'] . '")';
         $db->setQuery($query);
         if (!$db->query()) {
             echo $this->_db->getErrorMsg();
@@ -162,7 +162,7 @@ class GoogleMapLocatorModelService extends JModelList {
 
         $data['service'] = $db->getEscaped($data['service'], true);
         
-        $query = 'UPDATE #__gm_service SET service = "' . $data['service'] . '",type_id = "' . $data['type_id'] . '" where id = ' . (int) $id;
+        $query = 'UPDATE #__gm_service SET service = "' . $data['service'] . '",type_id = "' . $data['type_id'] . '",img_url = "' . $data['img_url'] . '" where id = ' . (int) $id;
         $db->setQuery($query);
         $db->query();
     }

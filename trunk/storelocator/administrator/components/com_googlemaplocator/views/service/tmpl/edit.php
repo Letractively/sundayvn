@@ -1,10 +1,25 @@
 <?php
 $row = $this->service;
 $option = 'com_googlemaplocator';
+	JHtml::_('behavior.modal');
+	
+
 ?>
 
 <script src="components/com_googlemaplocator/helpers/jquery.min.js"></script>
 <script>
+	function jInsertFieldValue(value, id) {
+		var old_value = document.id(id).value;
+		if (old_value != value) {
+			var elem = document.id(id);
+			elem.value = value;
+			elem.fireEvent("change");
+			if (typeof(elem.onchange) === "function") {
+				elem.onchange();
+			}
+			jMediaRefreshPreview(id);
+		}
+		}
 $(document).ready(function(){
     $("#type_id").val(<?php echo $row->type_id; ?>);
 });
@@ -38,15 +53,14 @@ $(document).ready(function(){
 		<td width="100" align="right" class="key"><?php echo JText::_('Location Service');?></td>
 		<td><input type="text" name="service" id="service" value="<?php echo htmlspecialchars(@$row->service, ENT_COMPAT, 'UTF-8'); ?>" size="30" /></td>
 	</tr>
-    <!--tr>
-		<td width="100" align="right" class="key"><?php echo JText::_('Location Type');?></td>
-		<td>
-                    <select name="type_id" id="type_id" style="width:170px;">
-                        <option value=""><?php echo JText::_('-- Select Type --'); ?></option>
-                        <?php echo JHtml::_('select.options', $this->list_type); ?>
-                    </select>
-            </td>
-	</tr-->
+  	<tr>
+		<td width="100" align="right" class="key"><?php echo JText::_('Image');?></td>
+		<td><input type="text" name="img_url" id="service_img"  value="<?php echo $row->img_url;?>" size="30" /><a class="modal" title="Select" href="index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;author=&amp;fieldid=service_img&amp;folder=" rel="{handler: 'iframe', size: {x: 800, y: 500}}">
+Select</a></td>
+		
+		
+	</tr>
+  
 </table>
 </fieldset>
 
