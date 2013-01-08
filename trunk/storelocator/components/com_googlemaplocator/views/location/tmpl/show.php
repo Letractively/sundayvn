@@ -23,8 +23,8 @@ JRequest::setVar('geoData',$geoData);
 	
 </script>
  <script>
-   	var myLatNumber = '<?php echo $geoData['geoplugin_latitude'] ?>';
-   	var myLongNumber = '<?php echo $geoData['geoplugin_longitude'] ?>';
+   	var myLatNumber = <?php if( empty($_GET['cur_lat_num']))echo $geoData['geoplugin_latitude'] ;else echo $_GET['cur_lat_num']; ?>;
+   	var myLongNumber = <?php if( empty($_GET['cur_long_num']))echo $geoData['geoplugin_longitude'];else echo $_GET['cur_long_num']; ?>;
 	  var directionsService = new google.maps.DirectionsService();
   var directionsDisplay = new google.maps.DirectionsRenderer();
     var myLocationMarker;
@@ -32,7 +32,7 @@ JRequest::setVar('geoData',$geoData);
       function initialize() {
         var mapOptions = 
 		{
-          center: new google.maps.LatLng(<?php echo $geoData['geoplugin_latitude'] ?>, <?php echo $geoData['geoplugin_longitude'] ?>),
+          center: new google.maps.LatLng(myLatNumber, myLongNumber),
           zoom: 13,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
 		    navigationControl: true,
@@ -40,6 +40,7 @@ JRequest::setVar('geoData',$geoData);
         };
          map = new google.maps.Map(document.getElementById('map_canvas'),
           mapOptions);
+		  <?php  if ( empty($_GET['cur_long_num']) or empty($_GET['cur_lat_num']) ) {?>
 	if(geo_position_js.init()){
 			geo_position_js.getCurrentPosition(success_callback,error_callback,{enableHighAccuracy:true});
 		}
@@ -52,6 +53,7 @@ JRequest::setVar('geoData',$geoData);
 			//alert('lat='+p.coords.latitude.toFixed(4)+';lon='+p.coords.longitude.toFixed(4));
 			myLatNumber = p.coords.latitude.toFixed(4);
 			myLongNumber = p.coords.longitude.toFixed(4);
+		
 			  var image = '<?php echo JURI::root() ?>user.png';
         var myLatLng = new google.maps.LatLng(myLatNumber, myLongNumber);
          myLocationMarker = new google.maps.Marker({
@@ -63,14 +65,25 @@ JRequest::setVar('geoData',$geoData);
 		
 		    map.setCenter(myLatLng);
 		}
-		
-		function error_callback(p)
+			function error_callback(p)
 		{
 			alert('error='+p.code);
 		}
+		<?php } 
+		else
+		{ ?>
+			  var image = '<?php echo JURI::root() ?>user.png';
+        var myLatLng = new google.maps.LatLng(myLatNumber, myLongNumber);
+         myLocationMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: image
+			        });
+		<?php  } ?>
+	
       
-        var input = document.getElementById('filter_address');
-        var autocomplete = new google.maps.places.Autocomplete(input);
+        var inputOB = document.getElementById('filter_address');
+        var autocomplete = new google.maps.places.Autocomplete(inputOB);
 
         autocomplete.bindTo('bounds', map);
 
@@ -101,7 +114,11 @@ JRequest::setVar('geoData',$geoData);
 	*/
 	myLocationMarker.setPosition(place.geometry.location);
 	myLatNumber = place.geometry.location.lat();
+
 	myLongNumber = place.geometry.location.lng();
+	jQuery('#cur_lat_num').val(myLatNumber);
+	jQuery('#cur_long_num').val(myLongNumber);
+	document.frmSearch.submit();
 });
 
 //get locations
@@ -261,9 +278,18 @@ jQuery('.showdirect').click(getdirection);
 		<?php 
 		foreach ($result as $itemL)
 		{
-
-			$distance = LocatorHelperCls::distance($geoData['geoplugin_latitude'] ,$geoData['geoplugin_longitude'], $itemL['loc_x'] , $itemL['loc_y']  );
-			$distance = round($distance,2);
+			$latint 		= $geoData['geoplugin_latitude'];
+			$longint 	= $geoData['geoplugin_longitude'];
+			if (!empty($_GET['cur_lat_num']))
+			{
+			$latint = $_GET['cur_lat_num'];
+			}	
+			if (!empty($_GET['cur_long_num']))
+			{
+			$longint = $_GET['cur_long_num'];
+			}
+			$distance 	= LocatorHelperCls::distance($latint ,$longint, $itemL['loc_x'] , $itemL['loc_y']  );
+			$distance 	= round($distance,2);
 			?>
 			
 			<tr>
@@ -280,7 +306,7 @@ jQuery('.showdirect').click(getdirection);
 				</div>
 				</td >
 				<td width='20%' class="nobor">					
-				<div class="location-info-block"><?php echo $distance; ?> km away<input class='get_direct showdirect' type="button"  lat="<?php echo $itemL['loc_x'] ?>" long="<?php echo $itemL['loc_y'] ?>" value="Get direction" /></div>
+				<div class="location-info-block"><?php echo $distance; ?> km away<br /><input class='get_direct showdirect' type="button"  lat="<?php echo $itemL['loc_x'] ?>" long="<?php echo $itemL['loc_y'] ?>" value="Get direction" /></div>
 				</td>
 			</tr>
 			<?php

@@ -13,11 +13,11 @@ $geoData =  JRequest::getVar('geoData');
     <h3><?php echo JText::_('MOD_CONTENT_LEFT_LOCATE_US'); ?></h3>
     <div class="listItemSearch">
         <strong class="titSearchBy"><?php echo JText::_('MOD_CONTENT_LEFT_SEARCH_BY'); ?></strong>
-        <form action="<?php echo JRoute::_('index.php?option=com_googlemaplocator&view=location&layout=show'); ?>" method="post" id="frmSearch" name="frmSearch" class="frmSearch" onsubmit="return false">
+        <form action="<?php echo JRoute::_('index.php?option=com_googlemaplocator&view=location&layout=show'); ?>" method="get" id="frmSearch" name="frmSearch" class="frmSearch" onsubmit="">
             <ul>
                 <li class="lineSpec">
                     <label for="txtAddress"><?php echo JText::_('MOD_CONTENT_LEFT_ADDRESS'); ?></label>
-                    <input type="text" id="filter_address" name="filter_address" value="<?php echo $geoData['geoplugin_city']; ?>" />
+                    <input type="text" id="filter_address" name="filter_address" value="<?php if( empty($_GET['filter_address']))echo $geoData['geoplugin_city'] ;else echo $_GET['filter_address'];   ?>" />
                 </li>
 				<li class="lineSpec">
 <h4 ><?php echo $geoData['geoplugin_city']; ?></h4>
@@ -33,7 +33,9 @@ $geoData =  JRequest::getVar('geoData');
                     </span><!--btn-->
                 </li>
             </ul>
-        </form><!--frmSearch-->
+			<input type="hidden" name="cur_lat_num"  id="cur_lat_num" value="<?php echo $_GET['cur_lat_num']; ?>" />
+			<input type="hidden" name="cur_long_num" id="cur_long_num" value="<?php echo $_GET['cur_long_num']; ?>" />
+	   </form><!--frmSearch-->
     </div><!--listItemSearch-->
     <span class="bgBot">&nbsp;</span>
 </div><!--blockSearch-->
