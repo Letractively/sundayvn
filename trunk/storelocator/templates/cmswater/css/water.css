@@ -754,3 +754,7 @@ display:none !important;
 {
 display:none !important;
 }
+#tableform_filter_form .image_serv.checked
+{
+border:1px solid red;
+}

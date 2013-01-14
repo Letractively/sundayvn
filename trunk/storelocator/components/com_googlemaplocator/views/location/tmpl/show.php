@@ -223,6 +223,7 @@ jQuery('.showdirect').click(getdirection);
 	
 			<tr>
 		<?php
+			$filter_array_serv = $this->filter_array_serv;
 		foreach ($this->servicesList as $serviceI)
 		{
 			if(empty($serviceI->img_url))
@@ -236,7 +237,7 @@ jQuery('.showdirect').click(getdirection);
 			?>
 			<td align="center">
 		<label style="cursor:pointer;" for ="service_item_<?php echo $serviceI->id; ?>">
-		<img src='<?php echo $img_url; ?>' width="50" /><br />
+		<img class='<?php if (in_array($serviceI->id,$filter_array_serv) ) echo "checked" ?> image_serv' src='<?php echo $img_url; ?>' width="50" /><br />
 		</label>
 		
 			</td>
