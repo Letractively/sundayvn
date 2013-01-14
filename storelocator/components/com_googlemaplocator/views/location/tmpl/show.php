@@ -245,7 +245,7 @@ jQuery('.showdirect').click(getdirection);
 		 ?>
 			</tr>
 			
-			<tr>
+			<tr class="service_tr_input">
 		<?php
 		$filter_array_serv = $this->filter_array_serv;
 		foreach ($this->servicesList as $serviceI)
@@ -258,7 +258,7 @@ jQuery('.showdirect').click(getdirection);
 		}
 		 ?>
 			</tr>
-	<tr>
+	<tr class="service_tr_name">
 		<?php
 		foreach ($this->servicesList as $serviceI)
 		{
