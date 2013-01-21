@@ -1,0 +1,168 @@
+/**
+ * @package     Expose
+ * @version     3.0.1
+ * @author      ThemeXpert http://www.themexpert.com
+ * @copyright   Copyright (C) 2010 - 2011 ThemeXpert
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+ **/
+
+.ex-megamenu { margin: 0; padding: 0; }
+.ex-megamenu a.over, .ex-megamenu a.active {}
+
+ul.megamenu { margin: 0; padding: 0; /* menu's gutter */ }
+
+ul.megamenu li { overflow: visible; }
+.ex-megamenu span.mega{cursor: default}
+
+/* lv - 0
+-----------------------------------*/
+/* Styling ---*/
+.ex-megamenu ul.level-0 {
+	margin: 0;
+	padding: 0;
+}
+.ex-megamenu ul.level-0 li.mega {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	position:relative;
+	/*z-index:2;*/
+}
+
+.ex-megamenu ul.level-0 li.mega a.mega,
+.ex-megamenu ul.level-0 li.mega span.mega{
+	display: block;
+	/*font-weight: bold;*/
+	line-height: 29px;
+	margin: 0;
+	padding: 8px 8px;
+	text-decoration: none;
+}
+.ex-megamenu ul li.has-desc .menu-title{
+    line-height: 16px;
+}
+.ex-megamenu ul li.has-desc .menu-desc{
+    line-height: 13px;
+}
+.ex-megamenu ul.level-0 li.mega .has-image {
+	padding-left: 35px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 0;
+}
+
+.ex-megamenu ul.level-0 li.mega span.menu-title { display: block; }
+
+.ex-megamenu ul.level-0 li.mega span.menu-desc {
+	display: block;
+	font-weight: normal;
+	font-size: 92%;
+}
+
+.ex-megamenu ul.level-0 li.mega a img {
+	float: left;
+	padding-right: 5px;
+}
+
+.ex-megamenu ul.level-0 li.over, ul.level-0 li.has-submenu-over {}
+
+.ex-megamenu ul.level-0 li.has-submenu a.mega span.menu-title,
+.ex-megamenu ul.level-0 li.has-submenu span.mega.level-0 span.menu-title{
+	background: url(../images/arrow3.png) no-repeat left center;
+	padding-left: 12px;
+}
+
+.ex-megamenu ul.level-0 li.has-submenu a.mega span.menu-desc,
+.ex-megamenu ul.level-0 li.has-submenu span.mega span.menu-desc
+{padding-left: 12px;}
+
+.ex-megamenu ul.level-0 li.active {}
+
+/* lv - 1 and below
+-----------------------------------*/
+/* Layout ---*/
+.ex-megamenu li.mega .childcontent { display: none; height: auto; position: absolute; border:1px solid #eee; }
+
+.ex-megamenu li.has-submenu:hover > .childcontent,
+.ex-megamenu li.mega li.has-submenu:hover > .childcontent,
+.ex-megamenu li.mega li.mega li.has-submenu:hover > .childcontent,
+.ex-megamenu li.mega li.mega li.mega li.has-submenu:hover > .childcontent,
+.ex-megamenu li.mega li.mega li.mega li.mega li.has-submenu:hover > .childcontent,
+.ex-megamenu li.mega li.mega li.mega li.mega li.mega li.has-submenu:hover > .childcontent { left: auto; visibility: visible; }
+
+.ex-megamenu li.mega .right,
+.ex-megamenu li.has-submenu-over li.mega .right,
+.ex-megamenu li.mega li.has-submenu-over li.mega .right ,
+.ex-megamenu li.mega li.mega li.has-submenu-over li.mega .right,
+.ex-megamenu li.mega li.mega li.mega li.has-submenu-over li.mega .right,
+.ex-megamenu li.mega li.mega li.mega li.mega li.has-submenu-over li.mega .right { right: auto; /*hide the menu*/ }
+
+.ex-megamenu li.has-submenu-over .right
+{ right: 0; /*show on parent:hover*/ }
+.ex-megamenu li.mega li.has-submenu-over .right,
+.ex-megamenu li.mega li.mega li.has-submenu-over .right,
+.ex-megamenu li.mega li.mega li.mega li.has-submenu-over .right,
+.ex-megamenu li.mega li.mega li.mega li.mega li.has-submenu-over .right,
+.ex-megamenu li.mega li.mega li.mega li.mega li.mega li.has-submenu-over .right
+{ right: 12em; /*show on parent:hover*/ }
+
+.ex-megamenu ul.level-1 li.mega { float: none; }
+
+.ex-megamenu ul.level-1 .childcontent {  }/*margin: -2em 0 0 160px;*/
+
+ /* Columns ---*/
+.ex-megamenu .megacol { float: left;}
+
+/* Styling ---*/
+.ex-megamenu ul.level-1 li.mega {}
+
+.ex-megamenu ul.level-1 li.first {}
+
+.ex-megamenu ul.level-1 li.mega a.mega {
+	background: none;
+	border: 0;
+	font-weight: normal;
+	padding: 8px 10px;
+}
+.ex-megamenu ul.level-1 li.mega .group-content > ul > li > a,
+.ex-megamenu ul.level-1 li.mega .group-content > ul > li > span{
+    padding: 4px ;
+    font-size: 85%;
+    margin: 0 10px;
+}
+
+.ex-megamenu ul.level-1 li.mega a.mega span.menu-title,
+.ex-megamenu ul.level-1 li.mega a.mega span.menu-desc{ background: none; padding: 0; }
+.ex-megamenu ul.level-1 li.has-submenu,
+.ex-megamenu ul.level-1 li.has-submenu-over {
+	background-image: url(../images/arrow.png);
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	padding: 0;
+	position:relative;
+}
+
+.ex-megamenu ul.level-1 li.over, ul.level-1 li.has-submenu-over {}
+.ex-megamenu ul.level-1 li.group { background: none; }
+
+ /* CHILD CONTENT
+-----------------------------------*/
+.ex-megamenu .childcontent {z-index: 10;}
+.ex-megamenu .childcontent-inner {background: #fff;}
+.ex-megamenu .level-1 .childcontent-inner {}
+
+/* Grouped --- */
+.ex-megamenu .group {}
+.ex-megamenu .group-title { overflow: hidden; }
+.ex-megamenu .group-title .menu-title {}
+.ex-megamenu .group-title .menu-desc {padding-left: 0 !important;}
+.ex-megamenu .group-content ul.megamenu  {margin: 0; /* Group-content's gutter*/}
+.ex-megamenu .group-content ul.megamenu .group-content{padding: 0 10px;}
+
+/* reset --- */
+.ex-megamenu .childcontent ul.megamenu .ex-moduletable {padding: 0;}
+
+.ex-megamenu .childcontent ul.megamenu .ex-moduletable h3 {margin-left: 0;margin-right: 0;}
+
+.fancy{ position:absolute; width:auto; height:auto; background:#eee; z-index:1; list-style:none;}
