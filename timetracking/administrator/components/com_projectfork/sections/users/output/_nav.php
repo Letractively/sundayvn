@@ -49,11 +49,11 @@ switch( $core->GetTask() )
 	    $html .= '
         <div class="pf_navigation">
            <ul>
-              <li class="btn pf_new">'.$form->NavButton('NEW', 'section=users&task=form_new', 'TT_NEW_USER', 'form_new').'</li>
-              <li class="btn pf_import">'.$form->NavButton('IMPORT_USER', 'section=users&task=form_invite', 'TT_IMPORT_USER', 'form_invite').'</li>              
-              <li class="btn pf_access">'.$form->NavButton('ACCESS_LVLS', 'section=users&task=list_accesslvl', 'TT_ACCESS_LEVELS', 'list_accesslvl').'</li>
-              <li class="btn pf_join">'.$form->NavButton('JOIN_REQUESTS', 'section=users&task=list_requests', 'TT_JOIN_REQUESTS', 'list_requests').'</li>
-              <li class="btn pf_delete">'.$form->NavButton('DELETE', 'javascript:task_delete();', 'TT_DELETE_USER', 'task_delete').'</li>
+              <li class="btn pf_new">'.$form->NavButton('NEW', 'section=users&task=form_new', 'TT_NEW_USER', 'form_new',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_import">'.$form->NavButton('IMPORT_USER', 'section=users&task=form_invite', 'TT_IMPORT_USER', 'form_invite',null,null,'btn btn-primary').'</li>              
+              <li class="btn pf_access">'.$form->NavButton('ACCESS_LVLS', 'section=users&task=list_accesslvl', 'TT_ACCESS_LEVELS', 'list_accesslvl',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_join">'.$form->NavButton('JOIN_REQUESTS', 'section=users&task=list_requests', 'TT_JOIN_REQUESTS', 'list_requests',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_delete">'.$form->NavButton('DELETE', 'javascript:task_delete();', 'TT_DELETE_USER', 'task_delete',null,null,'btn btn-danger').'</li>
               <!--<li class="btn pf_config">'.$form->NavButton('CONFIG', "section=config&task=form_edit_section&&rts=1&id=$sobj->id", 'QL_CONFIG_SECTION', 'form_edit_section', 'config').'</li>-->
            </ul>
         </div>
@@ -68,9 +68,9 @@ switch( $core->GetTask() )
 	    $html .= '
         <div class="pf_navigation list_request">
            <ul>
-              <li class="btn pf_accept">'.$form->NavButton('ACCEPT', "javascript:form_accept_request();", 'TT_ACCEPT_REQUEST', 'form_accept_request').'</li>
-              <li class="btn pf_deny">'.$form->NavButton('DENY', "javascript:task_deny();", 'TT_DENY_REQUEST', 'task_deny').'</li>
-              <li class="btn pf_back">'.$form->NavButton('BACK', 'section=users'.$filter, 'TT_BACK').'</li>
+              <li class="btn pf_accept">'.$form->NavButton('ACCEPT', "javascript:form_accept_request();", 'TT_ACCEPT_REQUEST', 'form_accept_request',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_deny">'.$form->NavButton('DENY', "javascript:task_deny();", 'TT_DENY_REQUEST', 'task_deny',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_back">'.$form->NavButton('BACK', 'section=users'.$filter, 'TT_BACK',null,null,null,'btn btn-primary').'</li>
            </ul>
         </div>';
 		break;
@@ -79,8 +79,8 @@ switch( $core->GetTask() )
 	    $html .= '
         <div class="pf_navigation form_new"> 
            <ul>
-              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:task_save()", '', 'task_save').'</li>
-              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users").'</li>
+              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:task_save()", '', 'task_save',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users",null,null,null,null,'btn ').'</li>
            </ul>
         </div>';
 		break;
@@ -89,8 +89,8 @@ switch( $core->GetTask() )
 	    $html .= '
         <div class="pf_navigation form_edit"> 
            <ul>
-              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:task_update()", 'TT_UPDATE', 'task_update').'</li>
-              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users".$filter, 'TT_BACK').'</li>
+              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:task_update()", 'TT_UPDATE', 'task_update',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users".$filter, 'TT_BACK',null,null,null,'btn ').'</li>
            </ul>
         </div>';
 		break;
@@ -110,8 +110,8 @@ switch( $core->GetTask() )
 	    $html .= '
         <div class="pf_navigation form_new_accesslvl"> 
            <ul>
-              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:task_save_accesslvl()", 'TT_SAVE_ACL', 'task_save_accesslvl').'</li>
-              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users&task=list_accesslvl".$filter, 'TT_BACK', 'list_accesslvl').'</li>
+              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:task_save_accesslvl()", 'TT_SAVE_ACL', 'task_save_accesslvl',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users&task=list_accesslvl".$filter, 'TT_BACK', 'list_accesslvl',null,null,'btn ').'</li>
            </ul>
         </div>';
 		break;
@@ -120,8 +120,8 @@ switch( $core->GetTask() )
 	    $html .= '
         <div class="pf_navigation form_edit_accesslvl"> 
            <ul>
-              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:task_update_accesslvl()", 'TT_UPDATE', 'task_update_accesslvl').'</li>
-              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users&task=list_accesslvl".$filter, 'TT_BACK', 'list_accesslvl').'</li>
+              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:task_update_accesslvl()", 'TT_UPDATE', 'task_update_accesslvl',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users&task=list_accesslvl".$filter, 'TT_BACK', 'list_accesslvl',null,null,'btn btn-primary').'</li>
            </ul>
         </div>';
 		break;
@@ -130,8 +130,8 @@ switch( $core->GetTask() )
 	    $html .= '
         <div class="pf_navigation form_accept_request"> 
            <ul>
-              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:submitbutton('task_accept_requests')", 'TT_ACCEPT_REQUEST', 'task_accept_requests').'</li>
-              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users&task=list_requests".$filter, 'TT_BACK', 'list_requests').'</li>
+              <li class="btn pf_save">'.$form->NavButton('SAVE', "javascript:submitbutton('task_accept_requests')", 'TT_ACCEPT_REQUEST', 'task_accept_requests',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users&task=list_requests".$filter, 'TT_BACK', 'list_requests',null,null,'btn ').'</li>
            </ul>
         </div>';
 		break;
@@ -140,8 +140,8 @@ switch( $core->GetTask() )
 	    $html .= '
         <div class="pf_navigation form_invite"> 
            <ul>
-              <li class="btn pf_import">'.$form->NavButton('IMPORT_USER', "javascript:submitbutton('task_invite')", 'TT_IMPORT_USER', 'task_invite').'</li>
-              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users".$filter, 'TT_BACK').'</li>
+              <li class="btn pf_import">'.$form->NavButton('IMPORT_USER', "javascript:submitbutton('task_invite')", 'TT_IMPORT_USER', 'task_invite',null,null,'btn btn-primary').'</li>
+              <li class="btn pf_cancel">'.$form->NavButton('CANCEL', "section=users".$filter, 'TT_BACK',null,null,null,'btn').'</li>
            </ul>
         </div>';
 		break;	
