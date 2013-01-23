@@ -61,29 +61,29 @@ switch( $core->GetTask() )
             <ul>';
             if($status != 2) {
                 $html .= '
-                <li class="btn pf_new">'.$form->NavButton('NEW', 'section=projects&task=form_new'.$filter, 'TT_NEW_PROJECT', 'form_new').'</li>
-                <li class="btn pf_copy">'.$form->NavButton('COPY', 'javascript:task_copy();', 'TT_COPY_PROJECT', 'task_copy').'</li>';
+                <li class="btn pf_new">'.$form->NavButton('NEW', 'section=projects&task=form_new'.$filter, 'TT_NEW_PROJECT', 'form_new',null,null,'btn btn-primary').'</li>
+                <li class="btn pf_copy">'.$form->NavButton('COPY', 'javascript:task_copy();', 'TT_COPY_PROJECT', 'task_copy',null,null,'btn btn-primary').'</li>';
             }
             if($status == 0) {
                 $html .= '
-                <li class="btn pf_archive">'.$form->NavButton('ARCHIVE', 'javascript:task_archivate();', 'TT_ARCHIVE', 'task_archive').'</li>';
+                <li class="btn pf_archive">'.$form->NavButton('ARCHIVE', 'javascript:task_archivate();', 'TT_ARCHIVE', 'task_archive',null,null,'btn btn-success').'</li>';
             } elseif ($status == 1) {
                 $html .= '
-                <li class="btn pf_activate">'.$form->NavButton('ACTIVATE', 'javascript:task_activate();', 'TT_ACTIVATE', 'task_activate').'</li>';
+                <li class="btn pf_activate">'.$form->NavButton('ACTIVATE', 'javascript:task_activate();', 'TT_ACTIVATE', 'task_activate',null,null,'btn btn-success').'</li>';
             } elseif ($status == 2) {
                 $html .= '
-                <li class="btn pf_approve">'.$form->NavButton('APPROVE', 'javascript:task_approve();', 'TT_APPROVE', 'task_approve').'</li>';
+                <li class="btn pf_approve">'.$form->NavButton('APPROVE', 'javascript:task_approve();', 'TT_APPROVE', 'task_approve',null,null,'btn btn-success').'</li>';
             }
             $html .= '
-            <li class="btn pf_delete">'.$form->NavButton('DELETE', 'javascript:task_delete();', 'TT_DELETE', 'task_delete').'</li>';
+            <li class="btn pf_delete">'.$form->NavButton('DELETE', 'javascript:task_delete();', 'TT_DELETE', 'task_delete',null,null,'btn btn-danger').'</li>';
             if($user->GetWorkspace()) {
                 $html .= '
-                <li class="btn pf_join">'.$form->NavButton('JOIN_REQUESTS', 'section=users&task=list_requests', 'TT_JOIN_REQUESTS', 'list_requests', 'users').'</li>
-                <li class="btn pf_groups">'.$form->NavButton('GROUPS', 'section=groups', 'TT_MANAGE_GROUPS', NULL, 'groups').'</li>
-                <li class="btn pf_access">'.$form->NavButton('ACCESS_LVLS', 'section=users&task=list_accesslvl', 'TT_ACCESS_LEVELS', 'list_accesslvl', 'users').'</li>';
+                <li class="btn pf_join">'.$form->NavButton('JOIN_REQUESTS', 'section=users&task=list_requests', 'TT_JOIN_REQUESTS', 'list_requests', 'users',null,'btn btn-success').'</li>
+                <li class="btn pf_groups">'.$form->NavButton('GROUPS', 'section=groups', 'TT_MANAGE_GROUPS', NULL, 'groups',null,'btn btn-warning').'</li>
+                <li class="btn pf_access">'.$form->NavButton('ACCESS_LVLS', 'section=users&task=list_accesslvl', 'TT_ACCESS_LEVELS', 'list_accesslvl', 'users',null,'btn btn-warning').'</li>';
             }
             $html .= '
-            <!--<li class="btn pf_config">'.$form->NavButton('CONFIG', "section=config&task=form_edit_section&rts=1&id=$sobj->id", 'QL_CONFIG_SECTION', 'form_edit_section', 'config').'</li>-->
+            <!--<li class="btn pf_config">'.$form->NavButton('CONFIG', "section=config&task=form_edit_section&rts=1&id=$sobj->id", 'QL_CONFIG_SECTION', 'form_edit_section', 'config',null,'btn ').'</li>-->
            </ul>
         </div>
         <div class="pfl_search">

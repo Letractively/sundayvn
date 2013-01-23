@@ -65,14 +65,14 @@ switch($core->GetTask())
 	    $html .= '
         <div class="pf_navigation tasks_navigation">
            <ul>
-              <li class="btn pf_new">'.$form->NavButton('NEW_TASK', "section=tasks&task=form_new_task".$filter, 'TT_NEW_TASK', 'form_new_task').'</li>';
+              <li class="btn pf_new">'.$form->NavButton('NEW_TASK', "section=tasks&task=form_new_task".$filter, 'TT_NEW_TASK', 'form_new_task',null,null,'btn btn-primary').'</li>';
               if($use_ms) {
-                  $html .= '<li class="btn pf_new">'.$form->NavButton('NEW_MILESTONE', "section=tasks&task=form_new_milestone".$filter, 'TT_NEW_MS', 'form_new_milestone').'</li>';
+                  $html .= '<li class="btn pf_new">'.$form->NavButton('NEW_MILESTONE', "section=tasks&task=form_new_milestone".$filter, 'TT_NEW_MS', 'form_new_milestone',null,null,'btn btn-primary').'</li>';
               }
               $html .= '
-              <li class="btn pf_order">'.$form->NavButton('REORDER', "javascript:submitbutton('task_reorder');", 'TT_REORDER', 'task_reorder').'</li>
-              <li class="btn pf_copy">'.$form->NavButton('COPY', 'javascript:task_copy();', 'TT_COPY', 'task_copy').'</li> 
-              <li class="btn pf_delete">'.$form->NavButton('DELETE', 'javascript:task_delete();', 'TT_DELETE', 'task_delete').'</li>
+              <li class="btn pf_order">'.$form->NavButton('REORDER', "javascript:submitbutton('task_reorder');", 'TT_REORDER', 'task_reorder',null,null,'btn btn-warning').'</li>
+              <li class="btn pf_copy">'.$form->NavButton('COPY', 'javascript:task_copy();', 'TT_COPY', 'task_copy',null,null,'btn btn-success').'</li> 
+              <li class="btn pf_delete">'.$form->NavButton('DELETE', 'javascript:task_delete();', 'TT_DELETE', 'task_delete',null,null,'btn btn-danger').'</li>
               <!--<li class="btn pf_config">'.$form->NavButton('CONFIG', "section=config&task=form_edit_section&&rts=1&id=$sobj->id", 'QL_CONFIG_SECTION', 'form_edit_section', 'config').'</li>-->
            </ul>
         </div>
