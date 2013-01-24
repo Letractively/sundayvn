@@ -132,11 +132,11 @@ switch( $core->GetTask() )
         <div class="pf_navigation">
             <ul>';
         if($user->Access('form_edit', 'projects', $author)) {
-            $html .= '<li class="btn pf_edit">'.$form->NavButton('EDIT', "section=projects&task=form_edit&id=".$id.$filter, 'TT_EDIT', 'form_edit').'</li>
-            <li class="btn pf_print">'.$form->NavButton('PRINT', 'javascript:task_print();', 'TT_PRINT', 'display_details').'</li>';
+            $html .= '<li class="btn pf_edit">'.$form->NavButton('EDIT', "section=projects&task=form_edit&id=".$id.$filter, 'TT_EDIT', 'form_edit',null,null,'btn btn-primary').'</li>
+            <li class="btn pf_print">'.$form->NavButton('PRINT', 'javascript:task_print();', 'TT_PRINT', 'display_details',null,null,'btn btn-warning').'</li>';
         }
         $html .= '
-                <li class="btn pf_back">'.$form->NavButton('BACK', "section=projects".$filter, 'TT_BACK').'</li>
+                <li class="btn pf_back">'.$form->NavButton('BACK', "section=projects".$filter, 'TT_BACK',null,null,null,'btn ').'</li>
             </ul>
         </div>';
         

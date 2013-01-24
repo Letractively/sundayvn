@@ -37,7 +37,9 @@ $prefix = $expose->getPrefix();
         <?php
             $expose->displayHead();
             $expose->addLink(array('bootstrap.css','template.css'),'css');
-        ?>
+
+    ?>
+	
     </head>
     
     <body <?php echo $expose->generateBodyClass();?> <?php /*Do not change the ID, otherwise it will fail to load mobile menu*/ echo ($expose->platform == 'mobile')? 'id="ex-mobile"' : '' ;?> >

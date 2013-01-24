@@ -127,9 +127,7 @@ $app->setTemplate('rhuk_milkyway');
       <?php } ?>
    </div>
    <!-- FOOTER NOTICE - YOU CAN REMOVE THIS IF YOU LIKE! -->
-   <div style="text-align:center !important" id="theme_link">
-      <a href="http://www.projectfork.net" target="_blank" title="Free Joomla! Project Manager">Projectfork</a> is Free Software released under the <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU/GPL License</a>.
-   </div>
+
    <!-- FOOTER NOTICE - YOU CAN REMOVE THIS IF YOU LIKE! -->
 </div>
 <?php if($location != 'backend' && $hide_tpl) { ?>

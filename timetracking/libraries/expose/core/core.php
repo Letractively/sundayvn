@@ -159,7 +159,7 @@ class ExposeCore{
         $this->loadPresetStyle();
     }
 
-    public function addLink($file, $type, $priority=10, $media='screen')
+    public function addLink($file, $type, $priority=10, $media='all')
     {
         if(is_array($file)){
             foreach($file as $path){
