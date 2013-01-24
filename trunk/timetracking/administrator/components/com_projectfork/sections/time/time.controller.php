@@ -62,7 +62,7 @@ class PFtimeController extends PFobject
         $keyword    = JRequest::getVar('keyword');
         $project    = $user->GetWorkspace();
         $config		= PFconfig::GetInstance();
-
+	
         // Load items from database
         $total      = $class->Count($project, $keyword, $ftask, $fuser);
         $rows       = $class->LoadList( $limitstart, $limit, $ob, $od, $project, $keyword, $ftask, $fuser );

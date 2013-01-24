@@ -51,7 +51,7 @@ function task_delete()
 }
 </script>
 <a id="pf_top"></a>
-<div class="pf_container">
+<div class="pf_container" id="section_to_print">
     <div class="pf_header componentheading">
         <h3><?php echo $ws_title." / "; echo PFformat::Lang('TIME_TRACKING');?>
         <?php echo PFformat::SectionEditButton();?>
@@ -75,7 +75,7 @@ function task_delete()
         <!-- NEW/EDIT FORM END -->
         
         <!-- TABLE START -->
-        <table class="pf_table adminlist" width="100%" cellpadding="0" cellspacing="0">
+        <table class="pf_table adminlist table table-bordered" width="100%" cellpadding="0" cellspacing="0">
             <thead>
                 <tr>
                     <th align="center" class="sectiontableheader title">#</th>
@@ -177,6 +177,40 @@ function task_delete()
 
     </div>
 </div>
+<style>
+	
+			@media print {
+  body {
+ 	font-size: 12px;
+ }
+  body * {
+    visibility:hidden;
+
+  }
+  #section_to_print, #section_to_print * {
+    visibility:visible;
+  }
+  #section_to_print {
+    position: fixed;
+  margin: auto;
+  width: 100%;
+    left: auto;
+  right: auto;
+    top:0;
+  }
+  #section_to_print input
+, #section_to_print .list-footer
+
+ {
+	display: none;
+}
+.ex-row, .ex-wrapper
+{
+	width: 100%;
+}
+}
+
+</style>
 <?php
 echo $form->HiddenField("boxchecked", 0);
 echo $form->HiddenField("option");

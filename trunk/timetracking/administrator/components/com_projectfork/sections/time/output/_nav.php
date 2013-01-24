@@ -40,7 +40,8 @@ echo $form->Start();
 <div class="pf_navigation tasks_navigation">
    <ul>
       <li class="btn pf_new"><?php echo $form->NavButton('ADD', "javascript:form_new();", 'PFL_TI_FN', 'form_new',null,null,'btn btn-primary');?></li>
-      <li class="btn pf_delete"><?php echo $form->NavButton('DELETE', 'javascript:task_delete();', 'TT_DELETE', 'task_delete',null,null,'btn btn-danger');?></li>
+      <li class="btn pf_delete"><?php echo $form->NavButton('DELETE', 'javascript:task_delete();', 'TT_DELETE', 'task_delete',null,null,'btn btn-danger');?></li>     
+    <li class="btn btn pf_print"><a class="btn  " style="background:url(../images/glyphicons-halflings.png)  -96px -48px no-repeat;" href='javascript:void();' onclick="window.print();"><span>Print</span></a></li>
       <!--<li class="btn pf_config"><?php echo $form->NavButton('CONFIG', "section=config&task=form_edit_section&&rts=1&id=$sobj->id", 'QL_CONFIG_SECTION', 'form_edit_section', 'config');?></li>-->
    </ul>
 </div>
