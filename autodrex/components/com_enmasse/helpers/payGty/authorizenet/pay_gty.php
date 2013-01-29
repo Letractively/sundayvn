@@ -36,7 +36,7 @@ $cart = $this->cart;
 foreach($cart->getAll() as $cartItem) {
 	$item = $cartItem; 
 }
-  $repemail = $_POST['x_email'];
+
 	$approved = true;
 if(isset($_POST['x_process']))
 {
@@ -117,6 +117,7 @@ $arrPost = JFactory::getApplication()->getUserState("com_enmasse.checkout.dataau
 if (!empty($arrPost))
 {
 $_POST = $arrPost;
+  $repemail = $_POST['x_email'];
 }
 $cartItem = array_pop($this->cart->getAll());
 $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent / 100, 2);
