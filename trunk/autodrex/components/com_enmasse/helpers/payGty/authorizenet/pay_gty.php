@@ -36,6 +36,7 @@ $cart = $this->cart;
 foreach($cart->getAll() as $cartItem) {
 	$item = $cartItem; 
 }
+  $repemail = $_POST['x_email'];
 	$approved = true;
 if(isset($_POST['x_process']))
 {
@@ -158,7 +159,7 @@ $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent 
 <tr><td>CCV: </td><td><input type="text" size="4" name="x_card_code" value="<?php echo $_POST['x_card_code']; ?>"></input></td></tr>
 <tr><td>First Name: </td><td><input type="text" size="25" name="x_first_name" value="<?php echo $_POST['x_first_name']; ?>"></input></td></tr>
 <tr><td>Last Name: </td><td><input type="text" size="25" name="x_last_name" value="<?php echo $_POST['x_last_name']; ?>"></input></td></tr>
-<tr><td>Email: </td><td><input type="text" size="25" name="x_email" value="<?php echo $_POST['x_email']; ?>"></input></td></tr>
+<tr><td>Email: </td><td><input type="text" size="25" name="x_email" value="<?php echo $repemail; ?>"></input></td></tr>
 <?php
 if (	!empty($juser->id))
 {
