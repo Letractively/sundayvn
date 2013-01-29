@@ -295,6 +295,7 @@ class EnmasseControllerShopping extends JController
 					$arData['x_exp_month'] =  $cc_month;
 					$arData['x_exp_year'] =  $cc_year;
 					$arData['x_card_code'] =  $cc['cc_cvv'];
+					$arData['x_email'] =  $_POST['x_email'];
 			}
 			else
 			{
