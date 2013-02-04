@@ -143,7 +143,7 @@ JHTML::_('behavior.formvalidation');
 					<button onclick="paypaldo();" style="border: none;background: none;"><img src="/autodrex/components/com_enmasse/theme/dark_blue/images/pay-using-paypal.png" style="border: none;margin-top: 30px;"></button>
 					<?php
 
-					if (!$juser->guest) {?><input type="button" onclick='useprecard()' value="Use previously saved credit card" /> <?php } ?>
+					if (!$juser->guest) {?><input type="button" style="width: 207px;" onclick='useprecard()' value="Use previously saved credit card" /> <?php } ?>
                 <p style="clear: left;text-align: left;float: left;margin-left: 279px;"><input style="margin-top:0px;" type="checkbox" name="agree" id="agree"  />I agree to all the <a class='modal' href="<?=JRoute::_('index.php?option=com_enmasse&view=term');?>">terms and conditions.</a>
 		<?php	if (!$juser->guest) {?> <br />
 			<input type="checkbox" name="save_cc" value='1' />Save credit card for future orders:
