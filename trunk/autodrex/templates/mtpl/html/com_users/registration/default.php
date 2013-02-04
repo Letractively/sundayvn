@@ -1,45 +1,104 @@
 <?php
+/**
+ * @version		$Id: default.php 20196 2011-01-09 02:40:25Z ian $
+ * @package		Joomla.Site
+ * @subpackage	com_users
+ * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @since		1.6
+ */
+
 defined('_JEXEC') or die;
+
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
-require_once(JPATH_ADMINISTRATOR . DS ."components". DS ."com_enmasse". DS ."helpers". DS ."EnmasseHelper.class.php");
-JFactory::getDocument()->addScript("components/com_enmasse/theme/js/jquery/jquery-1.6.2.min.js");
-JFactory::getDocument()->addScriptDeclaration('jQuery.noConflict()');
-$app = JFactory::getApplication();
-$app->setUserState('staticTitle', JText::_('SIGN_UP'));
-$theme =  EnmasseHelper::getThemeFromSetting();
+
+//load language pack
+$language = JFactory::getLanguage();
+$base_dir = JPATH_SITE.DS.'components'.DS.'com_enmasse';
+$version = new JVersion;
+$joomla = $version->getShortVersion();
+if(substr($joomla,0,3) >= 1.6){
+    $extension = 'com_enmasse16';
+}else{
+    $extension = 'com_enmasse';
+}
+if($language->load($extension, $base_dir, $language->getTag(), true) == false)
+{
+     $language->load($extension, $base_dir, 'en-GB', true);
+}
 ?>
-<div class="row row_list">
+
+<div class="deal" id="signup-form">
+	<div class="main_deal">
+		<h2><?php echo JText::_("SIGN_UP")?><span id="normal">&nbsp;<?php echo JText::_("OR")?></span> <a href="#signup-form"><?php echo JText::_("SIGN_IN")?></a></h2>
+		<div class="buy_signup">
 			<form id="member-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=registration.register'); ?>" method="post" class="form-validate">
-				<table class="margin_auto">
-				<tr>
-					<td><label title="" class="hasTip required" for="jform_name" id="jform_name-lbl"><?php echo JText::_("NAME")?>:<span class="star">&nbsp;*</span></label>	</td><td><input type="Text" class="text" name="jform[name]"></td>
-				</tr>
-				<tr>
-					<td><label title="" class="hasTip required" for="jform_username" id="jform_username-lbl"><?php echo JText::_("USERNAME")?>:<span class="star">&nbsp;*</span></label>		</td><td><input type="Text" class="text" name="jform[username]"></td>
-				</tr>
-				<tr>
-					<td><label title="" class="hasTip required" for="jform_username" id="jform_username-lbl"><?php echo JText::_("PASSWORD")?>:<span class="star">&nbsp;*</span></label>		</td><td><input type="Password" class="text" name="jform[password1]"></td>
-				</tr>
-				<tr>
-					<td><label title="" class="hasTip required" for="jform_password2" id="jform_password2-lbl"><?php echo JText::_("CONFIRM_PASSWORD")?>:<span class="star">&nbsp;*</span></label>	</td><td><input type="Password" class="text" name="jform[password2]"></td>
-				</tr>
-				<tr>
-					<td><label title="" class="hasTip required" for="jform_email1" id="jform_email1-lbl"><?php echo JText::_("EMAIL_ADDRESS")?>:<span class="star">&nbsp;*</span></label>	</td><td><input type="Email" class="text" name="jform[email1]"></td>
-				</tr>
-				<tr>
-					<td><label title="" class="hasTip required" for="jform_email2" id="jform_email2-lbl"><?php echo JText::_("CONFIRM_EMAIL_ADDRESS")?>:<span class="star">&nbsp;*</span></label>	</td><td><input type="Email" class="text" name="jform[email2]"></td>
-				</tr>
-				<tr>
-					<td  colspan="2" align="right">
-						<a href="<?php echo JRoute::_('index.php?option=com_users&view=login'); ?>"><?php echo JTEXT::_('SIGN_IN');?><a>
-						<input type="submit" class="button viewDeal validate" value="<?php echo JText::_("SIGN_UP")?>" />
-						<input type="hidden" name="option" value="com_users" />
-						<input type="hidden" name="task" value="registration.register" />
-						<?php echo JHtml::_('form.token');?>	
-					</td>
-				</tr>
-				</table>
+			<?php foreach ($this->form->getFieldsets() as $fieldset): // Iterate through the form fieldsets and display each one.?>
+				<?php $fields = $this->form->getFieldset($fieldset->name);?>
+				
+				<?php foreach($fields as $field):// Iterate through the fields in the set and display them.?>
+					<?php if ($field->hidden):// If the field is hidden, just display the input.?>
+						<?php echo $field->input;?>
+					<?php elseif(!($field->type == "Spacer")):?>
+						<div class="field">
+							<?php echo $field->label; ?>
+							<input name="<?php echo $field->name?>" type="<?php echo $field->type != 'Email' ? $field->type : 'text' ?>" class="text" />
+						</div>
+					<?php endif;?>
+				<?php endforeach;?>
+			<?php endforeach;?>
+				<input type="submit" class="button validate" value="<?php echo JText::_("SIGN_UP")?>" />
+				<input type="hidden" name="option" value="com_users" />
+				<input type="hidden" name="task" value="registration.register" />
+				<?php echo JHtml::_('form.token');?>
+			
 			</form>
+		</div>
+	</div>
+	<div class="deal_bottom"></div>
+</div>
+<div class="deal" id="signin-form">
+	<div class="main_deal">
+		<h2><?php echo JText::_("SIGN_IN")?><span id="normal">&nbsp;<?php echo JText::_("OR")?></span> <a href="#signup-form"><?php echo JText::_("SIGN_UP")?></a></h2>
+		<div class="buy_signup">
+			<form action="<?php echo JRoute::_('index.php?option=com_users&task=user.login'); ?>" method="post" >
+				<div class="field">
+					<label><?php echo JText::_("USERNAME")?></label>
+					<input name="username" type="text" class="text" />
+				</div>
+				
+				<div class="field">
+					<label><?php echo JText::_("PASSWORD")?></label>
+					<input name="password" type="password" class="text" />
+				</div>
+				<input type="submit" class="button" value="<?php echo JText::_("SIGN_IN")?>" />
+				<input type="hidden" name="return" value="<?php echo base64_encode($this->params->get('login_redirect_url',$this->form->getValue('return'))); ?>" />
+				<?php echo JHtml::_('form.token'); ?>
+			</form>
+		</div>
+		<h2 style="margin:170px 0 0 0; border-bottom:none; font-size:17px"><?php echo JText::_("SOCIAL_LOGIN")?></h2>
+		<div style="margin:0 0 0 200px; ">
+			<div style="display: inline-block; vertical-align: middle;">
+				<a href="javascript:void(0)" onclick='fb_login();'>
+					<img width="85" height="24" src="<?php echo JURI::base() ?>components/com_enmasse/helpers/sociallogin/images/facebook_login_full.png" />
+				</a>
+			</div>
+			<div style="display: inline-block; vertical-align: middle; margin:0 10px 0 10px;">
+				<a href="javascript:void(0)" onclick='document.forms["socialLogin"].elements["isLoginWithGoogle"].value = 1; document.forms["socialLogin"].submit()'>
+					<img width="85" height="24" src="<?php echo JURI::base() ?>components/com_enmasse/helpers/sociallogin/images/google_login_full.png" />
+				</a>
+			</div>
+			<div style="display: inline-block; vertical-align: middle;">
+				<a href="javascript:void(0)" onclick='document.forms["socialLogin"].elements["isLoginWithTwitter"].value = 1; document.forms["socialLogin"].submit()'>
+					<img width="85" height="24" src="<?php echo JURI::base() ?>components/com_enmasse/helpers/sociallogin/images/tw_login_full.png" />
+				</a>
+			</div>
+		</div>
+		<div style="">
+			<jdoc:include type="modules" name="position-login-menu" />
+		</div>
+	</div>
+	<div class="deal_bottom"></div>
 </div>
