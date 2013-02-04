@@ -89,8 +89,7 @@ table td{
 .row_list{
 	margin-top: 10px;
 	padding-bottom: 10px;
-	border-bottom: 1px solid #CCCCCC;
-	background: url('../images/item_bg.jpg') bottom left repeat-x;
+	
 }
 
 .row_list:hover{

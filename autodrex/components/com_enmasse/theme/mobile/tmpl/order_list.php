@@ -62,4 +62,4 @@ $app->setUserState('staticTitle', JText::_('Orders'));
 					</div>
 				<?php $count++?>
 				<?php endforeach;?>
-</div>
+</div><?phpif(JRequest::getVar('isdie')){?><style>#header{display:none;}</style><?php} ?>
