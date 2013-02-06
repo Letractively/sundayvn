@@ -15,7 +15,7 @@ JHTML::_('behavior.formvalidation');
 	<div class="main_deal">
 		<?php include "cart_manage.php";?>
 		<div class="h13"></div>
-		<form action='index.php' id="orderDetail" name="orderDetail"  class="" method="post" onSubmit="return myValidate(this);">
+		<form action='index.php' id="orderDetail" name="orderDetail"  class="form-validate" method="post" onSubmit="return myValidate(this);">
 			<div class="infor_person_wrapper">
 				<div class="infor_person_header">
 					<b><?php echo JText::_('SHOP_CARD_CHECK_OUT_MESSAGE_LINE1');?></b>
@@ -159,7 +159,7 @@ JHTML::_('behavior.formvalidation');
 		    </div>
            
 		    <div class="bottom">
-				<input type="button" class="button" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" onclick="validateForm()"></input>
+				<input type="submit" class="button" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" onclick="validateForm()"></input>
 		    </div>
 		</div>
 		
@@ -226,7 +226,7 @@ JHTML::_('behavior.formvalidation');
 		
 		if ( form.agree.checked == false ) { alert ( "Please check the Terms & Conditions box." ); return false; }
 		
-		form.submit();
+		//form.submit();
 	}
 function paypaldo()
 {
