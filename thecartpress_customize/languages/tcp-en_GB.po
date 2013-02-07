@@ -599,7 +599,7 @@ msgstr ""
 #: thecartpress/checkout/TCPBillingExBox.class.php:306
 #: thecartpress/checkout/TCPBillingBox.class.php:144
 msgid "New billing address"
-msgstr ""
+msgstr "New Contact Information"
 
 #: thecartpress/checkout/TCPBillingExBox.class.php:430
 #: thecartpress/checkout/TCPBillingBox.class.php:268
