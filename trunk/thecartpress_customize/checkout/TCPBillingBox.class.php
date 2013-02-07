@@ -145,7 +145,7 @@ class TCPBillingBox extends TCPCheckoutBox {
 				<br />
 		<?php endif;?>
 			<input type="radio" id="new_billing_address" name="selected_billing_address" value="new" <?php if ( $selected_billing_address == 'new' || count( $addresses ) == 0 ) : ?> checked="true"<?php endif;?> onChange="jQuery('#new_billing_area').show();jQuery('#selected_billing_area').hide();" />
-			<label for="new_billing_address"><?php _e( 'New billing address', 'tcp' ); ?></label>
+			<label for="new_billing_address"><?php _e( 'New Contact Information', 'tcp' ); ?></label>
 			<div id="new_billing_area" class="clearfix" <?php
 				if ( $selected_billing_address == 'new' ) :
 				?><?php elseif ( is_array( $addresses ) && count( $addresses ) > 0 ) :
