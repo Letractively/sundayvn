@@ -159,7 +159,7 @@ JHTML::_('behavior.formvalidation');
 		    </div>
            
 		    <div class="bottom">
-				<input type="submit" class="button" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" onclick="validateForm()"></input>
+				<input type="button" class="button" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" onclick="validateForm()"></input>
 		    </div>
 		</div>
 		
@@ -182,18 +182,12 @@ JHTML::_('behavior.formvalidation');
 </div>
 
 <script language="javascript" type="text/javascript">
-	function validateEmail($email)
-	{
-	    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-	    if( !emailReg.test( $email ) )
-	    {
-	    	return false;
-	    }
-	    else
-		{
-	    	return true;
-	    }
-	}
+
+	function validateEmail(email) 
+{
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
 
 	function validateForm()
 	{
@@ -226,7 +220,7 @@ JHTML::_('behavior.formvalidation');
 		
 		if ( form.agree.checked == false ) { alert ( "Please check the Terms & Conditions box." ); return false; }
 		
-		//form.submit();
+		form.submit();
 	}
 function paypaldo()
 {
