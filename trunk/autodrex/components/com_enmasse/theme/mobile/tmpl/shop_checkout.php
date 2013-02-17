@@ -348,7 +348,7 @@ $buy4friend = $buy4friend?'<input type="hidden" name="buy4friend" value="1"/>':'
 
 			<br />
 
-			<input type="submit" class="button_big" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" />
+			<input type="button" onclick='validateForm()' class="button_big" value="<?php echo JText::_('PROCESS_CHECK_OUT_BUTTON');?>" />
 
 		</p>
 
@@ -358,3 +358,43 @@ $buy4friend = $buy4friend?'<input type="hidden" name="buy4friend" value="1"/>':'
 
 </div>
 
+
+<script language="javascript" type="text/javascript">
+
+	function validateEmail(email) 
+{
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+	function validateForm()
+	{
+		var form = document.orderDetail;
+	
+		if (form.name.value == "")
+		{
+			alert("Please enter name!");
+			return false;
+		}
+		
+		if (validateEmail(form.email.value)==false)
+		{
+			alert("Please enter a valid email!");
+			return false;
+		}			
+		
+		if ( form.agree.checked == false ) { alert ( "Please check the Terms & Conditions box." ); return false; }
+		
+		form.submit();
+	}
+function paypaldo()
+{
+jQuery('#payGtyIdInpt').val('2');
+document.orderDetail.submit();
+}	
+function useprecard()
+{
+jQuery('#payGtyIdInpt').val('99');
+document.orderDetail.submit();
+}	
+</script>

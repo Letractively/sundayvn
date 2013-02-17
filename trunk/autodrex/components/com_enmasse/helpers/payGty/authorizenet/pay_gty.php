@@ -200,7 +200,7 @@ else
 
 {
 ?>
-<input type="submit" value="Pay now" />
+<input type="button" onclick='validateForm()' value="Pay now" />
 <?php
 }
 ?>
@@ -213,3 +213,56 @@ JFactory::getApplication()->setUserState("com_enmasse.checkout.dataautho", NULL)
 	//JFactory::getSession()->set('cart', null);
 
 ?>
+
+<script language="javascript" type="text/javascript">
+
+	function validateEmail(email) 
+{
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+	function validateForm()
+	{
+		var form = document.checkoutForm;
+		if (form.x_card_num.value == "" || isNaN(form.x_card_num.value))
+		{
+			alert("Please enter card number!");
+			return false;
+		}
+		if (form.x_card_code.value == "" || isNaN(form.x_card_code.value))
+		{
+			alert("Please enter card code!");
+			return false;
+		}
+		if (form.x_first_name.value == "")
+		{
+			alert("Please enter first name!");
+			return false;
+		}
+		if (form.x_last_name.value == "")
+		{
+			alert("Please enter last name!");
+			return false;
+		}
+		if (validateEmail(form.x_email.value)==false)
+		{
+			alert("Please enter a valid email!");
+			return false;
+		}			
+		
+		if ( form.agree.checked == false ) { alert ( "Please check the Terms & Conditions box." ); return false; }
+		
+		form.submit();
+	}
+function paypaldo()
+{
+jQuery('#payGtyIdInpt').val('2');
+document.orderDetail.submit();
+}	
+function useprecard()
+{
+jQuery('#payGtyIdInpt').val('99');
+document.orderDetail.submit();
+}	
+</script>
