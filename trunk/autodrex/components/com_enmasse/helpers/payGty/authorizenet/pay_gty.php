@@ -128,7 +128,7 @@ $price = number_format($cartItem->item->price * $cartItem->item->prepay_percent 
 
 <h1>Please enter your information:</h1>
 <?php } ?>
-<form method="post" name="checkoutForm" action="<?php echo $pageURL . $_SERVER["REQUEST_URI"]; ?>" <?php if ($approved) echo "style='display:none;'"?>>
+<form method="post" name="checkoutForm" id="checkoutForm" action="<?php echo $pageURL . $_SERVER["REQUEST_URI"]; ?>" <?php if ($approved) echo "style='display:none;'"?>>
 <table>
 <tr><td>Credit Card Number (without spaces): </td><td><input type="text" size="25" name="x_card_num" value="<?php echo $_POST['x_card_num']; ?>"></input></td></tr>
 <tr><td>Expired Date (MM/YY): </td><td><select name="x_exp_month">
@@ -251,7 +251,7 @@ JFactory::getApplication()->setUserState("com_enmasse.checkout.dataautho", NULL)
 			return false;
 		}			
 		
-		if ( form.agree.checked == false ) { alert ( "Please check the Terms & Conditions box." ); return false; }
+		//if ( form.agree.checked == false ) { alert ( "Please check the Terms & Conditions box." ); return false; }
 		
 		form.submit();
 	}
